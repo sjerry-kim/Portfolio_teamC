@@ -1,0 +1,52 @@
+.estquestion-Wrapper {
+  background-color: rgb(255, 250, 244);
+  width: 500px;
+  height: 600px;
+  border-radius: 20px;
+  margin: auto;
+}
+
+.estquestion-Title {
+  font-size: 40pt;
+  text-align: center;
+  font-family: "Humanbumsuk";
+}
+
+.PrgressBar {
+  margin-top: 30px;
+}
+
+.estquestion-QBtn {
+  width: 30%;
+  min-height: 10px;
+  font-size: 15pt;
+  margin-top: 30px;
+  border: none;
+  background-color: rgba(240, 248, 255, 0);
+  background: linear-gradient(#366360 0 0) no-repeat
+    calc(200% - var(--i, 0) * 100%) 100% / 200%
+    calc(100% * var(--i, 0) + 0.08em);
+  transition: 0.3s calc(var(--i, 0) * 0.2s),
+    background-position 0.3s calc(0.3s - calc(var(--i, 0) * 0.3s));
+}
+.estquestion-QBtn:hover {
+  --i: 1;
+  color: white;
+  border-radius: 5px;
+}
+
+.estquestion-ButtonGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Humanbumsuk";
+}
+
+.progress-bar {
+  background-color: #366360;
+}
+.estquestion-progressbox {
+  margin-bottom: 50px;
+  border: 1px solid rgba(255, 0, 0, 0);
+}

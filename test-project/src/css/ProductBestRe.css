@@ -1,0 +1,30 @@
+.Product-bestRe {
+  background-color: skyblue;
+  height: 100vh;
+}
+.Product-reviewCards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 90px;
+}
+
+.Product-card-img-top {
+  height: 300px;
+}
+
+.Product-reCard1 {
+  width: 500px;
+  height: 600px;
+}
+
+.Product-reCard2 {
+  width: 500px;
+  height: 600px;
+}
+
+.Product-reCard3 {
+  width: 500px;
+  height: 600px;
+}

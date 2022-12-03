@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'Humanbumsuk';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Humanbumsuk.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.est-body{
+    background-color: rgb(37, 90, 90);
+    width: 100%;
+    height: 100vh;
+}
+
+.eststart-Wrapper{
+    background-color: rgb(255, 250, 244);
+    width: 500px;
+    height: 600px;
+    margin: auto;
+    border-radius: 20px;
+    border: 1px solid black;
+    box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
+}
+
+
+.eststart-Header{
+    font-family: 'Humanbumsuk';
+    font-size: 40pt;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eststart-Contents{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.eststart-Title{
+    font-family: 'Humanbumsuk';
+    font-size: 30pt;
+    margin-top: 40px;
+}
+
+.eststart-LogoImage{
+    margin-top: 10px;
+}
+
+.eststart-Desc{
+    font-family: 'Humanbumsuk';
+    font-size: 20pt;
+    margin-top: 20px;
+}
+
+.eststart-StartBtn{
+    font-family: 'Humanbumsuk';
+}
+.PrgressBar {
+    margin-top: 30px;
+}
+.progress-bar{
+    background-color: #366360;
+}

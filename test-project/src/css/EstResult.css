@@ -1,0 +1,93 @@
+body{
+    
+}
+.estresult-Wrapper{
+    background-color: rgb(255, 250, 244);
+    width: 500px;
+    height: 600px;
+    margin: auto;
+    border-radius: 20px;
+    display: inline-block;
+    position: relative;
+}
+
+.estresult-Header{
+    font-family: 'Humanbumsuk';
+    font-size: 40pt;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.estresult-Contents{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.estresult-Title{
+    font-family: 'Humanbumsuk';
+    font-size: 30pt;
+    margin-top: 40px;
+}
+
+.estresult-LogoImage{
+    margin-top: 10px;
+}
+
+.estresult-Desc{
+    font-family: 'Humanbumsuk';
+    font-size: 15pt;
+    margin-top: 0px;
+}
+
+.estresult-ReStartBtn{
+    font-family: 'Humanbumsuk';
+    border-radius: 19px;
+    width: 100%;
+    min-height: 70px;
+    font-size: 15pt;
+    font-weight: bolder;
+    margin-top: 0px;
+    border: none;
+    --c: no-repeat linear-gradient(#366360 0 0);
+    background: 
+      var(--c) calc(-101% + var(--i,0)*101%) 100% / 50.1% calc(100%*var(--i,0) + .08em),
+      var(--c) calc( 201% - var(--i,0)*101%) 0    / 50.1% calc(100%*var(--i,0) + .08em);
+    transition: .3s calc(var(--i,0)*.3s), background-position .3s calc(.3s - var(--i,0)*.3s);
+}
+
+.estresult-ReStartBtn:hover {
+    --i: 1;
+    color: white;
+    border: 1px solid white;
+}
+
+
+
+  .estresult-Reciept-box{
+    position: relative;
+    left: 449px;
+    margin-left: 100px;
+    margin-top: -220px;
+    clear: right;
+    width: 250px;
+    height: 70px;
+    background-color: rgb(255, 250, 244);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
+}
+
+
+.PrgressBar {
+    margin-top: 30px;
+}
+.progress-bar{
+    background-color: #366360;
+}
