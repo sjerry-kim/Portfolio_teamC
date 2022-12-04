@@ -145,6 +145,8 @@ const EstQuestion = () => {
 
   // const name = ["type", "wallpaper", "sash", "floor", "veranda", "roomdoor","frontdoor", "light", "price"];
 
+  // 🌼🌼🌼 question 진행 중 새로고침 시 가장 첫 번째 문제로 돌아감 => 확인 필요 🌼🌼🌼
+
   return (
     <div className="estquestion-Wrapper">
       <div className="estquestion-progressbox"></div>

@@ -7,7 +7,7 @@ import EstQuestion from "../components/EstQuestion";
 import EstResult from "../components/EstResult";
 import Navbar from "../components/Navbar";
 
-// 🌼 지울지, 살려서 수정할 지 결정 필요
+// 🌼🌼🌼 포지션 상 pages 폴더에 들어가 있지만 실제로 출력되지 않는 component입니다 🌼🌼🌼
 
 const Estimation = () => {
   return (
