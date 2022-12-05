@@ -12,7 +12,7 @@ const EstStart = () => {
 
   const StartClickButton = () => {
     // useHistory 여기서 이동됨
-    navigate("/estimation/question");
+    navigate("/main/estimation/question");
   };
 
   return (

@@ -14,11 +14,12 @@ function App() {
     <div className="App">
       <DataProvider>
         <Routes>
-          <Route index path='/home' element={<Home />}/>
-          <Route path='/' element={<Main />}>
-            <Route path='/estimation/*' element={<EstStart /> }/>
-            <Route index path='/portfolio' element={<Portfolio />}/>
-            <Route path='/product' element={<ProductMergePage />} />
+          <Route index path='/' element={<Home />}/>
+          <Route path='/main' element={<Main />}>
+          <Route path='/main/estimation/*' element={<EstStart /> }/>
+            <Route index  element={<Portfolio />}/>
+            <Route path='/main/portfolio' element={<Portfolio />} />
+            <Route path='/main/product' element={<ProductMergePage />} />
           </Route>
           <Route path='*'element={<Nonfound />}/>
         </Routes>
