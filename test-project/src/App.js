@@ -1,7 +1,7 @@
 import './App.css';
 import {Route, Routes} from 'react-router-dom';
 import Home from './pages/Home';
-import Main from './pages/Layout';
+import Main from './pages/Main';
 import EstStart from './components/EstStart';
 import Portfolio from './pages/Portfolio';
 import ProductMergePage from './components/ProductMergePage'
@@ -16,7 +16,7 @@ function App() {
         <Routes>
           <Route index path='/' element={<Home />}/>
           <Route path='/main' element={<Main />}>
-          <Route path='/main/estimation/*' element={<EstStart /> }/>
+            <Route path='/main/estimation/*' element={<EstStart /> }/>
             <Route index  element={<Portfolio />}/>
             <Route path='/main/portfolio' element={<Portfolio />} />
             <Route path='/main/product' element={<ProductMergePage />} />
