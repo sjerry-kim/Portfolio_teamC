@@ -12,12 +12,13 @@ import Navbar from "../components/Navbar";
 const Estimation = () => {
   return (
     <div className="est-body">
-      <Routes>
-        <Route path="start" element={<EstStart />} />
-        <Route path="question" element={<EstQuestion />} />
-        <Route path="result" element={<EstResult />} />
-        <Route path="reciept" element={<EstReciept />} />
-      </Routes>
+      {/** 없애기 */}
+      {/* <Routes>
+        <Route path="/start" element={<EstStart />} />
+        <Route path="/question" element={<EstQuestion />} />
+        <Route path="/result" element={<EstResult />} />
+        <Route path="/reciept" element={<EstReciept />} />
+      </Routes> */}
     </div>
   );
 };

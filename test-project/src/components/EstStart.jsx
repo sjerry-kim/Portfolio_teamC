@@ -12,11 +12,11 @@ const EstStart = () => {
 
   const StartClickButton = () => {
     // useHistory 여기서 이동됨
-    navigate("/main/estimation/question");
+    navigate("/main/question");
   };
 
   return (
-    <div className="eststart-Wrapper" style={{ display: "flex", flexDeirection: "row" }}>
+    <div className="eststart-Wrapper">
       <div className="eststart-Contents">
         <div className="eststart-Header">간편 견적</div>
         <div className="eststart-Title">나에게 맞는 업체</div>
@@ -28,11 +28,6 @@ const EstStart = () => {
           견적 짜러가기
         </button>
       </div>
-      <Routes>
-        <Route path="/question" element={<EstQuestion />} />
-        <Route path="/result" element={<EstResult />} />
-        <Route path="/reciept" element={<EstReciept />} />
-      </Routes>
     </div>
   );
 };
