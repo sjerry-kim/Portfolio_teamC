@@ -44,8 +44,8 @@ const Home = () => {
         <div id="home-container2">
           <Slider className="home-main-slick" {...settings2} ref={slider}>
             <div className="home-box one"><div><HomeAboutUs /></div></div>
-            <div className="home-box two"><div className="home-slick-position"><HomePortfolio /></div></div>
-            <div className="home-box three"><div><HomeContactUs /></div></div>
+            <div className="home-box two"><div className="home-slick-position1"><HomePortfolio /></div></div>
+            <div className="home-box three"><div className="home-slick-position2"><HomeContactUs /></div></div>
           </Slider>
         </div>
       </div>

@@ -134,8 +134,13 @@ body {
   .outer::-webkit-scrollbar {
     /* 화면에서 스크롤바 안보이게 */
   }
-  .home-slick-position{
+  .home-slick-position1{
     position: absolute !important; 
     top: 300px !important; 
     left: 13% !important; 
+  }
+  .home-slick-position2{
+    position: absolute !important; 
+    top: 300px !important; 
+    left: 900px !important; 
   }
