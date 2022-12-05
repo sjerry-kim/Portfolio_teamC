@@ -7,8 +7,9 @@
     display: flex;
     align-items: flex-end;
     flex-direction: column;
-    margin-left: 780px;
+    margin-left: 80px;
     margin-top: -140px;
+    position: fixed;
     
 }
 .homeaboutus-title{
