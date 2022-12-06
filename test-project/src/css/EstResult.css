@@ -3,15 +3,22 @@ body{
 }
 .estresult-Wrapper{
     background-color: rgb(255, 250, 244);
-    width: 500px;
+    width: 540px;
     height: 600px;
     margin: auto;
     border-radius: 20px;
-    display: inline-block;
     position: relative;
+    right: 140px;
+    border: 1px solid black;
+    box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
 }
 
 .estresult-Header{
+    position: relative;
+    bottom: 320px;
+    margin-top: 368px;
     font-family: 'Humanbumsuk';
     font-size: 40pt;
     display:flex;
@@ -20,6 +27,8 @@ body{
 }
 
 .estresult-Contents{
+    position: relative;
+    bottom: 320px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,7 +48,7 @@ body{
 .estresult-Desc{
     font-family: 'Humanbumsuk';
     font-size: 15pt;
-    margin-top: 0px;
+    margin-top: 10px;
 }
 
 .estresult-ReStartBtn{
@@ -68,7 +77,8 @@ body{
 
   .estresult-Reciept-box{
     position: relative;
-    left: 449px;
+    top: 150px;
+    left: 501px;
     margin-left: 100px;
     margin-top: -220px;
     clear: right;
@@ -85,9 +95,10 @@ body{
 }
 
 
+
 .PrgressBar {
     margin-top: 30px;
 }
 .progress-bar{
-    background-color: #366360;
+    background-color: #366360 !important;
 }
