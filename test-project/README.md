@@ -32,7 +32,7 @@
 3. Portfolio의 각 명함들 중 가장 앞에 나온 명함을 제외한 뒤쪽 명함들의  opactiy 조절
 
 ### `일윤`
-1. Estimation css 재정리
+1. Estimation css 재정리1
 2. Estimation 코드 정리 (ex- mbti에서 따온 EST..etc의 명칭 변경 등)
 
 ### `회윤`
