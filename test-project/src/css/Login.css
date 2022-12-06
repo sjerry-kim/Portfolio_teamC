@@ -1,0 +1,130 @@
+.page{
+    position: absolute;
+    top: 85px;
+    bottom: 0;
+    width: 97.9vw;
+    max-width: 100%;
+    padding: 0 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    overflow: hidden;
+  
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)); /*, url(./img/img1.daumcdn.jpg) ;*/
+    background-size: cover;
+  }
+.login-border{
+    width: 600px;
+    background-color: #ffffff28;
+    height: 700px;
+    margin: auto;
+    text-align: center;
+  }
+  .titleWrap{
+    margin-top: 0px;
+    margin-bottom: 30px;
+    font-size: 26px;
+    color: rgb(253, 253, 253);
+  }
+  .contentWrap{
+    margin: auto;
+    flex: 1;
+  }
+  .inputTitle{
+    font-size: 12px;
+    color: #ffffff;
+    margin-bottom: 15px;
+  }
+  .inputWrap{
+    display: flex;
+    width: 50%;
+    max-width: 100%;
+    padding: 16px;
+    margin-top: 8px;
+    margin: auto;
+    border-bottom: 1px solid rgb(194, 194, 194);
+  
+  }
+  /* 인풋창 클릭하면 태두리색 바뀜 */
+  .inputWrap:focus-within{
+    border: 1px solid rgb(233, 233, 233);
+  }
+  
+  .input{
+    margin: auto;
+    width: 100%;
+    outline:  none;
+    border: none;
+    height: 17px;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: #0e0e0e00;
+    color: white;
+  }
+  
+  .input::placeholder{
+    color: rgb(192, 192, 192);
+  }
+  
+  .errorMessageWrap {
+    margin-top: 8px;
+    color: rgb(206, 0, 0);
+    font-size: 15px;
+  }
+  
+.createButton{
+    background-color: rgba(172, 172, 172, 0.281); 
+    width: 60%;
+    height: 48px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+    position: relative;
+}
+.LoginGoogle{
+    background-color: rgba(172, 172, 172, 0.281); 
+    width: 60%;
+    height: 48px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+    position: relative;
+    margin: 20px;
+}
+  .LoginButton{
+    width: 60%;
+    height: 48px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    color: rgb(22, 21, 21);
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .LoginButton:hover{
+    background-color: rgb(48, 48, 48);
+    color: white;
+  }
+  
+  /* 버튼 비활성화일때 회색 */
+  .LoginButton:disabled{
+    background-color: rgba(172, 172, 172, 0.281);
+    color: white;
+  }
+  
+  h1{
+    color: white;
+  }
+
+  .Login-Logo{
+    width: 200px;
+    margin: auto;
+  }
+  .Login-Logo2{
+    float: left;
+    width: 300px;
+  }
+  
