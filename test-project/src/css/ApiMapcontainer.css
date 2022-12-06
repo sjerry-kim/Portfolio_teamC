@@ -1,0 +1,36 @@
+#api-result-list {
+  width: 60%;
+  height: 800px;
+  overflow: auto;
+}
+
+#api-pagination {
+  margin-top: 3rem;
+}
+
+#api-pagination a {
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+#api-pagination a.on {
+  color: lightblue;
+  font-weight: bold;
+}
+#api-Map {
+  position: absolute;
+}
+#api-TopMap {
+  display: flex;
+}
+#api-midMap {
+  width: 40.7vw;
+  height: 80%;
+  margin-top: 160px;
+}
+#api-myMap {
+  margin-left: 470px;
+  margin-top: 160px;
+}

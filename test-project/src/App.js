@@ -1,4 +1,4 @@
-// import './App.css';
+import './App.css';
 import {Route, Routes} from 'react-router-dom';
 import Home from './pages/Home';
 import Main from './pages/Main';
@@ -10,6 +10,7 @@ import Nonfound from './pages/Notfound';
 import EstQuestion from './components/EstQuestion';
 import EstResult from './components/EstResult';
 import EstReciept from './components/EstReciept';
+import ApiLandingPage from './components/ApiLandingPage';
 
 // DataContext import
 import { DataProvider } from './data/DataContext'
@@ -32,6 +33,7 @@ function App() {
             <Route path="/main/result" element={<EstResult />} />
             <Route path="/main/reciept" element={<EstReciept />} />
             <Route path='/main/product' element={<ProductMergePage />} />
+            <Route path='/main/map' element={<ApiLandingPage />} />
           </Route>
           <Route path='*'element={<Nonfound />}/>
         </Routes>
