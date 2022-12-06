@@ -24,6 +24,7 @@ const EstResult = () => {
     <div>
       <div className="estresult-Wrapper">
         <div className="estresult-Header">간편 견적 </div>
+
         <div className="estresult-Contents">
           <div className="estresult-Title">결과 보기</div>
           <div className="estresult-LogoImage">
@@ -33,8 +34,9 @@ const EstResult = () => {
             나에게 어울리는 업체 "{resultData.name}"{" "}
           </div>
         </div>
-      </div>
-      <div>
+        
+      
+      <div className="estresult-all-box">
         <span className="estresult-Reciept-box">
           {/* <a href={data.state.score[].src}>업체 보러가기</a> */}
           <button
@@ -66,8 +68,11 @@ const EstResult = () => {
           </button>
           {/** 다시짜기하면 넘처서 안될듯*/}
         </span>
+       
+        
       </div>
-      <EstReciept />
+      <EstReciept/>
+      </div>
     </div>
   );
 };

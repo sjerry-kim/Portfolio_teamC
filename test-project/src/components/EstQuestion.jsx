@@ -66,7 +66,7 @@ const EstQuestion = () => {
       // 결과페이지로 이동
       navigate({
         //  search 사용
-        pathname: "/main/estimation/result",
+        pathname: "/main/result",
         search: `?${createSearchParams({
           mbti: mbti,
         })}`,
