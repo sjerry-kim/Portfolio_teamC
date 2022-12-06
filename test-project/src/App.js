@@ -1,17 +1,21 @@
-import './App.css';
+// import './App.css';
 import {Route, Routes} from 'react-router-dom';
 import Home from './pages/Home';
 import Main from './pages/Main';
 import EstStart from './components/EstStart';
-import Estimation from './pages/Estimation';
+// import Estimation from './pages/Estimation';
 import Portfolio from './pages/Portfolio';
 import ProductMergePage from './components/ProductMergePage'
 import Nonfound from './pages/Notfound';
-
-import { DataProvider } from './data/DataContext'
 import EstQuestion from './components/EstQuestion';
 import EstResult from './components/EstResult';
 import EstReciept from './components/EstReciept';
+
+// DataContext import
+import { DataProvider } from './data/DataContext'
+
+// Media Query import - 가장 아래 import 유지
+import './css/MediaQuery.css';
 
 
 function App() {
