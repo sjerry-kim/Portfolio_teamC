@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 // import NavbarComp from "../components/NavbarComp";
 import { Outlet } from "react-router-dom";
+import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signInWithEmailAndPassword, signOut} from "firebase/auth";
+import { auth } from "../data/firebase";
 
 import '../css/Login.css';
 
@@ -16,7 +18,50 @@ import '../css/Login.css';
 
 
     const Login = () => {
-        const [name, setName] = useState("");
+
+
+    const navigater = useNavigate();
+
+    // 구글로 로그인하기 버튼을 눌렀을때 파이어스토어를 들고와서 사용
+    const googleLogin = () => {
+    const provider = new GoogleAuthProvider();
+    provider.addScope("profile");
+    provider.addScope("email");
+
+    const auth = getAuth();
+    signInWithPopup(auth, provider)
+    .then((result) => {
+        // 로그인된 결과를 구글인증을 통해서 확인 > 토큰 발급
+        const credential = GoogleAuthProvider.credentialFromResult(result);
+        const token = credential.accessToken;
+        // 로그인된 결과 중에서 user를 통해서 관련 정보를 가져올수 있다
+        const user = result.user;
+        navigater('/',{state:{
+            name : user.displayName,
+            email : user.email,
+            photo : user.photoURL
+        }});
+
+        // 원하는 값들 확인 가능
+        console.log(user) 
+        console.log(user.email) // 이메일
+        console.log(user.photoURL) // 구글프로필
+    })
+    .catch((error) => {
+        // 
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // 
+        const email = error.customData.email;
+        // 
+        const credential = GoogleAuthProvider.credentialFromError(error);
+
+        });
+        console.log("누름")
+    };
+
+
+    const [name, setName] = useState("");
         // const {action} = useContext(DataContext)
         // const navigate = useNavigate()
     const inputRef = useRef("");
@@ -27,9 +72,34 @@ import '../css/Login.css';
         // 	navigate('/');
         // }
 
-    // input창에서 값 받을때 사용
-    const [email, setEmail] = useState("");
-    const [pw, setPw] = useState("");
+    // input창에서 값 받을때 사용 / 로그인
+    const [email, setEmail] = useState(""); // 이메일 로그인
+    const [pw, setPw] = useState(""); // 비밀번호
+    const [user, setUser] = useState({}); //코드 추가
+    const [qw, setQw] = useState("")
+
+    onAuthStateChanged(auth, (currentUser) => {
+        setUser(currentUser);
+    });
+
+    const login = async () => {
+        try {
+            const user = await signInWithEmailAndPassword(
+                auth,
+                email,
+                pw
+            );
+            console.log(user);
+        } catch (error) {
+            console.log(error.message);
+        }
+    };
+
+    const logout = async () => {
+        await signOut(auth);
+    };
+
+
 
     // 이메일,패스워드 조건이 충족하는지 확인용
     const [emailValid, setEmailValid] = useState(false);
@@ -89,7 +159,7 @@ import '../css/Login.css';
 
 
 return (
-    <Form > {/* onSubmit={loginUser} */}
+    <from > {/* onSubmit={loginUser} */}
     <div className="login-page" >
     
         <div className="login-border">
@@ -122,7 +192,7 @@ return (
 
                 <div className="login-inputTitle" style={{marginTop:"10px"}}>PW</div>
                 <div className="login-inputWrap">
-                    <input className="input" 
+                    <input className="login-input" 
                     type="password"
                     placeholder="영문, 숫자, 특수문자 포함 8자 이상 입력해주세요"
                     value={pw}
@@ -139,17 +209,19 @@ return (
             </div>
             <div>
                 {/* disabled 버튼활성화 체크*/}
-                <button type="submit" disabled={notAllow}  className="login-LoginButton">로그인</button>
+                <button disabled={notAllow}  className="login-LoginButton" onClick={login}>로그인</button>
+                <div>User Logged In:</div>
+                <div>{user?.email}</div>
             </div>
             <div>
-                <button className="login-LoginGoogle">구글로 로그인</button>
+                <button className="login-LoginGoogle" onClick={googleLogin}>구글로 로그인</button>
             </div>
             <div>
                 <button className="login-createButton">회원 가입</button>
             </div>
             </div>
         </div>
-        </Form>
+        </from>
     );
 };
 
