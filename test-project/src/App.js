@@ -12,6 +12,7 @@ import EstResult from './components/EstResult';
 import EstReciept from './components/EstReciept';
 import ApiLandingPage from './components/ApiLandingPage';
 import Login from './pages/Login';
+import Join from './pages/Join';
 
 // DataContext import
 import { DataProvider } from './data/DataContext'
@@ -27,6 +28,7 @@ function App() {
         <Routes>
           <Route index path='/' element={<Home />}/>
           <Route path='login' element={<Login />}/>
+          <Route path='join' element={<Join />}/>
           <Route path='/main' element={<Main />}>
             <Route index  element={<Portfolio />}/>
             <Route path='/main/portfolio' element={<Portfolio />} />
