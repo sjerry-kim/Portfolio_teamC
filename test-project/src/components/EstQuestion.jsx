@@ -37,9 +37,9 @@ const EstQuestion = () => {
   const [companyIndex, setCompanyIndex] = useState([]);
 
   const [totalScore, setTotalScore] = useState([
-    { id: "EI", score: 0 },
-    { id: "SN", score: 0 },
-    { id: "TF", score: 0 },
+    { id: "Aa", score: 0 },
+    { id: "Bb", score: 0 },
+    { id: "Cc", score: 0 },
   ]);
   console.log("totalScore", totalScore);
 

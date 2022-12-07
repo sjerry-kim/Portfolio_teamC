@@ -1,4 +1,4 @@
-.page{
+.login-page{
     position: absolute;
     top: 85px;
     bottom: 0;
@@ -21,22 +21,22 @@
     margin: auto;
     text-align: center;
   }
-  .titleWrap{
+  .login-titleWrap{
     margin-top: 0px;
     margin-bottom: 30px;
     font-size: 26px;
     color: rgb(253, 253, 253);
   }
-  .contentWrap{
+  .login-contentWrap{
     margin: auto;
     flex: 1;
   }
-  .inputTitle{
+  .login-inputTitle{
     font-size: 12px;
     color: #ffffff;
     margin-bottom: 15px;
   }
-  .inputWrap{
+  .login-inputWrap{
     display: flex;
     width: 50%;
     max-width: 100%;
@@ -47,11 +47,11 @@
   
   }
   /* 인풋창 클릭하면 태두리색 바뀜 */
-  .inputWrap:focus-within{
+  .login-inputWrap:focus-within{
     border: 1px solid rgb(233, 233, 233);
   }
   
-  .input{
+  .login-input{
     margin: auto;
     width: 100%;
     outline:  none;
@@ -63,17 +63,17 @@
     color: white;
   }
   
-  .input::placeholder{
+  .login-input::placeholder{
     color: rgb(192, 192, 192);
   }
   
-  .errorMessageWrap {
+  .login-errorMessageWrap {
     margin-top: 8px;
     color: rgb(206, 0, 0);
     font-size: 15px;
   }
   
-.createButton{
+.login-createButton{
     background-color: rgba(172, 172, 172, 0.281); 
     width: 60%;
     height: 48px;
@@ -83,7 +83,7 @@
     transition: 0.5s;
     position: relative;
 }
-.LoginGoogle{
+.login-LoginGoogle{
     background-color: rgba(172, 172, 172, 0.281); 
     width: 60%;
     height: 48px;
@@ -94,7 +94,7 @@
     position: relative;
     margin: 20px;
 }
-  .LoginButton{
+  .login-LoginButton{
     width: 60%;
     height: 48px;
     border: none;
@@ -104,27 +104,20 @@
     cursor: pointer;
     transition: 0.5s;
   }
-  .LoginButton:hover{
+  .login-LoginButton:hover{
     background-color: rgb(48, 48, 48);
     color: white;
   }
   
   /* 버튼 비활성화일때 회색 */
-  .LoginButton:disabled{
+  .login-LoginButton:disabled{
     background-color: rgba(172, 172, 172, 0.281);
     color: white;
   }
-  
-  h1{
-    color: white;
-  }
 
-  .Login-Logo{
+
+  .login-login-Logo{
     width: 200px;
     margin: auto;
-  }
-  .Login-Logo2{
-    float: left;
-    width: 300px;
   }
   

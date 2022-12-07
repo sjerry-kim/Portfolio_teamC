@@ -45,22 +45,22 @@ const EstResult = () => {
               console.log(resultData.best);
               const a = resultData.best;
               switch (a) {
-                case "EST":
-                  return window.open("https://www.naver.com/");
-                case "ESF":
-                  return window.open("https://www.daum.net/");
-                case "ENT":
-                  return window.open("https://www.daum.net/");
-                case "ENF":
-                  return window.open("https://www.daum.net/");
-                case "IST":
-                  return window.open("https://www.daum.net/");
-                case "ISF":
-                  return window.open("https://www.daum.net/");
-                case "INT":
-                  return window.open("https://www.daum.net/");
-                case "INF":
-                  return window.open("https://www.daum.net/");
+                case "ABC":
+                  return window.open("http://eviandesign.edenstore.co.kr/");
+                case "ABc":
+                  return window.open("https://jy-interiordesign.com/");
+                case "AbC":
+                  return window.open("http://www.xn--4k0bq0t9ujvwbpxvm6f.kr/");
+                case "Abc":
+                  return window.open("https://www.1204design.co.kr/");
+                case "aBC":
+                  return window.open("https://www.agiodesign.co.kr/");
+                case "aBc":
+                  return window.open("http://www.monointerior.co.kr/");
+                case "abc":
+                  return window.open("http://www.dawon.com/wen/index.php?v=220209");
+                case "abC":
+                  return window.open("http://idas.kr/");
               }
             }}
           >

@@ -90,27 +90,27 @@ import '../css/Login.css';
 
 return (
     <Form > {/* onSubmit={loginUser} */}
-    <div className="page" >
+    <div className="login-page" >
     
         <div className="login-border">
-            <img src={require("../img/logo_white.png")} className="Login-Logo" />
-            <div className="titleWrap">
+            <img src={require("../img/logo_white.png")} className="login-login-Logo" />
+            <div className="login-titleWrap">
                 로그인
                 <br />
 
             </div>
 
-            <div className="contentWrap">
-                <div className="inputTitle" >E-mail</div>
-                <div className="inputWrap">
-                    <input className="input" 
+            <div className="login-contentWrap">
+                <div className="login-inputTitle" >E-mail</div>
+                <div className="login-inputWrap">
+                    <input className="login-input" 
                     type="text"
                     placeholder="test@example.com" 
                     value={email}
                     onChange={handleEmail} ref={inputRef}
                     />
                 </div>
-                <div className="errorMessageWrap">
+                <div className="login-errorMessageWrap">
                     {/* 입력안했을땐 안나오고 이메일의 길이가 0보다 클때 오류문구 출력 */}
                     {   
                         !emailValid && email.length > 0 && (    // 조건이안맞고 이메일이0보다 높을때
@@ -120,8 +120,8 @@ return (
                 </div>
 
 
-                <div className="inputTitle" style={{marginTop:"10px"}}>PW</div>
-                <div className="inputWrap">
+                <div className="login-inputTitle" style={{marginTop:"10px"}}>PW</div>
+                <div className="login-inputWrap">
                     <input className="input" 
                     type="password"
                     placeholder="영문, 숫자, 특수문자 포함 8자 이상 입력해주세요"
@@ -129,7 +129,7 @@ return (
                     onChange={handlePw}
                     />
                 </div>
-                <div className="errorMessageWrap">
+                <div className="login-errorMessageWrap">
                     {
                         !pwValid && pw.length > 0 && ( // 조건이안맞고 패스워드가0보다 높을때
                             <div>영문, 숫자, 특수문자 포함 <br/> 8자 이상 입력해주세요</div>
@@ -139,13 +139,13 @@ return (
             </div>
             <div>
                 {/* disabled 버튼활성화 체크*/}
-                <button type="submit" disabled={notAllow}  className="LoginButton">로그인</button>
+                <button type="submit" disabled={notAllow}  className="login-LoginButton">로그인</button>
             </div>
             <div>
-                <button className="LoginGoogle">구글로 로그인</button>
+                <button className="login-LoginGoogle">구글로 로그인</button>
             </div>
             <div>
-                <button className="createButton">회원 가입</button>
+                <button className="login-createButton">회원 가입</button>
             </div>
             </div>
         </div>
