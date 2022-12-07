@@ -23,13 +23,14 @@ function ApiLandingPage() {
         onSubmit={handleSubmit}
         style={{
           position: "relative",
-          width: "100%",
-          bottom: "820px",
+          width: "470px",
+          bottom: "673px",
+          border:"1px solid red"
         }}
       >
         <input
           className="api-input"
-          placeholder="검색어를 입력하세요"
+          placeholder="ex) AGIO DESIGN"
           onChange={onChange}
           value={InputText}
           style={{
