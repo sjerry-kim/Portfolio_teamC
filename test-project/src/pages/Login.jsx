@@ -6,81 +6,87 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 // import NavbarComp from "../components/NavbarComp";
 import { Outlet } from "react-router-dom";
-import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signInWithEmailAndPassword, signOut} from "firebase/auth";
+import { getAuth, GoogleAuthProvider, signInWithPopup, 
+        onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { auth } from "../data/firebase";
+
 
 import '../css/Login.css';
 
-    const User = {
+const User = {
     email: 'test@example.com',
     pw: 'test8361@'
-    }
+}
 
 
-    const Login = () => {
+const Login = () => {
 
 
     const navigater = useNavigate();
 
     // 구글로 로그인하기 버튼을 눌렀을때 파이어스토어를 들고와서 사용
     const googleLogin = () => {
-    const provider = new GoogleAuthProvider();
-    provider.addScope("profile");
-    provider.addScope("email");
+        const provider = new GoogleAuthProvider();
+        provider.addScope("profile");
+        provider.addScope("email");
 
-    const auth = getAuth();
-    signInWithPopup(auth, provider)
-    .then((result) => {
-        // 로그인된 결과를 구글인증을 통해서 확인 > 토큰 발급
-        const credential = GoogleAuthProvider.credentialFromResult(result);
-        const token = credential.accessToken;
-        // 로그인된 결과 중에서 user를 통해서 관련 정보를 가져올수 있다
-        const user = result.user;
-        navigater('/',{state:{
-            name : user.displayName,
-            email : user.email,
-            photo : user.photoURL
-        }});
+        const auth = getAuth();
+        signInWithPopup(auth, provider)
+            .then((result) => {
+                // 로그인된 결과를 구글인증을 통해서 확인 > 토큰 발급
+                const credential = GoogleAuthProvider.credentialFromResult(result);
+                const token = credential.accessToken;
+                // 로그인된 결과 중에서 user를 통해서 관련 정보를 가져올수 있다
+                const user = result.user;
+                navigater('/', {
+                    state: {
+                        name: user.displayName,
+                        email: user.email,
+                        photo: user.photoURL
+                    }
+                });
 
-        // 원하는 값들 확인 가능
-        console.log(user) 
-        console.log(user.email) // 이메일
-        console.log(user.photoURL) // 구글프로필
-    })
-    .catch((error) => {
-        // 
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // 
-        const email = error.customData.email;
-        // 
-        const credential = GoogleAuthProvider.credentialFromError(error);
+                // 원하는 값들 확인 가능
+                console.log(user)
+                console.log(user.email) // 이메일
+                console.log(user.photoURL) // 구글프로필
+            })
+            .catch((error) => {
+                // 
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // 
+                const email = error.customData.email;
+                // 
+                const credential = GoogleAuthProvider.credentialFromError(error);
 
-        });
-        console.log("누름")
+            });
     };
 
 
     const [name, setName] = useState("");
-        // const {action} = useContext(DataContext)
-        // const navigate = useNavigate()
+    // const {action} = useContext(DataContext)
+    // const navigate = useNavigate()
     const inputRef = useRef("");
 
-        // const loginUser = (e) => {
-        // e.preventDefault();
-        // 	action.setUser({name: name, profile : null, likelist : [] });
-        // 	navigate('/');
-        // }
+    // const loginUser = (e) => {
+    // e.preventDefault();
+    // 	action.setUser({name: name, profile : null, likelist : [] });
+    // 	navigate('/');
+    // }
 
     // input창에서 값 받을때 사용 / 로그인
     const [email, setEmail] = useState(""); // 이메일 로그인
     const [pw, setPw] = useState(""); // 비밀번호
     const [user, setUser] = useState({}); //코드 추가
-    const [qw, setQw] = useState("")
 
-    onAuthStateChanged(auth, (currentUser) => {
-        setUser(currentUser);
-    });
+    useEffect(()=>{
+        onAuthStateChanged(auth, (currentUser) => {
+            setUser(currentUser);
+        });
+    },[])
+
+
 
     const login = async () => {
         try {
@@ -94,10 +100,12 @@ import '../css/Login.css';
             console.log(error.message);
         }
     };
-
     const logout = async () => {
         await signOut(auth);
     };
+
+
+  
 
 
 
@@ -122,10 +130,10 @@ import '../css/Login.css';
         } else {
             setEmailValid(false);
         }
-        };
+    };
 
-        // 이메일 조건충족 확인
-        const handlePw = (e) => {
+    // 이메일 조건충족 확인
+    const handlePw = (e) => {
         setPw(e.target.value);
         const regex =
             /^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+])(?!.*[^a-zA-z0-9$`~!@$!%*#^?&\\(\\)\-_=+]).{8,20}$/;
@@ -134,93 +142,94 @@ import '../css/Login.css';
         } else {
             setPwValid(false);
         }
-        };
+    };
 
 
 
 
 
-    useEffect(()=>{
+    useEffect(() => {
         // 둘다 모두 true면 버튼활성화를 풀어줌
-        if(emailValid && pwValid){
+        if (emailValid && pwValid) {
             setNotAllow(false);
             return;
-        }else{
+        } else {
             setNotAllow(true);
         }
 
-    },[emailValid, pwValid])
+    }, [emailValid, pwValid])
 
-    useEffect(()=>{
+    useEffect(() => {
         // console.log(inputRef);
         inputRef.current.focus(); // 로그인id 자동포커스
-    },[])
+    }, [])
 
 
 
-return (
-    <from > {/* onSubmit={loginUser} */}
-    <div className="login-page" >
-    
-        <div className="login-border">
-            <img src={require("../img/logo_white.png")} className="login-login-Logo" />
-            <div className="login-titleWrap">
-                로그인
-                <br />
+    return (
+        <from > 
+            <div className="login-page" >
 
-            </div>
+                <div className="login-border">
+                    <img src={require("../img/logo_white.png")} className="login-login-Logo" />
+                    <div className="login-titleWrap">
+                        로그인
+                        <br />
 
-            <div className="login-contentWrap">
-                <div className="login-inputTitle" >E-mail</div>
-                <div className="login-inputWrap">
-                    <input className="login-input" 
-                    type="text"
-                    placeholder="test@example.com" 
-                    value={email}
-                    onChange={handleEmail} ref={inputRef}
-                    />
+                    </div>
+
+                    <div className="login-contentWrap">
+                        <div className="login-inputTitle" >E-mail</div>
+                        <div className="login-inputWrap">
+                            <input className="login-input"
+                                type="text"
+                                placeholder="test@example.com"
+                                value={email}
+                                onChange={handleEmail} ref={inputRef}
+                            />
+                        </div>
+                        <div className="login-errorMessageWrap">
+                            {/* 입력안했을땐 안나오고 이메일의 길이가 0보다 클때 오류문구 출력 */}
+                            {
+                                !emailValid && email.length > 0 && (    // 조건이안맞고 이메일이0보다 높을때
+                                    <div>올바른 이메일을 입력하세요.</div>
+                                )
+                            }
+                        </div>
+
+
+                        <div className="login-inputTitle" style={{ marginTop: "10px" }}>PW</div>
+                        <div className="login-inputWrap">
+                            <input className="login-input"
+                                type="password"
+                                placeholder="영문, 숫자, 특수문자 포함 8자 이상 입력해주세요"
+                                value={pw}
+                                onChange={handlePw}
+                            />
+                        </div>
+                        <div className="login-errorMessageWrap">
+                            {
+                                !pwValid && pw.length > 0 && ( // 조건이안맞고 패스워드가0보다 높을때
+                                    <div>영문, 숫자, 특수문자 포함 <br /> 8자 이상 입력해주세요</div>
+                                )
+                            }
+                        </div>
+                    </div>
+                    <div>
+                        {/* disabled 버튼활성화 체크*/}
+                        <button disabled={notAllow} className="login-LoginButton" onClick={login}>로그인</button>
+                        <div>User Logged In:</div>
+                        <div>{user?.email}</div>
+                        <button onClick={logout}>로그아웃</button>
+                    </div>
+                    <div>
+                        <button className="login-LoginGoogle" onClick={googleLogin}>구글로 로그인</button>
+                    </div>
+                    <div>
+                        <button className="login-createButton">회원 가입</button>
+                    </div>
                 </div>
-                <div className="login-errorMessageWrap">
-                    {/* 입력안했을땐 안나오고 이메일의 길이가 0보다 클때 오류문구 출력 */}
-                    {   
-                        !emailValid && email.length > 0 && (    // 조건이안맞고 이메일이0보다 높을때
-                            <div>올바른 이메일을 입력하세요.</div>
-                        )
-                    }                   
-                </div>
-
-
-                <div className="login-inputTitle" style={{marginTop:"10px"}}>PW</div>
-                <div className="login-inputWrap">
-                    <input className="login-input" 
-                    type="password"
-                    placeholder="영문, 숫자, 특수문자 포함 8자 이상 입력해주세요"
-                    value={pw}
-                    onChange={handlePw}
-                    />
-                </div>
-                <div className="login-errorMessageWrap">
-                    {
-                        !pwValid && pw.length > 0 && ( // 조건이안맞고 패스워드가0보다 높을때
-                            <div>영문, 숫자, 특수문자 포함 <br/> 8자 이상 입력해주세요</div>
-                        )
-                    }                   
-                </div>
             </div>
-            <div>
-                {/* disabled 버튼활성화 체크*/}
-                <button disabled={notAllow}  className="login-LoginButton" onClick={login}>로그인</button>
-                <div>User Logged In:</div>
-                <div>{user?.email}</div>
-            </div>
-            <div>
-                <button className="login-LoginGoogle" onClick={googleLogin}>구글로 로그인</button>
-            </div>
-            <div>
-                <button className="login-createButton">회원 가입</button>
-            </div>
-            </div>
-        </div>
         </from>
     );
 };
