@@ -36,7 +36,7 @@ const DataProvider = (({children}) => {
             answerc: "단독주택",
             answerd: "오피스텔",
             answere: "상가",
-            type: "EI",
+            type: "Aa",
         },
         {
             id:2,
@@ -46,7 +46,7 @@ const DataProvider = (({children}) => {
             answerc: "도기",
             answerd: "타일",
             answere: "기타",
-            type: "EI",
+            type: "Aa",
         },
         {
             id:3,
@@ -56,7 +56,7 @@ const DataProvider = (({children}) => {
             answerc: "부분",
             answerd: "필름",
             answere: "기타",
-            type: "EI",
+            type: "Aa",
         },
         {
             id:4,
@@ -66,7 +66,7 @@ const DataProvider = (({children}) => {
             answerc: "합지",
             answerd: "대리석",
             answere: "기타",
-            type: "SN",
+            type: "Bb",
         },
         {
             id:5,
@@ -76,7 +76,7 @@ const DataProvider = (({children}) => {
             answerc: "방 확장",
             answerd: "단올림",
             answere: "기타",
-            type: "SN",
+            type: "Bb",
         },
         {
             id:6,
@@ -86,7 +86,7 @@ const DataProvider = (({children}) => {
             answerc: "부분",
             answerd: "필름",
             answere: "기타",
-            type: "SN",
+            type: "Bb",
         },
         {
             id:7,
@@ -96,7 +96,7 @@ const DataProvider = (({children}) => {
             answerc: "타일",
             answerd: "중문",
             answere: "기타",
-            type: "TF",
+            type: "Cc",
         },
         {
             id:8,
@@ -106,7 +106,7 @@ const DataProvider = (({children}) => {
             answerc: "등",
             answerd: "스위치",
             answere: "기타",
-            type: "TF",
+            type: "Cc",
         },
         {
             id:9,
@@ -116,7 +116,7 @@ const DataProvider = (({children}) => {
             answerc: "2,000만 원대",
             answerd: "3,000만 원대",
             answere: "4,000만 원대 이상",
-            type: "TF",
+            type: "Cc",
         },
         {
             id:10,
@@ -132,6 +132,7 @@ const DataProvider = (({children}) => {
     // 
 
     // 결과 정보
+    /*
     const [result, setResult] = useState([
         {
             id: 1,
@@ -212,54 +213,55 @@ const DataProvider = (({children}) => {
             price:"4,000만 원대 이상"
       },
     ])
+    */
 
     const [score, setScore] = useState([
         {
             id:1,
-            name:"집닥1",
-            best : "EST",
+            name:"에비앙 디자인",
+            best : "ABC",
         },
         {
             id:2,
-            name:"집닥2",
-            best : "ESF"
+            name:"제이와이인테리어",
+            best : "ABc"
         },
         {
             id:3,
-            name:"집닥3",
-            best : "ENT"
+            name:"푸른들인테리어",
+            best : "AbC"
         },
         {
             id:4,
-            name:"집닥4",
-            best : "ENF"
+            name:"주식회사1204디자인",
+            best : "Abc"
         },
         {
             id:5,
-            name:"집닥5",
-            best : "IST"
+            name:"Agio Design",
+            best : "aBC"
         },
         {
             id:6,
-            name:"집닥6",
-            best : "ISF"
+            name:"모노 인테리어",
+            best : "aBc"
         },
         {
             id:7,
-            name:"집닥7",
-            best : "INT"
+            name:"다원 디자인",
+            best : "abc"
         },
         {
             id:8,
-            name:"집닥8",
-            best : "INF"
+            name:"이다스 건축 인테리어",
+            best : "abC"
         },
     ])
 
 
     const value = {
-        state: { comment, question, result, reciept, score },
-        action: { setComment, setQuestion, setResult, setReciept, setScore }
+        state: { comment, question, reciept, score },
+        action: { setComment, setQuestion, setReciept, setScore }
     }
     return (
       <DataContext.Provider value={value}>
