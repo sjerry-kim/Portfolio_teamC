@@ -1,16 +1,11 @@
 import { useContext, useRef } from "react";
 import { useState } from "react";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-// import NavbarComp from "../components/NavbarComp";
-import { Outlet } from "react-router-dom";
+
 import { getAuth, GoogleAuthProvider, signInWithPopup, 
         onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { auth } from "../data/firebase";
-
-
 import '../css/Login.css';
 
 const User = {
@@ -21,8 +16,11 @@ const User = {
 
 const Login = () => {
 
-
-    const navigater = useNavigate();
+    const navigate = useNavigate();
+    const CreateButton = () => {
+        // 회원가입창 경로
+        navigate("/join");
+    };
 
     // 구글로 로그인하기 버튼을 눌렀을때 파이어스토어를 들고와서 사용
     const googleLogin = () => {
@@ -38,7 +36,7 @@ const Login = () => {
                 const token = credential.accessToken;
                 // 로그인된 결과 중에서 user를 통해서 관련 정보를 가져올수 있다
                 const user = result.user;
-                navigater('/', {
+                navigate('/', {
                     state: {
                         name: user.displayName,
                         email: user.email,
@@ -226,7 +224,7 @@ const Login = () => {
                         <button className="login-LoginGoogle" onClick={googleLogin}>구글로 로그인</button>
                     </div>
                     <div>
-                        <button className="login-createButton">회원 가입</button>
+                        <button className="login-createButton" onClick={CreateButton}>회원 가입</button>
                     </div>
                 </div>
             </div>

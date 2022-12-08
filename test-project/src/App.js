@@ -29,7 +29,6 @@ function App() {
         <Routes>
           <Route index path='/' element={<Home />}/>
           <Route path='login' element={<Login />}/>
-          <Route path='create' element={<CreateID />}/>
           <Route path='join' element={<Join />}/>
           <Route path='/main' element={<Main />}>
             <Route index  element={<Portfolio />}/>
