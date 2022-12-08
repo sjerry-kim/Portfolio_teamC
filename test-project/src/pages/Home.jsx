@@ -49,7 +49,7 @@ const Home = () => {
           </Slider>
         </div>
       </div>
-      {/** 🌼 스크롤 이미지(?) 사라짐 확인  */}
+      {/** 🌼 스크롤 이미지(?) 사라짐 확인 😁 */}
       <div className="home-scroll-txt">Scroll</div> 
       <img src={require("../img/logo_white.png")} className="home-logo" width="170" alt="" />
 
