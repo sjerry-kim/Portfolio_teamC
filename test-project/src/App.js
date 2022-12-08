@@ -19,6 +19,7 @@ import { DataProvider } from './data/DataContext'
 
 // Media Query import - 가장 아래 import 유지
 import './css/MediaQuery.css';
+import CreateID from './pages/CreateID';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Routes>
           <Route index path='/' element={<Home />}/>
           <Route path='login' element={<Login />}/>
+          <Route path='create' element={<CreateID />}/>
           <Route path='join' element={<Join />}/>
           <Route path='/main' element={<Main />}>
             <Route index  element={<Portfolio />}/>
