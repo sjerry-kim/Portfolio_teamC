@@ -10,7 +10,7 @@ import Nonfound from './pages/Notfound';
 import EstQuestion from './components/EstQuestion';
 import EstResult from './components/EstResult';
 import EstReciept from './components/EstReciept';
-import ApiLandingPage from './components/ApiLandingPage';
+import ApiMap from './pages/ApiMap';
 import Login from './pages/Login';
 import Join from './pages/Join';
 
@@ -29,7 +29,6 @@ function App() {
         <Routes>
           <Route index path='/' element={<Home />}/>
           <Route path='login' element={<Login />}/>
-          <Route path='create' element={<CreateID />}/>
           <Route path='join' element={<Join />}/>
           <Route path='/main' element={<Main />}>
             <Route index  element={<Portfolio />}/>
@@ -42,7 +41,7 @@ function App() {
             <Route path="/main/result" element={<EstResult />} />
             <Route path="/main/reciept" element={<EstReciept />} />
             <Route path='/main/product' element={<ProductMergePage />} />
-            <Route path='/main/map' element={<ApiLandingPage />} />
+            <Route path='/main/map' element={<ApiMap />} />
           </Route>
           <Route path='*'element={<Nonfound />}/>
         </Routes>
