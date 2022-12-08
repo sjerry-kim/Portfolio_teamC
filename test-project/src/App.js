@@ -33,6 +33,9 @@ function App() {
           <Route path='/main' element={<Main />}>
             <Route index  element={<Portfolio />}/>
             <Route path='/main/portfolio' element={<Portfolio />} />
+
+            <Route path='/main/product/:id' element={<ProductMergePage />} /> 
+
             <Route path='/main/estimation' element={<EstStart /> }/>
             <Route path="/main/question" element={<EstQuestion />} />
             <Route path="/main/result" element={<EstResult />} />

@@ -1,10 +1,10 @@
 export const markerdata = [
-    {
+    {   
         title: "AGIO DESIGN",
         lat: 37.48258884735234,
-        lng: 127.00874262540394,
+        lng: 127.00874262540394
     },
-    {
+    {   
         title: "모노인테리어(Interior Design)",
         lat: 37.55387451075577,
         lng: 126.9139900632512,
