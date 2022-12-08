@@ -49,6 +49,7 @@
     border-right: 1px solid rgba(255, 255, 255, 0.25);
   }
   .homecontactus-forminput {
+    display: inline-block;
     float: left;
     size: 10px;
     font-size: 30px;
@@ -60,4 +61,11 @@
   .homecontactus-checkbox {
     font-size: 20px;
     text-decoration: dashed;
+  }
+  #homecontactus-input{
+    display: inline-block;
+  }
+
+  .homecontactus-checkdiv{
+    display: flex;
   }

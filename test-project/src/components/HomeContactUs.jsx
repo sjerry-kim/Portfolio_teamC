@@ -1,7 +1,26 @@
 import { Button, Form } from "react-bootstrap";
+import React, { useRef } from "react";
+import emailjs from "emailjs-com";
+
 import "../css/HomeContactUs.css";
 
 const HomeContactUs = () => {
+    const form = useRef();
+  
+    const sendEmail = e => {
+      e.preventDefault();
+      const Service_ID = "service_y4raiv3";
+      const Template_ID = "template_sqorybn";
+      const User_ID = "odmr0vvUUkxqQq_1d";
+  
+      emailjs.sendForm(Service_ID, Template_ID, form.current, User_ID).then(
+        result => alert(result.text),
+        error => alert(error.text)
+      );
+      e.currentTarget.reset();
+    };
+  
+
   return (
     <div>
       <h2 className="homecontactus-title">Contact Us</h2>
@@ -19,35 +38,34 @@ const HomeContactUs = () => {
         </div>
       </div>
 
-      <form className="homecontactus-form">
+      <form className="homecontactus-form" ref={form} onSubmit={sendEmail}>
         <div className="homecontactus-formdiv">
-          <label className="homecontactus-formlable">회사 이름</label>
+          <label className="homecontactus-formlables" name="message" required >회사 이름</label>
           <input className="homecontactus-forminput" type="text"></input>
         </div>
 
         <div className="homecontactus-formdiv">
-          <label className="homecontactus-formlable">이름</label>
+          <label className="homecontactus-formlable" name="user_name" required >이름</label>
           <input className="homecontactus-forminput" type="text"></input>
         </div>
 
         <div className="homecontactus-formdiv">
-          <label className="homecontactus-formlable">연락처</label>
+          <label className="homecontactus-formlable" required >연락처</label>
           <input className="homecontactus-forminput" type="text"></input>
         </div>
 
         <div className="homecontactus-formdiv">
-          <label className="homecontactus-formlable">Email</label>
-          <input className="homecontactus-forminput" type="text"></input>@
+          <label className="homecontactus-formlable" name="user_email" required >Email</label>
           <input className="homecontactus-forminput" type="text" />
         </div>
 
-        <div>
-          <input type="checkbox" name="" id="" size={20} />
+        <div className="homecontactus-checkdiv">
+          <input type="checkbox" id="homecontactus-input" size={100} />
           <p className="homecontactus-checkbox">개인정보 동의함</p>
         </div>
 
-        <div>
-          <Button variant="btn btn-outline-light">보내기</Button>
+        <div>       
+        <input type="submit" value="Send" />
         </div>
       </form>
     </div>
