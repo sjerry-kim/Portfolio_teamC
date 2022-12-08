@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import {} from "../css/Portfolio.css";
 
 const Portfolio = () => {
@@ -75,11 +75,13 @@ const Portfolio = () => {
                     vel ansd . Nullam lorem. Nulla eu sodales
                   </span>
 
-                  <button>
-                    <Link to="/product">product</Link>
+                  <button className="portfolio_productPageBtn">
+                    <Link to="/main/product/1" >상세페이지</Link>
                   </button>
+
                 </div>
               </div>
+              <Outlet/>
             </label>
 
             <label for="s2" id="portfolio-slide2">
@@ -93,6 +95,11 @@ const Portfolio = () => {
                     Lorem ipsum dolor sit, adipiscing elit. Aenean vel sit ansd
                     . Nullam lorem. Nulla eu sodales karma stellus
                   </span>
+                  
+                  <button className="portfolio_productPageBtn">
+                    <Link to="/product">상세페이지</Link>
+                  </button>
+                
                 </div>
               </div>
             </label>
@@ -102,12 +109,17 @@ const Portfolio = () => {
                 <div className="portfolio-image">
                   <img src="img/Black Toe Union.jpg" alt="" />
                 </div>
-                <div className="portfolio-infos">
+                <div className="portfolio-infos"> 
                   <span className="portfolio-name">3번째 카드</span>
                   <span className="portfolio-lorem">
                     Lorem ipsum dolor, sit amet let kar adipiscing. Aenean vel
                     velit sit ansd . Nullam lorem. Nulla karma stellus
                   </span>
+
+                  <button className="portfolio_productPageBtn">
+                    <Link to="/product/1">상세페이지</Link>
+                  </button>
+
                 </div>
               </div>
             </label>
@@ -123,6 +135,11 @@ const Portfolio = () => {
                     Lorem ipsum dolor sit, sit amet elit. Aenean sit amet sit
                     amet vel velit sit ansd. Nulla eu sodales stellus
                   </span>
+
+                  <button className="portfolio_productPageBtn">
+                    <Link to="/product">상세페이지</Link>
+                  </button>
+
                 </div>
               </div>
             </label>
@@ -138,6 +155,11 @@ const Portfolio = () => {
                     Lorem ipsum sit amet, sit amet elit. Aenean vel velit ansd .
                     Nullam lorem. Nulla eu sodales stellus
                   </span>
+
+                  <button className="portfolio_productPageBtn">
+                    <Link to="/product">상세페이지</Link>
+                  </button>
+
                 </div>
               </div>
             </label>
@@ -153,6 +175,11 @@ const Portfolio = () => {
                     Lorem ipsum sit amet, sit amet elit. Aenean vel velit ansd .
                     Nullam lorem. Nulla eu sodales stellus
                   </span>
+
+                  <button className="portfolio_productPageBtn">
+                    <Link to="/product">상세페이지</Link>
+                  </button>
+
                 </div>
               </div>
             </label>
@@ -168,6 +195,11 @@ const Portfolio = () => {
                     Lorem ipsum sit amet, sit amet elit. Aenean vel velit ansd .
                     Nullam lorem. Nulla eu sodales stellus
                   </span>
+
+                  <button className="portfolio_productPageBtn">
+                    <Link to="/product">상세페이지</Link>
+                  </button>
+
                 </div>
               </div>
             </label>
@@ -179,11 +211,16 @@ const Portfolio = () => {
                   <img src="img/Off-White x Air Jordan.jpg" alt="" />
                 </div>
                 <div className="portfolio-infos">
-                  <span className="portfolio-name">새로 추가한 8번째 카드</span>
+                  <span className="portfolio-name">8번째 카드</span>
                   <span className="portfolio-lorem">
                     Lorem ipsum sit amet, sit amet elit. Aenean vel velit ansd .
                     Nullam lorem. Nulla eu sodales stellus
                   </span>
+
+                  <button className="portfolio_productPageBtn">
+                    <Link to="/product">상세페이지</Link>
+                  </button>
+                
                 </div>
               </div>
             </label>
@@ -194,11 +231,16 @@ const Portfolio = () => {
                   <img src="img/Off-White x Air Jordan.jpg" alt="" />
                 </div>
                 <div className="portfolio-infos">
-                  <span className="portfolio-name">새로 추가한 9번째 카드</span>
+                  <span className="portfolio-name">9번째 카드</span>
                   <span className="portfolio-lorem">
                     Lorem ipsum sit amet, sit amet elit. Aenean vel velit ansd .
                     Nullam lorem. Nulla eu sodales stellus
                   </span>
+
+                  <button className="portfolio_productPageBtn">
+                    <Link to="/product">상세페이지</Link>
+                  </button>
+
                 </div>
               </div>
             </label>
@@ -208,6 +250,7 @@ const Portfolio = () => {
       </body>
     </div>
   );
+ 
 };
 
 export default Portfolio;
