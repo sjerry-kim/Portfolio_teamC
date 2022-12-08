@@ -11,6 +11,8 @@ const EstResult = () => {
   const [searchParams] = useSearchParams();
   const mbti = searchParams.get("mbti");
 
+  const { state, action } = useContext(DataContext);
+
 
   // 최종적으로 도출한 결과 객체
   const [resultData, setResultData] = useState({});
@@ -19,15 +21,49 @@ const EstResult = () => {
     setResultData(result);
   }, [mbti]);
 
-  useEffect(()=>{
-    window.onpageshow = function(event) {
-      if ( event.persisted || (window.performance && window.performance.navigation.type == 2)) {
-      // Back Forward Cache로 브라우저가 로딩될 경우 혹은 브라우저 뒤로가기 했을 경우
-      alert("히스토리백!!!!");
-              }
-      }
+  // useEffect(()=>{
+  //   window.onpageshow = function(event) {
+  //     if ( event.persisted || (window.performance && window.performance.navigation.type == 2)) {
+  //     // Back Forward Cache로 브라우저가 로딩될 경우 혹은 브라우저 뒤로가기 했을 경우
+  //     alert("히스토리백!!!!");
+  //             }
+  //     }
+  // })
 
-  })
+// 새로고침 막기 변수
+//:BeforeUnloadEvent
+const preventClose = (e) => {
+  e.preventDefault();
+  e.returnValue = ""; // chrome에서는 설정이 필요해서 넣은 코드
+}
+
+// 브라우저에 렌더링 시 한 번만 실행하는 코드
+useEffect(() => {
+  (() => {
+      window.addEventListener("beforeunload", preventClose);    
+  })();
+  return () => {
+      window.removeEventListener("beforeunload", preventClose);
+  };
+},[]);
+
+// 뒤로가기 막기 변수
+const preventGoBack = () => {
+  window.history.pushState(null, "", window.location.href);
+  alert("다시하기 버튼을 눌러주세요");
+};
+
+// 브라우저에 렌더링 시 한 번만 실행하는 코드
+useEffect(() => {
+  (() => {
+      window.history.pushState(null, "", window.location.href);
+      window.addEventListener("popstate", preventGoBack);
+  })();
+  return () => {
+      window.removeEventListener("popstate", preventGoBack);
+  };
+},[]);
+
 
   // 로컬스토리지, 세션!!
   // 새로고침 막기!! 
@@ -51,7 +87,7 @@ const EstResult = () => {
           </div>
           <button onClick={()=>{
             navigate('/main/estimation')
-            window.location.reload();
+            action.setReciept([]);
             }}>다시 하기</button>
         </div>
         
