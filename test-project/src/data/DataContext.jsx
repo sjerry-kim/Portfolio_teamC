@@ -272,6 +272,13 @@ const DataProvider = (({children}) => {
             location: "서울 강남구 도산대로 68길 26",
             number: " 02-543 6566"
         },
+        {
+            id:9,
+            name:"다솔디자인",
+            best : "abC",
+            location: "수정",
+            number: " 수정"
+        },
     ])
 
 
