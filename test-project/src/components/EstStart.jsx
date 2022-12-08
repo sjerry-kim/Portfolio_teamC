@@ -6,9 +6,11 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import EstReciept from "./EstReciept";
 import EstQuestion from "./EstQuestion";
 import EstResult from "./EstResult";
+import { useEffect } from "react";
+import { useState } from "react";
 
 const EstStart = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate();  
 
   const StartClickButton = () => {
     // useHistory 여기서 이동됨
@@ -23,7 +25,7 @@ const EstStart = () => {
         <div className="eststart-LogoImage">
           <img src={PangImage} width={200}></img>
         </div>
-        <div className="eststart-Desc">mbti를 기본으로하는 간편 견적</div>
+        <div className="eststart-Desc">간편 견적</div>
         <button className="eststart-StartBtn" onClick={StartClickButton}>
           견적 짜러가기
         </button>
