@@ -254,7 +254,7 @@ const DataProvider = (({children}) => {
       },
     ])
     */
-
+    
     const [score, setScore] = useState([
         {
             id:1,
@@ -262,9 +262,7 @@ const DataProvider = (({children}) => {
             best : "ABC",
             location: "부산 강서구 유통단지1로 41",
             number: "010-2546-4095",
-            companyImg1:evianCom1,
-            companyImg2:evianCom2,
-            companyImg2:evianCom3,
+            companyImg:[ "evianCom1.jpg", "evianCom2.jpg", "evianCom3.jpg"], //😡
             reviewImg1:evianComRe1,
             reviewImg2:evianComRe2,
             reviewImg3:evianComRe3,
