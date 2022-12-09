@@ -1,13 +1,14 @@
 import { createContext, useState } from "react";
+// 회사 slick 이미지
+import companyImg1 from '../img/companyImg1.jpg';
+import companyImg2 from '../img/companyImg2.jpg';
+import companyImg3 from '../img/companyImg3.jpg';
+// 리뷰 card 이미지
+import reviewImg1 from '../img/reviewImg1.jpg';
+import reviewImg2 from '../img/reviewImg1.jpg';
+import reviewImg3 from '../img/reviewImg1.jpg';
 
-import zipdak  from '../img/zipdak.jpg';
-import modun from '../img/modun.jpg';
-import zipdak3  from '../img/zipdak3.jpg';
-import zipdak4  from '../img/zipdak4.jpg';
-import zipdak5  from '../img/zipdak5.jpg';
-import zipdak6  from '../img/zipdak6.jpg';
-import zipdak7  from '../img/zipdak7.jpg';
-import zipdak8  from '../img/zipdak8.jpg';
+
 import { useNavigate } from "react-router-dom";
 
 
@@ -221,63 +222,171 @@ const DataProvider = (({children}) => {
             name:"에비앙 디자인",
             best : "ABC",
             location: "부산 강서구 유통단지1로 41",
-            number: "010-2546-4095"
+            number: "010-2546-4095",
+            companyImg1:`${companyImg1}`,
+            companyImg2:`${companyImg2}`,
+            companyImg2:`${companyImg3}`,
+            reviewImg1:`${reviewImg1}`,
+            reviewImg2:`${reviewImg2}`,
+            reviewImg3:`${reviewImg3}`,
+            reviewTitle1:"부산인테리어 문현동 한일 오피스텔 로리진 사무실리모델링",
+            reviewTitle2:"부산인테리어 진해 신항만 실내골프장 리모델링",
+            reviewTitle3:"부산 강서구 명지동 롯대캐슬 33py",
+            reviewComment1:"상담부터 시공과정까지 틈틈히 소통해가며 현장 수시방문하여 점검, 케어해 주셨습니다. 사소한 요구사항까지 친절하시고 꼼꼼하게 진행해주시고 원하는 사항을 최대한 반영해 작업해 주셔서 좋았습니다. 다음에 또 의뢰 맡길 의사가 매우 있습니다.",
+            reviewComment2:"집을 계약하고 제일 중요하게 봤던게 인테리어였습니다. 특히 저희 건물은 화장실 타일이랑 전반적으로 상태가 너무 안좋았습니다. 믿고 할수 있는 업체를 찾다가 에비앙 디자인으로 상담을 받았습니다. 저희는 기간이 많이 남아있는데도 너무 친절하게 설명해주시고 저희 리즈를 확실하게 해주셧어요 덕분에 잘 마무리되었습니다! ",
+            reviewComment3:"상담부터 너무 친절하시고 마감도 꼼꼼하게 봐주시고 무엇보다 다른 주변사람들과 비교했을때 퀄리티도 좋았고 가격도 합리적이어서 좋았습니다! 제가 걱정한건 공사끝나고 하자문제였어요 근데 살다보니 어쩔수없이 수리해야 될것들이 있어서 연락드렸더니 바로 와주셔서 너무 만족스러웠어요 공사도 꼼꼼히 해주시고 추후as도 잘해주셔서 감사합니다!",
         },
         {
             id:2,
             name:"제이와이인테리어",
             best : "ABc",
             location: "전라북도 전주시 완산구 공북로",
-            number: "063-252-9631"
+            number: "063-252-9631",
+            companyImg1:"",
+            companyImg2:"",
+            companyImg2:"",
+            reviewImg1:"",
+            reviewImg2:"",
+            reviewImg3:"",
+            reviewTitle1:"",
+            reviewTitle2:"",
+            reviewTitle3:"",
+            reviewComment1:"",
+            reviewComment2:"",
+            reviewComment3:"",
         },
         {
             id:3,
             name:"푸른들인테리어",
             best : "AbC",
             location: "경상남도 김해시 월산로 11",
-            number: "010-7487-7410"
+            number: "010-7487-7410",
+            companyImg1:"",
+            companyImg2:"",
+            companyImg2:"",
+            reviewImg1:"",
+            reviewImg2:"",
+            reviewImg3:"",
+            reviewTitle1:"",
+            reviewTitle2:"",
+            reviewTitle3:"",
+            reviewComment1:"",
+            reviewComment2:"",
+            reviewComment3:"",
         },
         {
             id:4,
             name:"주식회사1204디자인",
             best : "Abc",
             location: "광주광역시 광산구 왕버들로 101",
-            number: "1666-1204"
+            number: "1666-1204",
+            companyImg1:"",
+            companyImg2:"",
+            companyImg2:"",
+            reviewImg1:"",
+            reviewImg2:"",
+            reviewImg3:"",
+            reviewTitle1:"",
+            reviewTitle2:"",
+            reviewTitle3:"",
+            reviewComment1:"",
+            reviewComment2:"",
+            reviewComment3:"",
         },
         {
             id:5,
             name:"Agio Design",
             best : "aBC",
             location: "서울특별시 서초구 효령로46길 22",
-            number: "02-517-5001"
+            number: "02-517-5001",
+            companyImg1:"",
+            companyImg2:"",
+            companyImg2:"",
+            reviewImg1:"",
+            reviewImg2:"",
+            reviewImg3:"",
+            reviewTitle1:"",
+            reviewTitle2:"",
+            reviewTitle3:"",
+            reviewComment1:"",
+            reviewComment2:"",
+            reviewComment3:"",
         },
         {
             id:6,
             name:"모노 인테리어",
             best : "aBc",
             location: "서울 마포구 양화로7길 74",
-            number: " 02-3144-7339"
+            number: " 02-3144-7339",
+            companyImg1:"",
+            companyImg2:"",
+            companyImg2:"",
+            reviewImg1:"",
+            reviewImg2:"",
+            reviewImg3:"",
+            reviewTitle1:"",
+            reviewTitle2:"",
+            reviewTitle3:"",
+            reviewComment1:"",
+            reviewComment2:"",
+            reviewComment3:"",
         },
         {
             id:7,
             name:"다원 디자인",
             best : "abc",
             location: "서울특별시 강남구 테헤란로 16길 12",
-            number: " 02-3468-5800"
+            number: " 02-3468-5800",
+            companyImg1:"",
+            companyImg2:"",
+            companyImg2:"",
+            reviewImg1:"",
+            reviewImg2:"",
+            reviewImg3:"",
+            reviewTitle1:"",
+            reviewTitle2:"",
+            reviewTitle3:"",
+            reviewComment1:"",
+            reviewComment2:"",
+            reviewComment3:"",
         },
         {
             id:8,
             name:"이다스 건축 인테리어",
             best : "abC",
             location: "서울 강남구 도산대로 68길 26",
-            number: " 02-543 6566"
+            number: " 02-543 6566",
+            companyImg1:"",
+            companyImg2:"",
+            companyImg2:"",
+            reviewImg1:"",
+            reviewImg2:"",
+            reviewImg3:"",
+            reviewTitle1:"",
+            reviewTitle2:"",
+            reviewTitle3:"",
+            reviewComment1:"",
+            reviewComment2:"",
+            reviewComment3:"",
         },
         {
             id:9,
             name:"다솔디자인",
             best : "abC",
             location: "수정",
-            number: " 수정"
+            number: " 수정",
+            companyImg1:"",
+            companyImg2:"",
+            companyImg2:"",
+            reviewImg1:"",
+            reviewImg2:"",
+            reviewImg3:"",
+            reviewTitle1:"",
+            reviewTitle2:"",
+            reviewTitle3:"",
+            reviewComment1:"",
+            reviewComment2:"",
+            reviewComment3:"",
         },
     ])
 
