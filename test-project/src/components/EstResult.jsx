@@ -12,7 +12,9 @@ const EstResult = () => {
   const mbti = searchParams.get("mbti");
 
   const { state, action } = useContext(DataContext);
-  const reciept = JSON.stringify(state.reciept);
+  let reciept = JSON.stringify(state.reciept);
+  
+  // JSON.parse(reciept)
 
 
 
@@ -68,13 +70,15 @@ useEffect(() => {
 
   useEffect(()=>{
     console.log(reciept)
-    sessionStorage.setItem("reciept", reciept)
+    localStorage.setItem("reciept", reciept)
     console.log(reciept)
   },[reciept])
 
   useEffect(()=>{
-    sessionStorage.getItem(JSON.parse(reciept))
-  },[])
+    let a = localStorage.getItem("reciept");
+    let b = JSON.parse(a);
+    console.log(b);
+  })
 
   // 뒤로가기는 막고, 새로고침은 세션스토리지에 저장된 값 불러오기
 
