@@ -12,6 +12,8 @@ const EstResult = () => {
   const mbti = searchParams.get("mbti");
 
   const { state, action } = useContext(DataContext);
+  const reciept = JSON.stringify(state.reciept);
+
 
 
   // 최종적으로 도출한 결과 객체
@@ -64,10 +66,17 @@ useEffect(() => {
   };
 },[]);
 
+  useEffect(()=>{
+    console.log(reciept)
+    sessionStorage.setItem("reciept", reciept)
+    console.log(reciept)
+  },[reciept])
 
-  // 로컬스토리지, 세션!!
-  // 새로고침 막기!! 
-  // 뒤로가기 했을 때, 처음부터 나오게 해보기!!!
+  useEffect(()=>{
+    sessionStorage.getItem(JSON.parse(reciept))
+  },[])
+
+  // 뒤로가기는 막고, 새로고침은 세션스토리지에 저장된 값 불러오기
 
 
   // 🌼🌼🌼 result창에서 새로고침 시 영수증 내용이 사라짐 >> 확인 필요 🌼🌼🌼
