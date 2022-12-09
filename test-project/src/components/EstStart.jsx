@@ -2,10 +2,7 @@ import React from "react";
 // css-in-js
 import PangImage from "../img/Logo.png";
 import "../css/EstStart.css";
-import { Route, Routes, useNavigate } from "react-router-dom";
-import EstReciept from "./EstReciept";
-import EstQuestion from "./EstQuestion";
-import EstResult from "./EstResult";
+import {useNavigate } from "react-router-dom";
 
 const EstStart = () => {
   const navigate = useNavigate();

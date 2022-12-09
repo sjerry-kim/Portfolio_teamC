@@ -1,5 +1,4 @@
-import { useContext, useEffect, useState } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useContext} from "react";
 import DataContext from "../data/DataContext";
 import "../css/EstReciept.css";
 

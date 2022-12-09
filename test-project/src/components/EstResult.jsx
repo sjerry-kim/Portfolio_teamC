@@ -34,44 +34,45 @@ const EstResult = () => {
             나에게 어울리는 업체 "{resultData.name}"{" "}
           </div>
         </div>
-        
-      
-      <div className="estresult-all-box">
-        <span className="estresult-Reciept-box">
-          {/* <a href={data.state.score[].src}>업체 보러가기</a> */}
-          <button
-            className="estresult-ReStartBtn"
-            onClick={() => {
-              console.log(resultData.best);
-              const a = resultData.best;
-              switch (a) {
-                case "ABC":
-                  return window.open("http://eviandesign.edenstore.co.kr/");
-                case "ABc":
-                  return window.open("https://jy-interiordesign.com/");
-                case "AbC":
-                  return window.open("http://www.xn--4k0bq0t9ujvwbpxvm6f.kr/");
-                case "Abc":
-                  return window.open("https://www.1204design.co.kr/");
-                case "aBC":
-                  return window.open("https://www.agiodesign.co.kr/");
-                case "aBc":
-                  return window.open("http://www.monointerior.co.kr/");
-                case "abc":
-                  return window.open("http://www.dawon.com/wen/index.php?v=220209");
-                case "abC":
-                  return window.open("http://idas.kr/");
-              }
-            }}
-          >
-            업체보러가기
-          </button>
-          {/** 다시짜기하면 넘처서 안될듯*/}
-        </span>
-       
-        
-      </div>
-      <EstReciept/>
+
+        <div className="estresult-all-box">
+          <span className="estresult-Reciept-box">
+            {/* <a href={data.state.score[].src}>업체 보러가기</a> */}
+            <button
+              className="estresult-ReStartBtn"
+              onClick={() => {
+                console.log(resultData.best);
+                const a = resultData.best;
+                switch (a) {
+                  case "ABC":
+                    return window.open("http://eviandesign.edenstore.co.kr/");
+                  case "ABc":
+                    return window.open("https://jy-interiordesign.com/");
+                  case "AbC":
+                    return window.open(
+                      "http://www.xn--4k0bq0t9ujvwbpxvm6f.kr/"
+                    );
+                  case "Abc":
+                    return window.open("https://www.1204design.co.kr/");
+                  case "aBC":
+                    return window.open("https://www.agiodesign.co.kr/");
+                  case "aBc":
+                    return window.open("http://www.monointerior.co.kr/");
+                  case "abc":
+                    return window.open(
+                      "http://www.dawon.com/wen/index.php?v=220209"
+                    );
+                  case "abC":
+                    return window.open("http://idas.kr/");
+                }
+              }}
+            >
+              업체보러가기
+            </button>
+            {/** 다시짜기하면 넘처서 안될듯*/}
+          </span>
+        </div>
+        <EstReciept />
       </div>
     </div>
   );
