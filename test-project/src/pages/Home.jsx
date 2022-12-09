@@ -43,7 +43,8 @@ const Home = () => {
 
   return (
     <div className="home-slick-div">
-      <div className="home-arrow"></div>
+
+
       <div id="home-container">
         <div id="home-container2">
           <Slider className="home-main-slick" {...settings2} ref={slider}>
@@ -54,7 +55,11 @@ const Home = () => {
         </div>
       </div>
       {/** 🌼 스크롤 이미지(?) 사라짐 확인 😁 */}
-      <div className="home-scroll-txt">Scroll</div> 
+      <div className="home-arrow-container">
+        <div className="home-scroll-txt">Scroll</div>
+        <div className="home-arrow"></div>
+        </div>
+        
       <img src={require("../img/logo_white.png")} className="home-logo" width="170" alt="" />
       
       <div id="outer-container">
