@@ -9,6 +9,14 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
+import { useParams } from "react-router";
+import { useContext } from "react";
+import DataContext from "../data/DataContext";
+
+
+
+
+
 
 const ShopSlick = () => {
   const settings = {
@@ -25,23 +33,27 @@ const ShopSlick = () => {
     // prevArrow: <PrevArrow />,
   };
 
-  const img = [
-    { img: "house01.jpg", title: "업체1", desc: "설명1" },
-    { img: "house02.jpg", title: "업체2", desc: "설명2" },
-    { img: "house03.jpg", title: "업체3", desc: "설명3" },
-  ];
+
+  const { id } = useParams();
+  const { state } = useContext(DataContext);
+  const shop = state.score.find((r) => r.id == id);
+
+
 
   return (
+
+
     <Slider className="Product-Slider product-slick-slide" {...settings}>
-      {img.map((img, index) => (
+      {shop.companyImg.map((item, index) => (
         <div key={index} className="Product-shopimg">
-          <img src={require(`../img/${img.img}`)} />
+          <img src={require(`../img/${item}`)} />
           <div className="Product-logo">
-            <h2>{img.title}</h2>
-            <p>{img.desc}</p>
+            <h2></h2>
           </div>
         </div>
       ))}
+
+
       {/* <div className="shopimg">
           <img src={house02}></img>
         </div>
