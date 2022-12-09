@@ -47,25 +47,32 @@
     box-sizing: border-box;
     vertical-align: top;
     border-right: 1px solid rgba(255, 255, 255, 0.25);
+
   }
   .homecontactus-forminput {
     display: inline-block;
     float: left;
     size: 10px;
     font-size: 30px;
-    padding: 8px 5px;
+    padding: 10px 5px;
     background: transparent;
-    border: 0;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
     box-sizing: border-box;
   }
   .homecontactus-checkbox {
     font-size: 20px;
     text-decoration: dashed;
+    margin: 20px 0 20px 0px;
+    padding: 0 15px 0  15px;
+
   }
   #homecontactus-input{
     display: inline-block;
   }
 
   .homecontactus-checkdiv{
+    
     display: flex;
+    padding-left: 25px;
   }
