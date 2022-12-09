@@ -5,9 +5,9 @@
   background: #9cbebd;
 } */
 .top {
-  width: 100%;
   height: 102vh;
-  background-color: pink;
+  background-image: url(../img/backgroundImg4.jpg);
+  background-size: cover;
 }
 /* ShopSlick 부분 */
 
@@ -18,7 +18,7 @@
 }
 
 .slick-slide {
-  width: 80%;
+  width: 100%;
   height: 100vh;
   box-sizing: border-box;
 }
