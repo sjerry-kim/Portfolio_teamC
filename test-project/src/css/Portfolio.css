@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: bisque;
+    background-color: lavender;
     overflow-x: hidden;
     font-family: 'Urbanist', sans-serif;
     width: 100vw;
@@ -101,7 +101,7 @@
 .portfolio-infos .portfolio-name{
 
     font-size: 30px;
-    color: var(--current-color1);
+    color: darkblue;
     letter-spacing: 8px;
     margin-bottom: 20px;
     padding-left: 25%;
@@ -144,6 +144,36 @@
     transition: all .7s ease;
     color: var(--current-color2);
 }
+
+
+
+.portfolio_productPageBtn a{
+    text-align: center;
+    text-decoration-line: none;/* 링크의 밑줄 제거 */
+    color: inherit; /* 링크의 색상 제거 */
+}
+
+.portfolio_productPageBtn a:hover{
+    color: cornflowerblue;
+}
+
+.portfolio_productPageBtn{
+    position: relative;
+    border: none;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+    background-color: aliceblue;
+    color: slateblue
+}
+
+
+
 
 
 

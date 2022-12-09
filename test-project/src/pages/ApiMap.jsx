@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import ApiMapContainer from "./ApiMapcontainer";
-import "../css/ApiLandingPage.css";
-function ApiLandingPage() {
+import ApiMapContainer from "../components/ApiMapcontainer";
+import "../css/ApiMap.css";
+function ApiMap() {
   const [InputText, setInputText] = useState("");
   const [Place, setPlace] = useState("");
 
@@ -46,4 +46,4 @@ function ApiLandingPage() {
   );
 }
 
-export default ApiLandingPage;
+export default ApiMap;
