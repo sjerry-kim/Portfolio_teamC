@@ -11,12 +11,14 @@ const EstResult = () => {
   const [searchParams] = useSearchParams();
   const mbti = searchParams.get("mbti");
 
+  // DataContext 
   const { state, action } = useContext(DataContext);
-  let reciept = JSON.stringify(state.reciept);
-  
-  // JSON.parse(reciept)
 
-
+  // 세션스토리지
+  // const reciept = JSON.stringify(state.reciept);
+  // const [sessionReciept, setSessionReciept] = useState(
+  //   ()=>JSON.parse(window.sessionStorage.getItem("sessionreciept"))
+  // ); 
 
   // 최종적으로 도출한 결과 객체
   const [resultData, setResultData] = useState({});
@@ -24,15 +26,6 @@ const EstResult = () => {
     const result = data.state.score.find((s) => s.best === mbti);
     setResultData(result);
   }, [mbti]);
-
-  // useEffect(()=>{
-  //   window.onpageshow = function(event) {
-  //     if ( event.persisted || (window.performance && window.performance.navigation.type == 2)) {
-  //     // Back Forward Cache로 브라우저가 로딩될 경우 혹은 브라우저 뒤로가기 했을 경우
-  //     alert("히스토리백!!!!");
-  //             }
-  //     }
-  // })
 
 // 새로고침 막기 변수
 //:BeforeUnloadEvent
@@ -68,22 +61,13 @@ useEffect(() => {
   };
 },[]);
 
-  useEffect(()=>{
-    console.log(reciept)
-    localStorage.setItem("reciept", reciept)
-    console.log(reciept)
-  },[reciept])
+// // 세션스토리지
+//   useEffect(()=>{
+//     console.log(data.state.sessionReciept)
+//     sessionStorage.setItem("sessionReciept", reciept)
+//   },[])
 
-  useEffect(()=>{
-    let a = localStorage.getItem("reciept");
-    let b = JSON.parse(a);
-    console.log(b);
-  })
-
-  // 뒤로가기는 막고, 새로고침은 세션스토리지에 저장된 값 불러오기
-
-
-  // 🌼🌼🌼 result창에서 새로고침 시 영수증 내용이 사라짐 >> 확인 필요 🌼🌼🌼
+  // 🌼🌼🌼 뒤로가기는 막고, 새로고침은 세션스토리지에 저장된 값 불러오기 🌼🌼🌼
 
   return (
     <div>
