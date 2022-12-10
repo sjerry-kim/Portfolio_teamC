@@ -9,7 +9,6 @@ const EstStart = () => {
   const navigate = useNavigate();  
 
   const StartClickButton = () => {
-    // useHistory 여기서 이동됨
     navigate("/main/question");
   };
 

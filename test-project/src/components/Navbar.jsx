@@ -10,6 +10,7 @@ const Navbar = () => {
       <Link to='/'>today design</Link>
       <Link to='/main/portfolio'>Portfolio</Link>
       <Link to='/main/estimation' onClick={()=>{action.setReciept([]);}}>Estimation</Link>
+      <Link to='/main/map'>Map</Link>
     </div>
   );
 }

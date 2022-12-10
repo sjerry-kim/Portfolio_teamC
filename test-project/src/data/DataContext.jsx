@@ -431,8 +431,8 @@ const DataProvider = (({children}) => {
 
 
     const value = {
-        state: { comment, question, reciept, score },
-        action: { setComment, setQuestion, setReciept, setScore }
+        state: { comment, question, reciept, score,},
+        action: { setComment, setQuestion, setReciept, setScore,}
     }
     return (
       <DataContext.Provider value={value}>
