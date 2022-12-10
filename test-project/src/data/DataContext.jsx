@@ -1,28 +1,9 @@
 import { createContext, useState } from "react";
+
 // 회사 slick 이미지
-import evianCom1 from '../img/evianCom1.jpg';
-import evianCom2 from '../img/evianCom2.jpg';
-import evianCom3 from '../img/evianCom3.jpg';
-
-import jyCom1 from '../img/jyCom1.jpg';
-import jyCom2 from '../img/jyCom2.jpg';
-import jyCom3 from '../img/jyCom3.jpg';
-
 import purenCom1 from '../img/purenCom1.jpg';
 import purenCom2 from '../img/purenCom2.JPG';
-
-import dasoleCom1 from '../img/dasoleCom1.JPG';
-import dasoleCom2 from '../img/dasoleCom2.JPG';
-import dasoleCom3 from '../img/dasoleCom3.JPG';
-
-import idasCom1 from '../img/idasCom1.JPG';
-import idasCom2 from '../img/idasCom2.JPG';
-import idasCom3 from '../img/idasCom3.JPG';
-
-import dawonCom1 from '../img/dawonCom1.JPG';
-import dawonCom2 from '../img/dawonCom2.JPG';
-import dawonCom3 from '../img/dawonCom3.JPG';
-
+// ❗️회사 slick 이미지 데이터 삽입방식 변경했습니다 -진혜-❗️
 
 // 리뷰 card 이미지
 import evianComRe1 from '../img/evianComRe1.jpg';
@@ -170,90 +151,6 @@ const DataProvider = (({children}) => {
     ])
     
     // 
-
-    // 결과 정보
-    /*
-    const [result, setResult] = useState([
-        {
-            id: 1,
-            title: "A",
-            type: "아파트",
-            wallpaper: "사제",
-            sash:"해당 없음",
-            floor: "해당 없음",
-            veranda:"해당 없음",
-            roomdoor:"해당 없음",
-            frontdoor:"해당 없음",
-            light:"해당 없음",
-            price:"500만 원 미만"
-        },
-        {
-            id: 2,
-            title: "B",
-            type: "빌라",
-            wallpaper: "브랜드",
-            sash:"전체",
-            floor: "실크",
-            veranda:"거실 확장",
-            roomdoor:"전체",
-            frontdoor:"신발장",
-            light:"전체 교체",
-            price:"1,000만 원 대"
-        },
-        {
-            id: 3,
-            title: "C",
-            type: "단독주택",
-            wallpaper: "사제",
-            sash:"도기",
-            floor: "합지",
-            veranda:"방 확장",
-            roomdoor:"부분",
-            frontdoor:"타일",
-            light:"등",
-            price:"2,000만 원 대"
-        },
-        {
-            id: 4,
-            title: "D",
-            type: "오피스텔",
-            wallpaper: "사제",
-            sash:"타일",
-            floor: "대리석",
-            veranda:"단올림",
-            roomdoor:"필름",
-            frontdoor:"중문",
-            light:"스위치",
-            price:"3,000만 원 대"
-        },
-        {
-            id: 5,
-            title: "E",
-            type: "상가",
-            wallpaper: "사제",
-            sash:"기타",
-            floor: "기타",
-            veranda:"기타",
-            roomdoor:"기타",
-            frontdoor:"기타",
-            light:"해당 없음",
-            price:"4,000만 원대 이상"
-        },
-        {
-            id: 6,
-            title: "F",
-            type: "상가",
-            wallpaper: "사제",
-            sash:"기타",
-            floor: "기타",
-            veranda:"기타",
-            roomdoor:"기타",
-            frontdoor:"기타",
-            light:"해당 없음",
-            price:"4,000만 원대 이상"
-      },
-    ])
-    */
     
     const [score, setScore] = useState([
         {
@@ -279,9 +176,7 @@ const DataProvider = (({children}) => {
             best : "ABc",
             location: "전라북도 전주시 완산구 공북로",
             number: "063-252-9631",
-            companyImg1:jyCom1,
-            companyImg2:jyCom2,
-            companyImg2:jyCom3,
+            companyImg:[ "jyCom1.jpg", "jyCom2.jpg", "jyCom3.jpg"],
             reviewImg1:jyComRe1,
             reviewImg2:jyComRe2,
             reviewImg3:jyComRe3,
@@ -374,9 +269,7 @@ const DataProvider = (({children}) => {
             best : "abc",
             location: "서울시 강남구 테헤란로 16길 다원빌딩 12F",
             number: "02-3468-5800",
-            companyImg1: dawonCom1,
-            companyImg2: dawonCom2,
-            companyImg2: dawonCom3,
+            companyImg:[ "dawonCom1.jpg", "dawonCom2.jpg", "dawonCom3.jpg"],
             reviewImg1: dawonComRe1,
             reviewImg2: dawonComRe2,
             reviewImg3: dawonComRe3,
@@ -393,9 +286,7 @@ const DataProvider = (({children}) => {
             best : "abC",
             location: "서울 강남구 도산대로 68길 26 IDAS 빌딩 1F/2F",
             number: "+82-2-543 6566",
-            companyImg1: idasCom1,
-            companyImg2: idasCom2,
-            companyImg2: idasCom3,
+            companyImg:[ "idasCom1.jpg", "idasCom2.jpg", "idasCom3.jpg"],
             reviewImg1: idasComRe1,
             reviewImg2: idasComRe2,
             reviewImg3: idasComRe3,
@@ -413,9 +304,7 @@ const DataProvider = (({children}) => {
             best : "abC",
             location: "서울시 서초구 명달로 104, 모차르트빌딩 7F",
             number: "02.535.3431  02.535.3432   070.4279.0800",
-            companyImg1: dasoleCom1,
-            companyImg2: dasoleCom2,
-            companyImg2: dasoleCom3,
+            companyImg:[ "dasoleCom1.jpg", "dasoleCom2.jpg", "dasoleCom3.jpg"],
             reviewImg1: dasoleComRe1,
             reviewImg2: dasoleComRe2,
             reviewImg3: dasoleComRe3,
