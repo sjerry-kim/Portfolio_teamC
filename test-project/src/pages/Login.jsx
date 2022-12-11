@@ -4,18 +4,17 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
 import { getAuth, GoogleAuthProvider, signInWithPopup, 
-        onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
+        onAuthStateChanged, signInWithEmailAndPassword, signOut, EmailAuthProvider } from "firebase/auth";
 import { auth } from "../data/firebase";
 import '../css/Login.css';
+import DataContext from "../data/DataContext";
 
 const User = {
     email: 'test@example.com',
     pw: 'test8361@'
 }
 
-
 const Login = () => {
-
     const navigate = useNavigate();
     const CreateButton = () => {
         // 회원가입창 경로
@@ -43,7 +42,8 @@ const Login = () => {
                         photo: user.photoURL
                     }
                 });
-
+                // 로컬스토리지에 로그인 상태 저장
+                window.localStorage.setItem('login',true);
                 // 원하는 값들 확인 가능
                 console.log(user)
                 console.log(user.email) // 이메일
@@ -57,7 +57,6 @@ const Login = () => {
                 const email = error.customData.email;
                 // 
                 const credential = GoogleAuthProvider.credentialFromError(error);
-
             });
     };
 
@@ -84,22 +83,46 @@ const Login = () => {
         });
     },[])
 
+    const emailLogin = async () => {
+        const auth = getAuth();
+        // const provider = new EmailAuthProvider();
+        // signInWithEmailAndPassword(auth,provider)
+        //     .then((result)=>{
+        //         const credential = EmailAuthProvider.credentialFromResult(result);
+        //         const token = credential.accessToken;
+        //         const user = result.user;
+        //         action.setLogin("로그인성공");
+        //     })
+        //     .catch((error)=>{
+        //         // 
+        //         const errorCode = error.code;
+        //         const errorMessage = error.message;
+        //         // 
+        //         const email = error.customData.email;
+        //         // 
+        //         //const credential = EmailAuthProvider.credentialFromError(error);
+        //         console.log("로그인실패")
+        //     });
 
-
-    const login = async () => {
-        try {
-            const user = await signInWithEmailAndPassword(
+        try{
+            const userInfo = await signInWithEmailAndPassword(
                 auth,
                 email,
                 pw
             );
-            console.log(user);
-        } catch (error) {
+            // setUser(userInfo.user);
+            // 로컬스토리지에 로그인 상태 저장
+            window.localStorage.setItem('login',true);
+            navigate('/');
+        }catch(error) {
             console.log(error.message);
         }
     };
-    const logout = async () => {
+
+    const emailLogout = async () => {
         await signOut(auth);
+        // 로컬스토리지에 로그인 상태 저장
+        window.localStorage.setItem('login',false);
     };
 
 
@@ -215,10 +238,10 @@ const Login = () => {
                     </div>
                     <div>
                         {/* disabled 버튼활성화 체크*/}
-                        <button disabled={notAllow} className="login-LoginButton" onClick={login}>로그인</button>
+                        <button disabled={notAllow} className="login-LoginButton" onClick={emailLogin}>로그인</button>
                         <div>User Logged In:</div>
                         <div>{user?.email}</div>
-                        <button onClick={logout}>로그아웃</button>
+                        <button onClick={emailLogout}>로그아웃</button>
                     </div>
                     <div>
                         <button className="login-LoginGoogle" onClick={googleLogin}>구글로 로그인</button>

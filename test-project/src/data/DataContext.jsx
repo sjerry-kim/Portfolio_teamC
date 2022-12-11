@@ -31,7 +31,7 @@ import dawonComRe3 from '../img/dawonComRe3.JPG';
 
 import { useNavigate } from "react-router-dom";
 
-
+// createContext
 const DataContext = createContext();
 
 const DataProvider = (({children}) => {
@@ -39,9 +39,8 @@ const DataProvider = (({children}) => {
     // Portfolio & Product 
     const [comment, setComment] = useState([]);
 
-
     // Estimation
-    // 간편견적 결과 페이지 이동
+    // 간편견적 결과 페이지 이동 -> 이거 왜 있음? 삭제해도 되는지 확인하기
     const navigate = useNavigate();
 
     // Receipt 리스트 정보

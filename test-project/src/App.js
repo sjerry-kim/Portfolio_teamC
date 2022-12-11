@@ -17,9 +17,13 @@ import Join from './pages/Join';
 // DataContext import
 import { DataProvider } from './data/DataContext'
 
+// firebase
+import CreateID from './pages/CreateID';
+import "./data/firebase";
+
 // Media Query import - 가장 아래 import 유지
 import './css/MediaQuery.css';
-import CreateID from './pages/CreateID';
+
 
 
 function App() {
