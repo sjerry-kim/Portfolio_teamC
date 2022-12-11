@@ -97,11 +97,32 @@ const EstQuestion = () => {
 
   };
 
+  // 뒤로가기 막기 변수
+const preventGoBack = () => {
+  window.history.pushState(null, "", window.location.href);
+  alert("새로고침 버튼을 눌러주세요");
+};
+
+// 브라우저에 렌더링 시 한 번만 실행하는 코드
+useEffect(() => {
+  (() => {
+      window.history.pushState(null, "", window.location.href);
+      window.addEventListener("popstate", preventGoBack);
+  })();
+  return () => {
+      window.removeEventListener("popstate", preventGoBack);
+  };
+},[]);
+
   // 🌼🌼🌼 question 진행 중 새로고침 시 가장 첫 번째 문제로 돌아감 => 확인 필요 🌼🌼🌼
 
   return (
     <div className="estquestion-Wrapper">
-      <div className="estquestion-progressbox"></div>
+      {
+        window.localStorage.getItem('login') === 'true' ?
+        (
+          <div>
+            <div className="estquestion-progressbox"></div>
       <ProgressBar
         style={{
           height: "1%",
@@ -284,6 +305,12 @@ const EstQuestion = () => {
         </div>
       </form>
       <EstReciept />
+          </div>
+        )
+        :
+        
+        <h3 style={{textAlign: "center"}}>로그인하세요</h3>
+      }      
     </div>
   );
 };
