@@ -1,0 +1,8 @@
+.api-inputForm {
+  position: absolute;
+  margin-right: 400px;
+}
+
+.api-input:focus {
+  outline: none;
+}
