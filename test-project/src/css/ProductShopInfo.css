@@ -1,5 +1,5 @@
 .Product-shopInfo {
-  background-color: blueviolet;
+  background-color: lightgrey;
   height: 102vh;
   box-sizing: border-box;
 }
@@ -24,6 +24,17 @@
   width: 600px;
   height: 600px;
   margin-left: 2%;
+}
+
+h2 {
+  width: 330px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h2 > img{
+  width: 35%;
 }
 
 /*
