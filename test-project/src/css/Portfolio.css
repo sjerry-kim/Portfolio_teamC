@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: bisque;
+    background-color: lavender;
     overflow-x: hidden;
     font-family: 'Urbanist', sans-serif;
     width: 100vw;
@@ -101,7 +101,7 @@
 .portfolio-infos .portfolio-name{
 
     font-size: 30px;
-    color: var(--current-color1);
+    color: darkblue;
     letter-spacing: 8px;
     margin-bottom: 20px;
     padding-left: 25%;
@@ -147,29 +147,51 @@
 
 
 
-#s1:checked~.portfolio-cards #portfolio-slide5,
-#s2:checked~.portfolio-cards #portfolio-slide6,
-#s3:checked~.portfolio-cards #portfolio-slide7,
-#s4:checked~.portfolio-cards #portfolio-slide1,
-#s5:checked~.portfolio-cards #portfolio-slide2,
-#s6:checked~.portfolio-cards #portfolio-slide3,
-#s7:checked~.portfolio-cards #portfolio-slide4{
-    box-shadow: 0 15px 35px 0 rgba(0, 0, 0, 45%);
-    transform: translate3d(0,-99%,  -320px);
-    --current-color1: #ECEAED;
-    --current-color2: #404457;
+.portfolio_productPageBtn a{
+    text-align: center;
+    text-decoration-line: none;/* 링크의 밑줄 제거 */
+    color: inherit; /* 링크의 색상 제거 */
 }
+
+.portfolio_productPageBtn a:hover{
+    color: cornflowerblue;
+}
+
+.portfolio_productPageBtn{
+    position: relative;
+    border: none;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+    background-color: aliceblue;
+    color: slateblue
+}
+
+
+
+
+
+
+
 
 
 #s1:checked~.portfolio-cards #portfolio-slide6,
 #s2:checked~.portfolio-cards #portfolio-slide7,
-#s3:checked~.portfolio-cards #portfolio-slide1,
-#s4:checked~.portfolio-cards #portfolio-slide2,
-#s5:checked~.portfolio-cards #portfolio-slide3,
-#s6:checked~.portfolio-cards #portfolio-slide4, 
-#s7:checked~.portfolio-cards #portfolio-slide5{
+#s3:checked~.portfolio-cards #portfolio-slide8,
+#s4:checked~.portfolio-cards #portfolio-slide9,
+#s5:checked~.portfolio-cards #portfolio-slide1,
+#s6:checked~.portfolio-cards #portfolio-slide2, 
+#s7:checked~.portfolio-cards #portfolio-slide3,
+#s8:checked~.portfolio-cards #portfolio-slide4,
+#s9:checked~.portfolio-cards #portfolio-slide5
+{
     box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 45%);
-    transform: translate3d(0,-66%, -220px);
+    transform: translate3d(0,-100%, -420px);
     --current-color1: #ECEAED;
     --current-color2: #404457;
 }
@@ -177,17 +199,57 @@
 
 
 #s1:checked~.portfolio-cards #portfolio-slide7,
-#s2:checked~.portfolio-cards #portfolio-slide1,
-#s3:checked~.portfolio-cards #portfolio-slide2,
-#s4:checked~.portfolio-cards #portfolio-slide3,
-#s5:checked~.portfolio-cards #portfolio-slide4,
-#s6:checked~.portfolio-cards #portfolio-slide5, 
-#s7:checked~.portfolio-cards #portfolio-slide6{
+#s2:checked~.portfolio-cards #portfolio-slide8,
+#s3:checked~.portfolio-cards #portfolio-slide9,
+#s4:checked~.portfolio-cards #portfolio-slide1,
+#s5:checked~.portfolio-cards #portfolio-slide2,
+#s6:checked~.portfolio-cards #portfolio-slide3, 
+#s7:checked~.portfolio-cards #portfolio-slide4,
+#s8:checked~.portfolio-cards #portfolio-slide5,
+#s9:checked~.portfolio-cards #portfolio-slide6
+{
     box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 45%);
-    transform: translate3d(0,-33%, -120px);
+    transform: translate3d(0,-75%, -320px);
     --current-color1: #ECEAED;
     --current-color2: #404457;
 }
+
+
+#s1:checked~.portfolio-cards #portfolio-slide8,
+#s2:checked~.portfolio-cards #portfolio-slide9,
+#s3:checked~.portfolio-cards #portfolio-slide1,
+#s4:checked~.portfolio-cards #portfolio-slide2,          
+#s5:checked~.portfolio-cards #portfolio-slide3,
+#s6:checked~.portfolio-cards #portfolio-slide4, 
+#s7:checked~.portfolio-cards #portfolio-slide5,
+#s8:checked~.portfolio-cards #portfolio-slide6,
+#s9:checked~.portfolio-cards #portfolio-slide7{
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 45%);
+    transform: translate3d(0,-50%, -220px);
+    --current-color1: #ECEAED;
+    --current-color2: #404457;
+}
+
+
+#s1:checked~.portfolio-cards #portfolio-slide9,
+#s2:checked~.portfolio-cards #portfolio-slide1,
+#s3:checked~.portfolio-cards #portfolio-slide2,
+#s4:checked~.portfolio-cards #portfolio-slide3,     
+#s5:checked~.portfolio-cards #portfolio-slide4,
+#s6:checked~.portfolio-cards #portfolio-slide5, 
+#s7:checked~.portfolio-cards #portfolio-slide6,
+#s8:checked~.portfolio-cards #portfolio-slide7,
+#s9:checked~.portfolio-cards #portfolio-slide8
+{
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 45%);
+    transform: translate3d(0,-25%, -120px);
+    --current-color1: #ECEAED;
+    --current-color2: #404457;
+}
+
+
+
+
 
 
 #s1:checked~.portfolio-cards #portfolio-slide1,
@@ -196,7 +258,10 @@
 #s4:checked~.portfolio-cards #portfolio-slide4,
 #s5:checked~.portfolio-cards #portfolio-slide5,
 #s6:checked~.portfolio-cards #portfolio-slide6, 
-#s7:checked~.portfolio-cards #portfolio-slide7{
+#s7:checked~.portfolio-cards #portfolio-slide7,
+#s8:checked~.portfolio-cards #portfolio-slide8,
+#s9:checked~.portfolio-cards #portfolio-slide9
+{
     box-shadow: 5px 5px 5px 0px grey;
 -webkit-box-shadow: 5px 5px 5px 0px grey;
 -moz-box-shadow: 5px 5px 5px 0px grey;
@@ -213,11 +278,14 @@
 #s4:checked~.portfolio-cards #portfolio-slide5,
 #s5:checked~.portfolio-cards #portfolio-slide6,
 #s6:checked~.portfolio-cards #portfolio-slide7, 
-#s7:checked~.portfolio-cards #portfolio-slide1{
+#s7:checked~.portfolio-cards #portfolio-slide8,
+#s8:checked~.portfolio-cards #portfolio-slide9,
+#s9:checked~.portfolio-cards #portfolio-slide1
+{
     box-shadow: 5px 5px 5px 0px grey;
 -webkit-box-shadow: 5px 5px 5px 0px grey;
 -moz-box-shadow: 5px 5px 5px 0px grey;
-    transform: translate3d(0,33%, -120px);
+    transform: translate3d(0,25%, -120px);
     --current-color1: #ECEAED;
     --current-color2: #404457;
 }
@@ -229,12 +297,15 @@
 #s3:checked~.portfolio-cards #portfolio-slide5,
 #s4:checked~.portfolio-cards #portfolio-slide6,
 #s5:checked~.portfolio-cards #portfolio-slide7,
-#s6:checked~.portfolio-cards #portfolio-slide1, 
-#s7:checked~.portfolio-cards #portfolio-slide2{
+#s6:checked~.portfolio-cards #portfolio-slide8, 
+#s7:checked~.portfolio-cards #portfolio-slide9,
+#s8:checked~.portfolio-cards #portfolio-slide1,
+#s9:checked~.portfolio-cards #portfolio-slide2
+{
     box-shadow: 5px 5px 5px 0px grey;
 -webkit-box-shadow: 5px 5px 5px 0px grey;
 -moz-box-shadow: 5px 5px 5px 0px grey;
-    transform: translate3d(0,66%, -220px);
+    transform: translate3d(0,50%, -220px);
     --current-color1: #ECEAED;
     --current-color2: #404457;
 }
@@ -244,16 +315,34 @@
 #s2:checked~.portfolio-cards #portfolio-slide5,
 #s3:checked~.portfolio-cards #portfolio-slide6,
 #s4:checked~.portfolio-cards #portfolio-slide7,
-#s5:checked~.portfolio-cards #portfolio-slide1,
-#s6:checked~.portfolio-cards #portfolio-slide2,
-#s7:checked~.portfolio-cards #portfolio-slide3{
+#s5:checked~.portfolio-cards #portfolio-slide8,
+#s6:checked~.portfolio-cards #portfolio-slide9,
+#s7:checked~.portfolio-cards #portfolio-slide1,
+#s8:checked~.portfolio-cards #portfolio-slide2,
+#s9:checked~.portfolio-cards #portfolio-slide3
+{
     box-shadow: 5px 5px 5px 0px grey;
 -webkit-box-shadow: 5px 5px 5px 0px grey;
 -moz-box-shadow: 5px 5px 5px 0px grey;
-    transform: translate3d(0,99%,  -320px);
+    transform: translate3d(0,75%, -320px);
     --current-color1: #ECEAED;
     --current-color2: #404457;
 }
 
 
 
+#s1:checked~.portfolio-cards #portfolio-slide5,
+#s2:checked~.portfolio-cards #portfolio-slide6,
+#s3:checked~.portfolio-cards #portfolio-slide7,
+#s4:checked~.portfolio-cards #portfolio-slide8,
+#s5:checked~.portfolio-cards #portfolio-slide9,
+#s6:checked~.portfolio-cards #portfolio-slide1,
+#s7:checked~.portfolio-cards #portfolio-slide2,
+#s8:checked~.portfolio-cards #portfolio-slide3,
+#s9:checked~.portfolio-cards #portfolio-slide4
+{
+    box-shadow: 0 15px 35px 0 rgba(0, 0, 0, 45%);
+    transform: translate3d(0, 100%, -420px);
+    --current-color1: #ECEAED;
+    --current-color2: #404457;
+}

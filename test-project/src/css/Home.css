@@ -58,16 +58,21 @@ body {
     background-image: url(../img/backgroundImg3.jpg);
     background-size: cover;
   }
-
+  
+.home-arrow-container{
+  position: fixed;
+  z-index:11; /*숫자가 클수록 앞에 옴*/
+  bottom: 30px;
+  left: 160px;
+}
   .home-arrow {
-    z-index:11; /*숫자가 클수록 앞에 옴*/
-    position: fixed;
+    position: relative; /*현재 위치에서 이동하기 위함(top,left사용)*/
     width: 42px;
     height: 64px;
-    top: 850px;
-    left: 195px;
+    top:18px;
+    left: 33px;
     transform: translate(-50%, -50%);
-    bottom: 82px;
+/*    bottom: 82px;*/
   
     border-radius: 50px;
   }
@@ -114,13 +119,10 @@ body {
 }
 
   .home-scroll-txt{
-    position: fixed;
-    z-index:11;
     font-size: 25px;
     font-weight: bold;
     color: rgb(255, 255, 255);
-    bottom: 110px;
-    left: 160px;
+
   }
 
   /* 스크롤 슬라이드*/

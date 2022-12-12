@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+
+import { markerdata } from "../data/markerdata";
 import "../css/ApiMapcontainer.css";
 const { kakao } = window;
 
@@ -11,8 +13,8 @@ const ApiMapContainer = ({ searchPlace }) => {
     var markers = [];
     const container = document.getElementById("api-myMap");
     const options = {
-      center: new kakao.maps.LatLng(33.450701, 126.570667),
-      level: 3,
+      center: new kakao.maps.LatLng(37.55414414942706, 126.9339531816519),
+      level: 8,
     };
     const map = new kakao.maps.Map(container, options);
 
@@ -82,6 +84,18 @@ const ApiMapContainer = ({ searchPlace }) => {
         infowindow.open(map, marker);
       });
     }
+
+    markerdata.forEach(el => {
+      // 마커를 생성합니다
+      new kakao.maps.Marker({
+        //마커가 표시 될 지도
+        map: map,
+        //마커가 표시 될 위치
+        position: new kakao.maps.LatLng(el.lat, el.lng),
+        //마커에 hover시 나타날 title
+        title: el.title,
+      });
+    });
   }, [searchPlace]);
 
   return (
@@ -90,9 +104,10 @@ const ApiMapContainer = ({ searchPlace }) => {
         <div
           id="api-myMap"
           style={{
-            width: "1450px",
-            height: "800px",
+            width: "1400px",
+            height: "670px",
             position: "absolute",
+            border: "2px solid green",
           }}
         ></div>
       </div>
