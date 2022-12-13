@@ -1,4 +1,4 @@
-import {} from "../css/ProductShopInfo.css";
+import { } from "../css/ProductShopInfo.css";
 import Card from "react-bootstrap/Card";
 import MainComment from "./ProductMainComment";
 import ProductInsertComment from "./ProductInsertComment";
@@ -12,7 +12,49 @@ const ShopInfo = () => {
   const { id } = useParams();
   const { state } = useContext(DataContext);
   const market = state.score.find((m) => m.id == id); //undefined 값을 지정해줘야한다.
+  const [comment, setComment] = useState([
+    {
+      id: 1,
+      comment: []
+    },
+    {
+      id: 2,
+      comment: []
+    },
+    {
+      id: 3,
+      comment: []
+    },
+    {
+      id: 4,
+      comment: []
+    },
+    {
+      id: 5,
+      comment: []
+    },
+    {
+      id: 6,
+      comment: []
+    },
+    {
+      id: 7,
+      comment: []
+    },
+    {
+      id: 8,
+      comment: []
+    },
+    {
+      id: 9,
+      comment: []
+    },
+  ]
+  );
 
+  const addComment = () => {
+
+  }
   return (
     <div className="Product-shopInfo">
       <InfoCard market={market} />
@@ -29,12 +71,12 @@ function InfoCard(props) {
         <Card.Body>
           <Card.Title>
             <h2>{market ? market.name : "없는 정보 입니다"}<img src={market.companyLogo} alt="" /></h2>
-         
+
           </Card.Title>
 
           <Card.Text>
             <p>주소 : {market ? market.location : "없는 정보 입니다"}</p>
-            
+
             <p>대충 자사 소개와 사진이 들어가는건 어떠세요?</p>
             <p>연락처 : {market ? market.number : "없는 정보 입니다"}</p>
           </Card.Text>
@@ -50,7 +92,7 @@ function InfoCard(props) {
           <Card style={{ height: "420px", overflow: "auto" }}>
             <MainComment />
           </Card>
-          <ProductInsertComment />
+          <ProductInsertComment comment={comment} addComment={addComent} />
         </Card.Body>
       </Card>
     </div>

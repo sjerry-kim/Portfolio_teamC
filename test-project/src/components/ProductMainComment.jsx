@@ -1,30 +1,30 @@
 import { useContext } from "react";
+import { useParams } from "react-router-dom";
 import DataContext from "../data/DataContext";
 
 const MainComment = () => {
   const { state, action } = useContext(DataContext);
-
+  const { id } = useParams();
+  const marketComment = state.comment.filter((m) => m.id == id);
   const date = new Date();
 
   return (
     <div style={{ height: "100%", overflow: "auto" }}>
-      {state.comment.map((c, i) => (
+      {marketComment.comment.map((c, i) => (
         <div key={i}>
           {c.name}
           {c.text}
           <br />
           <p style={{ fontSize: "0.9em", color: "gray" }}>
             {`${date.getFullYear()}.
-                            ${
-                              date.getMonth() + 1 < 10
-                                ? `0${date.getMonth() + 1}`
-                                : date.getMonth() + 1
-                            }.
-                            ${
-                              date.getDate() < 10
-                                ? `0${date.getDate()}`
-                                : date.getDate()
-                            }.　`}
+                            ${date.getMonth() + 1 < 10
+                ? `0${date.getMonth() + 1}`
+                : date.getMonth() + 1
+              }.
+                            ${date.getDate() < 10
+                ? `0${date.getDate()}`
+                : date.getDate()
+              }.　`}
             {/* {
                             `${date.getHours()} : ${date.getMinutes()<10 ? (`0${date.getMinutes()}`): date.getMinutes() }` 
                            } */}
