@@ -43,7 +43,6 @@ function App() {
             <Route path='/main/estimation' element={<EstStart /> }/>
             <Route path="/main/question" element={<EstQuestion />} />
             <Route path="/main/result" element={<EstResult />} />
-            <Route path="/main/reciept" element={<EstReciept />} />
             <Route path='/main/product' element={<ProductMergePage />} />
             <Route path='/main/map' element={<ApiMap />} />
           </Route>
