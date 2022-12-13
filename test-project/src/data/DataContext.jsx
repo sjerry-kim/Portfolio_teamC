@@ -16,18 +16,46 @@ import jyComRe3 from '../img/jyComRe3.JPG';
 
 import purenComRe1 from '../img/purenComRe1.JPG';
 import purenComRe2 from '../img/purenComRe2.jpg';
+import purenComRe3 from '../img/purenComRe3.JPG';
 
-import dasoleComRe1 from '../img/dasoleComRe1.JPG';
-import dasoleComRe2 from '../img/dasoleComRe2.JPG';
-import dasoleComRe3 from '../img/dasoleComRe3.JPG';
+import oneComRe1 from '../img/oneComRe1.jpg';
+import oneComRe2 from '../img/oneComRe2.jpg';
+import oneComRe3 from '../img/oneComRe3.jpg';
+
+import agioComRe1 from '../img/agioComRe1.JPG';
+import agioComRe2 from '../img/agioComRe2.JPG';
+import agioComRe3 from '../img/agioComRe3.JPG';
+
+import monoComRe1 from '../img/monoComRe1.JPG';
+import monoComRe2 from '../img/monoComRe2.JPG';
+import monoComRe3 from '../img/monoComRe3.JPG';
+
+import dawonComRe1 from '../img/dawonComRe1.JPG';
+import dawonComRe2 from '../img/dawonComRe2.JPG';
+import dawonComRe3 from '../img/dawonComRe3.JPG';
 
 import idasComRe1 from '../img/idasComRe1.JPG';
 import idasComRe2 from '../img/idasComRe2.JPG';
 import idasComRe3 from '../img/idasComRe3.JPG';
 
-import dawonComRe1 from '../img/dawonComRe1.JPG';
-import dawonComRe2 from '../img/dawonComRe2.JPG';
-import dawonComRe3 from '../img/dawonComRe3.JPG';
+import dasoleComRe1 from '../img/dasoleComRe1.JPG';
+import dasoleComRe2 from '../img/dasoleComRe2.JPG';
+import dasoleComRe3 from '../img/dasoleComRe3.JPG';
+
+
+
+
+
+// 회사 로고 
+import evianLogo from '../img/evianLogo.png';
+import jyLogo from '../img/jyLogo.png';
+import purenLogo from '../img/purenLogo.png';
+import oneLogo from '../img/oneLogo.png';
+import agioLogo from '../img/agioLogo.png'; 
+import monoLogo from '../img/monoLogo.jpg';
+import dawonLogo from '../img/dawonLogo.png';
+import idasLogo from '../img/idasLogo.png';
+import dasoleLogo from '../img/dasoleLogo.jpg';
 
 import { useNavigate } from "react-router-dom";
 
@@ -158,7 +186,8 @@ const DataProvider = (({children}) => {
             best : "ABC",
             location: "부산 강서구 유통단지1로 41",
             number: "010-2546-4095",
-            companyImg:[ "evianCom1.jpg", "evianCom2.jpg", "evianCom3.jpg"], //😡
+            companyLogo: evianLogo,
+            companyImg:[ "evianCom1.jpg", "evianCom2.jpg", "evianCom3.jpg"], 
             reviewImg1:evianComRe1,
             reviewImg2:evianComRe2,
             reviewImg3:evianComRe3,
@@ -169,12 +198,14 @@ const DataProvider = (({children}) => {
             reviewComment2:"집을 계약하고 제일 중요하게 봤던게 인테리어였습니다. 특히 저희 건물은 화장실 타일이랑 전반적으로 상태가 너무 안좋았습니다. 믿고 할수 있는 업체를 찾다가 에비앙 디자인으로 상담을 받았습니다. 저희는 기간이 많이 남아있는데도 너무 친절하게 설명해주시고 저희 리즈를 확실하게 해주셧어요 덕분에 잘 마무리되었습니다! ",
             reviewComment3:"상담부터 너무 친절하시고 마감도 꼼꼼하게 봐주시고 무엇보다 다른 주변사람들과 비교했을때 퀄리티도 좋았고 가격도 합리적이어서 좋았습니다! 제가 걱정한건 공사끝나고 하자문제였어요 근데 살다보니 어쩔수없이 수리해야 될것들이 있어서 연락드렸더니 바로 와주셔서 너무 만족스러웠어요 공사도 꼼꼼히 해주시고 추후as도 잘해주셔서 감사합니다!",
         },
+
         {
             id:2,
             name:"제이와이인테리어",
             best : "ABc",
             location: "전라북도 전주시 완산구 공북로",
             number: "063-252-9631",
+            companyLogo: jyLogo,
             companyImg:[ "jyCom1.jpg", "jyCom2.jpg", "jyCom3.jpg"],
             reviewImg1:jyComRe1,
             reviewImg2:jyComRe2,
@@ -192,18 +223,19 @@ const DataProvider = (({children}) => {
             best : "AbC",
             location: "경상남도 김해시 월산로 11",
             number: "010-7487-7410",
-            companyImg1:purenCom1,
-            companyImg2:purenCom2,
-            companyImg2:"",
-            reviewImg1:purenComRe1,
-            reviewImg2:purenComRe2,
-            reviewImg3:"",
+            companyLogo: purenLogo,
+            companyImg:["purenCom1.jpg","purenCom2.JPG","purenCom3.jpg"],
+            reviewImg1: purenComRe1,
+            reviewImg2: purenComRe2,
+            reviewImg3: purenComRe3,
             reviewTitle1:"대구전원주택 리모델링",
-            reviewTitle2:"",
-            reviewTitle3:"",
-            reviewComment1:"계단관련 리뷰쓰기",
-            reviewComment2:"",
-            reviewComment3:"",
+            reviewTitle2:"김해 인테리어/리모델링 월산주공",
+            reviewTitle3:"부산 강서구 부산공군관사 인테리어 리모델",
+            reviewComment1:"저희집이 복층이라 인테리어 고민이 많았는데 상담도 친절하시고 한방에 해결해주셔서 너무좋았습니다! 마감도 전체적으로 훌륭했구요 다음에 또이용해도 여기만 애용할거같아요~~ 대만족입니다!",
+            reviewComment2:"인테리어하는 과정도 저희가 궁금해 하지 않게 설명과 전화도 잘해주시고 조금 더 해주려 하시고 더 챙겨주려 하시는 모습에 감동!! 끝까지 하자나 마무리에 신경써주셨구요~믿고 맡길수 밖에 없지요!!",
+            reviewComment3:"오래된 아파트라.. 모두 고쳐 들어왔습니다~^^ 전에 살던 아파트(24평)를 거실확장, 아이방 확장으로 리모델링 할까해서 리모델링 계획을 세우며 여러 업체도 만나보고 실측도 받아보고 했었죠~ 저희 부부에게 딱이다 싶은곳은 푸른들 이였어요!! 실측도 금방 봐주러 오시고 적극적이고 전문가 포스가 팍팍~~ 너무 만족스러웟습니다~",
+
+            
         },
         {
             id:4,
@@ -211,18 +243,17 @@ const DataProvider = (({children}) => {
             best : "Abc",
             location: "광주광역시 광산구 왕버들로 101",
             number: "1666-1204",
-            companyImg1:"",
-            companyImg2:"",
-            companyImg2:"",
-            reviewImg1:"",
-            reviewImg2:"",
-            reviewImg3:"",
-            reviewTitle1:"",
-            reviewTitle2:"",
-            reviewTitle3:"",
-            reviewComment1:"",
-            reviewComment2:"",
-            reviewComment3:"",
+            companyLogo: oneLogo,
+            companyImg:["oneCom1.jpg","oneCom2.jpg","oneCom3.jpg"],
+            reviewImg1: oneComRe1,
+            reviewImg2: oneComRe2,
+            reviewImg3: oneComRe3,
+            reviewTitle1:"LIVING 49평 아파트_165㎡",
+            reviewTitle2:"LIVING 31평 아파트_102㎡",
+            reviewTitle3:"COMMERCIAL 광주 제과기술학원 280.99㎡_85평",
+            reviewComment1:"중문부터 조명까지 다른곳 견적 다섯군데는 했습니다 ㅠㅠ 가격에 치이고 실력에 불안해 결국 1204디자인으로 결정해서 진행하였는데 처음부터 1204로 할껄 여러군데 귀찮게 사람만나가면 했던말들 또 한시간들이 조금 아깝더라구요 ㅎㅎ 인테리어가 잘나와준덕이겠죠 늦은시간 주말에도 답장 바로바로 해주시고 너무 감사했습니다 ^^ 믿고 시공하세요 ^^",
+            reviewComment2:"여러 루트를 통해서 얻은 정보를 바탕으로 1204디자인에 일을 맡겼는데. “역시”  전문성에 놀라서 감탄했고~ 작은 것 하나도 놓치지 않는 서비스와 집 주인의 마음을 알아주는 센스에 깊은 감동을 받았습니다.",
+            reviewComment3:"평범하지 않은 내부 구조를 최대한 실용적으로 풀어내고자 한 노력이 현장 곳곳에 스며있어요. 덕분에 고객 동선에도 불편함 없는 모던한 인테리어로 완성되어서 너무 만족스럽습니다 감사합니다~. ",
         },
         {
             id:5,
@@ -230,37 +261,37 @@ const DataProvider = (({children}) => {
             best : "aBC",
             location: "서울특별시 서초구 효령로46길 22",
             number: "02-517-5001",
-            companyImg1:"",
-            companyImg2:"",
-            companyImg2:"",
-            reviewImg1:"",
-            reviewImg2:"",
-            reviewImg3:"",
-            reviewTitle1:"",
-            reviewTitle2:"",
-            reviewTitle3:"",
-            reviewComment1:"",
-            reviewComment2:"",
-            reviewComment3:"",
+            companyLogo: agioLogo, 
+            companyImg:["agioCom1.JPG","agioCom2.JPG","agioCom3.JPG"],
+            reviewImg1: agioComRe1,
+            reviewImg2: agioComRe2,
+            reviewImg3: agioComRe3,
+            reviewTitle1:"Agio Design 서울 서초구 영어학원",
+            reviewTitle2:"Agio Design 서울 강남구 몸 스테이 ",
+            reviewTitle3:"Agio Design 서울 은평구 사무실",
+            reviewComment1:"학원에 낙서가 너무 많아서 이번에 큰 마음먹고 새로 리모델링 했습니다. 아무래도 학원이라 어린이들이 좋아할 만한 컬러로 알록 달록하게 인테리어를 했는데 너무 귀여워요♡ (그냥 제 취향인듯..ㅎ) 특히 초등학생 저학년들이 난리네여~~ 다음에 확장하면 또 이용하고 싶습니다 적극추천!!!!!!!!!!!!!",
+            reviewComment2:"30대가 넘어가고 회사생활 너무 힘들어서 그동안에 틈틈했던 요가학원을 냈습니다 제 손으로 한 첫 사업이라 인테리어 업체를 겁나겁나겁나겁나 까다롭게 보게 되더라고요 근데 제 요청 그대로 만들어주셨습니다ㅜㅜ 너무 이뻐요ㅜㅜ 상담하며 자재 찾아가면서 했는데 만족도 오조오억배에요ㅋㅋㅋㅋ 이제 난 떼부자가 될 일만 남았어요~~~",
+            reviewComment3:"회사 사무실이 오래되어 이전하면서 리모델링을 같이했습니다. 분위기 있어서 야근도 쌉가능..(은 뻥ㅋㅋ) 그치만 진짜 분위기는 좋아여 카페에 있는것 같아여~~ 좋습니다 만족",
+            
         },
         {
             id:6,
             name:"모노 인테리어",
             best : "aBc",
-            location: "서울 마포구 양화로7길 74",
+            location: "서울 마포구 서교동 483-14번지 1층 (서울 마포구 양화로7길 74)",
             number: " 02-3144-7339",
-            companyImg1:"",
-            companyImg2:"",
-            companyImg2:"",
-            reviewImg1:"",
-            reviewImg2:"",
-            reviewImg3:"",
-            reviewTitle1:"",
-            reviewTitle2:"",
-            reviewTitle3:"",
-            reviewComment1:"",
-            reviewComment2:"",
-            reviewComment3:"",
+            companyLogo: monoLogo,
+            companyImg:["monoCom1.JPG","monoCom2.JPG","monoCom3.JPG"],
+            reviewImg1: monoComRe1,
+            reviewImg2: monoComRe2,
+            reviewImg3: monoComRe3,
+            reviewTitle1:"모노인테리어 서울 마포구 강변힐스테이트 아파트 ",
+            reviewTitle2:"모노인테리어 서울 동작구 상도현대 아파트 ",
+            reviewTitle3:"모노인테리어 서울 관악구 성현동아 아파트",
+            reviewComment1:"신발장 인테리어을 맡겼는데 너무 맘에 들어요 중문이 투명해서 집에 들어올 때 넓어보여서 넘나 좋은 것~ㅋㅋㅋㅋㅋㅋㅋ  간접등이 은은해서 이쁨\^^/",
+            reviewComment2:"주방 인테리어 올해 10월에 결혼한 신혼부부임돵~~ 주방은 요리를 해야하니까 넓었으면 좋겠는데.. 집이 좁아가지고 어렵겠다 생각했는데 세상에 모노인테리어에서 너무 이쁘게 만들어주셔서 행복해서 매립등 조명도 있고 설거지 할 때 간접등도 있어서 어둡지 않은게 맘에 쏙 들어욤",
+            reviewComment3:"40대 평범한 주부입니다 아이가 있어서 1층 집으로 마련했어요~~ 처음에 베란다 확장을 하려고 했는데 1층이라 사생활보호가 어려울까봐 확장하지 않고 인테리어했는데 만족해영~ 포세린 타일 진짜 너무 이쁩니다 여러분도 이거 하세요~~~~~ ",
+            
         },
         {
             id:7,
@@ -268,16 +299,17 @@ const DataProvider = (({children}) => {
             best : "abc",
             location: "서울시 강남구 테헤란로 16길 다원빌딩 12F",
             number: "02-3468-5800",
-            companyImg:[ "dawonCom1.jpg", "dawonCom2.jpg", "dawonCom3.jpg"],
+            companyLogo: dawonLogo,
+            companyImg:[ "dawonCom1.JPG", "dawonCom2.JPG", "dawonCom3.JPG"],
             reviewImg1: dawonComRe1,
             reviewImg2: dawonComRe2,
             reviewImg3: dawonComRe3,
-            reviewTitle1:"다원디자인 서울",
-            reviewTitle2:"다원디자인",
-            reviewTitle3:"다원디자인 서울 ",
-            reviewComment1:"",
-            reviewComment2:"",
-            reviewComment3:"",
+            reviewTitle1:"다원디자인 서울 한남동 무신사 쇼룸 ",
+            reviewTitle2:"다원디자인 서울 Green Cross I-MED ",
+            reviewTitle3:"다원디자인 서울 아트 박물관 ",
+            reviewComment1:"정말 어렵게 고심해서 고른 인테리어 업체입니다. 세련된 디자인부터 저희 무신사의 색깔과 맞을 수 있게 디자인을 부탁드렸는데 만족스럽게 나왔습니다. 직원들뿐아니라 고객님들의 마음까지 사로 잡을 수 있는 디자인이라 좋았습니다.",
+            reviewComment2:"병원은 화이트가 기본 바탕이 되는 곳이 많아서 다 비슷 비슷해 보였는데 다원 디자인은 컬러를 조화롭게 써서 병원이 더욱 활기 차 보였습니다. 전체적으로 디자인이 모서리 부분 없이 둥글게 빠져서 더 조화로운 느낌입니다. 감사합니다",
+            reviewComment3:"LED 화면으로 크고 화려하게 작품을 전시할 수 있어서 좋았습니다. 조명까지 섬세하게 신경을 써 주셨는데 왜 사람들이 이 곳을 추천하고 인기가 많은지 알겠더라고요 이번 리모델링으로 LED영상 음악 전시를 더 멋스럽게 소화할 수 있을 것 같아서 기대가 됩니다",
         },
         {
             id:8,
@@ -285,7 +317,8 @@ const DataProvider = (({children}) => {
             best : "abC",
             location: "서울 강남구 도산대로 68길 26 IDAS 빌딩 1F/2F",
             number: "+82-2-543 6566",
-            companyImg:[ "idasCom1.jpg", "idasCom2.jpg", "idasCom3.jpg"],
+            companyLogo: idasLogo,
+            companyImg:[ "idasCom1.JPG", "idasCom2.JPG", "idasCom3.JPG"],
             reviewImg1: idasComRe1,
             reviewImg2: idasComRe2,
             reviewImg3: idasComRe3,
@@ -303,7 +336,8 @@ const DataProvider = (({children}) => {
             best : "abC",
             location: "서울시 서초구 명달로 104, 모차르트빌딩 7F",
             number: "02.535.3431  02.535.3432   070.4279.0800",
-            companyImg:[ "dasoleCom1.jpg", "dasoleCom2.jpg", "dasoleCom3.jpg"],
+            companyLogo: dasoleLogo,
+            companyImg:[ "dasoleCom1.JPG", "dasoleCom2.JPG", "dasoleCom3.JPG"],
             reviewImg1: dasoleComRe1,
             reviewImg2: dasoleComRe2,
             reviewImg3: dasoleComRe3,

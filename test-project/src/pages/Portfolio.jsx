@@ -69,7 +69,8 @@ const Portfolio = (props) => {
             <label for="s1" id="portfolio-slide1">
               <div className="portfolio-card">
                 <div className="portfolio-image">
-                  <img src="img/Nike SuperRep Go.jpg" alt="" />
+                  <img src={state.score[0].reviewImg1} alt="" />{" "}
+                  {/**대표사진 추가되면 바꿀예정 */}
                 </div>
                 <div className="portfolio-infos">
                   <span className="portfolio-name">
@@ -91,14 +92,15 @@ const Portfolio = (props) => {
             <label for="s2" id="portfolio-slide2">
               <div className="portfolio-card">
                 <div className="portfolio-image">
-                  <img src="img/Free run flyknit.jpg" alt="" />
+                  <img src={state.score[1].reviewImg1} alt="" />
+                  {/**대표사진 추가되면 바꿀예정 */}
                 </div>
                 <div className="portfolio-infos">
                   <span className="portfolio-name">
                     2 {state.score[1].name}
                   </span>
                   <span className="portfolio-lorem">
-                    {state.score[1].name}{" "}
+                    {state.score[1].name}
                     {/*소개 데이터 추가되면 변경예정 / 번호 직접 지정 안하고는 방법이 없을까욤?*/}
                     여기에 자사 소개가 들어가나요??????????????
                   </span>
@@ -114,7 +116,8 @@ const Portfolio = (props) => {
             <label for="s3" id="portfolio-slide3">
               <div className="portfolio-card">
                 <div className="portfolio-image">
-                  <img src="img/Black Toe Union.jpg" alt="" />
+                  <img src={state.score[2].reviewImg1} alt="" />
+                  {/**대표사진 추가되면 바꿀예정 */}
                 </div>
                 <div className="portfolio-infos">
                   <span className="portfolio-name">
@@ -137,7 +140,8 @@ const Portfolio = (props) => {
             <label for="s4" id="portfolio-slide4">
               <div className="portfolio-card">
                 <div className="portfolio-image">
-                  <img src="img/Retro High Og.jpg" alt="" />
+                  <img src={state.score[3].reviewImg1} alt="" />
+                  {/**대표사진 추가되면 바꿀예정 */}
                 </div>
                 <div className="portfolio-infos">
                   <span className="portfolio-name">
@@ -160,7 +164,8 @@ const Portfolio = (props) => {
             <label for="s5" id="portfolio-slide5">
               <div className="portfolio-card">
                 <div className="portfolio-image">
-                  <img src="img/Off-White x Air Jordan.jpg" alt="" />
+                  <img src={state.score[4].reviewImg1} alt="" />
+                  {/**대표사진 추가되면 바꿀예정 */}
                 </div>
                 <div className="portfolio-infos">
                   <span className="portfolio-name">
@@ -183,7 +188,8 @@ const Portfolio = (props) => {
             <label for="s6" id="portfolio-slide6">
               <div className="portfolio-card">
                 <div className="portfolio-image">
-                  <img src="img/Off-White x Air Jordan.jpg" alt="" />
+                  <img src={state.score[5].reviewImg1} alt="" />
+                  {/**대표사진 추가되면 바꿀예정 */}
                 </div>
                 <div className="portfolio-infos">
                   <span className="portfolio-name">
@@ -206,7 +212,8 @@ const Portfolio = (props) => {
             <label for="s7" id="portfolio-slide7">
               <div className="portfolio-card">
                 <div className="portfolio-image">
-                  <img src="img/Off-White x Air Jordan.jpg" alt="" />
+                  <img src={state.score[6].reviewImg1} alt="" />
+                  {/**대표사진 추가되면 바꿀예정 */}
                 </div>
                 <div className="portfolio-infos">
                   <span className="portfolio-name">
@@ -229,7 +236,8 @@ const Portfolio = (props) => {
             <label for="s8" id="portfolio-slide8">
               <div className="portfolio-card">
                 <div className="portfolio-image">
-                  <img src="img/Off-White x Air Jordan.jpg" alt="" />
+                  <img src={state.score[7].reviewImg1} alt="" />
+                  {/**대표사진 추가되면 바꿀예정 */}
                 </div>
                 <div className="portfolio-infos">
                   <span className="portfolio-name">
@@ -252,7 +260,8 @@ const Portfolio = (props) => {
             <label for="s9" id="portfolio-slide9">
               <div className="portfolio-card">
                 <div className="portfolio-image">
-                  <img src="img/Off-White x Air Jordan.jpg" alt="" />
+                  <img src={state.score[8].reviewImg1} alt="" />
+                  {/**대표사진 추가되면 바꿀예정 */}
                 </div>
                 <div className="portfolio-infos">
                   <span className="portfolio-name">

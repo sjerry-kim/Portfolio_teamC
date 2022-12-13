@@ -1,22 +1,16 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 import {} from "../css/ProductShopSlick.css";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
+//삭제하면 안대용 데이터 파일 만들어지면 사용함
 import { useParams } from "react-router";
 import { useContext } from "react";
 import DataContext from "../data/DataContext";
-
-
-
-
-
 
 const ShopSlick = () => {
   const settings = {
@@ -33,45 +27,24 @@ const ShopSlick = () => {
     // prevArrow: <PrevArrow />,
   };
 
+const { id } = useParams();
+const { state } = useContext(DataContext);
+const shop = state.score.find((r) => r.id == id);
 
-  const { id } = useParams();
-  const { state } = useContext(DataContext);
-  const shop = state.score.find((r) => r.id == id);
-
-
-
-  return (
-
-
-    <Slider className="Product-Slider product-slick-slide" {...settings}>
-      {shop.companyImg.map((item, index) => (
-        <div key={index} className="Product-shopimg">
-          <img src={require(`../img/${item}`)} />
-          <div className="Product-logo">
-            <h2></h2>
-          </div>
+return (
+  <Slider className="Product-Slider product-slick-slide" {...settings}>
+    {shop.companyImg.map((item, index) => (
+      <div key={index} className="Product-shopimg">
+        <img src={require(`../img/${item}`)} />
+        <div className="Product-logo">
+          <h2></h2>
         </div>
-      ))}
-
-
-      {/* <div className="shopimg">
-          <img src={house02}></img>
-        </div>
-        <div className="shopimg">
-          <img src={house03}></img>
-        </div>
-        <div className="shopimg">
-          <img src={house04}></img>
-        </div>
-        <div className="shopimg">
-          <img src={house05}></img>
-        </div>
-        <div className="shopimg">
-          <img src={house06}></img>
-        </div> */}
-    </Slider>
-  );
-};
+      </div>
+    ))}
+  </Slider>
+  
+);
+    }
 
 export default ShopSlick;
 
@@ -86,8 +59,7 @@ function NextArrow(props) {
         color: "#fff",
         right: "50em",
         zIndex: "100",
-      }}
-    ></FontAwesomeIcon>
+      }}></FontAwesomeIcon>
   );
 }
 
