@@ -13,16 +13,28 @@ const ProductInsertComment = () => {
   const [name, setName] = useState("홍길동");
   const [num, setNum] = useState(0);
 
+
+
+
   const { id } = useParams();
-  const market = state.score.find((m) => m.id == id); //undefined 값을 지정해줘야한다.
+  const marketComment = state.comment.filter((m) => m.id == id);
+
+
+  //undefined 값을 지정해줘야한다.
 
   const sendComment = e => {
+
     e.preventDefault();
     setNum(num + 1);
-    const newText = { id: num, name: name, text: text };
-    const addText = market.comment.concat(newText);
-    //action.setComment(addText);
-    text ? action.setScore(addText) : alert("댓글을 입력해주세요");
+    const newText = { id: num, name: name, text: text ,};
+    const addText = marketComment.comment.concat(newText);
+
+    action.setComment([
+      ...state,
+
+    ]);
+    text ? action.setCommnet(addText)
+      : alert("댓글을 입력해주세요");
     document.querySelector(".question-text").value = "";
     setText("");
   };
