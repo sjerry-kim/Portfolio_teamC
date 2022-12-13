@@ -10,7 +10,7 @@ const EstReciept = () => {
   // 세션 스토리지
   const reciept = JSON.stringify(state.reciept);
   const [sessionReciept, setSessionReciept] = useState([]);
-
+  
   useEffect(()=>{
     sessionStorage.setItem("sessionReciept", reciept)
   })
