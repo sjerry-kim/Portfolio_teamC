@@ -104,9 +104,9 @@ const ApiMapContainer = ({ searchPlace }) => {
         <div
           id="api-myMap"
           style={{
-            width: "1400px",
-            height: "670px",
-            position: "absolute",
+            width: "1980px",
+            height: "100px",
+            position: "relative",
             border: "2px solid green",
           }}
         ></div>
@@ -118,8 +118,8 @@ const ApiMapContainer = ({ searchPlace }) => {
               <div
                 key={i}
                 style={{
+                  position: "absolute",
                   marginTop: "10px",
-                  position: "relative",
                 }}
               >
                 <span>{i + 1}</span>

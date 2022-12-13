@@ -7,14 +7,16 @@ import { useContext, useState } from "react";
 import DataContext from "../data/DataContext";
 import { useParams } from "react-router-dom";
 
-const ProductInsertComment = () => {
+const ProductInsertComment = ({ number }) => {
+  //회윤 - 평균평점 props
+
   const { state, action } = useContext(DataContext);
   const [text, setText] = useState("");
   const [name, setName] = useState("홍길동");
   const [num, setNum] = useState(0);
 
   const { id } = useParams();
-  const market = state.score.find((m) => m.id == id); //undefined 값을 지정해줘야한다.
+  const market = state.score.find(m => m.id == id); //undefined 값을 지정해줘야한다.
 
   const sendComment = e => {
     e.preventDefault();
@@ -38,6 +40,7 @@ const ProductInsertComment = () => {
             justifyContent: "center",
           }}
         >
+          {number}
           <Form.Control
             as="textarea"
             className="question-text"
