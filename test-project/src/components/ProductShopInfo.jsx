@@ -48,7 +48,8 @@ function InfoCard(props) {
           <Card style={{ height: "420px", overflow: "auto" }}>
             <MainComment />
           </Card>
-          <ProductInsertComment />
+            <ProductInsertComment />
+          
         </Card.Body>
       </Card>
     </div>
