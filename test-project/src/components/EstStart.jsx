@@ -13,6 +13,7 @@ const EstStart = () => {
 
   const StartClickButton = () => {
     navigate("/main/question");
+
   };
 
   return (

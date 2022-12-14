@@ -15,7 +15,7 @@ const ProductInsertAverage = ({ list }) => {
 
   return (
     <div>
-      <b>평균 값:</b> {avg.toFixed(1)}
+      <b>별점:</b> {avg.toFixed(1)}
     </div>
   );
 };
