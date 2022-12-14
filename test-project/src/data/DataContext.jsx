@@ -68,11 +68,12 @@ const DataProvider = (({ children }) => {
     // Portfolio & Product 
     const [comment, setComment] = useState([
         {   
-            MID:1,
-            id: 1,
-        }
-    ]
-    );
+            marketId: 1,
+            commentId: 1,
+            name: "홍길동",
+            text: "좋은 업체입니다"
+        },
+    ]);
 
     // Estimation
     // 간편견적 결과 페이지 이동 -> 이거 왜 있음? 삭제해도 되는지 확인하기
