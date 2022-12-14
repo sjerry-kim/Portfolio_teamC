@@ -5,12 +5,12 @@ import DataContext from "../data/DataContext";
 const MainComment = () => {
   const { state, action } = useContext(DataContext);
   const { id } = useParams();
-  const marketComment = state.comment.filter((m) => m.id == id);
   const date = new Date();
+  const filteredMarket = state.comment.filter((f)=>(f.marketId == id))
 
   return (
     <div style={{ height: "100%", overflow: "auto" }}>
-      {marketComment.comment.map((c, i) => (
+      {filteredMarket.map((c, i) => (
         <div key={i}>
           {c.name}
           {c.text}
