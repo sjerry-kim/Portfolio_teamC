@@ -125,7 +125,7 @@ useEffect(() => {
             <div className="estquestion-progressbox"></div>
       <ProgressBar
         style={{
-          height: "1%",
+          height: "5px",
           borderRadius: "0px",
           width: "90%",
           margin: "auto",
