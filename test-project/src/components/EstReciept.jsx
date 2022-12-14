@@ -55,7 +55,6 @@ const EstReciept = () => {
           </div>
         ))} */}
         <div className="estreciept-box"></div>
-
       </div>
     </div>
   );

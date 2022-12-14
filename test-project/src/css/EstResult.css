@@ -1,15 +1,13 @@
-body{
-    
-}
+
 .estresult-Wrapper{
-    background-color: rgb(255, 250, 244);
-    width: 540px;
+    background-color: rgb(255, 255, 255);
+    width: 600px;
     height: 600px;
     margin: auto;
-    border-radius: 20px;
+    border-radius: 5px;
     position: relative;
     right: 140px;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
     box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
@@ -18,7 +16,7 @@ body{
 .estresult-Header{
     position: relative;
     bottom: 320px;
-    margin-top: 368px;
+    margin-top: 337px;
     font-family: 'Humanbumsuk';
     font-size: 40pt;
     display:flex;
@@ -53,45 +51,44 @@ body{
 
 .estresult-ReStartBtn{
     font-family: 'Humanbumsuk';
-    border-radius: 19px;
     width: 100%;
     min-height: 70px;
     font-size: 15pt;
     font-weight: bolder;
     margin-top: 0px;
     border: none;
-    --c: no-repeat linear-gradient(#366360 0 0);
+    --c: no-repeat linear-gradient(#4d4d4d 0 0);
     background: 
       var(--c) calc(-101% + var(--i,0)*101%) 100% / 50.1% calc(100%*var(--i,0) + .08em),
       var(--c) calc( 201% - var(--i,0)*101%) 0    / 50.1% calc(100%*var(--i,0) + .08em);
     transition: .3s calc(var(--i,0)*.3s), background-position .3s calc(.3s - var(--i,0)*.3s);
 }
 
-.estresult-ReStartBtn:hover {
+/* .estresult-ReStartBtn:hover {
     --i: 1;
     color: white;
     border: 1px solid white;
-}
+} */
 
 
 
   .estresult-Reciept-box{
+    z-index: 13 !important;
     position: relative;
-    top: 150px;
-    left: 501px;
-    margin-left: 100px;
+    top: 130px;
+    left: 551px;
+    margin-left: 105px;
     margin-top: -220px;
     clear: right;
-    width: 250px;
+    width: 240px;
     height: 70px;
-    background-color: rgb(255, 250, 244);
-    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
+    /* box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75); */
 }
 
 
@@ -102,3 +99,4 @@ body{
 .progress-bar{
     background-color: #366360 !important;
 }
+
