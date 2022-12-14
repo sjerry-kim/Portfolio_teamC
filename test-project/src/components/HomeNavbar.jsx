@@ -27,10 +27,6 @@ const HomeNavbar = () => {
     // Login에서 가져온 함수들
 
     const navigate = useNavigate();
-    const CreateButton = () => {
-      // 회원가입창 경로
-      navigate("/join");
-    };
   
     // 구글로 로그인하기 버튼을 눌렀을때 파이어스토어를 들고와서 사용
     const googleLogin = () => {
@@ -54,7 +50,7 @@ const HomeNavbar = () => {
             },
           });
           // 로컬스토리지에 로그인 상태 저장
-          window.localStorage.setItem("login", true);
+          window.sessionStorage.setItem("login", true);
           // 원하는 값들 확인 가능
           console.log(user);
           console.log(user.email); // 이메일
@@ -115,7 +111,7 @@ const HomeNavbar = () => {
         const userInfo = await signInWithEmailAndPassword(auth, email, pw);
         // setUser(userInfo.user);
         // 로컬스토리지에 로그인 상태 저장
-        window.localStorage.setItem("login", true);
+        window.sessionStorage.setItem("login", true);
         navigate("/");
       } catch (error) {
         console.log(error.message);
@@ -125,7 +121,7 @@ const HomeNavbar = () => {
     const emailLogout = async () => {
       await signOut(auth);
       // 로컬스토리지에 로그인 상태 저장
-      window.localStorage.setItem("login", false);
+      window.sessionStorage.setItem("login", false);
     };
   
     // 이메일,패스워드 조건이 충족하는지 확인용
@@ -182,8 +178,15 @@ const HomeNavbar = () => {
                 <Link to='/main/portfolio'>포트폴리오</Link>
                 <Link to='/main/estimation'>나에게 맞는 시공업체 찾기</Link>
                 <Link to='/main/map'>주변 찾기</Link>
-                <button onClick={()=>{navigate('/login')}}>로그인하러 가기</button>
-                <button onClick={emailLogout}>로그아웃</button>
+                { window.sessionStorage.getItem('login') === 'true' ? 
+                  (
+                    <button onClick={emailLogout}>Logout</button>
+                  ) 
+                  : 
+                  (
+                  <button onClick={()=>{navigate('/login')}}>Login</button>
+                  )
+                }
             </Menu>
         </div>
     );
