@@ -5,73 +5,42 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useContext, useEffect, useState } from "react";
 import DataContext from "../data/DataContext";
+import { useParams } from "react-router-dom";
 
 
-
-const ProductInsertComment = () => {
+const ProductInsertComment = ({ setList }) => {
   const { state, action } = useContext(DataContext);
   const [text, setText] = useState("");
-  const [name, setName] = useState("홍길동");
-  const [num, setNum] = useState(0);
-  const date = new Date();
+  const [rating, setRating] = useState(5);
+
+  const [name, setName] = useState("홍길동"); // 💛 uset 이름으로 변경해야함
+  const [num, setNum] = useState(1);
+
+  const { id } = useParams();
+
+  //undefined 값을 지정해줘야한다. -> 이게 뭐야..?
+
 
 
 
   const sendComment = (e) => {
     e.preventDefault();
     setNum(num + 1);
-    const newText = { id: num, name: name, text: text };
+    const newText = { marketId: id, commentId: num , name: name, text: text ,};
     const addText = state.comment.concat(newText);
-    //action.setComment(addText);
-    text ? action.setComment(addText) : alert("댓글을 입력해주세요");
+    text ? action.setComment(addText)
+      : alert("댓글을 입력해주세요");
     document.querySelector(".question-text").value = "";
     setText("");
+    setList(prev => [...prev, Number(rating)]);
+
+    console.log(state.comment)
   };
 
 
   return (
-    <div>
-     
-      <div style={{ height: "100%", overflow: "auto" }}>
-      {state.comment.map((c, i) => (
-        <div key={i}>
-          {c.name}
-          {c.text}
-          <br />
-          <p style={{ fontSize: "0.9em", color: "gray" }}>
-            {
-            
-            `${date.getFullYear()}.
-                            ${
-                              date.getMonth() + 1 < 10
-                                ? `0${date.getMonth() + 1}`
-                                : date.getMonth() + 1
-                            }.
-                            ${
-                              date.getDate() < 10
-                                ? `0${date.getDate()}`
-                                : date.getDate()
-                            }.　`}
-            {/* {
-                            `${date.getHours()} : ${date.getMinutes()<10 ? (`0${date.getMinutes()}`): date.getMinutes() }` 
-                           } */}
-          </p>
-          <button
-            onClick={() => {
-              const deletedText = state.comment.filter(
-                (d, index) => i != index
-              );
-              if (true) {
-                action.setComment(deletedText);
-              }
-              console.log(state.comment);
-            }}
-          >
-            삭제
-          </button>
-        </div>
-      ))}
-    </div>
+
+<div>
       <Form onSubmit={sendComment}>
         <Form.Group
           controlId="exampleForm.ControlTextarea1"
@@ -89,8 +58,18 @@ const ProductInsertComment = () => {
             }}
             placeholder="Send your qusestions."
             rows={3}
-          />
-          <Button variant="secondary" type="submit" style={styles.button}>
+          ></Form.Control>
+          <Form.Select
+            onChange={e => setRating(e.target.value)}
+            defaultValue="5"
+          >
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </Form.Select>
+          <Button variant="secondary" type="submit">
             Send
           </Button>
         </Form.Group>
