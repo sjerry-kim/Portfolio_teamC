@@ -7,10 +7,11 @@ import { useContext, useEffect, useState } from "react";
 import DataContext from "../data/DataContext";
 import { useParams } from "react-router-dom";
 import { Firestore } from "firebase/firestore";
+// 💖 + 2022-12-15 추가 한 import
+import { firestore } from "../data/firebase";
 
 
-
-const ProductInsertComment = ({ setList }) => {
+const ProductInsertComment = ({ setList,list }) => {
   const { state, action } = useContext(DataContext);
   const [text, setText] = useState("");
   const [rating, setRating] = useState(5);
@@ -19,6 +20,11 @@ const ProductInsertComment = ({ setList }) => {
   const [num, setNum] = useState(1);
 
   const { id } = useParams();
+
+
+  // 💖+2022-12-15💖 그냥 하나 더준거
+  const startest = firestore.collection("startest");
+
 
   //undefined 값을 지정해줘야한다. -> 이게 뭐야..?
 
@@ -30,6 +36,36 @@ const ProductInsertComment = ({ setList }) => {
   //     star.data('store').set({starlist : '[]'})
   // })
 
+  // 💖 파이어베이스 값 가져오는거 +2022-12-15 💖
+  useEffect(() => {
+  // startest이라는 변수로 firestore의 collection인 startest에 접근!
+  const startest = firestore.collection("startest");
+  // collection의 document인 "startestplz"을 가져온다.
+  startest.doc("startestplz").get().then((doc) => {
+    // document의 데이터를 가져옴
+      console.log("가져온데이터",doc.data());
+    // document의 id를 가져옴
+      console.log("가져온아이디",doc.id);
+  }); 
+
+},[]);
+
+
+  // 💖 파이어베이스 값 startest에 문서,필드 추가 +2022-12-15 💖
+  useEffect(()=>{
+    const startest = firestore.collection("startest");
+    // startest 콜렉션의 info 문서에 {name: '문일윤', height: 180} 데이터 추가.
+    // 새로 만들거나 덮어쓰기
+    startest.doc("info").set({name: '문일윤', height: 180});
+  })
+
+  // 💖 파이어베이스 값 startest에 문서,필드 추가 +2022-12-15 💖 <- 수정할때만 주석해제
+  // useEffect(()=>{
+  //   const startest = firestore.collection("startest");
+  //   // 기존 데이터 { name: 'duck', height: 180 }
+  //   // startest 콜렉션의 starList 문서의 starList 필드 안녕 으로 바꾸기
+  //   startest.doc("startestplz").update({ starList: '안녕' });
+  // })
 
 
   const sendComment = (e) => {
@@ -47,14 +83,34 @@ const ProductInsertComment = ({ setList }) => {
 
   // 별점 onClick !!! 💛 + 2022-12-15 아래 onClick 주석처리 해놓음 
   const sendRating = () => {
-    
-  }
+    const newText = { marketId: id, commentId: num , name: name, text: text ,};
+    const addText = state.comment.concat(newText);
+    text ? action.setComment(addText) : alert("댓글을 입력해주세요");
+    setList(prev => [...prev, Number(rating)]);
+
+    // 💖 2022-12-15
+      // startest이라는 변수로 firestore의 collection인 bucket에 접근!
+      const startest = firestore.collection("startest");
+      // collection의 document인 "startest"을 가져온다.
+        startest.doc("startestplz").get().then((doc) => {
+        // document의 데이터를 가져옴
+        console.log("버튼눌름",doc.data());
+        // document의 id를 가져옴
+        console.log("버튼눌름",doc.id);
+      });
+
+      
+    }
+      
 
 
   return (
 
 <div>
       <Form onSubmit={sendComment}>
+        <div>
+          
+        </div>
         <Form.Group
           controlId="exampleForm.ControlTextarea1"
           style={{
@@ -82,7 +138,7 @@ const ProductInsertComment = ({ setList }) => {
             <option value="4">4</option>
             <option value="5">5</option>
           </Form.Select>                    
-          <Button variant="secondary" type="submit" > {/**+ 2022-12-15 버튼에 들어가있던거 💛 onClick={sendRating} */}
+          <Button variant="secondary" type="submit" onClick={sendRating}> {/**+ 2022-12-15 버튼에 들어가있던거 💛 onClick={sendRating} */}
             Send
           </Button>
         </Form.Group>

@@ -25,10 +25,18 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 
+//💖 2022-12-15 집에서 추가 💖
+firebase.initializeApp(firebaseConfig); // 이거추가하니 밑에꺼오류났던거 안남
+const firestore = firebase.firestore(); // firebase의 firestore 인스턴스를 변수에 저장
+//--------------------------------------
+
 const db = getFirestore(app);
 export {db};
 
-// export {firestore};
+// 💖 2022-12-15 집에서 추가💖
+// 필요한 곳에서 사용할 수 있도록 내보내기
+// 다른 곳에서 불러올때 firestore로 불러와야 함!!
+export {firestore};
 
 
 

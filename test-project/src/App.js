@@ -16,7 +16,6 @@ import Join from './pages/Join';
 
 // DataContext import
 import { DataProvider } from './data/DataContext'
-
 // firebase
 import CreateID from './pages/CreateID';
 import "./data/firebase";
