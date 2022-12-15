@@ -6,6 +6,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useContext, useEffect, useState } from "react";
 import DataContext from "../data/DataContext";
 import { useParams } from "react-router-dom";
+import { Firestore } from "firebase/firestore";
+
 
 
 const ProductInsertComment = ({ setList }) => {
@@ -20,6 +22,11 @@ const ProductInsertComment = ({ setList }) => {
 
   //undefined 값을 지정해줘야한다. -> 이게 뭐야..?
 
+
+  useEffect(()=>{
+    const star = Firestore.collection("starlist")
+      star.data('store').set({starlist : '[]'})
+  })
 
 
 
@@ -36,14 +43,11 @@ const ProductInsertComment = ({ setList }) => {
     console.log(state.comment)
   };
 
-<<<<<<< HEAD
-=======
   // 별점 onClick !!! 💛
   const sendRating = () => {
-    text ? setRating(rating) : alert("댓글을 입력해주세요");
-    setList(prev => [...prev, Number(rating)]);
+
   }
->>>>>>> 8337f095bdc7d408181995ed32dae53bee1b98d1
+
 
   return (
 

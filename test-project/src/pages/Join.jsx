@@ -3,6 +3,7 @@ import JoinInput from "../components/JoinInput";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../data/firebase";
 import { useNavigate } from "react-router-dom";
+import { firestore } from "../data/firebase";
 
 const Join = () => {
 
@@ -12,6 +13,9 @@ const Join = () => {
   const [registerPassword, setRegisterPassword] = useState("");
 
   const navigate = useNavigate();
+
+  
+
   const CreateCheckButton = () => {
     // 가입완료시 페이지 경로
     navigate("/");
@@ -91,6 +95,20 @@ const Join = () => {
     // }, [])
   
 
+  // FireStore 콜랙션 추가하기
+
+  const addUser = () => {
+        // user이라는 변수로 firestore의 collection인 user에 접근
+        const user = auth.collection("user");
+
+        // bucket 콜렉션에 데이터를 추가한다.
+        // document를 지정하지 않았기 때문에 랜덤으로 document와 id가 생성되고 값이 저장됨.
+        user.add({ email: registerEmail, password: registerPassword }).then((docRef)=>{
+          // 새로운 document의 id
+            console.log(docRef.id);
+          })
+  }
+
   return (
     <div className="join-app-joinForm">
       <form className="join-joinForm_form">
@@ -126,7 +144,7 @@ const Join = () => {
               )
             }
           </div>
-        <button className="join-joinForm_btn" disabled={notAllow} onClick={()=>{register(); CreateCheckButton();}}>가입</button>
+        <button className="join-joinForm_btn" disabled={notAllow} onClick={()=>{register(); CreateCheckButton(); addUser();}}>가입</button>
       </form>
     </div>
   );

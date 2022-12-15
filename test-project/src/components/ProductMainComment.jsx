@@ -50,4 +50,4 @@ const MainComment = () => {
 };
 
 
-// export default MainComment;
+export default MainComment;
