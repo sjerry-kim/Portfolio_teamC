@@ -5,6 +5,10 @@ import { auth } from "../data/firebase";
 import { useNavigate } from "react-router-dom";
 import { firestore } from "../data/firebase";
 
+// 진혜 추가
+import db from '../data/firebase'
+import { collection, query, where, getDocs, orderBy } from "firebase/firestore";
+
 const Join = () => {
 
   // 파이어베이스 회원가입
@@ -29,7 +33,12 @@ const Join = () => {
               registerEmail,
               registerPassword,
           );
-
+          // 진혜 추가
+          const member = firestore.collection("member");
+          member.add({email: registerEmail, password: registerPassword, })
+          .then((docRef)=>{
+            console.log(docRef.id);
+          })
           console.log(user);
       } catch (error) {
           console.log(error.message);

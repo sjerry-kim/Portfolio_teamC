@@ -2,14 +2,19 @@
 import 'firebase/database';
 import 'firebase/firestore';
 import { initializeApp} from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+// import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 // import { firestore } from 'firebase/firestore';
 
-import firebase from "firebase/compat/app"
-import 'firebase/compat/firestore';
+// import firebase from "firebase/compat/app"
+// import 'firebase/compat/firestore';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
+
+// 진혜 추가
+import {getFirestore} from 'firebase/firestore';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -22,14 +27,12 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+const app = firebase.initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 
+// 진혜 추가
 const db = getFirestore(app);
-export {db};
+export default db;
 
-// export {firestore};
-
-
-
-// 따로 가져와서 사용하자
+const firestore = firebase.firestore();
+export {firestore};
