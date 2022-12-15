@@ -1,12 +1,14 @@
 import { useContext } from "react";
 import { Link, Outlet } from "react-router-dom";
-import {} from "../css/Portfolio.css";
+import { } from "../css/Portfolio.css";
 import DataContext from "../data/DataContext";
+
 
 const Portfolio = (props) => {
   const { state } = useContext(DataContext);
 
   return (
+
     <div>
       <body className="portfolio-body">
         <div className="portfolio-container">
@@ -65,225 +67,137 @@ const Portfolio = (props) => {
             id="s9"
           />
 
+          
           <div className="portfolio-cards">
             <label for="s1" id="portfolio-slide1">
               <div className="portfolio-card">
                 <div className="portfolio-image">
                   <img src={state.score[0].reviewImg1} alt="" />{" "}
-                  {/**대표사진 추가되면 바꿀예정 */}
                 </div>
                 <div className="portfolio-infos">
-                  <span className="portfolio-name">
-                    1 {state.score[0].name}
-                  </span>
-                  <span className="portfolio-lorem">
-                    {state.score[0].name} {/*소개 데이터 추가되면 변경예정*/}
-                    여기에 자사 소개가 들어가나요??????????????
-                  </span>
-
-                  <button className="portfolio_productPageBtn">
-                    <Link to="/main/product/1">상세페이지</Link>
-                  </button>
+                  <p className="portfolio-name">
+                    <Link to="/main/product/1">1 {state.score[0].name}
+                    </Link>
+                  </p>
                 </div>
               </div>
-              <Outlet />
             </label>
-
             <label for="s2" id="portfolio-slide2">
               <div className="portfolio-card">
                 <div className="portfolio-image">
                   <img src={state.score[1].reviewImg1} alt="" />
-                  {/**대표사진 추가되면 바꿀예정 */}
                 </div>
                 <div className="portfolio-infos">
-                  <span className="portfolio-name">
-                    2 {state.score[1].name}
-                  </span>
-                  <span className="portfolio-lorem">
-                    {state.score[1].name}
-                    {/*소개 데이터 추가되면 변경예정 / 번호 직접 지정 안하고는 방법이 없을까욤?*/}
-                    여기에 자사 소개가 들어가나요??????????????
-                  </span>
-
-                  <button className="portfolio_productPageBtn">
-                    <Link to="/main/product/2">상세페이지</Link>
-                  </button>
+                  <p className="portfolio-name">
+                    <Link to="/main/product/2"> 2 {state.score[1].name}</Link>
+                  </p>
                 </div>
               </div>
-              <Outlet />
             </label>
-
             <label for="s3" id="portfolio-slide3">
               <div className="portfolio-card">
                 <div className="portfolio-image">
                   <img src={state.score[2].reviewImg1} alt="" />
-                  {/**대표사진 추가되면 바꿀예정 */}
                 </div>
                 <div className="portfolio-infos">
-                  <span className="portfolio-name">
-                    3 {state.score[2].name}
-                  </span>
-                  <span className="portfolio-lorem">
-                    {state.score[2].name}
-                    여기에 자사 소개가 들어가나요??????????????
-                    {/*소개 데이터 추가되면 변경예정*/}
-                  </span>
-
-                  <button className="portfolio_productPageBtn">
-                    <Link to="/main/product/3">상세페이지</Link>
-                  </button>
+                  <p className="portfolio-name">
+                    <Link to="/main/product/3">3 {state.score[2].name}</Link>
+                  </p>
                 </div>
               </div>
-              <Outlet />
             </label>
-
             <label for="s4" id="portfolio-slide4">
               <div className="portfolio-card">
                 <div className="portfolio-image">
                   <img src={state.score[3].reviewImg1} alt="" />
-                  {/**대표사진 추가되면 바꿀예정 */}
                 </div>
                 <div className="portfolio-infos">
-                  <span className="portfolio-name">
-                    4 {state.score[3].name}
-                  </span>
-                  <span className="portfolio-lorem">
-                    {state.score[3].name}
-                    여기에 자사 소개가 들어가나요??????????????
-                    {/*소개 데이터 추가되면 변경예정*/}
-                  </span>
-
-                  <button className="portfolio_productPageBtn">
-                    <Link to="/main/product/4">상세페이지</Link>
-                  </button>
+                  <p className="portfolio-name">
+                    <Link to="/main/product/4">4 {state.score[3].name}</Link>
+                  </p>
                 </div>
               </div>
-              <Outlet />
             </label>
-
             <label for="s5" id="portfolio-slide5">
               <div className="portfolio-card">
                 <div className="portfolio-image">
                   <img src={state.score[4].reviewImg1} alt="" />
-                  {/**대표사진 추가되면 바꿀예정 */}
                 </div>
                 <div className="portfolio-infos">
-                  <span className="portfolio-name">
-                    5 {state.score[4].name}
-                  </span>
-                  <span className="portfolio-lorem">
-                    {state.score[4].name}
-                    여기에 자사 소개가 들어가나요??????????????
-                    {/*소개 데이터 추가되면 변경예정*/}
-                  </span>
-
-                  <button className="portfolio_productPageBtn">
-                    <Link to="/main/product/5">상세페이지</Link>
-                  </button>
+                  <p className="portfolio-name">
+                    <Link to="/main/product/5">  5 {state.score[4].name}</Link>
+                  </p>
                 </div>
               </div>
-              <Outlet />
             </label>
-
             <label for="s6" id="portfolio-slide6">
               <div className="portfolio-card">
                 <div className="portfolio-image">
                   <img src={state.score[5].reviewImg1} alt="" />
-                  {/**대표사진 추가되면 바꿀예정 */}
                 </div>
                 <div className="portfolio-infos">
-                  <span className="portfolio-name">
-                    6 {state.score[5].name}
-                  </span>
-                  <span className="portfolio-lorem">
-                    {state.score[5].name}
-                    여기에 자사 소개가 들어가나요??????????????
-                    {/*소개 데이터 추가되면 변경예정*/}
-                  </span>
-
-                  <button className="portfolio_productPageBtn">
-                    <Link to="/main/product/6">상세페이지</Link>
-                  </button>
+                  <p className="portfolio-name">
+                    <Link to="/main/product/6"> 6 {state.score[5].name}</Link>
+                  </p>
                 </div>
               </div>
-              <Outlet />
             </label>
-
             <label for="s7" id="portfolio-slide7">
               <div className="portfolio-card">
                 <div className="portfolio-image">
                   <img src={state.score[6].reviewImg1} alt="" />
-                  {/**대표사진 추가되면 바꿀예정 */}
                 </div>
                 <div className="portfolio-infos">
-                  <span className="portfolio-name">
-                    7 {state.score[6].name}
-                  </span>
-                  <span className="portfolio-lorem">
-                    {state.score[6].name}
-                    여기에 자사 소개가 들어가나요??????????????
-                    {/*소개 데이터 추가되면 변경예정*/}
-                  </span>
-
-                  <button className="portfolio_productPageBtn">
-                    <Link to="/main/product/7">상세페이지</Link>
-                  </button>
+                  <p className="portfolio-name">
+                    <Link to="/main/product/7">  7 {state.score[6].name}</Link>
+                  </p>
                 </div>
               </div>
-              <Outlet />
             </label>
-
             <label for="s8" id="portfolio-slide8">
               <div className="portfolio-card">
                 <div className="portfolio-image">
                   <img src={state.score[7].reviewImg1} alt="" />
-                  {/**대표사진 추가되면 바꿀예정 */}
                 </div>
                 <div className="portfolio-infos">
-                  <span className="portfolio-name">
-                    8 {state.score[7].name}
-                  </span>
-                  <span className="portfolio-lorem">
-                    {state.score[7].name}
-                    여기에 자사 소개가 들어가나요??????????????
-                    {/*소개 데이터 추가되면 변경예정*/}
-                  </span>
-
-                  <button className="portfolio_productPageBtn">
-                    <Link to="/main/product/8">상세페이지</Link>
-                  </button>
+                  <p className="portfolio-name">
+                    <Link to="/main/product/8"> 8 {state.score[7].name}</Link>
+                  </p>
                 </div>
               </div>
-              <Outlet />
             </label>
-
             <label for="s9" id="portfolio-slide9">
               <div className="portfolio-card">
                 <div className="portfolio-image">
                   <img src={state.score[8].reviewImg1} alt="" />
-                  {/**대표사진 추가되면 바꿀예정 */}
                 </div>
                 <div className="portfolio-infos">
-                  <span className="portfolio-name">
-                    9 {state.score[8].name}
-                  </span>
-                  <span className="portfolio-lorem">
-                    {state.score[8].name}
-                    여기에 자사 소개가 들어가나요??????????????
-                    {/*소개 데이터 추가되면 변경예정*/}
-                  </span>
+                  <p className="portfolio-name">
+                    {/*  */}
+                    
+                    <Link to="/main/product/9">9{state.score[8].name}</Link>
+                 
 
-                  <button className="portfolio_productPageBtn">
-                    <Link to="/main/product/9">상세페이지</Link>
-                  </button>
+                  </p>
                 </div>
               </div>
-              <Outlet />
             </label>
           </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
       </body>
     </div>
+
   );
 };
 
