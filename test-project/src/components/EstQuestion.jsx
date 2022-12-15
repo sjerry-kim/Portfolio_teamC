@@ -126,7 +126,7 @@ useEffect(() => {
       <ProgressBar
         style={{
           height: "5px",
-          borderRadius: "0px",
+          borderRadius: "4px",
           width: "90%",
           margin: "auto",
         }}

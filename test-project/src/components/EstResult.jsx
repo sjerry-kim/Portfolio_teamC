@@ -96,9 +96,9 @@ useEffect(() => {
             {/* <img src={resultData.image} width={300} /> */}
           </div>
           <div className="estresult-Desc">
-            나에게 어울리는 업체 "{resultData.name}"{" "}
+            나에게 맞는 업체 [ {resultData.name} ]{" "}
           </div>
-          <button onClick={()=>{
+          <button className="estresult-ReBtn" onClick={()=>{
             navigate('/main/estimation')
             action.setReciept([]);
             }}>다시 하기</button>
