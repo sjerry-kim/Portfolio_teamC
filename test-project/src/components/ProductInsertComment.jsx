@@ -28,15 +28,22 @@ const ProductInsertComment = ({ setList }) => {
     setNum(num + 1);
     const newText = { marketId: id, commentId: num , name: name, text: text ,};
     const addText = state.comment.concat(newText);
+    // 별점이 바로 들어감 -> 수정 필요
     text ? action.setComment(addText)
       : alert("댓글을 입력해주세요");
     document.querySelector(".question-text").value = "";
     setText("");
-    setList(prev => [...prev, Number(rating)]);
-
     console.log(state.comment)
   };
 
+<<<<<<< HEAD
+=======
+  // 별점 onClick !!! 💛
+  const sendRating = () => {
+    text ? setRating(rating) : alert("댓글을 입력해주세요");
+    setList(prev => [...prev, Number(rating)]);
+  }
+>>>>>>> 8337f095bdc7d408181995ed32dae53bee1b98d1
 
   return (
 
@@ -69,7 +76,7 @@ const ProductInsertComment = ({ setList }) => {
             <option value="4">4</option>
             <option value="5">5</option>
           </Form.Select>
-          <Button variant="secondary" type="submit">
+          <Button variant="secondary" type="submit" onClick={sendRating}>
             Send
           </Button>
         </Form.Group>

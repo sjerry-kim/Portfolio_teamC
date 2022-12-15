@@ -75,6 +75,9 @@ const DataProvider = (({ children }) => {
         },
     ]);
 
+    // const [rating, setRating] = useState(5);
+    // const [list, setList] = useState([]);
+
     // Estimation
     // 간편견적 결과 페이지 이동 -> 이거 왜 있음? 삭제해도 되는지 확인하기
     const navigate = useNavigate();

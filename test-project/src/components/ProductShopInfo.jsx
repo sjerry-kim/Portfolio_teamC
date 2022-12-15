@@ -51,9 +51,9 @@ function InfoCard(props) {
             <h1>한줄평</h1>
           </Card.Title>
           <Card style={{ height: "420px", overflow: "auto" }}>
-            <MainComment />
+            <MainComment/>
           </Card>
-          <ProductInsertComment setList={setList} />
+          <ProductInsertComment setList={setList}/>
         </Card.Body>
       </Card>
     </div>

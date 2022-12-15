@@ -1,16 +1,19 @@
 .estquestion-Wrapper {
   position: relative;
   right: 140px;
-  background-color: rgb(255, 250, 244);
-  width: 540px;
+  background-color: rgb(255, 255, 255);
+  width: 600px;
   height: 600px;
-  margin: auto ;
-  border-radius: 20px;
-  border: 1px solid black;
-  box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
+  margin: 50px auto ;
+  border-radius: 5px;
+  border: 1px solid rgb(255, 255, 255);
+    -webkit-box-shadow: 7px 8px 5px 1px rgba(0,0,0,0.47); 
+    box-shadow: 7px 8px 5px 1px rgba(0,0,0,0.47);
+  /* box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
   -webkit-box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75); */
 }
+
 
 .estquestion-Title {
   font-size: 40pt;
@@ -20,7 +23,7 @@
 
 .PrgressBar {
   margin-top: 30px;
-
+  background-color: rgba(255, 0, 0, 0) !important;
 }
 
 .estquestion-QBtn {
