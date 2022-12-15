@@ -23,10 +23,12 @@ const ProductInsertComment = ({ setList }) => {
   //undefined 값을 지정해줘야한다. -> 이게 뭐야..?
 
 
-  useEffect(()=>{
-    const star = Firestore.collection("starlist")
-      star.data('store').set({starlist : '[]'})
-  })
+
+  // + 2022-12-15 주석처리 안하니 오류났음 💛 
+  // useEffect(()=>{
+  //   const star = Firestore.collection("starlist")
+  //     star.data('store').set({starlist : '[]'})
+  // })
 
 
 
@@ -43,9 +45,9 @@ const ProductInsertComment = ({ setList }) => {
     console.log(state.comment)
   };
 
-  // 별점 onClick !!! 💛
+  // 별점 onClick !!! 💛 + 2022-12-15 아래 onClick 주석처리 해놓음 
   const sendRating = () => {
-
+    
   }
 
 
@@ -79,8 +81,8 @@ const ProductInsertComment = ({ setList }) => {
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
-          </Form.Select>
-          <Button variant="secondary" type="submit" onClick={sendRating}>
+          </Form.Select>                    
+          <Button variant="secondary" type="submit" > {/**+ 2022-12-15 버튼에 들어가있던거 💛 onClick={sendRating} */}
             Send
           </Button>
         </Form.Group>
