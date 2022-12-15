@@ -38,9 +38,9 @@
 
 .estreciept-box{
     position: fixed;
-    bottom: 180px;
+    bottom: 195px;
     width: 230px;
-    height: 90px;
+    height: 80px;
     border-top: 2px dashed #000000;
     border-bottom: 2px dashed #000000;
 }

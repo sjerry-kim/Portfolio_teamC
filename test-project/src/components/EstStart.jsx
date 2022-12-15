@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 // css-in-js
 import PangImage from "../img/Logo.png";
+import purenComRe3 from "../img/purenComRe3.JPG";
 import "../css/EstStart.css";
 import {useNavigate } from "react-router-dom";
 import DataContext from "../data/DataContext";
@@ -20,6 +21,7 @@ const EstStart = () => {
     <div className="eststart-Wrapper">
       <div className="eststart-Contents">
         <div className="eststart-Header">{ window.sessionStorage.getItem('login') === 'true' ? "간편 견적" : "로그인하세요"}</div>
+        
         {
           window.sessionStorage.getItem('login') === 'true' ? 
           (
@@ -29,15 +31,22 @@ const EstStart = () => {
           " "
         }
         <div className="eststart-LogoImage">
+          <div className="eststart-img">
+            <div className="eststart-imgText">
+              인테리어 중계업은 Today Design !!
+            </div>
+          </div>
+          <div className="eststart-backColor"></div>
           <img src={PangImage} width={200}></img>
         </div>
-        <div className="eststart-Desc">간편 견적</div>
         {
           window.sessionStorage.getItem('login') === 'true' ? 
           (
+          <div className="eststart-StartBtnBox">
           <button className="eststart-StartBtn" onClick={StartClickButton}>
           견적 짜러가기
           </button>
+          </div>
           )
           :
           " "
