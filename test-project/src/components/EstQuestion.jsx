@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import "../css/EstQuestion.css";
-import { ProgressBar} from "react-bootstrap";
+import {ProgressBar} from "react-bootstrap";
 import { createSearchParams, useNavigate } from "react-router-dom";
 import DataContext from "../data/DataContext";
 import EstReciept from "./EstReciept";
