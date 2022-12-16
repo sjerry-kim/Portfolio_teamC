@@ -15,12 +15,14 @@ import {
 import { auth } from "../data/firebase";
 import "../css/Login.css";
 import DataContext from "../data/DataContext";
-import LoginLocalStorage from "../components/LoginLocalStorage";
+import RestrictPage from "../components/RestrictPage";
 
 const User = {
   email: "test@example.com",
   pw: "test8361@",
 };
+
+// Home ('/')으로 돌아가는
 
 const Login = () => {
   const navigate = useNavigate();
@@ -51,7 +53,7 @@ const Login = () => {
           },
         });
         // 로컬스토리지에 로그인 상태 저장
-        window.localStorage.setItem("login", true);
+        window.sessionStorage.setItem("login", true);
         // 원하는 값들 확인 가능
         console.log(user);
         console.log(user.email); // 이메일
@@ -112,7 +114,7 @@ const Login = () => {
       const userInfo = await signInWithEmailAndPassword(auth, email, pw);
       // setUser(userInfo.user);
       // 로컬스토리지에 로그인 상태 저장
-      window.localStorage.setItem("login", true);
+      window.sessionStorage.setItem("login", true);
       navigate("/");
     } catch (error) {
       console.log(error.message);
@@ -122,7 +124,7 @@ const Login = () => {
   const emailLogout = async () => {
     await signOut(auth);
     // 로컬스토리지에 로그인 상태 저장
-    window.localStorage.setItem("login", false);
+    window.sessionStorage.setItem("login", false);
   };
 
   // 이메일,패스워드 조건이 충족하는지 확인용
@@ -169,18 +171,16 @@ const Login = () => {
     }
   }, [emailValid, pwValid]);
 
-  //useEffect(() => {
-  // console.log(inputRef);
-  //inputRef.current.focus(); // 로그인id 자동포커스
-  //}, []);
+  // useEffect(() => {
+  //   console.log(inputRef);
+  //   inputRef.current.target.focus(); // 로그인id 자동포커스
+  // }, []);
 
   return (
     <from>
-      {window.localStorage.getItem("login") === "true" ? (
-        <LoginLocalStorage />
+      {window.sessionStorage.getItem("login") === "true" ? (
+        <RestrictPage />
       ) : (
-        // 로그인 id 자동포커스 확인해야함
-        // -> 컴포넌트로 만들어서 회원가입, 로그인에 동시 적용
         <div>
           <div className="login-page">
             <div className="login-border">

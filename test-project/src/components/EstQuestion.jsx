@@ -119,7 +119,7 @@ useEffect(() => {
   return (
     <div className="estquestion-Wrapper">
       {
-        window.localStorage.getItem('login') === 'true' ?
+        window.sessionStorage.getItem('login') === 'true' ?
         (
           <div>
             <div className="estquestion-progressbox"></div>

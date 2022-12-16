@@ -19,9 +19,9 @@ const EstStart = () => {
   return (
     <div className="eststart-Wrapper">
       <div className="eststart-Contents">
-        <div className="eststart-Header">{ window.localStorage.getItem('login') === 'true' ? "간편 견적" : "로그인하세요"}</div>
+        <div className="eststart-Header">{ window.sessionStorage.getItem('login') === 'true' ? "간편 견적" : "로그인하세요"}</div>
         {
-          window.localStorage.getItem('login') === 'true' ? 
+          window.sessionStorage.getItem('login') === 'true' ? 
           (
             <div className="eststart-Title">나에게 맞는 업체</div>
           )
@@ -33,7 +33,7 @@ const EstStart = () => {
         </div>
         <div className="eststart-Desc">간편 견적</div>
         {
-          window.localStorage.getItem('login') === 'true' ? 
+          window.sessionStorage.getItem('login') === 'true' ? 
           (
           <button className="eststart-StartBtn" onClick={StartClickButton}>
           견적 짜러가기
