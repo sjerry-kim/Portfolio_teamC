@@ -5,8 +5,8 @@ import Card from "react-bootstrap/Card";
 const HomePortfolioCard1 = () => {
   const cardInfo = [
     {
-      image: require("../img/backgroundImg1.jpg"),
-      title: "BMW",
+      image: require("../img/evianComRe2.jpg"),
+      title: "evian",
       text: "HI",
     },
   ];

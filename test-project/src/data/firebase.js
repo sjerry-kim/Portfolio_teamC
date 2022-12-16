@@ -30,6 +30,8 @@ const firebaseConfig = {
 const app = firebase.initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 
+
+
 // 진혜 추가
 const db = getFirestore(app);
 export default db;
