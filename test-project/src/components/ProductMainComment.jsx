@@ -1,3 +1,4 @@
+
 import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import DataContext from "../data/DataContext";
@@ -47,5 +48,6 @@ const MainComment = () => {
     </div>
   );
 };
+
 
 export default MainComment;

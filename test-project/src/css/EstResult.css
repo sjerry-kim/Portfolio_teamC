@@ -1,16 +1,21 @@
 
 .estresult-Wrapper{
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.678),
+        rgba(255, 255, 255, 0.678)
+        ),url(../img/QuestionImg-5.JPG);
+        background-size: cover;
+        background-position-x: -100px;
     background-color: rgb(255, 255, 255);
     width: 600px;
     height: 600px;
-    margin: auto;
+    margin: 100px auto;
     border-radius: 5px;
     position: relative;
     right: 140px;
     border: 1px solid rgb(255, 255, 255);
-    box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 7px 8px 5px 1px rgba(0,0,0,0.47); 
+    box-shadow: 7px 8px 5px 1px rgba(0,0,0,0.47);
 }
 
 .estresult-Header{
@@ -36,17 +41,32 @@
 .estresult-Title{
     font-family: 'Humanbumsuk';
     font-size: 30pt;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .estresult-LogoImage{
-    margin-top: 10px;
+    margin-top: 0px;
 }
 
 .estresult-Desc{
+    position: relative;
+    bottom: -100px;
     font-family: 'Humanbumsuk';
-    font-size: 15pt;
-    margin-top: 10px;
+    font-size: 25pt;
+    margin-top: 0px;
+}
+
+.estresult-ReBtn{
+    font-size: 25px;
+    width: 150px;
+    height: 50px;
+    border: none;
+    background-color: rgb(51, 51, 51);
+    color: rgb(255, 255, 255);
+    -webkit-box-shadow: 5px 6px 6px 0px rgba(0,0,0,0.7); 
+    box-shadow: 5px 6px 6px 0px rgba(0,0,0,0.7);
+    position: relative;
+    bottom: -200px;
 }
 
 .estresult-ReStartBtn{
@@ -93,10 +113,6 @@
 
 
 
-.PrgressBar {
-    margin-top: 30px;
-}
-.progress-bar{
-    background-color: #366360 !important;
-}
+
+
 

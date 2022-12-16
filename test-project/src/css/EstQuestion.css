@@ -1,16 +1,26 @@
 .estquestion-Wrapper {
   position: relative;
   right: 140px;
-  background-color: rgb(255, 255, 255);
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.678),
+    rgba(255, 255, 255, 0.678)
+    ),url(../img/QuestionImg-5.JPG);
+    background-size: cover;
+  background-color: rgba(255, 255, 255, 0.966);
+  background-position-x: -100px;
+  background-position-y: 0px;
   width: 600px;
   height: 600px;
-  margin: auto ;
+  margin: 100px auto ;
   border-radius: 5px;
   border: 1px solid rgb(255, 255, 255);
-  box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 7px 8px 5px 1px rgba(0,0,0,0.47); 
+    box-shadow: 7px 8px 5px 1px rgba(0,0,0,0.47);
+  /* box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
   -webkit-box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75); */
 }
+
 
 .estquestion-Title {
   font-size: 40pt;
@@ -18,9 +28,9 @@
   font-family: "Humanbumsuk";
 }
 
-.PrgressBar {
+.ProgressBar {
   margin-top: 30px;
-
+  background-color: rgba(206, 68, 68, 0) ;
 }
 
 .estquestion-QBtn {
@@ -30,7 +40,7 @@
   margin-top: 30px;
   border: none;
   background-color: rgba(240, 248, 255, 0);
-  background: linear-gradient(#366360 0 0) no-repeat
+  background: linear-gradient(rgb(51, 51, 51) 0 0) no-repeat
     calc(200% - var(--i, 0) * 100%) 100% / 200%
     calc(100% * var(--i, 0) + 0.08em);
   transition: 0.3s calc(var(--i, 0) * 0.2s),
@@ -51,7 +61,7 @@
 }
 
 .progress-bar {
-  background-color: #366360;
+  background-color: rgb(51, 51, 51);
 }
 .estquestion-progressbox {
   margin-bottom: 50px;

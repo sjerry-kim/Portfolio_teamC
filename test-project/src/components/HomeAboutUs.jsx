@@ -3,6 +3,7 @@ import "../css/HomeAboutUs.css"
 const HomeAboutUs = () => {
     return (
       <div>
+        {/** 지우기 */}
           <div className="homeaboutus-Box">
             <h1 className="homeaboutus-title">About us</h1>
             <h2 className="homeaboutus-info">(사이트 이름)은 blah blah를 위한 사이트입니다</h2>
