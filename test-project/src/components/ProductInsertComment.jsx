@@ -6,8 +6,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useContext, useEffect, useState } from "react";
 import DataContext from "../data/DataContext";
 import { useParams } from "react-router-dom";
-import { Firestore } from "firebase/firestore";
-
+import { firestore } from "firebase/firestore";
+import firebase from 'firebase/compat/app';
 
 
 const ProductInsertComment = ({ setList }) => {
@@ -50,6 +50,10 @@ const ProductInsertComment = ({ setList }) => {
     
   }
 
+  // ID정보 비교
+  const hello = () => {
+    
+  }
 
   return (
 
@@ -82,7 +86,7 @@ const ProductInsertComment = ({ setList }) => {
             <option value="4">4</option>
             <option value="5">5</option>
           </Form.Select>                    
-          <Button variant="secondary" type="submit" > {/**+ 2022-12-15 버튼에 들어가있던거 💛 onClick={sendRating} */}
+          <Button variant="secondary" type="submit"> {/**+ 2022-12-15 버튼에 들어가있던거 💛 onClick={sendRating} */}
             Send
           </Button>
         </Form.Group>
