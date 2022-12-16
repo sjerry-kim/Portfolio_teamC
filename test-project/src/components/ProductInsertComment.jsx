@@ -6,10 +6,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useContext, useEffect, useState } from "react";
 import DataContext from "../data/DataContext";
 import { useParams } from "react-router-dom";
+<<<<<<< HEAD
 import { Firestore } from "firebase/firestore";
 // 💖 + 2022-12-15 추가 한 import
 import { firestore } from "../data/firebase";
 
+=======
+import { firestore } from "firebase/firestore";
+import firebase from 'firebase/compat/app';
+>>>>>>> c06a1dc4daf3203e450965afeeba97bae0cd6182
 
 const ProductInsertComment = ({ setList,list }) => {
   const { state, action } = useContext(DataContext);
@@ -103,6 +108,10 @@ const ProductInsertComment = ({ setList,list }) => {
     }
       
 
+  // ID정보 비교
+  const hello = () => {
+    
+  }
 
   return (
 
@@ -138,7 +147,11 @@ const ProductInsertComment = ({ setList,list }) => {
             <option value="4">4</option>
             <option value="5">5</option>
           </Form.Select>                    
+<<<<<<< HEAD
           <Button variant="secondary" type="submit" onClick={sendRating}> {/**+ 2022-12-15 버튼에 들어가있던거 💛 onClick={sendRating} */}
+=======
+          <Button variant="secondary" type="submit"> {/**+ 2022-12-15 버튼에 들어가있던거 💛 onClick={sendRating} */}
+>>>>>>> c06a1dc4daf3203e450965afeeba97bae0cd6182
             Send
           </Button>
         </Form.Group>

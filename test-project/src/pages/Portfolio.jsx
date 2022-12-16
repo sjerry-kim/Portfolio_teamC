@@ -76,8 +76,7 @@ const Portfolio = (props) => {
                 </div>
                 <div className="portfolio-infos">
                   <p className="portfolio-name">
-                    <Link to="/main/product/1">1 {state.score[0].name}
-                    </Link>
+                    <Link to="/main/product/1">1 {state.score[0].name}</Link>
                   </p>
                 </div>
               </div>
@@ -137,7 +136,7 @@ const Portfolio = (props) => {
                 </div>
                 <div className="portfolio-infos">
                   <p className="portfolio-name">
-                    <Link to="/main/product/6"> 6 {state.score[5].name}</Link>
+                   <Link to="/main/product/6"> 6 {state.score[5].name}</Link>
                   </p>
                 </div>
               </div>
@@ -166,6 +165,8 @@ const Portfolio = (props) => {
                 </div>
               </div>
             </label>
+
+
             <label for="s9" id="portfolio-slide9">
               <div className="portfolio-card">
                 <div className="portfolio-image">
@@ -173,15 +174,17 @@ const Portfolio = (props) => {
                 </div>
                 <div className="portfolio-infos">
                   <p className="portfolio-name">
-                    {/*  */}
-                    
-                    <Link to="/main/product/9">9{state.score[8].name}</Link>
-                 
 
+                  <Link to="/main/product/9">9{state.score[8].name}
+        </Link>
                   </p>
                 </div>
               </div>
             </label>
+
+
+
+
           </div>
         </div>
 
