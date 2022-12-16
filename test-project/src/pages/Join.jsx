@@ -33,12 +33,15 @@ const Join = () => {
               registerEmail,
               registerPassword,
           );
+          const uid = user.user.uid;
           // 진혜 추가
           const member = firestore.collection("member");
-          member.add({email: registerEmail, password: registerPassword, })
+          member.add({email: registerEmail, password: registerPassword, uid: uid})
           .then((docRef)=>{
             console.log(docRef.id);
+            const user = docRef.user;
           })
+          console.log("uid제발",user.uid)
           console.log(user);
       } catch (error) {
           console.log(error.message);
