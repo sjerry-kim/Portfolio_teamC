@@ -31,12 +31,9 @@ function InfoCard(props) {
         <Card.Body>
           <Card.Title>
             <h2>{market ? market.name : "없는 정보 입니다"}<img src={market.companyLogo} alt="" /></h2>
-
           </Card.Title>
-
           <Card.Text>
             <p>주소 : {market ? market.location : "없는 정보 입니다"}</p>
-
             <p>대충 자사 소개와 사진이 들어가는건 어떠세요?</p>
             <p>연락처 : {market ? market.number : "없는 정보 입니다"}</p>
           </Card.Text>

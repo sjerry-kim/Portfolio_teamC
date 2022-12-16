@@ -41,7 +41,7 @@ function ReviewCard(props) {
             <Card.Text>
               {bestReviews ? bestReviews.reviewComment1 : "후기 없음"}
             </Card.Text>
-            <Button variant="primary">후기 보러가기</Button>
+            <Button className="bestRe_btn" variant="primary">후기 보러가기</Button>
           </Card.Body>
         </Card>
       </div>
@@ -67,7 +67,6 @@ function ReviewCard(props) {
 
       <div className="Product-reCard3">
         <div className="bestReviews_card3" >
-
           {bestReviews
             ? <img src={bestReviews.reviewImg3} />
             : "후기 사진없음"}
