@@ -58,7 +58,7 @@
 
 ### `일윤`
 1. Estimation css 재정리1
-2. Estimation 코드 정리 (ex- mbti에서 따온 EST..etc의 명칭 변경 등).
+2. Estimation 코드 정리 (ex- mbti에서 따온 EST..etc의 명칭 변경 등)
 
 ### `회윤`
 
