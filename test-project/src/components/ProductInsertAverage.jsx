@@ -6,7 +6,7 @@ const ProductInsertAverage = ({ list }) => {
     return sum / numbers.length;
 
     console.log(sum);
-  };
+};
 
   //Form.Group에 넣기
   //Button에 넣기

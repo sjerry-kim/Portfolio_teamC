@@ -6,7 +6,7 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 // import { firestore } from 'firebase/firestore';
 
-import firebase from "firebase/compat/app"
+//import firebase from "firebase/compat/app"
 import 'firebase/compat/firestore';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
