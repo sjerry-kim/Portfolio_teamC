@@ -51,9 +51,7 @@ const ProductInsertComment = ({ setList }) => {
   }
 
   // ID정보 비교
-  const hello = () => {
-    
-  }
+ 
 
   return (
 
