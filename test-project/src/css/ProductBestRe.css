@@ -15,30 +15,37 @@
 }
 
 .Product-reCard1 {
-  width: 500px;
-  height: 600px;
+  width: 400px;
+  height: 500px;
+  overflow: hidden;
 }
 
 .Product-reCard2 {
-  width: 500px;
-  height: 600px;
+  width: 400px;
+  height: 700px;
+  overflow: hidden;
 }
 
 .Product-reCard3 {
-  width: 500px;
-  height: 600px;
+  width: 400px;
+  height: 700px;
+  overflow: hidden;
 }
 
-.bestReviews_card1 img{
-  width: 500px;
-  height: 400px;
+.bestReviews_card1 > img{
+  width: 400px;
+  height: 300px;
 }
 
-.bestReviews_card2 img{
-  width: 500px;
-  height: 400px;
+.bestReviews_card2 > img{
+  width: 400px;
+  height: 300px;
 }
-.bestReviews_card3 img{
-  width: 500px;
-  height: 400px;
+.bestReviews_card3 > img{
+  width: 400px;
+  height: 300px;
+}
+
+.bestRe_btn{
+  
 }
