@@ -101,7 +101,7 @@ useEffect(() => {
           <button className="estresult-ReBtn" onClick={()=>{
             navigate('/main/estimation')
             action.setReciept([]);
-            }}>다시하기</button>
+            }}>다시 하기</button>
         </div>
 
         <div className="estresult-all-box">
