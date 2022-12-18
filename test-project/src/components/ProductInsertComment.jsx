@@ -10,6 +10,11 @@ import { firestore } from "firebase/firestore";
 import firebase from 'firebase/compat/app';
 
 
+import { auth } from "../data/firebase";
+// 버튼클릭시 데이터담을때 필요함 import
+import { collection, addDoc } from "firebase/firestore";
+import db from "../data/firebase";
+
 const ProductInsertComment = ({ setList }) => {
   const { state, action } = useContext(DataContext);
   const [text, setText] = useState("");
@@ -20,6 +25,8 @@ const ProductInsertComment = ({ setList }) => {
 
   const { id } = useParams();
 
+
+  
   //undefined 값을 지정해줘야한다. -> 이게 뭐야..?
 
 
@@ -45,9 +52,25 @@ const ProductInsertComment = ({ setList }) => {
     console.log(state.comment)
   };
 
-  // 별점 onClick !!! 💛 + 2022-12-15 아래 onClick 주석처리 해놓음 
-  const sendRating = () => {
-    
+  // 별점 onClick !!! 💛
+    const sendRating = async () => {
+      // 데이터가 담김 2022 12-18 성공 
+      try {
+        const user = await addDoc(collection(db, "test"),{
+          /* docRef라는 객체에 아래 데이터가 담기게 된다 */
+          comment: text,
+          star: rating,
+          marketId: id,
+        });
+        console.log("Document written with ID☆: ", user.id);
+      } catch (e) {
+        console.error("Error adding document★: ", e);
+      }
+
+      const newText = { marketId: id, commentId: num, name: name, text: text };
+      const addText = state.comment.concat(newText);
+      text ? action.setComment(addText) : alert("댓글을 입력해주세요");
+      setList(prev => [...prev, Number(rating)]);
   }
 
   // ID정보 비교
@@ -84,7 +107,7 @@ const ProductInsertComment = ({ setList }) => {
             <option value="4">4</option>
             <option value="5">5</option>
           </Form.Select>                    
-          <Button variant="secondary" type="submit"> {/**+ 2022-12-15 버튼에 들어가있던거 💛 onClick={sendRating} */}
+          <Button variant="secondary" type="submit" onClick={sendRating}> {/**+ 2022-12-15 버튼에 들어가있던거 💛 onClick={sendRating} */}
             Send
           </Button>
         </Form.Group>

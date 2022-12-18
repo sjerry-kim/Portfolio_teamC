@@ -9,7 +9,9 @@ import { firestore } from "../data/firebase";
 import db from '../data/firebase'
 import { collection, query, where, getDocs, orderBy } from "firebase/firestore";
 
-const Join = () => {
+
+
+const Join = (props) => {
 
   // 파이어베이스 회원가입
   const [name, setName] = useState("");
