@@ -6,8 +6,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useContext, useEffect, useState } from "react";
 import DataContext from "../data/DataContext";
 import { useParams } from "react-router-dom";
-import { firestore } from "firebase/firestore";
+
+// import { firestore } from "firebase/firestore";
 import firebase from 'firebase/compat/app';
+import { firestore } from "../data/firebase";
+import db from '../data/firebase'
+import { collection, query, where, getDocs, orderBy, doc, setDoc, addDoc, updateDoc, arrayUnion } from "firebase/firestore";
 
 
 const ProductInsertComment = ({ setList }) => {
@@ -51,12 +55,110 @@ const ProductInsertComment = ({ setList }) => {
   }
 
   // ID정보 비교
- 
+
+  // 1217 진혜 작성
+  const [cNum, setCNume] = useState(0);
+
+  const InsertComment = async (e)=> {
+    e.preventDefault();
+
+    // firestore의 commentstar collection을 가져와서 변수에 담음
+    // const commentStar = firestore.collection(db, "commentstar");
+    // const commentStarDoc = await getDocs(commentStar);
+    // console.log(commentStarDoc);
+
+    // 같은 업체 댓글(doc)들끼리 분류함
+    // const market = commentStar.filter((m)=>m.marketId==id);
+
+    // const a = query(collection(db,"commentstar") ,where("marketId", "==" , id));
+    // const aDoc = await getDocs(a);
+    // console.log(aDoc);
+
+    // commentStar.doc("QfV8gsvjrfxSOnuKrqGX").get().then((doc)=>{
+    //   console.log(doc.data());
+    // })
+
+
+      // 1218 진혜 ❤️ -1 
+    // const insertlist = collection(db,"commentstar");
+    // setCNume(cNum+1);
+
+    // const sessionEmail = window.sessionStorage.getItem("email")
+    // const userDoc = query(collection(db,"newMember"), where("account", "==", sessionEmail));
+    // const querySnapshot = await getDocs(userDoc);
+
+    // console.log(querySnapshot);
+
+
+
+    // 1218- 진혜 ❤️ -2
+    try{
+      const docRef = await addDoc(collection(db, "test"),{
+        comment: text,
+        star: rating,
+        marketId: id
+      })
+      console.log(docRef.id)
+    }catch(e){
+      console.error("Error", e);
+    }
+
+    //1218-진혜 ❤️ -3
+    // try{
+    //   const commentDoc = doc(db, "test", "comment");
+    //   const commentObj = {
+    //     comment: text,
+    //     star: rating,
+    //     marketId: id
+    //   }
+    //   await updateDoc(commentDoc, {
+    //     comments: arrayUnion(commentObj)
+    //   })
+    // }catch(e){
+    //   console.error("Error", e);
+    // }
+
+    // const newText = {marketId: id, commentId: num, name:name, text:text};
+    // const addText = state.comment.concat(newText);
+    // text? action.setComment(addText) : alert("댓글을 입력해주세요");
+    // setList(prev => [...prev, Number(rating)]);
+
+
+    // await setDoc(doc(insertlist,cNum),{
+    //   commentId: cNum,
+    //   comment: "good",
+    //   marketId: id,
+    //   star: rating,
+    //   // uid: 
+    // })
+
+
+
+    // // firestore의 member collection을 가져와서 변수에 담음
+    // const member = firestore.collection("member");
+    
+    // // 로그인 시 sessionStorage에 담았던 email 데이터를 가져와서 변수에 담음
+    // const sessionEmail = window.sessionStorage.getItem("email");
+
+    // // member에 저장된 Docs 중 email이 sessionEmail과 동일한 Doc을 가져옴
+    // const q = query(collection(db, "member"), where("email", "==", `${sessionEmail}`));
+    // const qDoc =  getDocs(q);
+
+    // // member collection의 uid를 가져와서 변수에 담음
+    // const memberDocsUid = getDocs(member).uid;
+    // // const writtenComment = aDoc.find((m)=>m.uid = memberDocsUid);
+    // const writtenComment = query(collection(db,"member"),where("uid","==",`${memberDocsUid}`))
+
+    // if(writtenComment == null){
+    //   alert("리뷰는 1번만 작성하실 수 있습니다")
+    // }else{
+    //   commentStar.add({marketId: id, uid: qDoc.uid, comment: text, star: rating });
+    // }
+  }
 
   return (
-
-<div>
-      <Form onSubmit={sendComment}>
+  <div>
+      <Form onSubmit={InsertComment}>
         <Form.Group
           controlId="exampleForm.ControlTextarea1"
           style={{
