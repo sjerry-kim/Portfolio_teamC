@@ -1,6 +1,10 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import DataContext from "../data/DataContext";
+import "../css/Navbar.css"
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 // login에서 가져온 import
 import {
@@ -165,7 +169,12 @@ const Navbar = () => {
       //}, []);
 
   return (
-    <div style={{ height: " 100px", backgroundColor: "transparent" }}>
+    <Container>
+      <Row>
+        <Col>
+        
+        
+    <div className="navBar_box" style={{ height: " 100px", backgroundColor: "transparent" }}>
       <Link to="/">today design</Link>
       <Link to="/main/portfolio">Portfolio</Link>
       <Link
@@ -180,7 +189,7 @@ const Navbar = () => {
       {window.sessionStorage.getItem("login") === "true" ? (
         <button onClick={emailLogout}>Logout</button>
       ) : (
-        <button
+        <button className="navBar_Loginbtn"
           onClick={() => {
             navigate("/login");
           }}
@@ -189,6 +198,14 @@ const Navbar = () => {
         </button>
       )}
     </div>
+        
+        
+        </Col>
+      </Row>
+    </Container>
+
+
+
   );
 };
 
