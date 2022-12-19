@@ -7,7 +7,7 @@ import { firestore } from "../data/firebase";
 
 // 진혜 추가
 import db from '../data/firebase'
-import { collection, query, where, getDocs, orderBy } from "firebase/firestore";
+import { collection, query, where, getDocs, orderBy, doc, updateDoc, arrayUnion } from "firebase/firestore";
 
 const Join = () => {
 
@@ -41,6 +41,9 @@ const Join = () => {
             console.log(docRef.id);
             const user = docRef.user;
           })
+        window.sessionStorage.setItem("login", true);
+        window.sessionStorage.setItem("email", registerEmail);
+        navigate('/')
           console.log("uid제발",user.uid)
           console.log(user);
       } catch (error) {
@@ -48,6 +51,47 @@ const Join = () => {
       }
       
   };
+
+//   // 배열 형식으로 바꾸기 위해 변경한 함수 - 1218 진혜
+//   const register = async () => {
+//     try {
+//         const user = await createUserWithEmailAndPassword(
+//             auth,
+//             registerEmail,
+//             registerPassword,
+//         );
+//         const uid = user.user.uid;
+//         const userObj = {
+//           email: registerEmail, 
+//           password: registerPassword, 
+//           uid: uid
+//         }
+
+//         // 진혜 추가
+//         const member = firestore.collection("newMember");
+
+//         const userAccount = doc(db, "newMember", "user");
+//         // Atomically add a new region to the "regions" array field.
+//         await updateDoc(userAccount, {
+//           account: arrayUnion(userObj)
+//         });
+
+//         // member.updateDoc (doc(db, "newMember", "user"), {account: userObj})
+//         // .then((docRef)=>{
+//         //   console.log(docRef.id);
+//         // })
+
+//         window.sessionStorage.setItem("login", true);
+//         window.sessionStorage.setItem("email", registerEmail);
+//         console.log("uid제발",user.uid)
+//         console.log(user);
+//         navigate('/')
+
+//     } catch (error) {
+//         console.log(error.message);
+//     }
+    
+// };
   // ---------------------------------------
 
   const inputRef = useRef("");

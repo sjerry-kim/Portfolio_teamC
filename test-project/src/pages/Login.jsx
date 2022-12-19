@@ -52,8 +52,9 @@ const Login = () => {
             photo: user.photoURL,
           },
         });
-        // 로컬스토리지에 로그인 상태 저장
+        // 세션스토리지에 로그인 상태 저장
         window.sessionStorage.setItem("login", true);
+        window.sessionStorage.setItem("userEmail", user.email);
         // 원하는 값들 확인 가능
         console.log(user);
         console.log(user.email); // 이메일
@@ -113,8 +114,9 @@ const Login = () => {
     try {
       const userInfo = await signInWithEmailAndPassword(auth, email, pw);
       // setUser(userInfo.user);
-      // 로컬스토리지에 로그인 상태 저장
+      // 세션스토리지에 로그인 상태 저장
       window.sessionStorage.setItem("login", true);
+      window.sessionStorage.setItem("email", email );
       navigate("/");
     } catch (error) {
       console.log(error.message);
@@ -125,6 +127,7 @@ const Login = () => {
     await signOut(auth);
     // 로컬스토리지에 로그인 상태 저장
     window.sessionStorage.setItem("login", false);
+    window.sessionStorage.removeItem("email", email );
   };
 
   // 이메일,패스워드 조건이 충족하는지 확인용
