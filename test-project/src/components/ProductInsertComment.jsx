@@ -62,6 +62,7 @@ const ProductInsertComment = ({ setList }) => {
   const InsertComment = async (e)=> {
     e.preventDefault();
 
+    // 1218 진혜 🔥 -0 : 추후 삭제할 예정
     // firestore의 commentstar collection을 가져와서 변수에 담음
     // const commentStar = firestore.collection(db, "commentstar");
     // const commentStarDoc = await getDocs(commentStar);
@@ -79,7 +80,7 @@ const ProductInsertComment = ({ setList }) => {
     // })
 
 
-      // 1218 진혜 ❤️ -1 
+      // 1218 진혜 ❤️ -1 : 추후 삭제할 예정
     // const insertlist = collection(db,"commentstar");
     // setCNume(cNum+1);
 
@@ -91,7 +92,7 @@ const ProductInsertComment = ({ setList }) => {
 
 
 
-    // 1218- 진혜 ❤️ -2
+    // 1218- 진혜 ❤️ -2 : 추후 삭제할 예정
     try{
       const docRef = await addDoc(collection(db, "test"),{
         comment: text,
@@ -103,7 +104,7 @@ const ProductInsertComment = ({ setList }) => {
       console.error("Error", e);
     }
 
-    //1218-진혜 ❤️ -3
+    //1218-진혜 ❤️ -3 : 추후 삭제할 예정
     // try{
     //   const commentDoc = doc(db, "test", "comment");
     //   const commentObj = {
@@ -131,8 +132,6 @@ const ProductInsertComment = ({ setList }) => {
     //   star: rating,
     //   // uid: 
     // })
-
-
 
     // // firestore의 member collection을 가져와서 변수에 담음
     // const member = firestore.collection("member");
