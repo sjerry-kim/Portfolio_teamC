@@ -9,6 +9,11 @@ import DataContext from "../data/DataContext";
 import { useParams } from "react-router-dom";
 import ProductInsertAverage from "./ProductInsertAverage";
 
+// 1219 firestore- 진혜
+import db from '../data/firebase'
+import { collection, query, where, getDocs, orderBy, doc, setDoc, addDoc, getDoc, getDocsFromCache } from "firebase/firestore";
+import { useEffect } from "react";
+
 const ShopInfo = () => {
   const { id } = useParams();
   const { state } = useContext(DataContext);
@@ -25,6 +30,24 @@ export default ShopInfo;
 function InfoCard(props) {
   const { market } = props;
   const [list, setList] = useState([]);
+
+  const { id } = useParams();
+  const [newArray, setNewArray] = useState([]);
+  let array = []
+
+  const getData = async() => {
+    const filteredMarket = query(collection(db, "test"),where("marketId","==",`${id}`));
+    const queryMarket = await getDocs(filteredMarket); // 파이어베이서 디비 ...
+    queryMarket.forEach((doc)=>{
+        array.push(doc.data());
+    })
+    setNewArray(array);
+  }
+
+  useEffect(()=>{
+    getData();
+  },[newArray])
+
   return (
     <div className="Product-infoCards">
       <Card className="Product-infoCard">
@@ -50,7 +73,7 @@ function InfoCard(props) {
           <Card style={{ height: "420px", overflow: "auto" }}>
             <MainComment/>
           </Card>
-          <ProductInsertComment setList={setList}/>
+          <ProductInsertComment />
         </Card.Body>
       </Card>
     </div>
