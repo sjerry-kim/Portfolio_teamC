@@ -18,13 +18,13 @@ import 'firebase/compat/firestore';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCUIedA7u8cw_toR13v0svPqBtdluxXFvk",
-    authDomain: "fir-login-6362b.firebaseapp.com",
-    projectId: "fir-login-6362b",
-    storageBucket: "fir-login-6362b.appspot.com",
-    messagingSenderId: "940266348977",
-    appId: "1:940266348977:web:f2b31b4ed6509190009d90"
-};
+    apiKey: "AIzaSyDO3WnDF9v1_SdD3iqJ7hAxNCobLpSyDJM",
+    authDomain: "fir-login-c9c1b.firebaseapp.com",
+    projectId: "fir-login-c9c1b",
+    storageBucket: "fir-login-c9c1b.appspot.com",
+    messagingSenderId: "916193764628",
+    appId: "1:916193764628:web:43e9821cc83f9fcdab0e01"
+  };
 
 // Initialize Firebase
 const app = firebase.initializeApp(firebaseConfig);
