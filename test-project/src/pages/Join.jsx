@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import JoinInput from "../components/JoinInput";
-import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, updateProfile } from "firebase/auth";
 import { auth } from "../data/firebase";
 import { useNavigate } from "react-router-dom";
 import { firestore } from "../data/firebase";
@@ -51,7 +51,9 @@ const Join = (props) => {
             console.log(docRef.id);
             const user = docRef.user;
           })
-
+          updateProfile(auth.currentUser,{displayName: name})
+          
+          console.log(user.displayName);
           console.log("uid제발",user.uid)
           console.log(user);
           //dispatch(userLogin(user));

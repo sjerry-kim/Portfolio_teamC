@@ -25,7 +25,15 @@ const Navbar = () => {
   const { action } = useContext(DataContext);
   const navigate = useNavigate();
   const loginuser = useSelector((state)=>(state.currentUser)) 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
+  const currentUser = auth.currentUser;
+  const [userName, setUserName] = useState("")
+
+  useEffect(()=>{
+    if(currentUser){
+      setUserName(currentUser.displayName);
+    }
+    })
 
       // 구글로 로그인하기 버튼을 눌렀을때 파이어스토어를 들고와서 사용
       const googleLogin = () => {
@@ -191,12 +199,16 @@ const Navbar = () => {
       </Link>
       <Link to="/main/map">Map</Link>
       {window.sessionStorage.getItem("login") == 'true' ? (
-        <button className="navBar_Loginbtn" onClick={()=>{
+        <div>
+          <p>welcome,{userName}</p>
+          <button className="navBar_Loginbtn" onClick={()=>{
           window.sessionStorage.setItem("login", false);
+          alert("로그아웃하였습니다")
           navigate('/')
         }}>
           Logout
         </button>
+        </div>
       ) : (
         <button className="navBar_Loginbtn"
           onClick={() => {

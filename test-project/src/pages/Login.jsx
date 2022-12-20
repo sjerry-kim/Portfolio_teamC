@@ -102,6 +102,7 @@ const Login = () => {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, pw);
       const user = userCredential.user;
+      console.log(user);
       window.sessionStorage.setItem("login",true);
       window.sessionStorage.setItem("uid", user.uid);
       navigate("/");

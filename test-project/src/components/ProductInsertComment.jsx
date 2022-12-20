@@ -20,69 +20,34 @@ const ProductInsertComment = ({getData}) => {
   const [rating, setRating] = useState(5);
 
   const [name, setName] = useState("홍길동"); // 💛 uset 이름으로 변경해야함
-  const [num, setNum] = useState(1);
+  const [num, setNum] = useState(0);
 
   const { id } = useParams();
-
-  //undefined 값을 지정해줘야한다. -> 이게 뭐야..?
-
-
-
-  // + 2022-12-15 주석처리 안하니 오류났음 💛 
-  // useEffect(()=>{
-  //   const star = Firestore.collection("starlist")
-  //     star.data('store').set({starlist : '[]'})
-  // })
-
 
   const [newArray, setNewArray] = useState([]);
   let array = []
 
-  // const sendComment = (e) => {
-  //   e.preventDefault();
-  //   setNum(num + 1);
-  //   const newText = { marketId: id, commentId: num , name: name, text: text ,};
-  //   const addText = state.comment.concat(newText);
-  //   // 별점이 바로 들어감 -> 수정 필요
-  //   text ? action.setComment(addText)
-  //     : alert("댓글을 입력해주세요");
-  //   document.querySelector(".question-text").value = "";
-  //   setText("");
-  //   console.log(state.comment)
-  // };
-
   // 1217 진혜 작성
-  const [date, setDate] = useState("");
-  let sameDoc = [];
-  const [userName, setUserName] = useState("");
-
   const InsertComment = async (e)=> {
-    e.preventDefault();
-    const userUid = window.sessionStorage.getItem('uid');
-    //const userUid = user.uid;
-    
-    const sameAccount = query(collection(db, "member"),where("uid","==",userUid));
-    const sameAccountDoc = await getDocs(sameAccount); 
-    sameAccountDoc.forEach((doc)=>{
-      sameDoc.push(doc.data());
-    })
-    console.log(sameDoc)
-
+    e.preventDefault();    
+    const user = auth.currentUser;
+    setNum(num+1);
     try{
-      setUserName(sameDoc[0].name);
-    console.log(userName)
-      const docRef = await addDoc(collection(db, "test"),{
+      const docRef = await addDoc(collection(db, "review"),{
         comment: text,
         star: rating,
         marketId: id,
-        name: userName,
+        name: user.displayName,
+        commentId: num,
         timeStamp: new Date(),
       })
+      console.log(user.displayName);
       console.log(docRef.id)
     }catch(e){
       console.error("Error", e);
     }
     getData(id)
+    document.querySelector(".question-text").value = "";
   }
 
   return (
