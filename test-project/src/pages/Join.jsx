@@ -13,7 +13,9 @@ import { collection, query, where, getDocs, orderBy, doc, updateDoc, arrayUnion 
 import { useDispatch } from "react-redux";
 import { userLogin } from "../module/currentUser";
 
-const Join = () => {
+
+
+const Join = (props) => {
 
   // 파이어베이스 회원가입
   const [name, setName] = useState("");
