@@ -191,7 +191,7 @@ const Navbar = () => {
       </Link>
       <Link to="/main/map">Map</Link>
       {window.sessionStorage.getItem("login") == 'true' ? (
-        <button onClick={()=>{
+        <button className="navBar_Loginbtn" onClick={()=>{
           window.sessionStorage.setItem("login", false);
           navigate('/')
         }}>
