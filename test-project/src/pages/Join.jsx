@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import JoinInput from "../components/JoinInput";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
 import { auth } from "../data/firebase";
 import { useNavigate } from "react-router-dom";
 import { firestore } from "../data/firebase";
@@ -8,6 +8,10 @@ import { firestore } from "../data/firebase";
 // 진혜 추가
 import db from '../data/firebase'
 import { collection, query, where, getDocs, orderBy, doc, updateDoc, arrayUnion } from "firebase/firestore";
+
+
+import { useDispatch } from "react-redux";
+import { userLogin } from "../module/currentUser";
 
 const Join = () => {
 
@@ -18,81 +22,43 @@ const Join = () => {
 
   const navigate = useNavigate();
 
+   // 리덕스의 리듀서를 사용하기위한 디스패치
+  const dispatch = useDispatch();
   
-
   const CreateCheckButton = () => {
     // 가입완료시 페이지 경로
     navigate("/");
   };
 
-
   const register = async () => {
+    const auth = getAuth();
       try {
-          const user = await createUserWithEmailAndPassword(
+          const userCredential = await createUserWithEmailAndPassword(
               auth,
               registerEmail,
               registerPassword,
           );
-          const uid = user.user.uid;
+          const user = userCredential.user;
+          const uid = userCredential.user.uid;
+
           // 진혜 추가
           const member = firestore.collection("member");
-          member.add({email: registerEmail, password: registerPassword, uid: uid})
+          member.add({email: registerEmail, password: registerPassword, uid: uid, name: name})
           .then((docRef)=>{
+            // Signed in 회원가입성공
             console.log(docRef.id);
             const user = docRef.user;
           })
-        window.sessionStorage.setItem("login", true);
-        window.sessionStorage.setItem("email", registerEmail);
-        navigate('/')
+
           console.log("uid제발",user.uid)
           console.log(user);
+          dispatch(userLogin(user));
+          navigate('/');
       } catch (error) {
           console.log(error.message);
       }
       
   };
-
-//   // 배열 형식으로 바꾸기 위해 변경한 함수 - 1218 진혜
-//   const register = async () => {
-//     try {
-//         const user = await createUserWithEmailAndPassword(
-//             auth,
-//             registerEmail,
-//             registerPassword,
-//         );
-//         const uid = user.user.uid;
-//         const userObj = {
-//           email: registerEmail, 
-//           password: registerPassword, 
-//           uid: uid
-//         }
-
-//         // 진혜 추가
-//         const member = firestore.collection("newMember");
-
-//         const userAccount = doc(db, "newMember", "user");
-//         // Atomically add a new region to the "regions" array field.
-//         await updateDoc(userAccount, {
-//           account: arrayUnion(userObj)
-//         });
-
-//         // member.updateDoc (doc(db, "newMember", "user"), {account: userObj})
-//         // .then((docRef)=>{
-//         //   console.log(docRef.id);
-//         // })
-
-//         window.sessionStorage.setItem("login", true);
-//         window.sessionStorage.setItem("email", registerEmail);
-//         console.log("uid제발",user.uid)
-//         console.log(user);
-//         navigate('/')
-
-//     } catch (error) {
-//         console.log(error.message);
-//     }
-    
-// };
-  // ---------------------------------------
 
   const inputRef = useRef("");
     // 이메일,패스워드 조건이 충족하는지 확인용

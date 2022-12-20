@@ -26,16 +26,19 @@ const MainComment = () => {
         array.push(doc.data());
     })
     setNewArray(array);
+    console.log(array);
   }
-  useEffect(()=>{
-    getData();
-  },[newArray])
+
+  // useEffect(()=>{
+  //   getData();
+  // },[newArray])
 
   return (
     <div style={{ height: "100%", overflow: "auto" }}>
       {newArray.map((item)=>(
         <p>{item.comment}</p>
       ))}
+      <button onClick={getData}></button>
     </div>
   );
 };

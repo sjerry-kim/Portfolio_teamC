@@ -22,8 +22,17 @@ import { auth } from "../data/firebase";
 import "../css/Login.css";
 import DataContext from "../data/DataContext";
 
+import { useDispatch, useSelector } from 'react-redux';
+import { userLogout } from '../module/currentUser';
 
 const HomeNavbar = () => {
+  
+    // 로그인 유무를 확인하기위한 변수
+    const login = false;
+    // 리덕스의 state값을 가져와서 확인
+    const loginuser = useSelector((state)=>(state.currentUser)) 
+    const dispatch = useDispatch();
+
     // Login에서 가져온 함수들
 
     const navigate = useNavigate();
@@ -178,9 +187,9 @@ const HomeNavbar = () => {
                 <Link to='/main/portfolio'>포트폴리오</Link>
                 <Link to='/main/estimation'>나에게 맞는 시공업체 찾기</Link>
                 <Link to='/main/map'>주변 찾기</Link>
-                { window.sessionStorage.getItem('login') === 'true' ? 
+                { loginuser ? 
                   (
-                    <button onClick={emailLogout}>Logout</button>
+                    <button onClick={()=>{dispatch(userLogout())}}>Logout</button>
                   ) 
                   : 
                   (

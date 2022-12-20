@@ -31,22 +31,23 @@ function InfoCard(props) {
   const { market } = props;
   const [list, setList] = useState([]);
 
-  const { id } = useParams();
-  const [newArray, setNewArray] = useState([]);
-  let array = []
+  // 별점 작성하다 망함 ❤🧡💜
+  // const { id } = useParams();
+  // const [newArray, setNewArray] = useState([]);
+  // let array = []
 
-  const getData = async() => {
-    const filteredMarket = query(collection(db, "test"),where("marketId","==",`${id}`));
-    const queryMarket = await getDocs(filteredMarket); // 파이어베이서 디비 ...
-    queryMarket.forEach((doc)=>{
-        array.push(doc.data());
-    })
-    setNewArray(array);
-  }
+  // const getData = async() => {
+  //   const filteredMarket = query(collection(db, "test"),where("marketId","==",`${id}`));
+  //   const queryMarket = await getDocs(filteredMarket); // 파이어베이서 디비 ...
+  //   queryMarket.forEach((doc)=>{
+  //       array.push(doc.data());
+  //   })
+  //   setNewArray(array);
+  // }
 
-  useEffect(()=>{
-    getData();
-  },[newArray])
+  // useEffect(()=>{
+  //   getData();
+  // },[newArray])
 
   return (
     <div className="Product-infoCards">
