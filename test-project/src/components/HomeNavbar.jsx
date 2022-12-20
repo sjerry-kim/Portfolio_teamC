@@ -187,9 +187,9 @@ const HomeNavbar = () => {
                 <Link to='/main/portfolio'>포트폴리오</Link>
                 <Link to='/main/estimation'>나에게 맞는 시공업체 찾기</Link>
                 <Link to='/main/map'>주변 찾기</Link>
-                { loginuser ? 
+                { window.sessionStorage.getItem("login") == 'true' ? 
                   (
-                    <button onClick={()=>{dispatch(userLogout())}}>Logout</button>
+                    <button onClick={()=>{window.sessionStorage.setItem("login", false);}}>Logout</button>
                   ) 
                   : 
                   (

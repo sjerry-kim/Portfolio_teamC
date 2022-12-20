@@ -53,7 +53,8 @@ const Login = () => {
         // 로그인된 결과 중에서 user를 통해서 관련 정보를 가져올수 있다
         const user = result.user;
         // 로그인할때
-        dispatch(userLogin(user));
+        //dispatch(userLogin(user));
+        window.sessionStorage.setItem("login",true);
         navigate("/", {
           state: {
             name: user.displayName,
@@ -100,10 +101,10 @@ const Login = () => {
     const auth = getAuth();
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, pw);
-
       const user = userCredential.user;
+      window.sessionStorage.setItem("login",true);
       navigate("/");
-      dispatch(userLogin(user));
+      //dispatch(userLogin(user));
     } catch (error) {
       console.log(error.message);
     }
@@ -113,7 +114,6 @@ const Login = () => {
     await signOut(auth);
     // 로컬스토리지에 로그인 상태 저장
     window.sessionStorage.setItem("login", false);
-    window.sessionStorage.removeItem("email", email );
   };
 
   // 이메일,패스워드 조건이 충족하는지 확인용

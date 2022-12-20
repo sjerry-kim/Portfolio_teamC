@@ -14,7 +14,7 @@ import db from '../data/firebase'
 import { collection, query, where, getDocs, orderBy, doc, setDoc, addDoc, updateDoc, arrayUnion, getDoc } from "firebase/firestore";
 import { auth } from "../data/firebase";
 
-const ProductInsertComment = ({ setList }) => {
+const ProductInsertComment = ({getData}) => {
   const { state, action } = useContext(DataContext);
   const [text, setText] = useState("");
   const [rating, setRating] = useState(5);
@@ -35,48 +35,50 @@ const ProductInsertComment = ({ setList }) => {
   // })
 
 
+  const [newArray, setNewArray] = useState([]);
+  let array = []
 
-  const sendComment = (e) => {
-    e.preventDefault();
-    setNum(num + 1);
-    const newText = { marketId: id, commentId: num , name: name, text: text ,};
-    const addText = state.comment.concat(newText);
-    // 별점이 바로 들어감 -> 수정 필요
-    text ? action.setComment(addText)
-      : alert("댓글을 입력해주세요");
-    document.querySelector(".question-text").value = "";
-    setText("");
-    console.log(state.comment)
-  };
-
-  // 별점 onClick !!! 💛 + 2022-12-15 아래 onClick 주석처리 해놓음 
-  const sendRating = () => {
-    
-  }
-
+  // const sendComment = (e) => {
+  //   e.preventDefault();
+  //   setNum(num + 1);
+  //   const newText = { marketId: id, commentId: num , name: name, text: text ,};
+  //   const addText = state.comment.concat(newText);
+  //   // 별점이 바로 들어감 -> 수정 필요
+  //   text ? action.setComment(addText)
+  //     : alert("댓글을 입력해주세요");
+  //   document.querySelector(".question-text").value = "";
+  //   setText("");
+  //   console.log(state.comment)
+  // };
 
   // 1217 진혜 작성
-  const [cNum, setCNume] = useState(0);
+  const [date, setDate] = useState("");
+  let sameDoc = [];
+  const [userName, setUserName] = useState("");
 
   const InsertComment = async (e)=> {
     e.preventDefault();
     const user = auth.currentUser;
     const userUid = user.uid;
-    const sameAccount = query(collection(db, "test"),where("uid","==",userUid));
+    
+    const sameAccount = query(collection(db, "member"),where("uid","==",userUid));
     const sameAccountDoc = await getDocs(sameAccount); 
-
+    sameAccountDoc.forEach((doc)=>{
+      sameDoc.push(doc.data());
+    })
+    console.log(sameDoc)
 
     try{
-      if(sameAccountDoc){
-        alert("후기는 한 번만 작성 가능합니다");
-      }else{
-        const docRef = await addDoc(collection(db, "test"),{
-          comment: text,
-          star: rating,
-          marketId: id,
-          uid: user.uid
-        })
-      }
+      setUserName(sameDoc[0].name);
+    console.log(userName)
+      const docRef = await addDoc(collection(db, "test"),{
+        comment: text,
+        star: rating,
+        marketId: id,
+        name: userName,
+        timeStamp: new Date(),
+      })
+      console.log(docRef.id)
     }catch(e){
       console.error("Error", e);
     }
@@ -102,7 +104,7 @@ const ProductInsertComment = ({ setList }) => {
             placeholder="Send your qusestions."
             rows={3}
           ></Form.Control>
-          <Form.Select
+          {/* <Form.Select
             onChange={e => setRating(e.target.value)}
             defaultValue="5"
           >
@@ -111,8 +113,8 @@ const ProductInsertComment = ({ setList }) => {
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
-          </Form.Select>                    
-          <Button variant="secondary" type="submit"> {/**+ 2022-12-15 버튼에 들어가있던거 💛 onClick={sendRating} */}
+          </Form.Select>                     */}
+          <Button onClick={()=>{getData(id)}} variant="secondary" type="submit"> {/**+ 2022-12-15 버튼에 들어가있던거 💛 onClick={sendRating} */}
             Send
           </Button>
         </Form.Group>
