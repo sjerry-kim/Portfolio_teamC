@@ -19,6 +19,8 @@ function currentUser (state=initalState, action ){
             // 그 값을 통채로 넣어준다면, 받아온 값을 그대로 넣어주면 된다
             // > 그 값을 그대로 넣어주기보다는 
             // 그 안에 있는 값중에 필요한것만 골라서 넣는게 좋다
+            // ...스프레드 연산자를 이용하여
+            // 객체안의 속성값들을 유지할수있도록 가져온다
             return action.payload;
         case "userLogout":
             // 로그아웃을 했을때 그 값이 null값으로 들어감
