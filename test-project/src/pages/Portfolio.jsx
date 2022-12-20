@@ -69,116 +69,130 @@ const Portfolio = (props) => {
 
           
           <div className="portfolio-cards">
-            <label for="s1" id="portfolio-slide1">
+          <label for="s1" id="portfolio-slide1">
               <div className="portfolio-card">
                 <div className="portfolio-image">
-                  <img src={state.score[0].reviewImg1} alt="" />{" "}
+                  <img src={state.score[0].mainIMG} alt="" />
                 </div>
                 <div className="portfolio-infos">
                   <p className="portfolio-name">
-                    <Link to="/main/product/1">1 {state.score[0].name}</Link>
+                      {state.score[0].name}
                   </p>
+                  <p className="portfolio_intro">{state.score[0].companyIntro}</p>
                 </div>
+                <button className="portfolio_btn"><Link to="/main/product/1">회사 상세보기</Link></button>
               </div>
-            </label>
+              </label>
             <label for="s2" id="portfolio-slide2">
               <div className="portfolio-card">
                 <div className="portfolio-image">
-                  <img src={state.score[1].reviewImg1} alt="" />
+                  <img src={state.score[1].mainIMG} alt="" />
                 </div>
                 <div className="portfolio-infos">
                   <p className="portfolio-name">
-                    <Link to="/main/product/2"> 2 {state.score[1].name}</Link>
+                     {state.score[1].name}
                   </p>
+                  <p className="portfolio_intro">{state.score[1].companyIntro}</p>
                 </div>
+                <button className="portfolio_btn"><Link to="/main/product/2">회사 상세보기</Link></button>
               </div>
-            </label>
-            <label for="s3" id="portfolio-slide3">
+              </label>
+              <label for="s3" id="portfolio-slide3">
               <div className="portfolio-card">
                 <div className="portfolio-image">
-                  <img src={state.score[2].reviewImg1} alt="" />
+                  <img src={state.score[2].mainIMG} alt="" />
                 </div>
                 <div className="portfolio-infos">
                   <p className="portfolio-name">
-                    <Link to="/main/product/3">3 {state.score[2].name}</Link>
+                      {state.score[2].name}
                   </p>
+                  <p className="portfolio_intro">{state.score[2].companyIntro}</p>
                 </div>
+                <button className="portfolio_btn"><Link to="/main/product/3">회사 상세보기</Link></button>
               </div>
             </label>
             <label for="s4" id="portfolio-slide4">
               <div className="portfolio-card">
                 <div className="portfolio-image">
-                  <img src={state.score[3].reviewImg1} alt="" />
+                  <img src={state.score[3].mainIMG} alt="" />
                 </div>
                 <div className="portfolio-infos">
                   <p className="portfolio-name">
-                    <Link to="/main/product/4">4 {state.score[3].name}</Link>
+                      {state.score[3].name}
                   </p>
+                  <p className="portfolio_intro">{state.score[3].companyIntro}</p>
                 </div>
+                <button className="portfolio_btn"><Link to="/main/product/4">회사 상세보기</Link></button>
               </div>
             </label>
             <label for="s5" id="portfolio-slide5">
               <div className="portfolio-card">
                 <div className="portfolio-image">
-                  <img src={state.score[4].reviewImg1} alt="" />
+                  <img src={state.score[4].mainIMG} alt="" />
                 </div>
                 <div className="portfolio-infos">
                   <p className="portfolio-name">
-                    <Link to="/main/product/5">  5 {state.score[4].name}</Link>
+                     {state.score[4].name}
                   </p>
+                  <p className="portfolio_intro">{state.score[4].companyIntro}</p>
                 </div>
+                <button className="portfolio_btn"><Link to="/main/product/5">회사 상세보기</Link></button>
               </div>
             </label>
             <label for="s6" id="portfolio-slide6">
               <div className="portfolio-card">
                 <div className="portfolio-image">
-                  <img src={state.score[5].reviewImg1} alt="" />
+                  <img src={state.score[5].mainIMG} alt="" />
                 </div>
                 <div className="portfolio-infos">
                   <p className="portfolio-name">
-                   <Link to="/main/product/6"> 6 {state.score[5].name}</Link>
+                     {state.score[5].name}
                   </p>
+                  <p className="portfolio_intro">{state.score[5].companyIntro}</p>
                 </div>
+                <button className="portfolio_btn"><Link to="/main/product/6">회사 상세보기</Link></button>
               </div>
             </label>
             <label for="s7" id="portfolio-slide7">
               <div className="portfolio-card">
                 <div className="portfolio-image">
-                  <img src={state.score[6].reviewImg1} alt="" />
+                  <img src={state.score[6].mainIMG} alt="" />
                 </div>
                 <div className="portfolio-infos">
                   <p className="portfolio-name">
-                    <Link to="/main/product/7">  7 {state.score[6].name}</Link>
+                     {state.score[6].name}
                   </p>
+                  <p className="portfolio_intro">{state.score[6].companyIntro}</p>
                 </div>
+                <button className="portfolio_btn"><Link to="/main/product/7">회사 상세보기</Link></button>
               </div>
             </label>
             <label for="s8" id="portfolio-slide8">
               <div className="portfolio-card">
                 <div className="portfolio-image">
-                  <img src={state.score[7].reviewImg1} alt="" />
+                  <img src={state.score[7].mainIMG} alt="" />
                 </div>
                 <div className="portfolio-infos">
                   <p className="portfolio-name">
-                    <Link to="/main/product/8"> 8 {state.score[7].name}</Link>
+                      {state.score[7].name}
                   </p>
+                  <p className="portfolio_intro">{state.score[7].companyIntro}</p>
                 </div>
+                <button className="portfolio_btn"><Link to="/main/product/8">회사 상세보기</Link></button>
               </div>
             </label>
-
-
             <label for="s9" id="portfolio-slide9">
               <div className="portfolio-card">
                 <div className="portfolio-image">
-                  <img src={state.score[8].reviewImg1} alt="" />
+                  <img src={state.score[8].mainIMG} alt="" />
                 </div>
                 <div className="portfolio-infos">
                   <p className="portfolio-name">
-
-                  <Link to="/main/product/9">9{state.score[8].name}
-        </Link>
+                     {state.score[8].name}
                   </p>
+                  <p className="portfolio_intro">{state.score[8].companyIntro}</p>
                 </div>
+                <button className="portfolio_btn"><Link to="/main/product/9">회사 상세보기</Link></button>
               </div>
             </label>
 
