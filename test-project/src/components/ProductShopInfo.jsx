@@ -34,7 +34,7 @@ function InfoCard(props) {
   const [newArray, setNewArray] = useState([]);
 
   const getData = async(id) => {
-    const filteredMarket = query(collection(db, "test"),where("marketId","==",`${id}`),orderBy("timeStamp"));
+    const filteredMarket = query(collection(db, "review"),where("marketId","==",`${id}`),orderBy("timeStamp"));
     const queryMarket = await getDocs(filteredMarket); // 파이어베이서 디비 ...
     let array = []
     queryMarket.forEach((doc)=>{
@@ -88,7 +88,7 @@ function InfoCard(props) {
                   <h1>한줄평</h1>
                 </Card.Title>
                 <Card style={{ height: "420px", overflow: "auto" }}>
-                  <MainComment newArray={newArray} getData={getData}/>
+                  <MainComment newArray={newArray} setNewArray={setNewArray} getData={getData}/>
                 </Card>
                 <ProductInsertComment getData={getData} />
               </div>
