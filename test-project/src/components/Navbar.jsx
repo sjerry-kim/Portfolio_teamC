@@ -18,10 +18,14 @@ import {
 } from "firebase/auth";
 import { auth } from "../data/firebase";
 import "../css/Login.css";
+import { useDispatch, useSelector } from "react-redux";
+import { userLogout } from "../module/currentUser";
 
 const Navbar = () => {
   const { action } = useContext(DataContext);
   const navigate = useNavigate();
+  const loginuser = useSelector((state)=>(state.currentUser)) 
+  const dispatch = useDispatch();
 
       // 구글로 로그인하기 버튼을 눌렀을때 파이어스토어를 들고와서 사용
       const googleLogin = () => {
@@ -186,8 +190,13 @@ const Navbar = () => {
         Estimation
       </Link>
       <Link to="/main/map">Map</Link>
-      {window.sessionStorage.getItem("login") === "true" ? (
-        <button onClick={emailLogout}>Logout</button>
+      {window.sessionStorage.getItem("login") == 'true' ? (
+        <button onClick={()=>{
+          window.sessionStorage.setItem("login", false);
+          navigate('/')
+        }}>
+          Logout
+        </button>
       ) : (
         <button className="navBar_Loginbtn"
           onClick={() => {

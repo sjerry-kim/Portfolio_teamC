@@ -52,7 +52,8 @@ const Join = () => {
 
           console.log("uid제발",user.uid)
           console.log(user);
-          dispatch(userLogin(user));
+          //dispatch(userLogin(user));
+          window.sessionStorage.setItem("login",true);
           navigate('/');
       } catch (error) {
           console.log(error.message);
