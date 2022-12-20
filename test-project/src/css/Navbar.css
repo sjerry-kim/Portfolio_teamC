@@ -1,0 +1,36 @@
+.navBar_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #232533; 
+    padding-top: 55px;
+    font-weight: bold;
+
+}
+
+
+  .navBar_box a{
+    text-decoration: none;
+    font-size: medium; 
+    color: inherit;
+    color: skyblue;
+  }
+
+  .navBar_box a:hover{
+    color:lightpink;
+    font-weight: 500;
+  }
+
+.navBar_Loginbtn{
+  background: none;
+  border: none;
+  font-weight: bold;
+  color:skyblue;
+
+}
+.navBar_Loginbtn:hover{
+    color:lightpink;
+    font-weight: 500;
+  } 
+
+

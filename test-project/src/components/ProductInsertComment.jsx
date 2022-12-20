@@ -6,16 +6,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useContext, useEffect, useState } from "react";
 import DataContext from "../data/DataContext";
 import { useParams } from "react-router-dom";
-import { firestore } from "firebase/firestore";
+
+// import { firestore } from "firebase/firestore";
 import firebase from 'firebase/compat/app';
-
-
+import { firestore } from "../data/firebase";
+import db from '../data/firebase'
+import { collection, query, where, getDocs, orderBy, doc, setDoc, addDoc, updateDoc, arrayUnion, getDoc } from "firebase/firestore";
 import { auth } from "../data/firebase";
-// 버튼클릭시 데이터담을때 필요함 import
-import { collection, addDoc } from "firebase/firestore";
-import db from "../data/firebase";
 
-const ProductInsertComment = ({ setList }) => {
+const ProductInsertComment = ({getData}) => {
   const { state, action } = useContext(DataContext);
   const [text, setText] = useState("");
   const [rating, setRating] = useState(5);
@@ -25,8 +24,6 @@ const ProductInsertComment = ({ setList }) => {
 
   const { id } = useParams();
 
-
-  
   //undefined 값을 지정해줘야한다. -> 이게 뭐야..?
 
 
@@ -38,48 +35,58 @@ const ProductInsertComment = ({ setList }) => {
   // })
 
 
+  const [newArray, setNewArray] = useState([]);
+  let array = []
 
-  const sendComment = (e) => {
+  // const sendComment = (e) => {
+  //   e.preventDefault();
+  //   setNum(num + 1);
+  //   const newText = { marketId: id, commentId: num , name: name, text: text ,};
+  //   const addText = state.comment.concat(newText);
+  //   // 별점이 바로 들어감 -> 수정 필요
+  //   text ? action.setComment(addText)
+  //     : alert("댓글을 입력해주세요");
+  //   document.querySelector(".question-text").value = "";
+  //   setText("");
+  //   console.log(state.comment)
+  // };
+
+  // 1217 진혜 작성
+  const [date, setDate] = useState("");
+  let sameDoc = [];
+  const [userName, setUserName] = useState("");
+
+  const InsertComment = async (e)=> {
     e.preventDefault();
-    setNum(num + 1);
-    const newText = { marketId: id, commentId: num , name: name, text: text ,};
-    const addText = state.comment.concat(newText);
-    // 별점이 바로 들어감 -> 수정 필요
-    text ? action.setComment(addText)
-      : alert("댓글을 입력해주세요");
-    document.querySelector(".question-text").value = "";
-    setText("");
-    console.log(state.comment)
-  };
+    const user = auth.currentUser;
+    const userUid = user.uid;
+    
+    const sameAccount = query(collection(db, "member"),where("uid","==",userUid));
+    const sameAccountDoc = await getDocs(sameAccount); 
+    sameAccountDoc.forEach((doc)=>{
+      sameDoc.push(doc.data());
+    })
+    console.log(sameDoc)
 
-  // 별점 onClick !!! 💛
-    const sendRating = async () => {
-      // 데이터가 담김 2022 12-18 성공 
-      try {
-        const user = await addDoc(collection(db, "test"),{
-          /* docRef라는 객체에 아래 데이터가 담기게 된다 */
-          comment: text,
-          star: rating,
-          marketId: id,
-        });
-        console.log("Document written with ID☆: ", user.id);
-      } catch (e) {
-        console.error("Error adding document★: ", e);
-      }
-
-      const newText = { marketId: id, commentId: num, name: name, text: text };
-      const addText = state.comment.concat(newText);
-      text ? action.setComment(addText) : alert("댓글을 입력해주세요");
-      setList(prev => [...prev, Number(rating)]);
+    try{
+      setUserName(sameDoc[0].name);
+    console.log(userName)
+      const docRef = await addDoc(collection(db, "test"),{
+        comment: text,
+        star: rating,
+        marketId: id,
+        name: userName,
+        timeStamp: new Date(),
+      })
+      console.log(docRef.id)
+    }catch(e){
+      console.error("Error", e);
+    }
   }
 
-  // ID정보 비교
- 
-
   return (
-
-<div>
-      <Form onSubmit={sendComment}>
+  <div>
+      <Form onSubmit={InsertComment}>
         <Form.Group
           controlId="exampleForm.ControlTextarea1"
           style={{
@@ -97,7 +104,7 @@ const ProductInsertComment = ({ setList }) => {
             placeholder="Send your qusestions."
             rows={3}
           ></Form.Control>
-          <Form.Select
+          {/* <Form.Select
             onChange={e => setRating(e.target.value)}
             defaultValue="5"
           >
@@ -106,8 +113,8 @@ const ProductInsertComment = ({ setList }) => {
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
-          </Form.Select>                    
-          <Button variant="secondary" type="submit" onClick={sendRating}> {/**+ 2022-12-15 버튼에 들어가있던거 💛 onClick={sendRating} */}
+          </Form.Select>                     */}
+          <Button onClick={()=>{getData(id)}} variant="secondary" type="submit"> {/**+ 2022-12-15 버튼에 들어가있던거 💛 onClick={sendRating} */}
             Send
           </Button>
         </Form.Group>

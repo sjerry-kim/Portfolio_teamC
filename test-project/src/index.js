@@ -8,13 +8,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./data/firebase";
 
+import {Provider} from "react-redux"
+// createStore를 추가
+import {createStore} from "redux"
+import rootReducer from './module'; // index라는 이름을가진 파일은 폴더이름만적어도 접근
+// createStore를 통해서 store생성
+// modules에 있는 index 안에 rootReducer 들고옴
+const store = createStore(rootReducer);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </React.StrictMode>
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function

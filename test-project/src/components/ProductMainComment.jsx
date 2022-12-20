@@ -1,72 +1,46 @@
-
-import { useContext, useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import DataContext from "../data/DataContext";
 
-// 데이터 가져올때 필요
-import { collection, query, where, getDocs } from "firebase/firestore";
-import db from "../data/firebase";
+// import { firestore } from "firebase/firestore";
+import firebase from 'firebase/compat/app';
+import { firestore } from "../data/firebase";
+import db from '../data/firebase'
+import { collection, query, where, getDocs, orderBy, doc, setDoc, addDoc, getDoc, getDocsFromCache } from "firebase/firestore";
+import { useState } from "react";
+import { get, getDatabase } from "firebase/database";
+import { getIdToken } from "firebase/auth";
 
-const MainComment = () => {
-  const { state, action } = useContext(DataContext);
+const MainComment = ({newArray, getData}) => {
   const { id } = useParams();
-  const date = new Date();
-  const filteredMarket = state.comment.filter((f)=>(f.marketId == id))
+  // const [newArray, setNewArray] = useState([]);
+  // let array = []
 
-  const [fireinput, setFireinput] = useState();
+  // const getData = async() => {
+  //   const filteredMarket = query(collection(db, "test"),where("marketId","==",`${id}`),orderBy("timeStamp"));
+  //   const queryMarket = await getDocs(filteredMarket); // 파이어베이서 디비 ...
+  //   queryMarket.forEach((doc)=>{
+  //       array.push(doc.data());
+  //   })
+  //   setNewArray(array);
+  //   console.log(array);
+  // }
 
-  const textinput = async () => {
-    const filteredMarket = query(collection(db, "test"), where("marketId", "==", `${id}`));
-    /* cities라는 컬렉션의 문서 중 capital이라는 key의 값이 true인 문서들만 담기 */
-      const querySnapshot = await getDocs(filteredMarket);
-      querySnapshot.forEach((doc) => {
-      // doc.data() is never undefined for query doc snapshots
-      setFireinput(doc.id, " => ", doc.data());
-    });
-  }
-
-  console.log(fireinput)
+  useEffect(()=>{
+    getData(id);
+  },[])
 
   return (
     <div style={{ height: "100%", overflow: "auto" }}>
-      {filteredMarket.map((c, i) => (
-        <div key={i}>
-          {`이름: ${fireinput}`}
-          {c.name}
-          {c.text}
-          <br />
-          <p style={{ fontSize: "0.9em", color: "gray" }}>
-            {`${date.getFullYear()}.
-                            ${date.getMonth() + 1 < 10
-                ? `0${date.getMonth() + 1}`
-                : date.getMonth() + 1
-              }.
-                            ${date.getDate() < 10
-                ? `0${date.getDate()}`
-                : date.getDate()
-              }.　`}
-            {/* {
-                            `${date.getHours()} : ${date.getMinutes()<10 ? (`0${date.getMinutes()}`): date.getMinutes() }` 
-                           } */}
-          </p>
-          <button
-            onClick={() => {
-              const deletedText = state.comment.filter(
-                (d, index) => i != index
-              );
-              if (true) {
-                action.setComment(deletedText);
-              }
-              console.log(state.comment);
-            }}
-          >
-            삭제
-          </button>
+      {newArray.map((item)=>(
+        <div>
+          <p>{item.name} : {item.comment}</p>
         </div>
       ))}
+      {/* <button onClick={getData}>댓글 수동 업데이트</button> */}
     </div>
   );
 };
-
 
 export default MainComment;

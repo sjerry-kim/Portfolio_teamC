@@ -17,6 +17,9 @@ import "../css/Login.css";
 import DataContext from "../data/DataContext";
 import RestrictPage from "../components/RestrictPage";
 
+import { userLogin } from "../module/currentUser";
+import { useDispatch } from "react-redux";
+
 const User = {
   email: "test@example.com",
   pw: "test8361@",
@@ -25,6 +28,10 @@ const User = {
 // Home ('/')으로 돌아가는 
 
 const Login = () => {
+
+  // 리덕스의 리듀서를 사용하기위한 디스패치
+  const dispatch = useDispatch();
+
   const navigate = useNavigate();
   const CreateButton = () => {
     // 회원가입창 경로
@@ -45,6 +52,9 @@ const Login = () => {
         const token = credential.accessToken;
         // 로그인된 결과 중에서 user를 통해서 관련 정보를 가져올수 있다
         const user = result.user;
+        // 로그인할때
+        //dispatch(userLogin(user));
+        window.sessionStorage.setItem("login",true);
         navigate("/", {
           state: {
             name: user.displayName,
@@ -52,8 +62,6 @@ const Login = () => {
             photo: user.photoURL,
           },
         });
-        // 로컬스토리지에 로그인 상태 저장
-        window.sessionStorage.setItem("login", true);
         // 원하는 값들 확인 가능
         console.log(user);
         console.log(user.email); // 이메일
@@ -91,31 +99,12 @@ const Login = () => {
 
   const emailLogin = async () => {
     const auth = getAuth();
-    // const provider = new EmailAuthProvider();
-    // signInWithEmailAndPassword(auth,provider)
-    //     .then((result)=>{
-    //         const credential = EmailAuthProvider.credentialFromResult(result);
-    //         const token = credential.accessToken;
-    //         const user = result.user;
-    //         action.setLogin("로그인성공");
-    //     })
-    //     .catch((error)=>{
-    //         //
-    //         const errorCode = error.code;
-    //         const errorMessage = error.message;
-    //         //
-    //         const email = error.customData.email;
-    //         //
-    //         //const credential = EmailAuthProvider.credentialFromError(error);
-    //         console.log("로그인실패")
-    //     });
-
     try {
-      const userInfo = await signInWithEmailAndPassword(auth, email, pw);
-      // setUser(userInfo.user);
-      // 로컬스토리지에 로그인 상태 저장
-      window.sessionStorage.setItem("login", true);
+      const userCredential = await signInWithEmailAndPassword(auth, email, pw);
+      const user = userCredential.user;
+      window.sessionStorage.setItem("login",true);
       navigate("/");
+      //dispatch(userLogin(user));
     } catch (error) {
       console.log(error.message);
     }
