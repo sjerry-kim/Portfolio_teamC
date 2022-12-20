@@ -88,7 +88,7 @@ function InfoCard(props) {
                   <h1>한줄평</h1>
                 </Card.Title>
                 <Card style={{ height: "420px", overflow: "auto" }}>
-                  <MainComment newArray={newArray} setNewArray={setNewArray} getData={getData}/>
+                  <MainComment newArray={newArray} getData={getData}/>
                 </Card>
                 <ProductInsertComment getData={getData} />
               </div>

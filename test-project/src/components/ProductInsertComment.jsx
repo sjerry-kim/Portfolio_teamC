@@ -58,8 +58,8 @@ const ProductInsertComment = ({getData}) => {
 
   const InsertComment = async (e)=> {
     e.preventDefault();
-    const user = auth.currentUser;
-    const userUid = user.uid;
+    const userUid = window.sessionStorage.getItem('uid');
+    //const userUid = user.uid;
     
     const sameAccount = query(collection(db, "member"),where("uid","==",userUid));
     const sameAccountDoc = await getDocs(sameAccount); 
@@ -82,6 +82,7 @@ const ProductInsertComment = ({getData}) => {
     }catch(e){
       console.error("Error", e);
     }
+    getData(id)
   }
 
   return (
@@ -114,7 +115,7 @@ const ProductInsertComment = ({getData}) => {
             <option value="4">4</option>
             <option value="5">5</option>
           </Form.Select>                     */}
-          <Button onClick={()=>{getData(id)}} variant="secondary" type="submit"> {/**+ 2022-12-15 버튼에 들어가있던거 💛 onClick={sendRating} */}
+          <Button  variant="secondary" type="submit"> {/**+ 2022-12-15 버튼에 들어가있던거 💛 onClick={sendRating} */}
             Send
           </Button>
         </Form.Group>
