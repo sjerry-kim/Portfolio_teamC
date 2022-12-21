@@ -24,6 +24,8 @@ import { firestore } from "./data/firebase";
 // Media Query import - 가장 아래 import 유지
 import './css/MediaQuery.css';
 import MyPage from './pages/MyPage';
+import MyPageReciept from './components/MyPageReciept';
+import MyPageAccount from './components/MyPageAccount';
 
 
 
@@ -35,13 +37,15 @@ function App() {
           <Route index path='/' element={<Home />}/>
           <Route path='/login' element={<Login />}/>
           <Route path='/join' element={<Join />}/>
-          <Route path='/mypage' element={<MyPage />}></Route>
+          <Route path='/mypage' element={<MyPage />}>
+            <Route index element={<MyPageAccount />}/>
+            <Route path='/mypage/account' element={<MyPageAccount />}/>
+            <Route path='/mypage/reciept' element={<MyPageReciept />}/>
+          </Route>
           <Route path='/main' element={<Main />}>
             <Route index  element={<Portfolio />}/>
             <Route path='/main/portfolio' element={<Portfolio />} />
-
             <Route path='/main/product/:id' element={<ProductMergePage />} /> 
-
             <Route path='/main/estimation' element={<EstStart /> }/>
             <Route path="/main/question" element={<EstQuestion />} />
             <Route path="/main/result" element={<EstResult />} />

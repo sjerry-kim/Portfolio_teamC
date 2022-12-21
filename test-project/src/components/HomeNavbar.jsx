@@ -200,6 +200,7 @@ const HomeNavbar = () => {
                   (
                     <button className='homeLogout-Btn' onClick={()=>{
                       window.sessionStorage.setItem("login", false);
+                      window.sessionStorage.setItem("photoURL", null);
                       alert("로그아웃하였습니다")
                       navigate('/')
                     }}>Logout</button>

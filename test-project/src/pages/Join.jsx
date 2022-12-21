@@ -58,6 +58,10 @@ const Join = (props) => {
           console.log(user);
           //dispatch(userLogin(user));
           window.sessionStorage.setItem("login",true);
+          window.sessionStorage.setItem("uid", user.uid);
+          window.sessionStorage.setItem("displayName", user.displayName);
+          window.sessionStorage.setItem("email", user.email);
+          window.sessionStorage.setItem("photoURL", user.photoURL);
           navigate('/');
       } catch (error) {
         navigate('/login')
