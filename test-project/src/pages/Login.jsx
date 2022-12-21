@@ -108,7 +108,14 @@ const Login = () => {
       navigate("/");
       //dispatch(userLogin(user));
     } catch (error) {
-      console.log(error.message);
+      const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+        if (errorCode == "auth/wrong-password") {
+          alert("잘못된 비밀번호입니다");
+        } else if (errorCode == "auth/user-not-found") {
+          alert("없는 이메일입니다");
+        }
     }
   };
 
