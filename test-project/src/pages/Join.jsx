@@ -60,7 +60,15 @@ const Join = (props) => {
           window.sessionStorage.setItem("login",true);
           navigate('/');
       } catch (error) {
-          console.log(error.message);
+        navigate('/login')
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode);
+        if (errorCode == "auth/email-already-in-use") {
+          alert("이미 사용하고 있는 이메일입니다.");
+        } else if (errorCode == "auth/weak-password") {
+          alert("비밀번호를 6자리 이상으로 작성하세요");
+        }
       }
       
   };

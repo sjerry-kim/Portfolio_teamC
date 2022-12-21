@@ -10,7 +10,7 @@
   
   /* Color/shape of burger icon bars */
   .bm-burger-bars {
-    background: #373a47;
+    background: #c7c7c7;
   }
   
   /* Color/shape of burger icon bars on hover*/
@@ -41,8 +41,8 @@
   
   /* General sidebar styles */
   .bm-menu {
-    background: #373a47;
-    opacity: 80%;
+    background: #362101;
+    opacity: 100%;
     padding: 2.5em 1.5em 0;
     font-size: 1.15em;
   }
@@ -58,7 +58,7 @@
     padding: 0.8em;
     display: grid;
     margin: -5px;
-    align-content: center;
+    align-content:flex-start;
 
   }
   
@@ -66,7 +66,6 @@
   .bm-item {
     display: inline-block;
     font-size: 34px;
-    text-align: center  !important;
     margin-bottom: 70px !important;
   }
   
@@ -87,4 +86,55 @@
   
   .bm-item:hover {
     color: #ffffff;
+  }
+
+  .homenamebox{
+    width: 350px;
+  }
+  .homename{
+    position: relative;
+    top: 15px;
+    font-size: 20px;
+    float: left;
+    clear: both;
+  }
+
+  .homeLogin-Btn{
+    position: relative;
+    left: 225px;
+    width: 100px;
+    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.815);
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(255, 255, 255);
+    padding-bottom: 5px;
+    font-size: 20px;
+    text-align: center  !important;
+  }
+  .homeLogout-Btn{
+    position: relative;
+    left: 60px;
+    width: 100px;
+    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.815);
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(255, 255, 255);
+    padding-bottom: 5px;
+    font-size: 20px;
+    text-align: center  !important;
+  }
+  
+
+  
+  .hometext1:hover{
+    color: rgb(156, 156, 156);
+    transition: 0.5s;
+  }
+  .hometext2:hover{
+    color: rgb(156, 156, 156);
+    transition: 0.5s;
+  }
+  .hometext3:hover{
+    color: rgb(156, 156, 156);
+    transition: 0.5s;
   }

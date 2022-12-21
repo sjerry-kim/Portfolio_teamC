@@ -190,17 +190,15 @@ const HomeNavbar = () => {
     return (  
         <div >
             <Menu right width={"400px"} >
+              <div className='homenamebox'>
               {
           
                 window.sessionStorage.getItem("login") == 'true' ?
-                (<p>welcome, {userName}</p> ):( <p></p> )
+                (<p className='homename'>안녕하세요 {userName} 님</p> ):( <p className='homename'></p> )
               }
-                <Link to='/main/portfolio'>포트폴리오</Link>
-                <Link to='/main/estimation'>나에게 맞는 시공업체 찾기</Link>
-                <Link to='/main/map'>주변 찾기</Link>
                 { window.sessionStorage.getItem("login") == 'true' ? 
                   (
-                    <button onClick={()=>{
+                    <button className='homeLogout-Btn' onClick={()=>{
                       window.sessionStorage.setItem("login", false);
                       alert("로그아웃하였습니다")
                       navigate('/')
@@ -208,9 +206,14 @@ const HomeNavbar = () => {
                   ) 
                   : 
                   (
-                  <button onClick={()=>{navigate('/login')}}>Login</button>
+                  <button className='homeLogin-Btn' onClick={()=>{navigate('/login')}}>Login</button>
                   )
                 }
+                </div>
+                <Link to='/main/portfolio' className='hometext1'>업체 포트폴리오</Link>
+                <Link to='/main/estimation' className='hometext2'>맞춤 업체 찾기</Link>
+                <Link to='/main/map' className='hometext3'>주변 업체 찾기</Link>
+                
             </Menu>
         </div>
     );
