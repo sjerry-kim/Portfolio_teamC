@@ -1,15 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;600;700&display=swap');
+@font-face {
+  font-family: 'Chosunilbo_myungjo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 .portfolio-body {
     align-items: center;
     justify-content: center;
     overflow-x: hidden;
-    font-family: 'Urbanist', sans-serif;
+    font-family: 'Chosunilbo_myungjo';
     width: 100vw;
     height: 100vh;
     overflow-y: auto;
     background-size: cover;
-    background-color: rgb(255, 251, 243);
+    background-color: #f1eeeb;
     margin-bottom: -100px;
   }
   
@@ -60,7 +66,7 @@
     height: 100%;
     border-radius: 5px;
     border: 1px solid #8d8b8009;
-    background-color: rgb(255, 251, 243);
+    background-color: #fdfcfa;
     height: 700px;
     width: 500px;
     box-shadow: 10px 0px 10px 0px rgba(0, 0, 0, 0.15);
@@ -90,16 +96,18 @@
 
 
 .portfolio-name{
+  font-family: 'Chosunilbo_myungjo';
   padding-top: 15px;
   font-size: 35px;
   letter-spacing: 5px;
   text-align: end;
   margin-top: 7px;
+  font-weight: bold;
 }
 .portfolio-infos {
   display: block;
 }
- .portfolio-infos > .portfolio-name > a{
+  .portfolio-infos > .portfolio-name > a{
     position: relative;
     font-size: 30px;
     font-weight: 500;
@@ -110,6 +118,7 @@
     color: inherit; 
 } 
 .portfolio-card a{
+  font-family: 'Chosunilbo_myungjo';
   color:inherit;
   text-decoration-line: none;
   
@@ -119,6 +128,7 @@
   display: block;
 }
 .portfolio-infos > .portfolio_intro{
+  font-family: 'Chosunilbo_myungjo';
   font-size: 20px;
   white-space: pre-wrap;
   text-align: center;
@@ -126,8 +136,7 @@
 }
 
 
-
- .portfolio_btn {
+.portfolio_btn {
   position: fixed;
   width: 130px;
   height: 40px;
@@ -137,15 +146,16 @@
   padding: 0;
   border: none;
   font-weight: bold;
-  color: skyblue;
-  background: rgb(255, 251, 243);
+  color: #291b0b;
+  background: #FDFCFA;
 
 }
 .portfolio_btn:hover {
-  color: pink;
+  color: #5a3e31;
   font-weight: 500;
   background: transparent;
   box-shadow:none;
+  font-weight: bold;
 }
 
 .portfolio_btn:before,
@@ -156,8 +166,7 @@
   right:0;
   height:2px;
   width:0;
-  background: pink;
-
+  background: #5a3e31;
   transition:400ms ease all;
 }
 
@@ -187,114 +196,6 @@
   transition: all .7s ease;
   color: var(--current-color2);
 }
-
-
-
-{/** .portfolio-infos  .portfolio-name > a {
-    position: relative;
-    display: inline-block;
-    padding: 10px 25px;
-    margin: 8px 0;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: 0.5s;
-    letter-spacing: 4px;
-    overflow: hidden;
-
-  }
-  a:hover {
-    background: #373a47;
-    color: #fff;
-    box-shadow: 0 0 5px #fff, 0 0 25px #fff, 0 0 50px #fff, 0 0 100px #fff; 
-  }
-  a:nth-child(1) {
-    filter: hue-rotate(270deg);
-  }
-  a:nth-child(2) {
-    filter: hue-rotate(110deg);
-  }
-  a span {
-    position: absolute;
-    display: block;
-  }
-  a span:nth-child(1) {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #fff);
-    animation: animate1 2s linear infinite;
-  }
-  @keyframes animate1 {
-    0% {
-      left: -100%;
-    }
-    50%,
-    100% {
-      left: 100%;
-    }
-  }
-  a span:nth-child(2) {
-    top: -100%;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(180deg, transparent, #fff);
-    animation: animate2 2s linear infinite;
-    animation-delay: 0.5s;
-  }
-  @keyframes animate2 {
-    0% {
-      top: -100%;
-    }
-    50%,
-    100% {
-      top: 100%;
-    }
-  }
-  a span:nth-child(3) {
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(270deg, transparent, #fff);
-    animation: animate3 2s linear infinite;
-    animation-delay: 1s;
-  }
-  @keyframes animate3 {
-    0% {
-      right: -100%;
-    }
-    50%,
-    100% {
-      right: 100%;
-    }
-  }
-  
-  a span:nth-child(4) {
-    bottom: -100%;
-    left: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(360deg, transparent, #fff);
-    animation: animate4 2s linear infinite;
-    animation-delay: 1.5s;
-  }
-  @keyframes animate4 {
-    0% {
-      bottom: -100%;
-    }
-    50%,
-    100% {
-      bottom: 100%;
-    }
-  }
-  
-
-*/}
-
-
 
 
 
