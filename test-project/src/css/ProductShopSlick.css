@@ -6,8 +6,7 @@
 } */
 .top {
   height: 102vh;
-  background-image: url(../img/backgroundImg4.jpg);
-  background-size: cover;
+
 }
 /* ShopSlick 부분 */
 
@@ -25,11 +24,11 @@
 
 .Product-shopimg img {
   margin: 0 auto 0 auto;
-  width: 700px;
-  height: 500px;
+  width: 100vw;
+  height: 91vh;
   box-sizing: border-box;
   position: relative;
-  top: 100px;
+  
 } /*위 오른쪽 아래 왼쪽*/
 
 .Product-logo {
