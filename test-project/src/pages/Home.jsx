@@ -43,8 +43,6 @@ const Home = () => {
 
   return (
     <div className="home-slick-div">
-
-
       <div id="home-container">
         <div id="home-container2">
           <Slider className="home-main-slick" {...settings2} ref={slider}>
