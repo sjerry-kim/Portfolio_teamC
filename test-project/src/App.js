@@ -23,6 +23,7 @@ import { firestore } from "./data/firebase";
 
 // Media Query import - 가장 아래 import 유지
 import './css/MediaQuery.css';
+import MyPage from './pages/MyPage';
 
 
 
@@ -32,8 +33,9 @@ function App() {
       <DataProvider>
         <Routes>
           <Route index path='/' element={<Home />}/>
-          <Route path='login' element={<Login />}/>
-          <Route path='join' element={<Join />}/>
+          <Route path='/login' element={<Login />}/>
+          <Route path='/join' element={<Join />}/>
+          <Route path='/mypage' element={<MyPage />}></Route>
           <Route path='/main' element={<Main />}>
             <Route index  element={<Portfolio />}/>
             <Route path='/main/portfolio' element={<Portfolio />} />

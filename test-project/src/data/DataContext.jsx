@@ -1,8 +1,7 @@
 import { createContext, useState } from "react";
 
 // 회사 slick 이미지
-import purenCom1 from '../img/purenCom1.jpg';
-import purenCom2 from '../img/purenCom2.jpg';
+
 // ❗️회사 slick 이미지 데이터 삽입방식 변경했습니다 -진혜-❗️
 
 // 리뷰 card 이미지
