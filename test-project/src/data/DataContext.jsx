@@ -2,7 +2,7 @@ import { createContext, useState } from "react";
 
 // 회사 slick 이미지
 import purenCom1 from '../img/purenCom1.jpg';
-import purenCom2 from '../img/purenCom2.JPG';
+import purenCom2 from '../img/purenCom2.jpg';
 // ❗️회사 slick 이미지 데이터 삽입방식 변경했습니다 -진혜-❗️
 
 // 리뷰 card 이미지
@@ -257,7 +257,7 @@ const DataProvider = (({ children }) => {
             location: "경상남도 김해시 월산로 11",
             number: "010-7487-7410",
             companyLogo: purenLogo,
-            companyImg: ["purenCom1.jpg", "purenCom2.JPG", "purenCom3.jpg"],
+            companyImg: ["purenCom1.jpg", "purenCom2.jpg", "purenCom3.jpg"],
             reviewImg1: purenComRe1,
             reviewImg2: purenComRe2,
             reviewImg3: purenComRe3,

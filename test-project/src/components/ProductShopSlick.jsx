@@ -22,8 +22,9 @@ const ShopSlick = () => {
     autoplay: true, // 자동 스크롤 사용 여부
     autoplaySpeed: 2500, // 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간
     pauseOnHover: true, //마우스 올리면 멈춤
-
-    // nextArrow: <NextArrow />,
+    fade:true,
+    dots:true
+        // nextArrow: <NextArrow />,
     // prevArrow: <PrevArrow />,
   };
 
