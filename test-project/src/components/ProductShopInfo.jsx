@@ -9,6 +9,22 @@ import DataContext from "../data/DataContext";
 import { useParams } from "react-router-dom";
 import ProductInsertAverage from "./ProductInsertAverage";
 
+// 1219 firestore- 진혜
+import db from "../data/firebase";
+import {
+  collection,
+  query,
+  where,
+  getDocs,
+  orderBy,
+  doc,
+  setDoc,
+  addDoc,
+  getDoc,
+  getDocsFromCache,
+} from "firebase/firestore";
+import { useEffect } from "react";
+
 const ShopInfo = () => {
   const { id } = useParams();
   const { state } = useContext(DataContext);
@@ -25,6 +41,42 @@ export default ShopInfo;
 function InfoCard(props) {
   const { market } = props;
   const [list, setList] = useState([]);
+
+  const [newArray, setNewArray] = useState([]);
+
+  const getData = async id => {
+    const filteredMarket = query(
+      collection(db, "review"),
+      where("marketId", "==", `${id}`),
+      orderBy("timeStamp")
+    );
+    const queryMarket = await getDocs(filteredMarket); // 파이어베이서 디비 ...
+    let array = [];
+    queryMarket.forEach(doc => {
+      array.push(doc.data());
+    });
+    setNewArray(array);
+    console.log(array);
+  };
+
+  // 별점 작성하다 망함 ❤🧡💜
+  // const { id } = useParams();
+  // const [newArray, setNewArray] = useState([]);
+  // let array = []
+
+  // const getData = async() => {
+  //   const filteredMarket = query(collection(db, "test"),where("marketId","==",`${id}`));
+  //   const queryMarket = await getDocs(filteredMarket); // 파이어베이서 디비 ...
+  //   queryMarket.forEach((doc)=>{
+  //       array.push(doc.data());
+  //   })
+  //   setNewArray(array);
+  // }
+
+  // useEffect(()=>{
+  //   getData();
+  // },[newArray])
+
   return (
     <div className="Product-infoCards">
       <Card className="Product-infoCard">
@@ -35,27 +87,40 @@ function InfoCard(props) {
               <img src={market.companyLogo} alt="" />
             </h2>
           </Card.Title>
-
           <Card.Text>
             <p>주소 : {market ? market.location : "없는 정보 입니다"}</p>
-
             <p>대충 자사 소개와 사진이 들어가는건 어떠세요?</p>
             <p>연락처 : {market ? market.number : "없는 정보 입니다"}</p>
           </Card.Text>
           <Card.Link href="#">업체 홈페이지 바로가기</Card.Link>
-          <ProductInsertAverage list={list} />
+          {/* <ProductInsertAverage list={list} /> */}
         </Card.Body>
       </Card>
 
       <Card className="Product-comment">
         <Card.Body>
-          <Card.Title>
-            <h1>한줄평</h1>
-          </Card.Title>
-          <Card style={{ height: "420px", overflow: "auto" }}>
-            <MainComment/>
-          </Card>
-          <ProductInsertComment setList={setList}/>
+          {window.sessionStorage.getItem("login") == "true" ? (
+            <div>
+              <Card.Title>
+                <h1>한줄평</h1>
+              </Card.Title>
+              <Card style={{ height: "420px", overflow: "auto" }}>
+                <MainComment
+                  newArray={newArray}
+                  setNewArray={setNewArray}
+                  getData={getData}
+                />
+              </Card>
+              <ProductInsertComment getData={getData} />
+            </div>
+          ) : (
+            <div>
+              <Card.Title>
+                <h1>한줄평</h1>
+              </Card.Title>
+              <p>로그인 후 이용하세요</p>
+            </div>
+          )}
         </Card.Body>
       </Card>
     </div>

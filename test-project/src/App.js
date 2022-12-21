@@ -9,18 +9,15 @@ import ProductMergePage from "./components/ProductMergePage";
 import Nonfound from "./pages/Notfound";
 import EstQuestion from "./components/EstQuestion";
 import EstResult from "./components/EstResult";
-import EstReciept from "./components/EstReciept";
 import ApiMap from "./pages/ApiMap";
 import Login from "./pages/Login";
 import Join from "./pages/Join";
 
 // DataContext import
-import { DataProvider } from "./data/DataContext";
 
+import { DataProvider } from "./data/DataContext";
 // firebase
-import CreateID from "./pages/CreateID";
 import "./data/firebase";
-import { firestore } from "./data/firebase";
 
 // Media Query import - 가장 아래 import 유지
 import "./css/MediaQuery.css";

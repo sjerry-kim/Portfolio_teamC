@@ -22,11 +22,26 @@ import { auth } from "../data/firebase";
 import "../css/Login.css";
 import DataContext from "../data/DataContext";
 
+import { useDispatch, useSelector } from 'react-redux';
+import { userLogout } from '../module/currentUser';
 
 const HomeNavbar = () => {
-    // Login에서 가져온 함수들
-
+  
+    // 로그인 유무를 확인하기위한 변수
+    const login = false;
+    // 리덕스의 state값을 가져와서 확인
+    const loginuser = useSelector((state)=>(state.currentUser)) 
+    // const dispatch = useDispatch();
+    const currentUser = auth.currentUser;
+    const [userName, setUserName] = useState("")
     const navigate = useNavigate();
+
+    useEffect(()=>{
+      if(currentUser){
+        setUserName(currentUser.displayName);
+      }
+      })
+
   
     // 구글로 로그인하기 버튼을 눌렀을때 파이어스토어를 들고와서 사용
     const googleLogin = () => {
@@ -174,13 +189,22 @@ const HomeNavbar = () => {
     //}, []);
     return (  
         <div >
-            <Menu right  >
+            <Menu right width={"400px"} >
+              {
+          
+                window.sessionStorage.getItem("login") == 'true' ?
+                (<p>welcome, {userName}</p> ):( <p></p> )
+              }
                 <Link to='/main/portfolio'>포트폴리오</Link>
                 <Link to='/main/estimation'>나에게 맞는 시공업체 찾기</Link>
                 <Link to='/main/map'>주변 찾기</Link>
-                { window.sessionStorage.getItem('login') === 'true' ? 
+                { window.sessionStorage.getItem("login") == 'true' ? 
                   (
-                    <button onClick={emailLogout}>Logout</button>
+                    <button onClick={()=>{
+                      window.sessionStorage.setItem("login", false);
+                      alert("로그아웃하였습니다")
+                      navigate('/')
+                    }}>Logout</button>
                   ) 
                   : 
                   (

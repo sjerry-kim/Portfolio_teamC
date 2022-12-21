@@ -6,10 +6,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useContext, useEffect, useState } from "react";
 import DataContext from "../data/DataContext";
 import { useParams } from "react-router-dom";
-import { Firestore } from "firebase/firestore";
+import { Firestore, runTransaction, Transaction } from "firebase/firestore";
 // 💖 + 2022-12-15 추가 한 import
 import { firestore } from "../data/firebase";
 import { set } from "firebase/database";
+import { async } from "@firebase/util";
 
 const ProductInsertComment = ({ setList, list }) => {
   const { state, action } = useContext(DataContext);
@@ -31,6 +32,15 @@ const ProductInsertComment = ({ setList, list }) => {
   //   const star = Firestore.collection("starlist")
   //     star.data('store').set({starlist : '[]'})
   // })
+  const getData = async () => {
+    const filteredMarket = query(
+      collection(db, "test"),
+      where("marketId", "==", `${id}`)
+    );
+    const queryMarket = await getDocs(filteredMarket); // 파이어베이서 디비 …
+    let array = [];
+    queryMarket.forEach(doc => {});
+  };
 
   // 💖 파이어베이스 값 가져오는거 +2022-12-15 💖
   useEffect(() => {
