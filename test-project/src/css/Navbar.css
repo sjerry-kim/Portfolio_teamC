@@ -48,8 +48,8 @@
 
 .navbar-log-div{
   position: absolute;
-  top: 20px;
-  right: 50px;
+  top: 15px;
+  right: 10px;
   display: flex;
 }
 
@@ -63,6 +63,7 @@
 
 .navbar-log-div button{
   font-family: 'Chosunilbo_myungjo';
+  margin-right: 20px;
   background-color: transparent;
   border: none;
   font-size: 0.8em;
