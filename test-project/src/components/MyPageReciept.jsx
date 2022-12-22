@@ -23,7 +23,8 @@ const MyPageReciept = () => {
     const filteredReciept = query(collection(db,"reciept"),where("uid","==", currentUserUid ))
     const reciepts = await getDocs(filteredReciept);
     reciepts.forEach((doc)=>{
-      array.push(doc.data().parseReciept);
+      // array.push(doc.data().parseReciept);
+      array.push(doc.data());
     })
     console.log(array);
     setReciept(array);
@@ -37,10 +38,12 @@ const MyPageReciept = () => {
         {
           reciept.map((reciept,i)=>{
             const mapArray = reciept;
+            const mapReciept = reciept.parseReciept;
+
             return (
               <>
                 {
-                  mapArray.map((r,i)=>{
+                  mapReciept.map((r,i)=>{
                     return(
                       <div key={i}>
                         {r.name}, {r.answer}
@@ -48,11 +51,14 @@ const MyPageReciept = () => {
                     )
                   })
                 }
+                  <p>맞춤 업체 : {mapArray.result}</p>
               </>
               
               )
           })
+          
         }
+        
       </div>
     </div>
   );
