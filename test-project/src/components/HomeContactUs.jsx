@@ -25,12 +25,8 @@ const HomeContactUs = () => {
 
   return (
     <div>
+      <div className="homecontactus-titleBox">
       <h2 className="homecontactus-title">Contact Us</h2>
-      <div>
-          <button className="homecontactus-button">
-            간편 견적 하러가기
-          </button>
-        </div>
       <div className="homecontactus-letter">
         <div className="homecontactus-middletitle">
           <p>주소주소주소주소주소주소</p>
@@ -39,20 +35,21 @@ const HomeContactUs = () => {
           <p>이메일:GamilC@gmail.com</p>
         </div>
       </div>
-
+      </div>
+    <div className="homecontactus-formBox">
       <form className="homecontactus-form" ref={form2} onSubmit={sendEmail2}>
         <div className="homecontactus-formdiv">
-          <label className="homecontactus-formlable">회사 이름</label>
+          <label className="homecontactus-formlable">Company&nbsp;</label>
           <input className="homecontactus-forminput" type="text"  name="user_com" required ></input>
         </div>
 
         <div className="homecontactus-formdiv">
-          <label className="homecontactus-formlable" >이름</label>
+          <label className="homecontactus-formlable" >Name</label>
           <input className="homecontactus-forminput" type="text" name="user_name" required></input>
         </div>
 
         <div className="homecontactus-formdiv">
-          <label className="homecontactus-formlable">연락처</label>
+          <label className="homecontactus-formlable">Tel .</label>
           <input className="homecontactus-forminput" type="text"name="user_num" required></input>
         </div>
 
@@ -61,15 +58,16 @@ const HomeContactUs = () => {
           <input className="homecontactus-forminput" type="text" name="user_email" required/>
         </div>
         <div className="homecontactus-formdiv">
-          <label className="homecontactus-formlable"  >추가 문의사항</label>
+          <label className="homecontactus-formlable"  >Etc</label>
           <input className="homecontactus-forminput" type="text" name="user_message" required/>
         </div>
         <div className="homecontactus-checkdiv">
-          <input type="checkbox" />
+          <input type="checkbox" className="homecontactus-checkbox" />
           <p className="homecontactus-checkbox">개인정보 동의함</p>
-        <Button variant="btn btn-outline-light" type="submit">보내기</Button>
+        <Button className="homecontactus-Btn" variant="btn btn-outline-light" type="submit">보내기</Button>
         </div>
       </form>
+    </div>
     </div>
   );
 };

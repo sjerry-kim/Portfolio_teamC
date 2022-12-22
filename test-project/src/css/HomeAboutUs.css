@@ -8,30 +8,28 @@
     align-items: flex-end;
     flex-direction: column;
     margin-top: -140px;
-    position: fixed;
-    
+    position: relative;
+    left:350px;
+    width: 400px;
 }
 .homeaboutus-title{
     font-size: 100px;
     font-weight: bold;
-    position: fixed;
-    left: 1110px;
+    position: relative;
+
 
 }
 .homeaboutus-info{
-    position: fixed;
-    margin-top: 120px;
-    left: 860px;
+    position: relative;
+    right: 355px;
 
 }
 .homeaboutus-info2{
-    position: fixed;
-    margin-top: 170px;
-    left: 1157px;
+    position: relative;
+
 }
 
 .homeaboutus-company{
-    position: fixed;
-    margin-top: 210px;
-    left: 1295px;
+    position: relative;
+
 }

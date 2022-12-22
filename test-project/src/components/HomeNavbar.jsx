@@ -194,7 +194,16 @@ const HomeNavbar = () => {
               {
           
                 window.sessionStorage.getItem("login") == 'true' ?
-                (<p className='homename'>안녕하세요 {userName} 님</p> ):( <p className='homename'></p> )
+                (
+                  <div>
+                  <button className="home-mypagebtn" onClick={()=>{
+                    navigate('/mypage');
+                  }}>My Page</button>
+                <p className='homename'>안녕하세요 {userName} 님</p> 
+                </div>
+                ):(
+                  <p className='homename'></p> 
+                  )
               }
                 { window.sessionStorage.getItem("login") == 'true' ? 
                   (

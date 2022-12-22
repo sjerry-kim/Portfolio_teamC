@@ -5,6 +5,9 @@
     font-style: normal;
 }
 
+body{
+    background-color: #f1eeeb;
+}
 
 .eststart-Wrapper{
     z-index: 12 !important;
