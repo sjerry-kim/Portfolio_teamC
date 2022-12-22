@@ -53,7 +53,6 @@ const MyPageReciept = () => {
                 }
                   <p>맞춤 업체 : {mapArray.result}</p>
               </>
-              
               )
           })
           
