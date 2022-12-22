@@ -10,9 +10,6 @@ import Slider from "react-slick";
 import { useEffect, useRef } from "react";
 import HomeNavbar from "../components/HomeNavbar";
 
-
-
-
 const Home = () => {
   const settings2 = {
     slidesToShow: 1,
@@ -43,8 +40,6 @@ const Home = () => {
 
   return (
     <div className="home-slick-div">
-
-
       <div id="home-container">
         <div id="home-container2">
           <Slider className="home-main-slick" {...settings2} ref={slider}>
@@ -60,7 +55,7 @@ const Home = () => {
         <div className="home-arrow"></div>
         </div>
         
-      <img src={require("../img/logo_white.png")} className="home-logo" width="170" alt="" />
+      <img src={require("../img/logo_white.png")} className="home-logo" width="230" alt="" />
       
       <div id="outer-container">
       <HomeNavbar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />

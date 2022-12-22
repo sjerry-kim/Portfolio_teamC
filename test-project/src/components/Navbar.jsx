@@ -1,5 +1,5 @@
 import { useContext, useEffect, useRef, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link as NavLink, useNavigate } from "react-router-dom";
 import DataContext from "../data/DataContext";
 import "../css/Navbar.css"
 import Container from 'react-bootstrap/Container';
@@ -181,28 +181,30 @@ const Navbar = () => {
       //}, []);
 
   return (
-    <Container>
-      <Row>
-        <Col>
-        
-        
-    <div className="navBar_box" style={{ height: " 100px", backgroundColor: "transparent" }}>
-      <Link to="/">today design</Link>
-      <Link to="/main/portfolio">Portfolio</Link>
-      <Link
-        to="/main/estimation"
-        onClick={() => {
-          action.setReciept([]);
-        }}
-      >
-        Estimation
-      </Link>
-      <Link to="/main/map">Map</Link>
+    <div className="navbar-box">
+      <div className="navbar-logo-div">
+        <NavLink to="/">로고이미지삽입</NavLink>
+      </div>
+      <div className="navbar-menu-big-div">
+        <NavLink to="/main/portfolio">업체 포트폴리오</NavLink>
+        <NavLink
+          to="/main/estimation"
+          onClick={() => {
+            action.setReciept([]);
+          }}
+        >
+          맞춤 견적 짜기
+        </NavLink>
+        <NavLink to="/main/map">주변 업체 찾기</NavLink>
+      </div>
       {window.sessionStorage.getItem("login") == 'true' ? (
-        <div>
-          <p>welcome,{userName}</p>
-          <button className="navBar_Loginbtn" onClick={()=>{
+        <div className="navbar-log-div">
+          <button className="navbar-mypagebtn" onClick={()=>{
+            navigate('/mypage');
+          }}>My Page</button>
+          <button className="navbar-loginbtn" onClick={()=>{
           window.sessionStorage.setItem("login", false);
+          window.sessionStorage.setItem("photoURL", null);
           alert("로그아웃하였습니다")
           navigate('/')
         }}>
@@ -210,23 +212,17 @@ const Navbar = () => {
         </button>
         </div>
       ) : (
-        <button className="navBar_Loginbtn"
+        <div className="navbar-log-div">
+          <button className="navbar-loginbtn"
           onClick={() => {
             navigate("/login");
           }}
         >
           Login
         </button>
+        </div>
       )}
     </div>
-        
-        
-        </Col>
-      </Row>
-    </Container>
-
-
-
   );
 };
 

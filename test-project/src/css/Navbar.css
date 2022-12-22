@@ -1,36 +1,75 @@
-.navBar_box {
+@font-face {
+  font-family: 'Chosunilbo_myungjo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.navbar-box {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    color: #232533; 
     padding-top: 55px;
     font-weight: bold;
-
+    background: #ece4db;
+    width: 100%;
+    height: 95px;
+    padding: 10px;
 }
 
+.navbar-box a{
+  font-family: 'Chosunilbo_myungjo';
+  text-decoration: none;
+  color: #291b0b;
+}
 
-  .navBar_box a{
-    text-decoration: none;
-    font-size: medium; 
-    color: inherit;
-    color: skyblue;
-  }
+.navbar-logo-div{
+  position: absolute;
+  left: 70px;
+}
 
-  .navBar_box a:hover{
-    color:lightpink;
-    font-weight: 500;
-  }
+.navbar-menu-big-div{
+  display: flex;
+  width: 45%;
+  flex-direction: row;
+  justify-content: space-around;
+}
 
-.navBar_Loginbtn{
-  background: none;
+.navbar-menu-big-div a{
+  font-family: 'Chosunilbo_myungjo';
+  text-align: center;
+  width: 120px;
+}
+
+.navbar-menu-big-div a:hover{
+  color: #5a3e31;
+}
+
+.navbar-log-div{
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  display: flex;
+}
+
+.navbar-log-div p{
+  font-family: 'Chosunilbo_myungjo';
+  margin: 0;
+  margin-right: 20px;
+  font-size: 0.8em;
+  color: #291b0b;
+}
+
+.navbar-log-div button{
+  font-family: 'Chosunilbo_myungjo';
+  margin-right: 20px;
+  background-color: transparent;
   border: none;
+  font-size: 0.8em;
   font-weight: bold;
-  color:skyblue;
-
+  color: #291b0b;
 }
-.navBar_Loginbtn:hover{
-    color:lightpink;
-    font-weight: 500;
-  } 
+
 
 

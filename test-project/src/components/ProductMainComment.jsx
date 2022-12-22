@@ -12,7 +12,7 @@ import { useState } from "react";
 import { get, getDatabase } from "firebase/database";
 import { getIdToken } from "firebase/auth";
 
-const MainComment = ({newArray, setNewArray, getData}) => {
+const MainComment = ({newArray, getData}) => {
   const { id } = useParams();
   const user = auth.currentUser;
 

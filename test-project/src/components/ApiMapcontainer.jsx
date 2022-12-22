@@ -98,29 +98,30 @@ const ApiMapContainer = ({ searchPlace }) => {
   }, [searchPlace]);
 
   return (
-    <div id="api-TopMap">
-      <div id="api-Map">
-        <div
-          id="api-myMap"
-          style={{
-            width: "1400px",
-            height: "670px",
-            position: "absolute",
-            border: "2px solid green",
-          }}
-        ></div>
-      </div>
+    <div
+      id="api-TopMap"
+      style={{
+        backgroundColor: "rgb(241,238,235)",
+      }}
+    >
+      <div
+        id="api-myMap"
+        style={{
+          width: "1450px",
+          height: "873px",
+          position: "absolute",
+        }}
+      ></div>
+      <div id="api-Map"></div>
       <div id="api-midMap">
-        <li>
+        <li
+          style={{
+            listStyle: "none",
+          }}
+        >
           <div id="api-result-list">
             {Places.map((item, i) => (
-              <div
-                key={i}
-                style={{
-                  marginTop: "10px",
-                  position: "relative",
-                }}
-              >
+              <div key={i} className="api-result-list-font">
                 <span>{i + 1}</span>
                 <div>
                   <h5>{item.place_name}</h5>

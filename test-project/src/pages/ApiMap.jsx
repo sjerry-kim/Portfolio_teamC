@@ -1,6 +1,8 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import ApiMapContainer from "../components/ApiMapcontainer";
 import "../css/ApiMap.css";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 function ApiMap() {
   const [InputText, setInputText] = useState("");
   const [Place, setPlace] = useState("");
@@ -17,32 +19,42 @@ function ApiMap() {
 
   return (
     <>
-      <ApiMapContainer searchPlace={Place}>
-        <form
-          className="api-inputForm"
-          onSubmit={handleSubmit}
+      <ApiMapContainer searchPlace={Place} />
+      <form
+        className="api-inputForm"
+        onSubmit={handleSubmit}
+        style={{
+          position: "absolute",
+          bottom: "840px",
+          backgroundColor: "rgb(241,238,235)",
+        }}
+      >
+        <input
+          className="api-input"
+          placeholder="ex) AGIO DESIGN"
+          onChange={onChange}
+          value={InputText}
           style={{
             position: "relative",
-            width: "470px",
-            bottom: "673px",
-            border: "1px solid red",
+            display: "inline-block",
+            border: "none",
+            borderBottom: "1px solid rgb(187, 163, 136)",
+            fontSize: "22px",
+            width: "22.6vw",
+            backgroundColor: "rgb(241,238,235)",
+          }}
+        />
+        <button
+          type="submit"
+          style={{
+            border: "none",
+            color: " rgb(187, 163, 136)",
+            marginLeft: "10px",
           }}
         >
-          <input
-            className="api-input"
-            placeholder="ex) AGIO DESIGN"
-            onChange={onChange}
-            value={InputText}
-            style={{
-              display: "inline-block",
-              border: "none",
-              borderBottom: "1px solid green",
-              fontSize: "20px",
-            }}
-          />
-          <button type="submit">검색</button>
-        </form>
-      </ApiMapContainer>
+          <FontAwesomeIcon icon={faMagnifyingGlass} />
+        </button>
+      </form>
     </>
   );
 }
