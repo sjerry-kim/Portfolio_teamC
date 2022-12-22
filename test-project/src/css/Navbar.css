@@ -26,7 +26,8 @@
 
 .navbar-logo-div{
   position: absolute;
-  left: 70px;
+  left: 50px;
+  margin-top: 10px;
 }
 
 .navbar-menu-big-div{
