@@ -197,7 +197,7 @@ const HomeNavbar = () => {
                 (
                   <div>
                   <button className="home-mypagebtn" onClick={()=>{
-                    navigate('/mypage');
+                    navigate('/main/mypage');
                   }}>My Page</button>
                 <p className='homename'>안녕하세요 {userName} 님</p> 
                 </div>
