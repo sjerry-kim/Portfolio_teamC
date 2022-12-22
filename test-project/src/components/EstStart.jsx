@@ -20,25 +20,26 @@ const EstStart = () => {
   return (
     <div className="eststart-Wrapper">
       <div className="eststart-Contents">
-        <div className="eststart-Header">{ window.sessionStorage.getItem('login') === 'true' ? "간편 견적" : "로그인하세요"}</div>
-        
+        <div className="eststart-Header">{ window.sessionStorage.getItem('login') === 'true' ? "맞춤 견적 짜기" : "로그인하세요"}</div>
         {
           window.sessionStorage.getItem('login') === 'true' ? 
           (
-            <div className="eststart-Title">나에게 맞는 업체</div>
+            <div className="eststart-Title">내가 찾던 그 업체</div>
           )
           :
           " "
         }
-        <div className="eststart-LogoImage">
-          <div className="eststart-img">
+
+        {/* <div className="eststart-LogoImage"> */}
+          {/* <div className="eststart-img">
             <div className="eststart-imgText">
               인테리어 중계업은 Today Design !!
             </div>
-          </div>
-          <div className="eststart-backColor"></div>
-          <img src={PangImage} width={200}></img>
-        </div>
+          </div> */}
+          {/* <div className="eststart-backColor"></div> */}
+          {/* <img src={PangImage} width={200}></img> */}
+        {/* </div> */}
+        
         {
           window.sessionStorage.getItem('login') === 'true' ? 
           (

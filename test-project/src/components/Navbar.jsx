@@ -5,6 +5,7 @@ import "../css/Navbar.css"
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import PangImage from "../img/Logo.png";
 
 // login에서 가져온 import
 import {
@@ -183,7 +184,7 @@ const Navbar = () => {
   return (
     <div className="navbar-box">
       <div className="navbar-logo-div">
-        <NavLink to="/">로고이미지삽입</NavLink>
+        <NavLink to="/"><img src={PangImage} width={130}></img></NavLink>
       </div>
       <div className="navbar-menu-big-div">
         <NavLink to="/main/portfolio">업체 포트폴리오</NavLink>
