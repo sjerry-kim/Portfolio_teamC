@@ -46,8 +46,18 @@ const EstStart = () => {
           window.sessionStorage.getItem('login') === 'true' ? 
           (
           <div className="eststart-StartBtnBox">
-            <button className="eststart-StartBtn" onClick={StartClickButton}>
+            {/* <button className="eststart-StartBtn" onClick={StartClickButton}>
             Start
+            </button> */}
+            {/* <button 
+              onClick={StartClickButton}
+              class="button button--shikoba">
+              <span>Start</span>
+            </button> */}
+            <button
+              onClick={StartClickButton} 
+              class="est-start-btn">
+              <span>Start ! </span>
             </button>
           </div>
           )
