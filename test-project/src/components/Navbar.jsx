@@ -199,9 +199,12 @@ const Navbar = () => {
       </div>
       {window.sessionStorage.getItem("login") == 'true' ? (
         <div className="navbar-log-div">
-          <p>Welcome, {userName}</p>
+          <button className="navbar-mypagebtn" onClick={()=>{
+            navigate('/mypage');
+          }}>My Page</button>
           <button className="navbar-loginbtn" onClick={()=>{
           window.sessionStorage.setItem("login", false);
+          window.sessionStorage.setItem("photoURL", null);
           alert("로그아웃하였습니다")
           navigate('/')
         }}>

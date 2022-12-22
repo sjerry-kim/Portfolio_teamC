@@ -15,10 +15,10 @@ import {
 import { auth } from "../data/firebase";
 import "../css/Login.css";
 import DataContext from "../data/DataContext";
-import RestrictPage from "../components/RestrictPage";
 
 import { userLogin } from "../module/currentUser";
 import { useDispatch } from "react-redux";
+import Notfound from "./Notfound";
 
 const User = {
   email: "test@example.com",
@@ -55,6 +55,10 @@ const Login = () => {
         // 로그인할때
         //dispatch(userLogin(user));
         window.sessionStorage.setItem("login",true);
+        window.sessionStorage.setItem("uid", user.uid);
+        window.sessionStorage.setItem("displayName", user.displayName);
+        window.sessionStorage.setItem("email", user.email);
+        window.sessionStorage.setItem("photoURL", user.photoURL);
         navigate("/", {
           state: {
             name: user.displayName,
@@ -105,10 +109,20 @@ const Login = () => {
       console.log(user);
       window.sessionStorage.setItem("login",true);
       window.sessionStorage.setItem("uid", user.uid);
+      window.sessionStorage.setItem("displayName", user.displayName);
+      window.sessionStorage.setItem("email", user.email);
+      window.sessionStorage.setItem("photoURL", user.photoURL);
       navigate("/");
       //dispatch(userLogin(user));
     } catch (error) {
-      console.log(error.message);
+      const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+        if (errorCode == "auth/wrong-password") {
+          alert("잘못된 비밀번호입니다");
+        } else if (errorCode == "auth/user-not-found") {
+          alert("없는 이메일입니다");
+        }
     }
   };
 
@@ -116,6 +130,9 @@ const Login = () => {
     await signOut(auth);
     // 로컬스토리지에 로그인 상태 저장
     window.sessionStorage.setItem("login", false);
+    window.sessionStorage.setItem("photoURL", null);
+    // window.sessionStorage.removeItem("uid"); // 로컬써야 지워짐
+    // window.sessionStorage.removeItem("displayName");
   };
 
   // 이메일,패스워드 조건이 충족하는지 확인용
@@ -172,7 +189,7 @@ const Login = () => {
       {
         window.sessionStorage.getItem('login') === 'true' ? 
         (
-          <RestrictPage />
+          <Notfound/>
         )
         :
         (

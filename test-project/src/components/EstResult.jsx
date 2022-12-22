@@ -5,6 +5,9 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import DataContext from "../data/DataContext";
 import EstReciept from "./EstReciept";
 
+// 1221 진혜 추가
+import { auth, firestore } from "../data/firebase";
+
 const EstResult = () => {
   const data = useContext(DataContext);
   const navigate = useNavigate();
@@ -14,7 +17,8 @@ const EstResult = () => {
   const { state, action } = useContext(DataContext);
   const reciept = JSON.stringify(state.reciept);
   
-  // JSON.parse(reciept)
+  // 1221 진혜추가
+  const currentUser = auth.currentUser;
 
 
 
@@ -138,7 +142,13 @@ useEffect(() => {
             >
               업체보러가기
             </button>
-            {/** 다시짜기하면 넘처서 안될듯*/}
+            <button onClick={()=>{
+              const currentReciept = window.sessionStorage.getItem("sessionReciept")
+              const firebaseReciept = firestore.collection("reciept");
+              const parseReciept = JSON.parse(currentReciept);
+              firebaseReciept.add({parseReciept: parseReciept, uid: currentUser.uid});
+              alert("저장한 영수증은 마이페이지에서 확인할 수 있습니다")
+              }}>영수증 저장하기</button>
           </span>
         </div>
         <EstReciept />

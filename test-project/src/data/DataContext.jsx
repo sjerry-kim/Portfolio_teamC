@@ -1,7 +1,5 @@
 import { createContext, useState } from "react";
 
-
-
 // 리뷰 card 이미지
 import evianComRe1 from '../img/evianComRe1.jpg';
 import evianComRe2 from '../img/evianComRe2.jpg';
