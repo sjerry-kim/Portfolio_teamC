@@ -25,9 +25,10 @@
 .Product-shopimg img {
   margin: 0 auto 0 auto;
   width: 100vw;
-  height: 91vh;
+  height: 89vh;
   box-sizing: border-box;
   position: relative;
+
   
 } /*위 오른쪽 아래 왼쪽*/
 

@@ -80,7 +80,7 @@ const Portfolio = (props) => {
                   </p>
                   <p className="portfolio_intro">{state.score[0].companyIntro}</p>
                 </div>
-                <button className="portfolio_btn"><Link to="/main/product/1">회사 상세보기</Link></button>
+                <button className="portfolio_btn"><Link to="/main/product/1">View More</Link></button>
               </div>
               </label>
             <label for="s2" id="portfolio-slide2">
@@ -94,7 +94,7 @@ const Portfolio = (props) => {
                   </p>
                   <p className="portfolio_intro">{state.score[1].companyIntro}</p>
                 </div>
-                <button className="portfolio_btn"><Link to="/main/product/2">회사 상세보기</Link></button>
+                <button className="portfolio_btn"><Link to="/main/product/2">View More</Link></button>
               </div>
               </label>
               <label for="s3" id="portfolio-slide3">
@@ -108,7 +108,7 @@ const Portfolio = (props) => {
                   </p>
                   <p className="portfolio_intro">{state.score[2].companyIntro}</p>
                 </div>
-                <button className="portfolio_btn"><Link to="/main/product/3">회사 상세보기</Link></button>
+                <button className="portfolio_btn"><Link to="/main/product/3">View More</Link></button>
               </div>
             </label>
             <label for="s4" id="portfolio-slide4">
@@ -122,7 +122,7 @@ const Portfolio = (props) => {
                   </p>
                   <p className="portfolio_intro">{state.score[3].companyIntro}</p>
                 </div>
-                <button className="portfolio_btn"><Link to="/main/product/4">회사 상세보기</Link></button>
+                <button className="portfolio_btn"><Link to="/main/product/4">View More</Link></button>
               </div>
             </label>
             <label for="s5" id="portfolio-slide5">
@@ -136,7 +136,7 @@ const Portfolio = (props) => {
                   </p>
                   <p className="portfolio_intro">{state.score[4].companyIntro}</p>
                 </div>
-                <button className="portfolio_btn"><Link to="/main/product/5">회사 상세보기</Link></button>
+                <button className="portfolio_btn"><Link to="/main/product/5">View More</Link></button>
               </div>
             </label>
             <label for="s6" id="portfolio-slide6">
@@ -150,7 +150,7 @@ const Portfolio = (props) => {
                   </p>
                   <p className="portfolio_intro">{state.score[5].companyIntro}</p>
                 </div>
-                <button className="portfolio_btn"><Link to="/main/product/6">회사 상세보기</Link></button>
+                <button className="portfolio_btn"><Link to="/main/product/6">View More</Link></button>
               </div>
             </label>
             <label for="s7" id="portfolio-slide7">
@@ -164,7 +164,7 @@ const Portfolio = (props) => {
                   </p>
                   <p className="portfolio_intro">{state.score[6].companyIntro}</p>
                 </div>
-                <button className="portfolio_btn"><Link to="/main/product/7">회사 상세보기</Link></button>
+                <button className="portfolio_btn"><Link to="/main/product/7">View More</Link></button>
               </div>
             </label>
             <label for="s8" id="portfolio-slide8">
@@ -178,7 +178,7 @@ const Portfolio = (props) => {
                   </p>
                   <p className="portfolio_intro">{state.score[7].companyIntro}</p>
                 </div>
-                <button className="portfolio_btn"><Link to="/main/product/8">회사 상세보기</Link></button>
+                <button className="portfolio_btn"><Link to="/main/product/8">View More</Link></button>
               </div>
             </label>
             <label for="s9" id="portfolio-slide9">
@@ -192,7 +192,7 @@ const Portfolio = (props) => {
                   </p>
                   <p className="portfolio_intro">{state.score[8].companyIntro}</p>
                 </div>
-                <button className="portfolio_btn"><Link to="/main/product/9">회사 상세보기</Link></button>
+                <button className="portfolio_btn"><Link to="/main/product/9">View More</Link></button>
               </div>
             </label>
 
