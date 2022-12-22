@@ -1,14 +1,52 @@
+@font-face {
+  font-family: "GangwonEdu_OTFBoldA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 #api-result-list {
   position: relative;
-  top: 10px;
+  bottom: 150px;
   width: 470px;
-  height: 649px;
-  overflow: auto;
-  border: 1px solid red;
+  height: 820px;
+  overflow-y: scroll;
+  background-color: rgb(241, 238, 235);
+}
+
+#api-result-list::-webkit-scrollbar-track {
+  background: rgb(241, 238, 235); /* 스크롤바의 색상 */
+}
+
+#api-result-list::-webkit-scrollbar {
+  width: 10px; /* 스크롤바의 너비 */
+  scroll-behavior: smooth;
+}
+
+#api-result-list::-webkit-scrollbar-thumb {
+  height: 30%; /* 스크롤바의 길이 */
+  background: rgb(230, 218, 204); /* 스크롤바의 색상 */
+  border-radius: 10px;
+}
+
+#api-result-list > div > div > h5 {
+  display: inline;
+  position: relative;
+  border-bottom: 1px solid rgb(187, 163, 136);
+  bottom: 23px;
+  width: 300px;
+  margin-left: 7px;
+  font-family: "GangwonEdu_OTFBoldA";
+}
+#api-result-list > div > div {
+  padding-bottom: 5px;
+  margin-left: 15px;
 }
 
 #api-pagination {
   margin-top: 3rem;
+  text-align: center;
 }
 
 #api-pagination a {
@@ -19,7 +57,7 @@
 }
 
 #api-pagination a.on {
-  color: lightblue;
+  color: rgb(187, 163, 136);
   font-weight: bold;
 }
 #api-Map {
@@ -27,14 +65,13 @@
 }
 #api-TopMap {
   display: flex;
- 
 }
 #api-midMap {
   width: 40.7vw;
-  height: 80%;
-  margin-top: 160px;
+  margin-top: 191px;
 }
 #api-myMap {
   margin-left: 470px;
   margin-top: 160px;
+  bottom: 1px;
 }

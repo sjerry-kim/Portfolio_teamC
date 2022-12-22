@@ -1,8 +1,11 @@
 .api-inputForm {
-  position: absolute;
-  margin-right: 400px;
+  background-color: rgb(241, 238, 235);
 }
 
 .api-input:focus {
   outline: none;
+}
+
+.api-input::placeholder {
+  color: rgb(187, 163, 136);
 }

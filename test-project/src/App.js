@@ -1,33 +1,30 @@
-import './App.css';
-import {Route, Routes} from 'react-router-dom';
-import Home from './pages/Home';
-import Main from './pages/Main';
-import EstStart from './components/EstStart';
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Main from "./pages/Main";
+import EstStart from "./components/EstStart";
 // import Estimation from './pages/Estimation';
-import Portfolio from './pages/Portfolio';
-import ProductMergePage from './components/ProductMergePage'
-import Nonfound from './pages/Notfound';
-import EstQuestion from './components/EstQuestion';
-import EstResult from './components/EstResult';
-import EstReciept from './components/EstReciept';
-import ApiMap from './pages/ApiMap';
-import Login from './pages/Login';
-import Join from './pages/Join';
+import Portfolio from "./pages/Portfolio";
+import ProductMergePage from "./components/ProductMergePage";
+import Nonfound from "./pages/Notfound";
+import EstQuestion from "./components/EstQuestion";
+import EstResult from "./components/EstResult";
+import ApiMap from "./pages/ApiMap";
+import Login from "./pages/Login";
+import Join from "./pages/Join";
 
 // DataContext import
-import { DataProvider } from './data/DataContext'
+
+import { DataProvider } from "./data/DataContext";
 // firebase
-import CreateID from './pages/CreateID';
 import "./data/firebase";
-import { firestore } from "./data/firebase";
 
 // Media Query import - 가장 아래 import 유지
-import './css/MediaQuery.css';
-import MyPage from './pages/MyPage';
-import MyPageReciept from './components/MyPageReciept';
-import MyPageAccount from './components/MyPageAccount';
 
-
+import "./css/MediaQuery.css";
+import MyPage from "./pages/MyPage";
+import MyPageReciept from "./components/MyPageReciept";
+import MyPageAccount from "./components/MyPageAccount";
 
 function App() {
   return (
@@ -45,10 +42,10 @@ function App() {
             <Route path='/main/estimation' element={<EstStart /> }/>
             <Route path="/main/question" element={<EstQuestion />} />
             <Route path="/main/result" element={<EstResult />} />
-            <Route path='/main/product' element={<ProductMergePage />} />
-            <Route path='/main/map' element={<ApiMap />} />
+            <Route path="/main/product" element={<ProductMergePage />} />
+            <Route path="/main/map" element={<ApiMap />} />
           </Route>
-          <Route path='*'element={<Nonfound />}/>
+          <Route path="*" element={<Nonfound />} />
         </Routes>
       </DataProvider>
     </div>

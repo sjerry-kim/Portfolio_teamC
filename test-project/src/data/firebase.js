@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
-import 'firebase/database';
-import 'firebase/firestore';
-import { initializeApp} from "firebase/app";
+import "firebase/database";
+import "firebase/firestore";
+import { initializeApp } from "firebase/app";
 // import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 // import { firestore } from 'firebase/firestore';
@@ -12,9 +12,9 @@ import { getAuth } from "firebase/auth";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // 진혜 추가
-import {getFirestore} from 'firebase/firestore';
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/firestore';
+import { getFirestore } from "firebase/firestore";
+import firebase from "firebase/compat/app";
+import "firebase/compat/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -24,7 +24,7 @@ const firebaseConfig = {
   storageBucket: "teamc-project-b7dfb.appspot.com",
   messagingSenderId: "806323494311",
   appId: "1:806323494311:web:9b277ea4823d588e626a82",
-  measurementId: "G-1ZGMDF529X"
+  measurementId: "G-1ZGMDF529X",
 };
 
 // Initialize Firebase
@@ -36,4 +36,4 @@ const db = getFirestore(app);
 export default db;
 
 const firestore = firebase.firestore();
-export {firestore};
+export { firestore };

@@ -25,10 +25,9 @@ const User = {
   pw: "test8361@",
 };
 
-// Home ('/')으로 돌아가는 
+// Home ('/')으로 돌아가는
 
 const Login = () => {
-
   // 리덕스의 리듀서를 사용하기위한 디스패치
   const dispatch = useDispatch();
 
@@ -46,7 +45,7 @@ const Login = () => {
 
     const auth = getAuth();
     signInWithPopup(auth, provider)
-      .then((result) => {
+      .then(result => {
         // 로그인된 결과를 구글인증을 통해서 확인 > 토큰 발급
         const credential = GoogleAuthProvider.credentialFromResult(result);
         const token = credential.accessToken;
@@ -54,7 +53,7 @@ const Login = () => {
         const user = result.user;
         // 로그인할때
         //dispatch(userLogin(user));
-        window.sessionStorage.setItem("login",true);
+        window.sessionStorage.setItem("login", true);
         window.sessionStorage.setItem("uid", user.uid);
         window.sessionStorage.setItem("displayName", user.displayName);
         window.sessionStorage.setItem("email", user.email);
@@ -71,7 +70,7 @@ const Login = () => {
         console.log(user.email); // 이메일
         console.log(user.photoURL); // 구글프로필
       })
-      .catch((error) => {
+      .catch(error => {
         const errorCode = error.code;
         const errorMessage = error.message;
         const email = error.customData.email;
@@ -96,7 +95,7 @@ const Login = () => {
   const [user, setUser] = useState({}); //코드 추가
 
   useEffect(() => {
-    onAuthStateChanged(auth, (currentUser) => {
+    onAuthStateChanged(auth, currentUser => {
       setUser(currentUser);
     });
   }, []);
@@ -107,7 +106,7 @@ const Login = () => {
       const userCredential = await signInWithEmailAndPassword(auth, email, pw);
       const user = userCredential.user;
       console.log(user);
-      window.sessionStorage.setItem("login",true);
+      window.sessionStorage.setItem("login", true);
       window.sessionStorage.setItem("uid", user.uid);
       window.sessionStorage.setItem("displayName", user.displayName);
       window.sessionStorage.setItem("email", user.email);
@@ -116,13 +115,13 @@ const Login = () => {
       //dispatch(userLogin(user));
     } catch (error) {
       const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
-        if (errorCode == "auth/wrong-password") {
-          alert("잘못된 비밀번호입니다");
-        } else if (errorCode == "auth/user-not-found") {
-          alert("없는 이메일입니다");
-        }
+      const errorMessage = error.message;
+      console.log(errorCode, errorMessage);
+      if (errorCode == "auth/wrong-password") {
+        alert("잘못된 비밀번호입니다");
+      } else if (errorCode == "auth/user-not-found") {
+        alert("없는 이메일입니다");
+      }
     }
   };
 
@@ -145,7 +144,7 @@ const Login = () => {
   const [notAllow, setNotAllow] = useState(true);
 
   // 이메일 조건충족 확인
-  const handleEmail = (e) => {
+  const handleEmail = e => {
     setEmail(e.target.value);
     // 정규식인데 로그인할떄 특문같이 정해진 조건발동을 수행시켜주는거같다
     const regex =
@@ -158,7 +157,7 @@ const Login = () => {
   };
 
   // 이메일 조건충족 확인
-  const handlePw = (e) => {
+  const handlePw = e => {
     setPw(e.target.value);
     const regex =
       /^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+])(?!.*[^a-zA-z0-9$`~!@$!%*#^?&\\(\\)\-_=+]).{8,20}$/;
@@ -186,94 +185,88 @@ const Login = () => {
 
   return (
     <from>
-      {
-        window.sessionStorage.getItem('login') === 'true' ? 
-        (
-          <Notfound/>
-        )
-        :
-        (
-          <div>
-            <div className="login-page">
-        <div className="login-border">
-          <img
-            src={require("../img/logo_white.png")}
-            className="login-login-Logo"
-          />
-          <div className="login-titleWrap">
-            로그인
-            <br />
-          </div>
+      {window.sessionStorage.getItem("login") === "true" ? (
+        <Notfound />
+      ) : (
+        <div>
+          <div className="login-page">
+            <div className="login-border">
+              <img
+                src={require("../img/logo_white.png")}
+                className="login-login-Logo"
+              />
+              <div className="login-titleWrap">
+                로그인
+                <br />
+              </div>
 
-          <div className="login-contentWrap">
-            <div className="login-inputTitle">E-mail</div>
-            <div className="login-inputWrap">
-              <input
-                className="login-input"
-                type="text"
-                placeholder="test@example.com"
-                value={email}
-                onChange={handleEmail}
-                ref={inputRef}
-              />
+              <div className="login-contentWrap">
+                <div className="login-inputTitle">E-mail</div>
+                <div className="login-inputWrap">
+                  <input
+                    className="login-input"
+                    type="text"
+                    placeholder="test@example.com"
+                    value={email}
+                    onChange={handleEmail}
+                    ref={inputRef}
+                  />
+                </div>
+                <div className="login-errorMessageWrap">
+                  {/* 입력안했을땐 안나오고 이메일의 길이가 0보다 클때 오류문구 출력 */}
+                  {!emailValid &&
+                    email.length > 0 && ( // 조건이안맞고 이메일이0보다 높을때
+                      <div>올바른 이메일을 입력하세요.</div>
+                    )}
+                </div>
+                <div className="login-inputTitle" style={{ marginTop: "10px" }}>
+                  PW
+                </div>
+                <div className="login-inputWrap">
+                  <input
+                    className="login-input"
+                    type="password"
+                    placeholder="영문, 숫자, 특수문자 포함 8자 이상 입력해주세요"
+                    value={pw}
+                    onChange={handlePw}
+                  />
+                </div>
+                <div className="login-errorMessageWrap">
+                  {!pwValid &&
+                    pw.length > 0 && ( // 조건이안맞고 패스워드가0보다 높을때
+                      <div>
+                        영문, 숫자, 특수문자 포함 <br /> 8자 이상 입력해주세요
+                      </div>
+                    )}
+                </div>
+              </div>
+              <div>
+                {/* disabled 버튼활성화 체크*/}
+                <button
+                  disabled={notAllow}
+                  className="login-LoginButton"
+                  onClick={emailLogin}
+                >
+                  로그인
+                </button>
+                <div>User Logged In:</div>
+                <div>{user?.email}</div>
+                <button onClick={emailLogout}>로그아웃</button>
+              </div>
+              <div>
+                <button className="login-LoginGoogle" onClick={googleLogin}>
+                  구글로 로그인
+                </button>
+              </div>
+              <div>
+                <button className="login-createButton" onClick={CreateButton}>
+                  회원 가입
+                </button>
+              </div>
             </div>
-            <div className="login-errorMessageWrap">
-              {/* 입력안했을땐 안나오고 이메일의 길이가 0보다 클때 오류문구 출력 */}
-              {!emailValid &&
-                email.length > 0 && ( // 조건이안맞고 이메일이0보다 높을때
-                  <div>올바른 이메일을 입력하세요.</div>
-                )}
-            </div>
-            <div className="login-inputTitle" style={{ marginTop: "10px" }}>
-              PW
-            </div>
-            <div className="login-inputWrap">
-              <input
-                className="login-input"
-                type="password"
-                placeholder="영문, 숫자, 특수문자 포함 8자 이상 입력해주세요"
-                value={pw}
-                onChange={handlePw}
-              />
-            </div>
-            <div className="login-errorMessageWrap">
-              {!pwValid &&
-                pw.length > 0 && ( // 조건이안맞고 패스워드가0보다 높을때
-                  <div>
-                    영문, 숫자, 특수문자 포함 <br /> 8자 이상 입력해주세요
-                  </div>
-                )}
-            </div>
-          </div>
-          <div>
-            {/* disabled 버튼활성화 체크*/}
-            <button
-              disabled={notAllow}
-              className="login-LoginButton"
-              onClick={emailLogin}
-            >
-              로그인
-            </button>
-            <div>User Logged In:</div>
-            <div>{user?.email}</div>
-            <button onClick={emailLogout}>로그아웃</button>
-          </div>
-          <div>
-            <button className="login-LoginGoogle" onClick={googleLogin}>
-              구글로 로그인
-            </button>
-          </div>
-          <div>
-            <button className="login-createButton" onClick={CreateButton}>
-              회원 가입
-            </button>
           </div>
         </div>
-      </div>
-          </div>
-        )
-      }
-      
+      )}
     </from>
   );
 };

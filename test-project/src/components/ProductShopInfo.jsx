@@ -1,4 +1,4 @@
-import { } from "../css/ProductShopInfo.css";
+import {} from "../css/ProductShopInfo.css";
 import Card from "react-bootstrap/Card";
 import MainComment from "./ProductMainComment";
 import ProductInsertComment from "./ProductInsertComment";
@@ -10,14 +10,25 @@ import { useParams } from "react-router-dom";
 import ProductInsertAverage from "./ProductInsertAverage";
 
 // 1219 firestore- 진혜
-import db from '../data/firebase'
-import { collection, query, where, getDocs, orderBy, doc, setDoc, addDoc, getDoc, getDocsFromCache } from "firebase/firestore";
+import db from "../data/firebase";
+import {
+  collection,
+  query,
+  where,
+  getDocs,
+  orderBy,
+  doc,
+  setDoc,
+  addDoc,
+  getDoc,
+  getDocsFromCache,
+} from "firebase/firestore";
 import { useEffect } from "react";
 
 const ShopInfo = () => {
   const { id } = useParams();
   const { state } = useContext(DataContext);
-  const market = state.score.find((m) => m.id == id); //undefined 값을 지정해줘야한다.
+  const market = state.score.find(m => m.id == id); //undefined 값을 지정해줘야한다.
 
   return (
     <div className="Product-shopInfo">
@@ -33,16 +44,20 @@ function InfoCard(props) {
 
   const [newArray, setNewArray] = useState([]);
 
-  const getData = async(id) => {
-    const filteredMarket = query(collection(db, "review"),where("marketId","==",`${id}`),orderBy("timeStamp"));
+  const getData = async id => {
+    const filteredMarket = query(
+      collection(db, "review"),
+      where("marketId", "==", `${id}`),
+      orderBy("timeStamp")
+    );
     const queryMarket = await getDocs(filteredMarket); // 파이어베이서 디비 ...
-    let array = []
-    queryMarket.forEach((doc)=>{
-        array.push(doc.data());
-    })
+    let array = [];
+    queryMarket.forEach(doc => {
+      array.push(doc.data());
+    });
     setNewArray(array);
     console.log(array);
-  }
+  };
 
   // 별점 작성하다 망함 ❤🧡💜
   // const { id } = useParams();
@@ -67,7 +82,10 @@ function InfoCard(props) {
       <Card className="Product-infoCard">
         <Card.Body>
           <Card.Title>
-            <h2>{market ? market.name : "없는 정보 입니다"}<img src={market.companyLogo} alt="" /></h2>
+            <h2>
+              {market ? market.name : "없는 정보 입니다"}
+              <img src={market.companyLogo} alt="" />
+            </h2>
           </Card.Title>
           <Card.Text>
             <p>주소 : {market ? market.location : "없는 정보 입니다"}</p>
@@ -81,26 +99,28 @@ function InfoCard(props) {
 
       <Card className="Product-comment">
         <Card.Body>
-          {
-            window.sessionStorage.getItem('login') == 'true' ? (
-              <div>
-                <Card.Title>
-                  <h1>한줄평</h1>
-                </Card.Title>
-                <Card style={{ height: "420px", overflow: "auto" }}>
-                  <MainComment newArray={newArray} setNewArray={setNewArray} getData={getData}/>
-                </Card>
-                <ProductInsertComment getData={getData} />
-              </div>
-            ) : (
-              <div>
-                <Card.Title>
+          {window.sessionStorage.getItem("login") == "true" ? (
+            <div>
+              <Card.Title>
                 <h1>한줄평</h1>
-                </Card.Title>
-                <p>로그인 후 이용하세요</p>
-              </div>
-            )
-          }
+              </Card.Title>
+              <Card style={{ height: "420px", overflow: "auto" }}>
+                <MainComment
+                  newArray={newArray}
+                  setNewArray={setNewArray}
+                  getData={getData}
+                />
+              </Card>
+              <ProductInsertComment getData={getData} />
+            </div>
+          ) : (
+            <div>
+              <Card.Title>
+                <h1>한줄평</h1>
+              </Card.Title>
+              <p>로그인 후 이용하세요</p>
+            </div>
+          )}
         </Card.Body>
       </Card>
     </div>
