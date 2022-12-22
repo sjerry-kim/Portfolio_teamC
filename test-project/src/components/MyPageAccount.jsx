@@ -35,9 +35,9 @@ const MyPageAccount = () => {
 
   return (  
     <div>
-      <h1>My Account</h1>
+      <h3>{window.sessionStorage.getItem("displayName")}님의 My Page</h3>
       {
-        window.sessionStorage.getItem("photoURL")== "null" ?  (
+        window.sessionStorage.getItem("photoURL") == "null" ?  (
           <div>
             <div style={{
                             width:"150px", 
@@ -50,16 +50,15 @@ const MyPageAccount = () => {
           </div>
         ):(
           <div>
-            <img style={{
+            {/* <div style={{
                 width:"150px", 
                 height:"150px",
-                // backgroundImage: `url(${require(`${window.sessionStorage.getItem("photoURL")}`)})`,
+                backgroundImage: `url(  ${require(`${window.sessionStorage.getItem("photoURL")}`)   } )`,
                 backgroundSize: "cover",
                 borderRadius:"50%",
               }}
-              src={window.sessionStorage.getItem("photoURL")}
-              alt="없음"
-              />
+              ></div> */}
+              {/* <img src={require(`${window.sessionStorage.getItem("photoURL")}`)} alt="없음" /> */}
           </div>
         )
       }
