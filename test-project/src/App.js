@@ -31,22 +31,17 @@ function App() {
     <div className="App">
       <DataProvider>
         <Routes>
-          <Route index path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/join" element={<Join />} />
-          <Route path="/mypage" element={<MyPage />}>
-            <Route index element={<MyPageAccount />} />
-            <Route path="/mypage/account" element={<MyPageAccount />} />
-            <Route path="/mypage/reciept" element={<MyPageReciept />} />
-          </Route>
-          <Route path="/main" element={<Main />}>
-            <Route index element={<Portfolio />} />
-            <Route path="/main/portfolio" element={<Portfolio />} />
-            <Route path="/main/product/:id" element={<ProductMergePage />} />
-            <Route path="/main/estimation" element={<EstStart />} />
+          <Route index path='/' element={<Home />}/>
+          <Route path='/login' element={<Login />}/>
+          <Route path='/join' element={<Join />}/>
+          <Route path='/main' element={<Main />}>
+            <Route path='/main/mypage' element={<MyPage />} />
+            <Route index  element={<Portfolio />}/>
+            <Route path='/main/portfolio' element={<Portfolio />} />
+            <Route path='/main/product/:id' element={<ProductMergePage />} /> 
+            <Route path='/main/estimation' element={<EstStart /> }/>
             <Route path="/main/question" element={<EstQuestion />} />
             <Route path="/main/result" element={<EstResult />} />
-
             <Route path="/main/product" element={<ProductMergePage />} />
             <Route path="/main/map" element={<ApiMap />} />
           </Route>

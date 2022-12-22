@@ -20,14 +20,26 @@ const EstResult = () => {
   // 1221 진혜추가
   const currentUser = auth.currentUser;
 
+ 
 
 
   // 최종적으로 도출한 결과 객체
   const [resultData, setResultData] = useState({});
   useEffect(() => {
+    console.log(mbti)
     const result = data.state.score.find((s) => s.best === mbti);
     setResultData(result);
-  }, [mbti]);
+  }, );
+
+  
+  // 결과값 가져오는 세션
+  useEffect(()=>{
+    const jsonResult = (resultData.name);
+    window.sessionStorage.setItem("result", jsonResult);
+    console.log(resultData.name)
+  },[resultData])
+
+
 
   // useEffect(()=>{
   //   window.onpageshow = function(event) {
@@ -89,6 +101,8 @@ useEffect(() => {
 
   // 🌼🌼🌼 result창에서 새로고침 시 영수증 내용이 사라짐 >> 확인 필요 🌼🌼🌼
 
+
+
   return (
     <div>
       <div className="estresult-Wrapper">
@@ -143,10 +157,11 @@ useEffect(() => {
               업체보러가기
             </button>
             <button onClick={()=>{
+              const currentResult = window.sessionStorage.getItem("result")
               const currentReciept = window.sessionStorage.getItem("sessionReciept")
               const firebaseReciept = firestore.collection("reciept");
               const parseReciept = JSON.parse(currentReciept);
-              firebaseReciept.add({parseReciept: parseReciept, uid: currentUser.uid});
+              firebaseReciept.add({parseReciept: parseReciept, uid: currentUser.uid, result: currentResult});
               alert("저장한 영수증은 마이페이지에서 확인할 수 있습니다")
               }}>영수증 저장하기</button>
           </span>

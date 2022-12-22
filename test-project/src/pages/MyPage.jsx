@@ -8,6 +8,7 @@ import MyPageReciept from '../components/MyPageReciept';
 import MypageNavbar from '../components/MypageNavbar';
 import { Outlet } from 'react-router-dom';
 import Notfound from './Notfound';
+import MyPageAccount from '../components/MyPageAccount';
 
 
 const MyPage = () => {
@@ -18,8 +19,8 @@ const MyPage = () => {
       {
         window.sessionStorage.login == 'true'? (
           <div>
-            <MypageNavbar/>
-            <Outlet />
+            <MyPageAccount />
+            <MyPageReciept />
           </div>
         ):(
           <Notfound/>

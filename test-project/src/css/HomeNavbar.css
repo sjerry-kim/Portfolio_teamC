@@ -41,7 +41,7 @@
   
   /* General sidebar styles */
   .bm-menu {
-    background: #362101;
+    background: #1b1b1b;
     opacity: 100%;
     padding: 2.5em 1.5em 0;
     font-size: 1.15em;
@@ -90,6 +90,14 @@
 
   .homenamebox{
     width: 350px;
+    margin-top: 10px;
+  }
+  .home-mypagebtn{
+    background-color: #1b1b1b00;
+    color: white;
+    border: none;
+    float: left;
+    clear: both;
   }
   .homename{
     position: relative;
@@ -113,7 +121,7 @@
   }
   .homeLogout-Btn{
     position: relative;
-    left: 60px;
+    left: 90px;
     width: 100px;
     border: none;
     border: 1px solid rgba(255, 255, 255, 0.815);

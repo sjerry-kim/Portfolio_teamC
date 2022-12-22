@@ -12,7 +12,7 @@ const ProductMergePage = () => {
   const settings2 = {
     slidesToShow: 1,
     slidesToScroll: 1,
-    dots: false,
+    dots: true,
     arrow: false,
     vertical: true,
     arrows: false,

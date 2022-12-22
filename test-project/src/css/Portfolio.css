@@ -99,10 +99,11 @@
   font-family: 'Chosunilbo_myungjo';
   padding-top: 15px;
   font-size: 35px;
-  letter-spacing: 5px;
+  letter-spacing: 10px;
   text-align: end;
-  margin-top: 7px;
+  margin-right: 8px;
   font-weight: bold;
+  color: #291b0b;
 }
 .portfolio-infos {
   display: block;
@@ -129,23 +130,25 @@
 }
 .portfolio-infos > .portfolio_intro{
   font-family: 'Chosunilbo_myungjo';
-  font-size: 20px;
+  font-size: 17px;
+  font-weight: 600;
   white-space: pre-wrap;
   text-align: center;
   margin-top: 32px;
+  color: #291b0b;
 }
 
 
 .portfolio_btn {
   position: fixed;
+  font-size: large;
   width: 130px;
   height: 40px;
-  margin-top: 15px;
+  margin-top: 40px;
   margin-left: 350px;
   line-height: 42px;
   padding: 0;
   border: none;
-  font-weight: bold;
   color: #291b0b;
   background: #FDFCFA;
 
@@ -164,7 +167,7 @@
   position:absolute;
   top:0;
   right:0;
-  height:2px;
+  height:1px;
   width:0;
   background: #5a3e31;
   transition:400ms ease all;
@@ -180,7 +183,7 @@
 .portfolio_btn:hover:before,
 .portfolio_btn:hover:after{
   width:100%;
-  transition:800ms ease all;
+  transition:700ms ease all;
 } 
 
 .portfolio-card .socials{
