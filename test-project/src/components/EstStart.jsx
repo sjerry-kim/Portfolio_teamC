@@ -20,7 +20,9 @@ const EstStart = () => {
   return (
     <div className="eststart-Wrapper">
       <div className="eststart-Contents">
-        <div className="eststart-Header">맞춤 견적 짜기</div>
+
+      <div className="eststart-main">
+      <div className="eststart-Header">맞춤 견적 짜기</div>
         {
           window.sessionStorage.getItem('login') === 'true' ? 
           (
@@ -52,6 +54,9 @@ const EstStart = () => {
           :
           " "
         }
+      </div>
+
+        
       </div>
     </div>
   );

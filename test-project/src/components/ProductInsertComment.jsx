@@ -8,9 +8,11 @@ import DataContext from "../data/DataContext";
 import { useParams } from "react-router-dom";
 import { Firestore, runTransaction, Transaction } from "firebase/firestore";
 // 💖 + 2022-12-15 추가 한 import
-import { firestore } from "../data/firebase";
+import db, { firestore } from "../data/firebase";
 import { set } from "firebase/database";
 import { async } from "@firebase/util";
+import { collection, query, where, getDocs, orderBy, doc, setDoc, addDoc, getDoc, getDocsFromCache } from "firebase/firestore";
+
 
 const ProductInsertComment = ({ setList, list }) => {
   const { state, action } = useContext(DataContext);
