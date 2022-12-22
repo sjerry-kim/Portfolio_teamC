@@ -14,7 +14,7 @@ const ProductBestRe = () => {
 
   return (
     <div className="Product-bestRe">
-      <h1>Best Reviews</h1>
+      <h1>베스트 리뷰</h1>
       <ReviewCard bestReviews={bestReviews}></ReviewCard>
     </div>
   );
@@ -26,60 +26,75 @@ function ReviewCard(props) {
   const { bestReviews } = props;
   return (
     <div className="Product-reviewCards">
-      <div className="Product-reCard1">
-        {/* <Card.Img             
-            variant="top"
-            className="Product-card-img-top"/> */}
-        <div className="bestReviews_card2" >
+      <div className="Product-reCard">
+        <div className="bestReviews_cardIMG" id="1" >
           {bestReviews
             ? <img src={bestReviews.reviewImg1} />
             : "후기 사진없음"}
         </div>
-        <Card className="Product-reCards">
-          <Card.Body>
-            <Card.Title>{bestReviews ? bestReviews.reviewTitle1 : "후기 제목 없음"}</Card.Title>
-            <Card.Text>
-              {bestReviews ? bestReviews.reviewComment1 : "후기 없음"}
-            </Card.Text>
-            <Button className="bestRe_btn" variant="primary">후기 보러가기</Button>
-          </Card.Body>
-        </Card>
+        <div className="product-bestReviews_cardIMG">
+          <h3>{bestReviews ? bestReviews.reviewTitle1 : "후기 제목 없음"}</h3>
+          <p>{bestReviews ? bestReviews.reviewComment1 : "후기 없음"}</p>
+        </div>
       </div>
-
-
-      <div className="Product-reCard2">
-        <div className="bestReviews_card2" >
+      <div className="Product-reCard">
+        <div className="bestReviews_cardIMG" id="1" >
           {bestReviews
             ? <img src={bestReviews.reviewImg2} />
             : "후기 사진없음"}
         </div>
-        <Card>
-          <Card.Body>
-            <Card.Title>{bestReviews ? bestReviews.reviewTitle2 : "후기 제목 없음"}</Card.Title>
-            <Card.Text>
-              {bestReviews ? bestReviews.reviewComment2 : "후기 없음"}
-            </Card.Text>
-            <Button variant="primary">후기 보러가기</Button>
-          </Card.Body>
-        </Card>
+        <div className="product-bestReviews_cardIMG" >
+          <h3>{bestReviews ? bestReviews.reviewTitle2 : "후기 제목 없음"}</h3>
+          <p>{bestReviews ? bestReviews.reviewComment2 : "후기 없음"}</p>
+        </div>
       </div>
 
-
-      <div className="Product-reCard3">
-        <div className="bestReviews_card3" >
+      <div className="Product-reCard">
+        <div className="bestReviews_cardIMG" >
           {bestReviews
             ? <img src={bestReviews.reviewImg3} />
             : "후기 사진없음"}
         </div>
-        <Card>
-          <Card.Body>
-            <Card.Title>{bestReviews ? bestReviews.reviewTitle3 : "후기 제목 없음"}</Card.Title>
-            <Card.Text>
-              {bestReviews ? bestReviews.reviewComment3 : "후기 없음"}
-            </Card.Text>
-            <Button variant="primary">후기 보러가기</Button>
-          </Card.Body>
-        </Card>
+        <div className="product-bestReviews_cardIMG">
+          <h3>{bestReviews ? bestReviews.reviewTitle3 : "후기 제목 없음"}</h3>
+          <p>{bestReviews ? bestReviews.reviewComment3 : "후기 없음"}</p>
+        </div>
+      </div>
+
+      <div className="Product-reCard">
+        <div className="bestReviews_cardIMG" >
+          {bestReviews
+            ? <img src={bestReviews.reviewImg3} />
+            : "후기 사진없음"}
+        </div>
+        <div className="product-bestReviews_cardIMG">
+          <h3>{bestReviews ? bestReviews.reviewTitle3 : "후기 제목 없음"}</h3>
+          <p>{bestReviews ? bestReviews.reviewComment3 : "후기 없음"}</p>
+        </div>
+      </div>
+
+      <div className="Product-reCard">
+        <div className="bestReviews_cardIMG" >
+          {bestReviews
+            ? <img src={bestReviews.reviewImg3} />
+            : "후기 사진없음"}
+        </div>
+        <div className="product-bestReviews_cardIMG">
+          <h3>{bestReviews ? bestReviews.reviewTitle3 : "후기 제목 없음"}</h3>
+          <p>{bestReviews ? bestReviews.reviewComment3 : "후기 없음"}</p>
+        </div>
+      </div>
+
+      <div className="Product-reCard">
+        <div className="bestReviews_cardIMG" >
+          {bestReviews
+            ? <img src={bestReviews.reviewImg3} />
+            : "후기 사진없음"}
+        </div>
+        <div className="product-bestReviews_cardIMG">
+          <h3>{bestReviews ? bestReviews.reviewTitle3 : "후기 제목 없음"}</h3>
+          <p>{bestReviews ? bestReviews.reviewComment3 : "후기 없음"}</p>
+        </div>
       </div>
     </div>
   );
