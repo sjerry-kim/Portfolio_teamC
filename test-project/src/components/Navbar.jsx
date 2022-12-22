@@ -200,7 +200,7 @@ const Navbar = () => {
       {window.sessionStorage.getItem("login") == 'true' ? (
         <div className="navbar-log-div">
           <button className="navbar-mypagebtn" onClick={()=>{
-            navigate('/mypage');
+            navigate('/main/mypage');
           }}>My Page</button>
           <button className="navbar-loginbtn" onClick={()=>{
           window.sessionStorage.setItem("login", false);

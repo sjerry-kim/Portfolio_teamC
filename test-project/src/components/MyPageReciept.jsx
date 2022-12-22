@@ -33,7 +33,7 @@ const MyPageReciept = () => {
   return (  
     <div>
       <div>
-        <h1>맞춤 견적 영수증</h1>
+        <h3>맞춤 견적 영수증</h3>
         {
           reciept.map((reciept,i)=>{
             const mapArray = reciept;
