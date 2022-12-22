@@ -1,16 +1,27 @@
+
+
+input:focus{
+  outline: none;
+}
+
+.homecontactus-titleBox{
+  width: 550%;
+  position: relative;
+  right: 700px;
+}
+
 .homecontactus-letter {
     text-align: left;
     margin-top: 350px;
-    margin-left: -740px;
   }
   
   .homecontactus-title {
-    margin-top: -80px;
-    margin-left: -740px;
+    margin-top: 0px;
     font-size: 100px;
     font-weight: bold;
+    width: 100%;
   }
-  .homecontactus-button {
+  /* .homecontactus-button {
     margin-top: 120px;
     margin-left: -550px;
     padding: 45px 100px 40px 100px;
@@ -19,51 +30,61 @@
     border-radius: 10px;
     background-color: transparent;
     color: white;
-  }
+  } */
   .homecontactus-button:hover {
     background-color: white;
     color: black;
   }
   
   .homecontactus-middletitle {
-    font-size: 15px;
+    font-size: 20px;
     margin-top: -250px;
     margin-left: 15px;
   }
   
+  .homecontactus-formBox{
+    display: flex;
+    text-align: center;
+    width: 100vw;
+    margin-top: -330px;
+    margin-left: -450px;
+  }
+
   .homecontactus-form {
-    margin-left: 250px;
-    margin-top: -500px;
     font-size: 50px;
+    width: 100%;
+  }
+
+  .homecontactus-formdiv{
+    margin: 30px;
+  
   }
   
   .homecontactus-formlable {
-    display: table-cell;
     width: 170px;
     font-size: 30px;
     color: rgba(255, 255, 255, 0.8);
     letter-spacing: 0.2pt;
-    padding: 7px 20px;
+    padding: 7px 0px;
     box-sizing: border-box;
-    vertical-align: top;
     border-right: 1px solid rgba(255, 255, 255, 0.25);
-
+    margin-right: 30px;
   }
   .homecontactus-forminput {
     display: inline-block;
-    float: left;
     size: 10px;
     font-size: 30px;
     padding: 10px 5px;
     background: transparent;
     border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     box-sizing: border-box;
+    color:rgba(255, 255, 255, 0.8);
   }
   .homecontactus-checkbox {
     font-size: 20px;
     text-decoration: dashed;
-    margin: 20px 0 20px 0px;
+    margin: 50px 0 20px 0px;
     padding: 0 15px 0  15px;
 
   }
@@ -72,7 +93,11 @@
   }
 
   .homecontactus-checkdiv{
-    
     display: flex;
+    justify-content: center;
+    margin-right: 300px;
     padding-left: 25px;
   }
+.homecontactus-Btn{
+  margin-top: 30px;
+}
