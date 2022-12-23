@@ -32,9 +32,9 @@ function App() {
       <DataProvider>
         <Routes>
           <Route index path='/' element={<Home />}/>
-          <Route path='/login' element={<Login />}/>
           <Route path='/join' element={<Join />}/>
           <Route path='/main' element={<Main />}>
+            <Route path='/main/login' element={<Login />}/>
             <Route path='/main/mypage' element={<MyPage />} />
             <Route index  element={<Portfolio />}/>
             <Route path='/main/portfolio' element={<Portfolio />} />

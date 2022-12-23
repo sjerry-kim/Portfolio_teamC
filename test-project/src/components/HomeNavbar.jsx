@@ -216,7 +216,7 @@ const HomeNavbar = () => {
                   ) 
                   : 
                   (
-                  <button className='homeLogin-Btn' onClick={()=>{navigate('/login')}}>Login</button>
+                  <button className='homeLogin-Btn' onClick={()=>{navigate('/main/login')}}>Login</button>
                   )
                 }
                 </div>
