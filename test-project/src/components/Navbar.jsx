@@ -216,7 +216,7 @@ const Navbar = () => {
         <div className="navbar-log-div">
           <button className="navbar-loginbtn"
           onClick={() => {
-            navigate("/login");
+            navigate("/main/login");
           }}
         >
           Login

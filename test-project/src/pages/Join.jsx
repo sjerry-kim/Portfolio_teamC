@@ -3,6 +3,7 @@ import JoinInput from "../components/JoinInput";
 import {
   createUserWithEmailAndPassword,
   getAuth,
+  onAuthStateChanged,
   updateProfile,
 } from "firebase/auth";
 import { auth } from "../data/firebase";
@@ -27,6 +28,18 @@ import { useDispatch } from "react-redux";
 import { userLogin } from "../module/currentUser";
 
 const Join = props => {
+
+
+  // 로딩중
+  const [state, setState] = useState("기달령");
+
+  const componentDidMount = () => {
+    setTimeout(() => {
+      setState({Loading: false});
+    }, 3000);
+  }
+
+
   // 파이어베이스 회원가입
   const [name, setName] = useState("");
   const [registerEmail, setRegisterEmail] = useState("");
@@ -67,18 +80,17 @@ const Join = props => {
           console.log(docRef.id);
           const user = docRef.user;
         });
-      updateProfile(auth.currentUser, { displayName: name });
-
-      console.log(user.displayName);
-      console.log("uid제발", user.uid);
-      console.log(user);
+        updateProfile(auth.currentUser, { displayName: name });
       //dispatch(userLogin(user));
+      window.sessionStorage.setItem("displayName", name);
       window.sessionStorage.setItem("login", true);
       window.sessionStorage.setItem("uid", user.uid);
-      window.sessionStorage.setItem("displayName", user.displayName);
       window.sessionStorage.setItem("email", user.email);
       window.sessionStorage.setItem("photoURL", user.photoURL);
-      navigate("/");
+      setTimeout(() => {
+        navigate('/')
+      }, 500);
+     
     } catch (error) {
       navigate("/login");
       const errorCode = error.code;

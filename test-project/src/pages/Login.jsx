@@ -2,6 +2,7 @@ import { useContext, useRef } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import googleImg from "../img/login-google.png";
 
 import {
   getAuth,
@@ -188,18 +189,35 @@ const Login = () => {
       {window.sessionStorage.getItem("login") === "true" ? (
         <Notfound />
       ) : (
-        <div>
+        <div className="login-page-box">
+          <div className="login-page2">
+            <div className="login-text-box">
+              <p className="login-page2-text1">전문가와 함께하는 </p>
+              <p className="login-page2-text2">간편한 업체 소싱,</p>
+              <p className="login-page2-text3">지금 시작해볼까요 ?</p>
+              <div className="login-line">
+              <p>
+                Today disign의 업체 소싱은<br></br>
+                전문가와 함께하기 때문에<br></br>
+                보다 효율적이고 안정적입니다<br></br>
+              </p>
+              </div>
+            </div>
+          </div>
+          <div className="login-line-2">
+            
+          </div>
           <div className="login-page">
             <div className="login-border">
-              <img
+              {/* <img
                 src={require("../img/logo_white.png")}
                 className="login-login-Logo"
-              />
+              /> */}
               <div className="login-titleWrap">
                 로그인
                 <br />
               </div>
-
+              
               <div className="login-contentWrap">
                 <div className="login-inputTitle">E-mail</div>
                 <div className="login-inputWrap">
@@ -249,19 +267,14 @@ const Login = () => {
                 >
                   로그인
                 </button>
-                <div>User Logged In:</div>
-                <div>{user?.email}</div>
-                <button onClick={emailLogout}>로그아웃</button>
               </div>
-              <div>
-                <button className="login-LoginGoogle" onClick={googleLogin}>
-                  구글로 로그인
-                </button>
-              </div>
-              <div>
-                <button className="login-createButton" onClick={CreateButton}>
-                  회원 가입
-                </button>
+              <div className="login-allbox">
+                  <button className="login-LoginGoogle" onClick={googleLogin}>
+                    <img src={googleImg} className="login-googleimg"/>
+                  </button>
+                  <button className="login-createButton" onClick={CreateButton}>
+                    회원 가입
+                  </button>      
               </div>
             </div>
           </div>
