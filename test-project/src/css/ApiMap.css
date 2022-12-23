@@ -1,5 +1,6 @@
 .api-inputForm {
-  background-color: rgb(241, 238, 235);
+  background-color: #ece4db;
+  font-family: "LINESeedKR-Bd";
 }
 
 .api-input:focus {
