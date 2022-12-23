@@ -1,20 +1,10 @@
 @font-face {
-  font-family: "GangwonEdu_OTFBoldA";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff")
-    format("woff");
-  font-weight: normal;
+  font-family: "LINESeedKR-Bd";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2")
+    format("woff2");
+  font-weight: 700;
   font-style: normal;
 }
-
-#api-result-list {
-  position: relative;
-  bottom: 150px;
-  width: 470px;
-  height: 820px;
-  overflow-y: scroll;
-  background-color: rgb(241, 238, 235);
-}
-
 #api-result-list::-webkit-scrollbar-track {
   background: rgb(241, 238, 235); /* 스크롤바의 색상 */
 }
@@ -30,22 +20,34 @@
   border-radius: 10px;
 }
 
+.api-result-list-font {
+  font-family: "LINESeedKR-Bd";
+}
+
+#api-result-list {
+  position: relative;
+  bottom: 90px;
+  width: 470px;
+  height: 750px;
+  overflow-y: scroll;
+  background-color: rgb(241, 238, 235);
+}
+
 #api-result-list > div > div > h5 {
   display: inline;
   position: relative;
   border-bottom: 1px solid rgb(187, 163, 136);
-  bottom: 23px;
+  bottom: 22px;
   width: 300px;
   margin-left: 7px;
-  font-family: "GangwonEdu_OTFBoldA";
+  font-family: "LINESeedKR-Bd";
 }
 #api-result-list > div > div {
-  padding-bottom: 5px;
+  padding-bottom: 15px;
   margin-left: 15px;
 }
 
 #api-pagination {
-  margin-top: 3rem;
   text-align: center;
 }
 
@@ -53,6 +55,7 @@
   color: black;
   font-size: 20px;
   text-decoration: none;
+  font-family: "LINESeedKR-Bd";
   margin: 0 10px;
 }
 
@@ -65,13 +68,19 @@
 }
 #api-TopMap {
   display: flex;
+  margin-left: 10px;
 }
 #api-midMap {
   width: 40.7vw;
   margin-top: 191px;
+  font-family: "LINESeedKR-Bd";
 }
 #api-myMap {
   margin-left: 470px;
-  margin-top: 160px;
+  margin-top: 100px;
   bottom: 1px;
+}
+
+#api-midMap li div div div span {
+  font-family: "LINESeedKR-Bd";
 }

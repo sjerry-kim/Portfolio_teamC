@@ -108,7 +108,7 @@ const ApiMapContainer = ({ searchPlace }) => {
         id="api-myMap"
         style={{
           width: "1450px",
-          height: "873px",
+          height: "820px",
           position: "absolute",
         }}
       ></div>
@@ -121,19 +121,29 @@ const ApiMapContainer = ({ searchPlace }) => {
         >
           <div id="api-result-list">
             {Places.map((item, i) => (
-              <div key={i} className="api-result-list-font">
+              <div key={i}>
                 <span>{i + 1}</span>
                 <div>
                   <h5>{item.place_name}</h5>
                   {item.road_address_name ? (
                     <div>
-                      <span>{item.road_address_name}</span>
-                      <span>{item.address_name}</span>
+                      <span>도로명 : {item.road_address_name}</span>
+                      <br />
+                      <span>지번 : {item.address_name}</span>
                     </div>
                   ) : (
-                    <span>{item.address_name}</span>
+                    <span>
+                      지번 : {item.address_name}
+                      <br />
+                    </span>
                   )}
-                  <span>{item.phone}</span>
+                  <span>
+                    {item.phone ? (
+                      <span>연락처: {item.phone}</span>
+                    ) : (
+                      <span></span>
+                    )}
+                  </span>
                 </div>
               </div>
             ))}

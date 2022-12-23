@@ -8,6 +8,7 @@ import React, { useContext, useState } from "react";
 import DataContext from "../data/DataContext";
 import { useParams } from "react-router-dom";
 import ProductInsertAverage from "./ProductInsertAverage";
+import useScrollFadeIn from "./useScrollFadeIn";
 
 // 1219 firestore- 진혜
 import db from "../data/firebase";
@@ -78,7 +79,7 @@ function InfoCard(props) {
   // },[newArray])
 
   return (
-    <div className="Product-infoCards">
+    <div className="Product-infoCards" {...useScrollFadeIn("up", 0.5, 0)}>
       <Card className="Product-infoCard">
         <Card.Body>
           <Card.Title>

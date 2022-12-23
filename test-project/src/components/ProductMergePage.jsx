@@ -6,6 +6,8 @@ import ProductBestRe from "./ProductBestRe";
 import ShopInfo from "./ProductShopInfo";
 import ShopSlick from "./ProductShopSlick";
 import { useEffect, useRef } from "react";
+import useScrollFadeIn from "./useScrollFadeIn";
+
 // import ShopContainer from "./ShopContainer";
 
 const ProductMergePage = () => {
