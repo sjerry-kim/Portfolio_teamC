@@ -57,7 +57,7 @@ const EstStart = () => {
             <button
               onClick={StartClickButton} 
               class="est-start-btn">
-              <span>Start ! </span>
+              <span>S t a r t</span>
             </button>
           </div>
           )

@@ -173,10 +173,10 @@ body {
   top: 4px;
   color: #fff;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 14px;
   background-color: #C3A88E;
   padding: 13px 50px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.20);
 }
 
 .est-start-btn span {
@@ -191,7 +191,7 @@ body {
   top: 0;
   height: 390%;
   width: 140%;
-  background: #7F5739;
+  background: #8b6343 ;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
   -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
