@@ -152,23 +152,23 @@ useEffect(() => {
               console.log(num);
               switch (num) {
                 case 0:
-                  return setRName("type");
+                  return setRName("타입");
                 case 1:
-                  return setRName("wallpaper");
+                  return setRName("벽지");
                 case 2:
-                  return setRName("sash");
+                  return setRName("샷시");
                 case 3:
-                  return setRName("floor");
+                  return setRName("바닥");
                 case 4:
-                  return setRName("veranda");
+                  return setRName("베란다");
                 case 5:
-                  return setRName("roomdoor");
+                  return setRName("방문");
                 case 6:
-                  return setRName("frontdoor");
+                  return setRName("현관문");
                 case 7:
-                  return setRName("light");
+                  return setRName("조명");
                 case 8:
-                  return setRName("price");
+                  return setRName("예상 비용");
               }
             }}
           >
@@ -184,23 +184,23 @@ useEffect(() => {
               setNum(num + 1);
               switch (num) {
                 case 0:
-                  return setRName("type");
+                  return setRName("타입");
                 case 1:
-                  return setRName("wallpaper");
+                  return setRName("벽지");
                 case 2:
-                  return setRName("sash");
+                  return setRName("샷시");
                 case 3:
-                  return setRName("floor");
+                  return setRName("바닥");
                 case 4:
-                  return setRName("veranda");
+                  return setRName("베란다");
                 case 5:
-                  return setRName("roomdoor");
+                  return setRName("방문");
                 case 6:
-                  return setRName("frontdoor");
+                  return setRName("현관문");
                 case 7:
-                  return setRName("light");
+                  return setRName("조명");
                 case 8:
-                  return setRName("price");
+                  return setRName("예상 비용");
               }
             }}
           >
@@ -216,23 +216,23 @@ useEffect(() => {
               setNum(num + 1);
               switch (num) {
                 case 0:
-                  return setRName("type");
+                  return setRName("타입");
                 case 1:
-                  return setRName("wallpaper");
+                  return setRName("벽지");
                 case 2:
-                  return setRName("sash");
+                  return setRName("샷시");
                 case 3:
-                  return setRName("floor");
+                  return setRName("바닥");
                 case 4:
-                  return setRName("veranda");
+                  return setRName("베란다");
                 case 5:
-                  return setRName("roomdoor");
+                  return setRName("방문");
                 case 6:
-                  return setRName("frontdoor");
+                  return setRName("현관문");
                 case 7:
-                  return setRName("light");
+                  return setRName("조명");
                 case 8:
-                  return setRName("price");
+                  return setRName("예상 비용");
               }
             }}
           >
@@ -249,23 +249,23 @@ useEffect(() => {
 
               switch (num) {
                 case 0:
-                  return setRName("type");
+                  return setRName("타입");
                 case 1:
-                  return setRName("wallpaper");
+                  return setRName("벽지");
                 case 2:
-                  return setRName("sash");
+                  return setRName("샷시");
                 case 3:
-                  return setRName("floor");
+                  return setRName("바닥");
                 case 4:
-                  return setRName("veranda");
+                  return setRName("베란다");
                 case 5:
-                  return setRName("roomdoor");
+                  return setRName("방문");
                 case 6:
-                  return setRName("frontdoor");
+                  return setRName("현관문");
                 case 7:
-                  return setRName("light");
+                  return setRName("조명");
                 case 8:
-                  return setRName("price");
+                  return setRName("예상 비용");
               }
             }}
           >
@@ -281,23 +281,23 @@ useEffect(() => {
               setNum(num + 1);
               switch (num) {
                 case 0:
-                  return setRName("type");
+                  return setRName("타입");
                 case 1:
-                  return setRName("wallpaper");
+                  return setRName("벽지");
                 case 2:
-                  return setRName("sash");
+                  return setRName("샷시");
                 case 3:
-                  return setRName("floor");
+                  return setRName("바닥");
                 case 4:
-                  return setRName("veranda");
+                  return setRName("베란다");
                 case 5:
-                  return setRName("roomdoor");
+                  return setRName("방문");
                 case 6:
-                  return setRName("frontdoor");
+                  return setRName("현관문");
                 case 7:
-                  return setRName("light");
+                  return setRName("조명");
                 case 8:
-                  return setRName("price");
+                  return setRName("예상 비용");
               }
             }}
           >

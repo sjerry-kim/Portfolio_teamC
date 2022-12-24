@@ -89,7 +89,7 @@ const Join = props => {
       window.sessionStorage.setItem("photoURL", user.photoURL);
       setTimeout(() => {
         navigate('/')
-      }, 500);
+      }, 800);
      
     } catch (error) {
       navigate("/login");

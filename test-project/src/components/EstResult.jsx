@@ -13,14 +13,9 @@ const EstResult = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const mbti = searchParams.get("mbti");
-
   const { state, action } = useContext(DataContext);
   const reciept = JSON.stringify(state.reciept);
-  
-  // 1221 진혜추가
   const currentUser = auth.currentUser;
-
- 
 
 
   // 최종적으로 도출한 결과 객체
@@ -29,26 +24,14 @@ const EstResult = () => {
     console.log(mbti)
     const result = data.state.score.find((s) => s.best === mbti);
     setResultData(result);
-  }, );
+  } );
 
-  
   // 결과값 가져오는 세션
   useEffect(()=>{
     const jsonResult = (resultData.name);
     window.sessionStorage.setItem("result", jsonResult);
     console.log(resultData.name)
   },[resultData])
-
-
-
-  // useEffect(()=>{
-  //   window.onpageshow = function(event) {
-  //     if ( event.persisted || (window.performance && window.performance.navigation.type == 2)) {
-  //     // Back Forward Cache로 브라우저가 로딩될 경우 혹은 브라우저 뒤로가기 했을 경우
-  //     alert("히스토리백!!!!");
-  //             }
-  //     }
-  // })
 
 // 새로고침 막기 변수
 //:BeforeUnloadEvent
@@ -84,31 +67,23 @@ useEffect(() => {
   };
 },[]);
 
-  useEffect(()=>{
-    console.log(reciept)
-    localStorage.setItem("reciept", reciept)
-    console.log(reciept)
-  },[reciept])
+  // useEffect(()=>{
+  //   console.log(reciept)
+  //   localStorage.setItem("reciept", reciept)
+  //   console.log(reciept)
+  // },[reciept])
 
-  useEffect(()=>{
-    let a = localStorage.getItem("reciept");
-    let b = JSON.parse(a);
-    console.log(b);
-  })
-
-  // 뒤로가기는 막고, 새로고침은 세션스토리지에 저장된 값 불러오기
-
-
-  // 🌼🌼🌼 result창에서 새로고침 시 영수증 내용이 사라짐 >> 확인 필요 🌼🌼🌼
-
-
+  // useEffect(()=>{
+  //   let a = localStorage.getItem("reciept");
+  //   let b = JSON.parse(a);
+  //   console.log(b);
+  // })
 
   return (
     <div>
       <div className="estresult-Wrapper">
-        <div className="estresult-Header">간편 견적 </div>
-
         <div className="estresult-Contents">
+        <div className="estresult-Header">간편 견적</div>
           <div className="estresult-Title">결과 보기</div>
           <div className="estresult-LogoImage">
             {/* <img src={resultData.image} width={300} /> */}
@@ -121,7 +96,6 @@ useEffect(() => {
             action.setReciept([]);
             }}>다시 해보기</button>
         </div>
-
         <div className="estresult-all-box">
           <span className="estresult-Reciept-box">
             {/* <a href={data.state.score[].src}>업체 보러가기</a> */}
@@ -136,9 +110,7 @@ useEffect(() => {
                   case "ABc":
                     return window.open("https://jy-interiordesign.com/");
                   case "AbC":
-                    return window.open(
-                      "http://www.xn--4k0bq0t9ujvwbpxvm6f.kr/"
-                    );
+                    return window.open("http://www.xn--4k0bq0t9ujvwbpxvm6f.kr/");
                   case "Abc":
                     return window.open("https://www.1204design.co.kr/");
                   case "aBC":
@@ -146,9 +118,7 @@ useEffect(() => {
                   case "aBc":
                     return window.open("http://www.monointerior.co.kr/");
                   case "abc":
-                    return window.open(
-                      "http://www.dawon.com/wen/index.php?v=220209"
-                    );
+                    return window.open("http://www.dawon.com/wen/index.php?v=220209");
                   case "abC":
                     return window.open("http://idas.kr/");
                 }
@@ -161,7 +131,7 @@ useEffect(() => {
               const currentReciept = window.sessionStorage.getItem("sessionReciept")
               const firebaseReciept = firestore.collection("reciept");
               const parseReciept = JSON.parse(currentReciept);
-              firebaseReciept.add({parseReciept: parseReciept, uid: currentUser.uid, result: currentResult});
+              firebaseReciept.add({parseReciept: parseReciept, uid: currentUser.uid, result: currentResult, timeStamp: new Date(),});
               alert("저장한 영수증은 마이페이지에서 확인할 수 있습니다")
               }}>영수증 저장하기</button>
           </span>
