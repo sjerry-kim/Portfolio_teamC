@@ -102,7 +102,7 @@ const DataProvider = (({ children }) => {
     const [question, setQuestion] = useState([
         {
             id: 1,
-            title: "건물 유형 선택",
+            title: "건물 타입",
             answera: "아파트",
             answerb: "빌라",
             answerc: "단독주택",
@@ -152,7 +152,7 @@ const DataProvider = (({ children }) => {
         },
         {
             id: 6,
-            title: "방문보수/교체",
+            title: "방문 시공",
             answera: "해당 없음",
             answerb: "전체",
             answerc: "부분",
@@ -175,19 +175,19 @@ const DataProvider = (({ children }) => {
             title: "조명 시공",
             answera: "해당 없음",
             answerb: "전체 교체",
-            answerc: "등",
+            answerc: "조명등",
             answerd: "스위치",
             answere: "기타",
             type: "Cc",
         },
         {
             id: 9,
-            title: "총 예상 비용",
+            title: "예상 비용",
             answera: "500만 원 미만",
-            answerb: "1,000 만 원 대",
+            answerb: "1,000만 원대",
             answerc: "2,000만 원대",
             answerd: "3,000만 원대",
-            answere: "4,000만 원대 이상",
+            answere: "4,000만 원 이상",
             type: "Cc",
         },
         {

@@ -1,60 +1,86 @@
-import { useContext} from "react";
+import { useContext } from "react";
 import DataContext from "../data/DataContext";
 import "../css/EstReciept.css";
 import { useEffect } from "react";
 import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 
 const EstReciept = () => {
   const { state, action } = useContext(DataContext);
-
-  // 세션 스토리지
   const reciept = JSON.stringify(state.reciept);
   const [sessionReciept, setSessionReciept] = useState([]);
-  
-  useEffect(()=>{
-    sessionStorage.setItem("sessionReciept", reciept)
-  })
+  const [resultData, setResultData] = useState({});
+  const [searchParams] = useSearchParams();
+  const mbti = searchParams.get("mbti");
+  const date= new Date();
 
-  useEffect((e)=>{
-    setSessionReciept(JSON.parse(window.sessionStorage.getItem("sessionReciept")))
-  },[])
+  useEffect(() => {
+    sessionStorage.setItem("sessionReciept", reciept);
+  });
+
+  useEffect((e) => {
+    setSessionReciept(
+      JSON.parse(window.sessionStorage.getItem("sessionReciept"))
+    );
+  }, []);
+
+  useEffect(() => {
+    console.log(mbti)
+    const result = state.score.find((s) => s.best === mbti);
+    setResultData(result);
+  } );
 
   return (
-    <div>
+    <div className="estreciept-wrapper">
+      <div className="estreciept-bar"></div>
       <div className="estreciept-receipt">
-        <div className="estreciept-State-bar">선택 항목</div>
-      {
-        sessionReciept.length>8 ? (sessionReciept.map((r,i)=>(
-          <div key={i}>
-            <p className="estreciept-checklist">
-              세션 {r.name}
-              {r.answer}
-            </p>
-          </div>
-        ))
-        )
-        :
-        (
-        state.reciept.map((r, i) => (
-          <div key={i}>
-            <p className="estreciept-checklist">
-              {r.name}
-              {r.answer}
-            </p>
-          </div>
-        ))
-        )
-      }
+        <h1 className="estreciept-logo">Today Design</h1>
+        <div className="estreciept-div">
+          <div className="estreciept-line">사업장명: 투데이디자인</div>
+          <div className="estreciept-line">사업자 등록번호: 123-45-678910</div>
+          <div className="estreciept-line">주소: 부산광역시 중앙대로 749</div>
+          <div class="estreciept-line">전화번호: 051-123-4567</div>
+          <div className="estreciept-line">담당자: POS 102-1</div>
+          <div className="estreciept-line">
+            결제일시: {date.getFullYear()}-
+            {date.getMonth()+1}-
+            {date.getDate()} { }
+            {date.getHours()}:
+            {date.getMinutes()}
+            </div>
+        </div>
+        <div className="estreciept-break">************************</div>
+        {state.reciept.map((r, i) => (
+            <div className="estreiept-list" key={i}>
+              <div className="estreciept-list-item">{i+1} {r.name}</div>
+              <div className="estreciept-list-item">{r.answer}</div>
+            </div>
+          ))}
+        <div className="estreciept-break">************************</div>
+        <div className="estreciept-result-div">
+          {
+            window.sessionStorage.getItem("result") == 'null' ? (
+              " "
+            ):(
+              <span className="estreciept-company">
+                {resultData.name}
+              </span>
+            )
+          }
+      </div>
 
-        {/* {state.reciept.map((r, i) => (
-          <div key={i}>
-            <p className="checklist">
-              {r.name}
-              {r.answer}
-            </p>
+        <div className="estreciept-barcode-div">
+          <div className="estreciept-barcode">
+            <img src={require("../img/barcode.png")} alt="" />
           </div>
-        ))} */}
-        <div className="estreciept-box"></div>
+          <div className="estreciept-barcodenum-div">
+            <p className="estreciept-barcodenum">2023</p>
+            <p className="estreciept-barcodenum">5018</p>
+            <p className="estreciept-barcodenum">2205</p>
+            <p className="estreciept-barcodenum">4812</p>
+            <p className="estreciept-barcodenum">1224</p>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -10,7 +10,6 @@
   position: relative;
   right: 140px;
   background-image: url(../img/EstStart-img2.jpg);
-  
   background-size: cover;
   background-color: rgba(255, 255, 255, 0.966);
   /* background-position-x: -100px;
@@ -21,24 +20,28 @@
   margin: 100px auto ;
   border-radius: 5px;
   border: 1px solid rgb(255, 255, 255);
-    -webkit-box-shadow: 7px 8px 5px 1px rgba(0,0,0,0.47); 
-    box-shadow: 7px 8px 5px 1px rgba(0,0,0,0.47);
-  /* box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
-  -webkit-box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75); */
+  box-shadow: 5px 5px 19px rgb(157, 157, 157);;
 }
 
 
 .estquestion-Title {
-  font-size: 28pt;
-  margin: 15px;
+  font-size: 30pt;
+  margin: 35px;
+  margin-bottom: 10px;
   text-align: center;
   font-family: "RIDIBatang";
 }
 
 .ProgressBar {
-  margin-top: 30px;
   background-color: rgba(206, 68, 68, 0) ;
+}
+
+.progress-bar {
+  background-color: rgb(51, 51, 51);
+}
+
+.estquestion-progressbox {
+  margin: 30px;
 }
 
 .estquestion-QBtn {
@@ -66,14 +69,6 @@
   align-items: center;
   justify-content: center;
   font-family: "RIDIBatang";
-}
-
-.progress-bar {
-  background-color: rgb(51, 51, 51);
-}
-.estquestion-progressbox {
-  margin-bottom: 50px;
-  border: 1px solid rgba(255, 0, 0, 0);
 }
 
 
