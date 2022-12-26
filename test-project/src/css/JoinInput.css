@@ -152,7 +152,7 @@ select:focus {outline:none}
   /* 버튼 비활성화일때 회색 */
 .join-joinForm_btn:disabled{
     background-color: rgba(172, 172, 172, 0.281);
-    color: white;
+    color: rgb(255, 255, 255);
 }
 .join-errorMessage{
     color: red;
