@@ -6,101 +6,189 @@
   font-style: normal;
 }
 
-.estresult-Wrapper{
-    background-image: linear-gradient(
-        rgba(255, 255, 255, 0.678),
-        rgba(255, 255, 255, 0.678)
-        ),url(../img/QuestionImg-5.JPG);
-        background-size: cover;
-    background-color: rgb(255, 255, 255);
-    width: 600px;
-    height: 600px;
-    margin: 100px auto;
-    border-radius: 5px;
-    position: relative;
-    right: 140px;
-    border: 1px solid rgb(255, 255, 255);
-    box-shadow: 5px 5px 19px #ccc;
+.estresult-Wrapper {
+  position: relative;
+  right: 140px;
+  background-image: url(../img/EstStart-img10.png);
+  background-size: 800px;
+  background-color: transparent;
+  background-position-x: -110px;
+  background-position-y: -120px;
+  width: 600px;
+  height: 600px;
+  margin: 100px auto;
+  border-radius: 5px;
+  border: none;
 }
 
-.estresult-Header{
-    position: relative;
-    bottom: 50px;
-    font-family: "RIDIBatang";
-    font-size: 33pt;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.estresult-Contents{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 170px;
-}
-
-.estresult-Title{
+.estresult-Header {
+  position: relative;
+  top: 0px;
   font-family: "RIDIBatang";
-    font-size: 25pt;
+  font-size: 30pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #291B0C;
 }
 
-.estresult-LogoImage{
-    margin-top: 0px;
+.estresult-Contents {
+  position: relative;
+  top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 207px;
 }
 
-.estresult-Desc{
-    position: relative;
-    font-family: "RIDIBatang";
-    font-size: 25pt;
-}
-
-.estresult-ReBtn{
+.estresult-Title {
   font-family: "RIDIBatang";
-  font-size: 25px;
+  font-size: 17pt;
+  position: relative;
+  top: 25px;
+  color: #291B0C;
+}
+
+.estresult-LogoImage {
+  margin-top: 0px;
+}
+
+.estresult-Desc {
+  position: relative;
+  font-family: "RIDIBatang";
+  color: #291B0C;
+  font-size: 25pt;
+  top: 43px;
+}
+
+.estresult-ReBtn {
+  font-family: "RIDIBatang";
+  font-size: 20px;
   width: 150px;
-  height: 50px;
+  height: 45px;
   border: none;
   background-color: rgb(51, 51, 51);
   color: rgb(255, 255, 255);
-  -webkit-box-shadow: 5px 6px 6px 0px rgba(0,0,0,0.7); 
-  box-shadow: 5px 6px 6px 0px rgba(0,0,0,0.7);
   position: relative;
+  top: 70px;
 }
 
-.estresult-all-box{
+.estresult-all-box {
   position: relative;
   display: flex;
   justify-content: center;
   width: 100%;
   margin: 0;
+  top: 55px;
 }
 
-
-.estresult-ReStartBtn{
-    font-family: "RIDIBatang";
-    width: 200px;
-    font-size: 15pt;
-    border: none;
-    --c: no-repeat linear-gradient(#4d4d4d 0 0);
-    background: 
-      var(--c) calc(-101% + var(--i,0)*101%) 100% / 50.1% calc(100%*var(--i,0) + .08em),
-      var(--c) calc( 201% - var(--i,0)*101%) 0    / 50.1% calc(100%*var(--i,0) + .08em);
-    transition: .3s calc(var(--i,0)*.3s), background-position .3s calc(.3s - var(--i,0)*.3s);
-}
-
-.estresult-savebtn{
+.estresult-ReStartBtn {
   font-family: "RIDIBatang";
+  width: 85px;
+  height: 35px;
+  font-size: 11pt;
   border: none;
   background-color: transparent;
-  width: 200px;
-  font-size: 15pt;
-
+  margin-right: 6px;
 }
 
+.estresult-ReStartBtn svg{
+  font-size: 13px;
+}
 
+.estresult-ReStartBtn:hover{
+  background-color: #DFB9B8;
+  color: #6d4c41;
+  font-weight: bold;
+}
 
+.estresult-savebtn {
+  font-family: "RIDIBatang";
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  width: 85px;
+  height: 35px;
+  font-size: 11pt;
+  -webkit-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+  margin-left: 6px
+}
 
+.estresult-savebtn svg{
+  font-size: 13px;
+}
 
+.estresult-savebtn:hover{
+  background-color: #DFB9B8;
+  color: #6d4c41;
+  font-weight: bold;
+}
+
+.estresult-effect {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: #7a32308c;
+  text-transform: capitalize;
+  background-color: transparent;
+  border: 1.5px solid #7a32308c;
+  font-family: "RIDIBatang";
+  font-size: 20px;
+  padding: 7px 0px;
+  width: 150px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.estresult-effect:hover{
+  background-color: #853734;
+  color: white;
+}
+
+/* effect-1 styles */
+.estresult-effect.estresult-effect-1 {
+  transition: all 0.2s linear 0s;
+}
+.estresult-effect.estresult-effect-1:before {
+  content: "\27F6";
+  font-family: FontAwesome;
+  font-size: 20px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  height: 100%;
+  width: 40px;
+  transition: all 0.2s linear 0s;
+  padding: 17px;
+}
+.estresult-effect.estresult-effect-1:hover {
+  text-indent: -20px;
+}
+.estresult-effect.estresult-effect-1:hover:before {
+  opacity: 1;
+  text-indent: 0px;
+}
+
+.estresult-btn-10 {
+  background: #8d6e63;
+  color: white;
+  border-radius: 7px;
+  box-shadow: 0 7px 0px #6d4c41;
+  display: inline-block;
+  transition: all 0.2s;
+  position: relative;
+  cursor: pointer;
+}
+
+.estresult-btn-10:hover {
+  top: 3px;
+  box-shadow: 0 2px 0px #9b6d6c;
+  transition: all 0.2s;
+}

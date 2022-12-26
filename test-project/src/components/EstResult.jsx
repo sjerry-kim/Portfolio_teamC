@@ -4,6 +4,8 @@ import "../css/EstResult.css";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import DataContext from "../data/DataContext";
 import EstReciept from "./EstReciept";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRotateLeft, faDoorOpen, faDownload, faFileArrowDown, faReceipt, faRightToBracket, faShare } from "@fortawesome/free-solid-svg-icons";
 
 // 1221 진혜 추가
 import { auth, firestore } from "../data/firebase";
@@ -84,21 +86,25 @@ useEffect(() => {
       <div className="estresult-Wrapper">
         <div className="estresult-Contents">
         <div className="estresult-Header">맞춤 견적 결과</div>
-          <div className="estresult-Title">{window.sessionStorage.getItem("displayName")}님에게 어울리는 업체</div>
+          <div className="estresult-Title">{window.sessionStorage.getItem("displayName")}님에게 어울리는 인테리어 업체</div>
           <div className="estresult-LogoImage">
             {/* <img src={resultData.image} width={300} /> */}
           </div>
           <div className="estresult-Desc">
-            {resultData.name}
+            " {resultData.name} "
           </div>
-          <button className="estresult-ReBtn" onClick={()=>{
+          <button className="estresult-ReBtn estresult-effect estresult-effect-1" onClick={()=>{
             navigate('/main/estimation')
             action.setReciept([]);
-            }}>다시 해보기</button>
+            }}>
+              {/* <FontAwesomeIcon icon={faArrowRotateLeft} /> */}
+              다시 하기
+            </button>
         </div>
         <div className="estresult-all-box">
             <button
-              className="estresult-ReStartBtn"
+              title="사이트 방문하기"
+              className="estresult-ReStartBtn estresult-btn-10"
               onClick={() => {
                 console.log(resultData.best);
                 const a = resultData.best;
@@ -122,16 +128,23 @@ useEffect(() => {
                 }
               }}
             >
-              사이트 구경하기
+              {/* <FontAwesomeIcon icon={faShare} /> <br /> */}
+              사이트 방문
             </button>
-            <button className="estresult-savebtn" onClick={()=>{
+            <button 
+              className="estresult-savebtn estresult-btn-10" 
+              title="영수증 저장하기"
+              onClick={()=>{
               const currentResult = window.sessionStorage.getItem("result")
               const currentReciept = window.sessionStorage.getItem("sessionReciept")
               const firebaseReciept = firestore.collection("reciept");
               const parseReciept = JSON.parse(currentReciept);
               firebaseReciept.add({parseReciept: parseReciept, uid: currentUser.uid, result: currentResult, timeStamp: new Date(),});
               alert("저장한 영수증은 마이페이지에서 확인할 수 있습니다")
-              }}>영수증 저장하기 </button>
+              }}>
+                {/* <FontAwesomeIcon icon={faDownload} /> <br /> */}
+                영수증 저장
+              </button>
         </div>
         <EstReciept />
       </div>
