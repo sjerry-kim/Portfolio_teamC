@@ -57,31 +57,31 @@ function ReviewCard(props) {
 
       <div className="Product-reCard" {...useScrollFadeIn("up", 2, 0)}>
         <div className="bestReviews_cardIMG">
-          {bestReviews ? <img src={bestReviews.reviewImg3} /> : "후기 사진없음"}
+          {bestReviews ? <img src={bestReviews.reviewImg4} /> : "후기 사진없음"}
         </div>
         <div className="product-bestReviews_cardIMG">
-          <h3>{bestReviews ? bestReviews.reviewTitle3 : "후기 제목 없음"}</h3>
-          <p>{bestReviews ? bestReviews.reviewComment3 : "후기 없음"}</p>
+          <h3>{bestReviews ? bestReviews.reviewTitle4 : "후기 제목 없음"}</h3>
+          <p>{bestReviews ? bestReviews.reviewComment4 : "후기 없음"}</p>
         </div>
       </div>
 
       <div className="Product-reCard" {...useScrollFadeIn("up", 2.5, 0)}>
         <div className="bestReviews_cardIMG">
-          {bestReviews ? <img src={bestReviews.reviewImg3} /> : "후기 사진없음"}
+          {bestReviews ? <img src={bestReviews.reviewImg5} /> : "후기 사진없음"}
         </div>
         <div className="product-bestReviews_cardIMG">
-          <h3>{bestReviews ? bestReviews.reviewTitle3 : "후기 제목 없음"}</h3>
-          <p>{bestReviews ? bestReviews.reviewComment3 : "후기 없음"}</p>
+          <h3>{bestReviews ? bestReviews.reviewTitle5 : "후기 제목 없음"}</h3>
+          <p>{bestReviews ? bestReviews.reviewComment5 : "후기 없음"}</p>
         </div>
       </div>
 
       <div className="Product-reCard" {...useScrollFadeIn("up", 3, 0)}>
         <div className="bestReviews_cardIMG">
-          {bestReviews ? <img src={bestReviews.reviewImg3} /> : "후기 사진없음"}
+          {bestReviews ? <img src={bestReviews.reviewImg6} /> : "후기 사진없음"}
         </div>
         <div className="product-bestReviews_cardIMG">
-          <h3>{bestReviews ? bestReviews.reviewTitle3 : "후기 제목 없음"}</h3>
-          <p>{bestReviews ? bestReviews.reviewComment3 : "후기 없음"}</p>
+          <h3>{bestReviews ? bestReviews.reviewTitle6 : "후기 제목 없음"}</h3>
+          <p>{bestReviews ? bestReviews.reviewComment6 : "후기 없음"}</p>
         </div>
       </div>
     </div>
