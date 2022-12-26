@@ -9,6 +9,8 @@ import {
 import { auth } from "../data/firebase";
 import { useNavigate } from "react-router-dom";
 import { firestore } from "../data/firebase";
+//css
+import '../css/JoinInput.css'
 
 // 진혜 추가
 
@@ -175,6 +177,7 @@ const Join = props => {
       <form className="join-joinForm_form">
         <h1 className="join-joinForm_h1">Register</h1>
         <JoinInput
+          className="join-name_input"
           ref={inputRef}
           placeholder="name"
           onChange={e => {
@@ -182,6 +185,7 @@ const Join = props => {
           }}
         />
         <JoinInput
+          className="join-email_input"
           value={registerEmail}
           placeholder="Email"
           onChange={handleEmail}
@@ -194,6 +198,7 @@ const Join = props => {
             )}
         </div>
         <JoinInput
+          className="join-password_input"
           value={registerPassword}
           type="password"
           placeholder="EmailPassword"
