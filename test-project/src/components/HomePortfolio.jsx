@@ -31,6 +31,11 @@ const HomePortfolio = () => {
   };
 
   return (
+    <div>
+      <div className="homeportfolio-info">
+        <p>Partner Companies</p>
+      </div>
+    
     <Slider className="homeportfolio-com" {...settings}>
       <div className="homeportfolio-imgDiv">
         <HomePortfolioCard1 />
@@ -60,6 +65,7 @@ const HomePortfolio = () => {
         <HomePortfolioCard9 />
       </div>
     </Slider>
+    </div>
   );
 }
 
