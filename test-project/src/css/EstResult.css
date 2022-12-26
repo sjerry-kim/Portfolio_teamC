@@ -27,7 +27,7 @@
     position: relative;
     bottom: 50px;
     font-family: "RIDIBatang";
-    font-size: 40pt;
+    font-size: 33pt;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -39,12 +39,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 108px;
+    margin-top: 170px;
 }
 
 .estresult-Title{
   font-family: "RIDIBatang";
-    font-size: 30pt;
+    font-size: 25pt;
 }
 
 .estresult-LogoImage{
@@ -74,26 +74,15 @@
   position: relative;
   display: flex;
   justify-content: center;
+  width: 100%;
+  margin: 0;
 }
 
-.estresult-Reciept-box{
-  font-family: "RIDIBatang";
-  position: relative;
-  clear: right;
-  width: 240px;
-  height: 70px;
-  background-color: rgba(255, 255, 255, 0);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .estresult-ReStartBtn{
     font-family: "RIDIBatang";
     width: 200px;
     font-size: 15pt;
-    font-weight: bolder;
-
     border: none;
     --c: no-repeat linear-gradient(#4d4d4d 0 0);
     background: 
@@ -102,13 +91,14 @@
     transition: .3s calc(var(--i,0)*.3s), background-position .3s calc(.3s - var(--i,0)*.3s);
 }
 
-/* .estresult-ReStartBtn:hover {
-    --i: 1;
-    color: white;
-    border: 1px solid white;
-} */
+.estresult-savebtn{
+  font-family: "RIDIBatang";
+  border: none;
+  background-color: transparent;
+  width: 200px;
+  font-size: 15pt;
 
-
+}
 
 
 

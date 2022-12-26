@@ -1,47 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;600;700&display=swap");
 @font-face {
-  font-family: 'Chosunilbo_myungjo';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+  font-family: "Chosunilbo_myungjo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
+.Product-bestRe {
+  margin-top: 100px;
+}
 
-.Product-bestRe h1{
-  font-family: 'Chosunilbo_myungjo';
-  margin-top: 16px ;
+.Product-bestRe h1 {
+  font-family: "Chosunilbo_myungjo";
+  margin-top: 16px;
   margin-left: 20px;
 }
 
-
-
-.bestReviews_cardIMG > img{
+.bestReviews_cardIMG > img {
   width: 450px;
   height: 350px;
 }
 
 .Product-reviewCards {
   width: 100vw;
-  height: 91vh;
+  height: 90vh;
   padding: 10px;
   display: grid;
-	grid-template-columns:450px 450px 450px;
-	grid-template-rows: 400px 400px;
+  grid-template-columns: 450px 450px 450px;
+  grid-template-rows: 400px 400px;
   margin-left: 170px;
   gap: 0px 55px;
 }
 
-.Product-reCard{
+.Product-reCard {
   position: relative;
   width: 450px;
   height: 350px;
-  box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
   margin-left: 50px;
 }
 
-.Product-reCard > .product-bestReviews_cardIMG{
+.Product-reCard > .product-bestReviews_cardIMG {
   color: #fff;
-  position: absolute; left: 0; bottom: 0;
-  background: rgba(0,0,0,0.5);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
   border: solid 2px rgba(0, 0, 0, 0.322);
   width: 100%;
   height: 100%;
@@ -51,25 +55,25 @@
   transition: opacity 0.35s ease-in-out;
 }
 
-.Product-reCard:hover .product-bestReviews_cardIMG{
+.Product-reCard:hover .product-bestReviews_cardIMG {
   opacity: 1;
 }
 
-.Product-reCard .product-bestReviews_cardIMG h3{
+.Product-reCard .product-bestReviews_cardIMG h3 {
   font-size: 30px;
   padding-bottom: 0.4em;
-  overflow:hidden;
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   text-transform: uppercase;
-  font-family: 'Chosunilbo_myungjo';
+  font-family: "Chosunilbo_myungjo";
 }
 
-.Product-reCard .product-bestReviews_cardIMG p{
+.Product-reCard .product-bestReviews_cardIMG p {
   font-size: 15px;
   text-overflow: ellipsis;
   text-transform: uppercase;
-  word-break:break-all;
-  white-space:normal;
-  font-family: 'Chosunilbo_myungjo';
+  word-break: break-all;
+  white-space: normal;
+  font-family: "Chosunilbo_myungjo";
 }

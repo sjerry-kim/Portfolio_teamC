@@ -1,10 +1,21 @@
 .homeportfolio-com {
     width: 80vw;
     height: 550px;
-    bottom: 50px;
+    bottom: 20px;
 }
 
 .homeportfolio-imgDiv{
     padding-left: 30px;
     padding-right: 30px;
+
+}
+
+.homeportfolio-info {
+    position: relative;
+    font-size: 40px;
+    left: 1110px;
+}
+
+.HomePortfolioCard1{
+    border: 1px solid red;
 }

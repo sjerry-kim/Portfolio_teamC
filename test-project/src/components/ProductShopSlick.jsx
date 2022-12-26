@@ -22,29 +22,25 @@ const ShopSlick = () => {
     autoplay: true, // 자동 스크롤 사용 여부
     autoplaySpeed: 2100, // 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간
     pauseOnHover: true, //마우스 올리면 멈춤
-    fade:true,
-        // nextArrow: <NextArrow />,
+    fade: true,
+    // nextArrow: <NextArrow />,
     // prevArrow: <PrevArrow />,
   };
 
-const { id } = useParams();
-const { state } = useContext(DataContext);
-const shop = state.score.find((r) => r.id == id);
+  const { id } = useParams();
+  const { state } = useContext(DataContext);
+  const shop = state.score.find(r => r.id == id);
 
-return (
-  <Slider className="Product-Slider product-slick-slide" {...settings}>
-    {shop.companyImg.map((item, index) => (
-      <div key={index} className="Product-shopimg">
-        <img src={require(`../img/${item}`)} />
-        <div className="Product-logo">
-          <h2></h2>
+  return (
+    <Slider className="product-slick-slide" {...settings}>
+      {shop.companyImg.map((item, index) => (
+        <div key={index} className="Product-shopimg">
+          <img src={require(`../img/${item}`)} />
         </div>
-      </div>
-    ))}
-  </Slider>
-  
-);
-    }
+      ))}
+    </Slider>
+  );
+};
 
 export default ShopSlick;
 
@@ -59,7 +55,8 @@ function NextArrow(props) {
         color: "#fff",
         right: "50em",
         zIndex: "100",
-      }}></FontAwesomeIcon>
+      }}
+    ></FontAwesomeIcon>
   );
 }
 
