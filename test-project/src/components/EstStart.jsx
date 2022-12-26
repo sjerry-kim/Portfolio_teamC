@@ -12,6 +12,7 @@ const EstStart = () => {
   const { state, action } = useContext(DataContext);
 
   const StartClickButton = () => {
+    action.setReciept([]);
     window.sessionStorage.setItem("result", null);
     navigate("/main/question");
   };
