@@ -6,15 +6,27 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useContext, useEffect, useState } from "react";
 import DataContext from "../data/DataContext";
 import { useParams } from "react-router-dom";
-
+import "../css/ProductInsertComment.css";
 // import { firestore } from "firebase/firestore";
-import firebase from 'firebase/compat/app';
+import firebase from "firebase/compat/app";
 import { firestore } from "../data/firebase";
-import db from '../data/firebase'
-import { collection, query, where, getDocs, orderBy, doc, setDoc, addDoc, updateDoc, arrayUnion, getDoc } from "firebase/firestore";
+import db from "../data/firebase";
+import {
+  collection,
+  query,
+  where,
+  getDocs,
+  orderBy,
+  doc,
+  setDoc,
+  addDoc,
+  updateDoc,
+  arrayUnion,
+  getDoc,
+} from "firebase/firestore";
 import { auth } from "../data/firebase";
 
-const ProductInsertComment = ({getData}) => {
+const ProductInsertComment = ({ getData }) => {
   const { state, action } = useContext(DataContext);
   const [text, setText] = useState("");
   const [rating, setRating] = useState(5);
@@ -25,34 +37,34 @@ const ProductInsertComment = ({getData}) => {
   const { id } = useParams();
 
   const [newArray, setNewArray] = useState([]);
-  let array = []
+  let array = [];
 
   // 1217 진혜 작성
-  const InsertComment = async (e)=> {
-    e.preventDefault();    
+  const InsertComment = async e => {
+    e.preventDefault();
     const user = auth.currentUser;
-    setNum(num+1);
-    try{
-      const docRef = await addDoc(collection(db, "review"),{
+    setNum(num + 1);
+    try {
+      const docRef = await addDoc(collection(db, "review"), {
         comment: text,
         star: rating,
         marketId: id,
         name: user.displayName,
         commentId: num,
         timeStamp: new Date(),
-      })
+      });
       console.log(user.displayName);
-      console.log(docRef.id)
-    }catch(e){
+      console.log(docRef.id);
+    } catch (e) {
       console.error("Error", e);
     }
-    getData(id)
+    getData(id);
     document.querySelector(".question-text").value = "";
-  }
+  };
 
   return (
-  <div>
-      <Form onSubmit={InsertComment}>
+    <div>
+      <Form onSubmit={InsertComment} className="scroll-Color-insert">
         <Form.Group
           controlId="exampleForm.ControlTextarea1"
           style={{
@@ -80,7 +92,17 @@ const ProductInsertComment = ({getData}) => {
             <option value="4">4</option>
             <option value="5">5</option>
           </Form.Select>                     */}
-          <Button  variant="secondary" type="submit"> {/**+ 2022-12-15 버튼에 들어가있던거 💛 onClick={sendRating} */}
+          <Button
+            variant="secondary"
+            type="submit"
+            style={{
+              backgroundColor: "rgb(230, 218, 204)",
+              border: "none",
+              borderRadius: "10px",
+            }}
+          >
+            {" "}
+            {/**+ 2022-12-15 버튼에 들어가있던거 💛 onClick={sendRating} */}
             Send
           </Button>
         </Form.Group>
@@ -95,7 +117,6 @@ const styles = {
   container: {
     display: "flex",
     flexDirection: "column",
-    alignItems: "center"
   },
   stars: {
     display: "flex",
@@ -107,12 +128,12 @@ const styles = {
     padding: 10,
     margin: "20px 0",
     minHeight: 100,
-    width: 300
+    width: 300,
   },
   button: {
     border: "1px solid #a9a9a9",
     borderRadius: 5,
     width: 300,
     padding: 10,
-  }
-}
+  },
+};

@@ -1,0 +1,14 @@
+::-webkit-scrollbar-track {
+  background: rgb(241, 238, 235); /* 스크롤바의 색상 */
+}
+
+::-webkit-scrollbar {
+  width: 10px; /* 스크롤바의 너비 */
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 30%; /* 스크롤바의 길이 */
+  background: rgb(230, 218, 204); /* 스크롤바의 색상 */
+  border-radius: 10px;
+}
