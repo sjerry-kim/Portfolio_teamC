@@ -8,7 +8,7 @@ const HomePortfolioCard9 = () => {
         <Card className="homeportfoliocard-card-main">
           <Card.Img src={require("../img/purenMain.JPG")} />
           <Card.ImgOverlay>
-            <Card.Title className='Card-Title1'>One</Card.Title>
+            <Card.Title className='Card-Title1'>1204</Card.Title>
           </Card.ImgOverlay>
         </Card>
       </>
