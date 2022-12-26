@@ -83,13 +83,13 @@ useEffect(() => {
     <div>
       <div className="estresult-Wrapper">
         <div className="estresult-Contents">
-        <div className="estresult-Header">간편 견적</div>
-          <div className="estresult-Title">결과 보기</div>
+        <div className="estresult-Header">맞춤 견적 결과</div>
+          <div className="estresult-Title">{window.sessionStorage.getItem("displayName")}님에게 어울리는 업체</div>
           <div className="estresult-LogoImage">
             {/* <img src={resultData.image} width={300} /> */}
           </div>
           <div className="estresult-Desc">
-            나에게 맞는 업체 [ {resultData.name} ]{" "}
+            {resultData.name}
           </div>
           <button className="estresult-ReBtn" onClick={()=>{
             navigate('/main/estimation')
@@ -97,8 +97,6 @@ useEffect(() => {
             }}>다시 해보기</button>
         </div>
         <div className="estresult-all-box">
-          <span className="estresult-Reciept-box">
-            {/* <a href={data.state.score[].src}>업체 보러가기</a> */}
             <button
               className="estresult-ReStartBtn"
               onClick={() => {
@@ -124,17 +122,16 @@ useEffect(() => {
                 }
               }}
             >
-              업체보러가기
+              사이트 구경하기
             </button>
-            <button onClick={()=>{
+            <button className="estresult-savebtn" onClick={()=>{
               const currentResult = window.sessionStorage.getItem("result")
               const currentReciept = window.sessionStorage.getItem("sessionReciept")
               const firebaseReciept = firestore.collection("reciept");
               const parseReciept = JSON.parse(currentReciept);
               firebaseReciept.add({parseReciept: parseReciept, uid: currentUser.uid, result: currentResult, timeStamp: new Date(),});
               alert("저장한 영수증은 마이페이지에서 확인할 수 있습니다")
-              }}>영수증 저장하기</button>
-          </span>
+              }}>영수증 저장하기 </button>
         </div>
         <EstReciept />
       </div>
