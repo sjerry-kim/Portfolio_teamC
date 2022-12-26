@@ -11,6 +11,14 @@ import { useNavigate } from "react-router-dom";
 import { firestore } from "../data/firebase";
 //css
 import '../css/JoinInput.css'
+import emailicon from "../img/join-email.png"
+import nameicon from "../img/join-person.png"
+import phoneicon from "../img/join-phone.png"
+import lockicon from "../img/join-lock.png"
+import gendersicon from "../img/join-genders.png"
+import paperimg from "../img/join-paper.png"
+import paperimg2 from "../img/join-paper-2.png"
+import breakpaperimg from "../img/join-breakpaper.png"
 
 // 진혜 추가
 
@@ -175,21 +183,19 @@ const Join = props => {
   return (
     <div className="join-app-joinForm">
       <form className="join-joinForm_form">
-        <h1 className="join-joinForm_h1">Register</h1>
-        <JoinInput
-          className="join-name_input"
-          ref={inputRef}
-          placeholder="name"
-          onChange={e => {
-            setName(e.target.value);
-          }}
-        />
+        <h1 className="join-joinForm_h1">Register
+          <img src={paperimg2} className="join-joinForm_h1backimg" />
+        </h1>
+  
+        <div className="join-joinForm_emailBox">
+        <img src={emailicon} className="join-joinForm_emailimg_2"></img>
         <JoinInput
           className="join-email_input"
           value={registerEmail}
-          placeholder="Email"
+          placeholder="email@example.com"
           onChange={handleEmail}
         />
+        </div>
         <div className="join-errorMessage">
           {/* 입력안했을땐 안나오고 이메일의 길이가 0보다 클때 오류문구 출력 */}
           {!emailValid &&
@@ -197,13 +203,16 @@ const Join = props => {
               <div>올바른 이메일을 입력하세요.</div>
             )}
         </div>
+        <div className="join-joinForm_emailBox">
+        <img src={lockicon} className="join-joinForm_emailimg_3"></img>
         <JoinInput
           className="join-password_input"
           value={registerPassword}
           type="password"
-          placeholder="EmailPassword"
+          placeholder="비밀번호를 입력하세요"
           onChange={handlePw}
         />
+        </div>
         <div className="join-errorMessage">
           {!pwValid &&
             registerPassword.length > 0 && ( // 조건이안맞고 패스워드가0보다 높을때
@@ -211,6 +220,42 @@ const Join = props => {
                 영문, 숫자, 특수문자 포함 <br /> 8자 이상 입력해주세요
               </div>
             )}
+        </div>
+        <div className="join-joinForm_emailBox" >
+        <img src={nameicon} className="join-joinForm_emailimg_1" ></img>
+        <JoinInput
+          className="join-name_input"
+          ref={inputRef}
+          placeholder="이름을 입력하세요"
+          onChange={e => {
+            setName(e.target.value);
+          }}
+        />
+        </div>
+        <form name="frame">
+          <div className="join-joinForm_emailBox_2">
+          <img src={gendersicon} className="join-joinForm_emailimg_1" ></img>
+          <select className="join-qustion">
+            <option selected>선택</option>
+            <option>남자</option>
+            <option >여자</option>
+          </select>
+          </div>
+        </form>
+        
+        <div id="wrapper">
+          <label id="label">
+            <input id="hiddenCheckbox" type="checkbox" />
+            <div id="showCheckbox"></div>
+            <span>개인정보 수집 및 이용 동의 (선택)</span>
+          </label>
+        </div>
+        <div id="wrapper">
+          <label id="label">
+            <input id="hiddenCheckbox" type="checkbox" />
+            <div id="showCheckbox"></div>
+            <span>이벤트 안내 등 광고성 마케팅 수신 동의 (선택)</span>
+          </label>
         </div>
         <button
           className="join-joinForm_btn"
@@ -221,7 +266,7 @@ const Join = props => {
             addUser();
           }}
         >
-          가입
+          회원가입
         </button>
       </form>
     </div>

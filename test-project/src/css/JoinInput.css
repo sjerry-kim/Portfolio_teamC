@@ -12,56 +12,120 @@
     border: 1px solid lightblue;
 }
 
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+.join-joinForm_h1{
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-bottom: 40px;
+}
 
 .join-name_input{
-    height: 60px;
+    height: 50px;
     color: #291b0b;
+    margin-top: 10px;
     padding: 15px;
     border: none;
-    border-bottom: 1px solid #291b0b7a;
 }
 .join-email_input{
-    height: 60px;
+    height: 50px;
     color: #291b0b;
-    margin-bottom: 15px;
+    margin-top: 10px;
     padding: 15px;
     border: none;
-    border-bottom: 1px solid #291b0b7a;
 }
+
 .join-password_input{
-    height: 60px;
+    height: 50px;
     color: #291b0b;
-    margin-bottom: 15px;
+    margin-top: 10px;
     padding: 15px;
     border: none;
-    border-bottom: 1px solid #291b0b7a;
 }
+.join-qustion{
+    width: 400px;
+    height: 50px;
+    border: none;
+    font-weight: 300;
+    margin-top: 15px;
+    color: #291b0b;
+    padding-left: 10px;
+}
+select:focus {outline:none}
 
 .join-app-joinForm {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: linear-gradient(
-    rgba(255, 255, 255, 0.7),
-    rgba(255, 255, 255, 0.3)
-    );
+    background-color: rgb(241, 238, 235);
 }
 
 .join-joinForm_form{
     background-color: white;
     padding: 0px 60px;
-    border-radius: 10px;
-    border: 1px solid #291b0b7a;
+
     border-width: 1px;
+    width: 500px;
+    height: 700px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .join-joinForm_h1{
     color: #291b0b;
     text-align: center;
     margin-top: 25px;
+    margin-left: 80px;
+}
+.join-joinForm_h1backimg{
+    position: relative;
+    left: -20px;
+    width: 100px;
 }
 
+.join-joinForm_emailBox{
+    display: flex;
+    border-bottom: 1px solid #291b0b7a;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.join-joinForm_emailBox_2{
+    display: flex;
+    border-bottom: 1px solid #291b0b7a;
+    margin-bottom: 30px;
+}
+.join-joinForm_emailimg_1{
+    position: relative;
+    top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto 10px;
+    width: 20px;
+    height: 20px;
+}
+.join-joinForm_emailimg_2{
+    position: relative;
+    top: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto 10px;
+    width: 20px;
+    height: 20px;
+}
+.join-joinForm_emailimg_3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto 10px;
+    width: 20px;
+    height: 20px;
+}
 
 
 .join-joinForm_btn{
@@ -75,7 +139,7 @@
     font-weight: bold;
     font-size: 18px;
     cursor: pointer;
-    margin-top: 15px;
+    margin-top: 60px;
     margin-bottom: 30px;
     transition: 0.5s;
 } 
@@ -92,56 +156,41 @@
 }
 .join-errorMessage{
     color: red;
-    margin-top: -5px;
+    margin-top: 5px;
+    margin-bottom: -5px;
     display: flex;
     justify-content: center;
     text-align: center;
 }
 
-
-
-
-/* 
-.app {
+/* 체크박스 */
+#wrapper {
+    display: inline-block;
+    padding: 8px 12px;
+    width: 400px;
+  }
+  
+  #label {
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background: linear-gradient(
-        rgba(255, 255, 255, 0.7),
-        rgba(255, 255, 255, 0.3)
-      );
-  
-      
-    
+    cursor: pointer;
   }
   
-  form{
-      background-color: white;
-      padding: 0px 60px;
-      border-radius: 10px;
-      border-style: solid ;
-      border-color: lightblue;
-      border-width: 1px;
+  #hiddenCheckbox {
+    display: none;
   }
   
-  h1{
-      color: lightblue;
-      text-align: center;
-      margin-top: 25px;
+  #hiddenCheckbox:checked + #showCheckbox {
+    background: url("https://blog.kakaocdn.net/dn/p2kpN/btrL4lwWrqf/KqNevAyZKWsoCB5ijL9qcK/img.png") no-repeat;
+    background-size: contain;
   }
   
-  button{
-      width: 100%;
-      height: 50px;
-      padding: 10px;
-      border: none;
-      background-color:lightblue ;
-      color: white;
-      border-radius: 5px;
-      font-weight: bold;
-      font-size: 18px;
-      cursor: pointer;
-      margin-top: 15px;
-      margin-bottom: 30px;
-  } */ 
+  #showCheckbox {
+    position: relative;
+    top:-2px;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background: url("https://blog.kakaocdn.net/dn/bjVlZ3/btrL5bHw92G/bg8CBmi4x6zklkecdJ1dpk/img.png") no-repeat;
+    background-size: contain;
+  }
