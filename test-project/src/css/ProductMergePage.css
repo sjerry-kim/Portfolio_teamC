@@ -3,10 +3,9 @@ body {
 }
 
 .slick-dots {
-   position: absolute;
-   top: 8%;
-   margin-left: 95%;
-   
+  position: absolute;
+  top: 8%;
+  margin-left: 95%;
 }
 
 .slick-dots li {
@@ -14,15 +13,11 @@ body {
   padding: 20px;
 }
 
-
 .slick-dots li.slick-active button:before {
   color: #291b0b;
   opacity: 0.8;
-
 }
 
 .slick-dots li button:before {
   color: #5a3e31;
-
 }
-

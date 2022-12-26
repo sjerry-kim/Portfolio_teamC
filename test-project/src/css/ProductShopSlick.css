@@ -4,9 +4,9 @@
 /* .outer {
   background: #9cbebd;
 } */
+
 .top {
   height: 102vh;
-
 }
 /* ShopSlick 부분 */
 
@@ -16,20 +16,17 @@
   justify-content: start;
 }
 
-.slick-slide {
+.Product-slick-slide {
   width: 100%;
-  height: 100vh;
+  height: 102vh;
   box-sizing: border-box;
 }
 
 .Product-shopimg img {
   margin: 0 auto 0 auto;
   width: 100vw;
-  height: 89vh;
+  height: 100vh;
   box-sizing: border-box;
-  position: relative;
-
-  
 } /*위 오른쪽 아래 왼쪽*/
 
 .Product-logo {

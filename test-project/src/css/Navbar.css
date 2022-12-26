@@ -1,72 +1,73 @@
 @font-face {
-  font-family: 'Chosunilbo_myungjo';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+  font-family: "Chosunilbo_myungjo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 .navbar-box {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding-top: 55px;
-    font-weight: bold;
-    background: #ece4db;
-    width: 100%;
-    height: 95px;
-    padding: 10px;
-    position: sticky;
-    top: 0;
-    z-index: 999;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 55px;
+  font-weight: bold;
+  background: #ece4db;
+  width: 100%;
+  height: 95px;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  z-index: 999;
 }
 
-.navbar-box a{
-  font-family: 'Chosunilbo_myungjo';
+.navbar-box a {
+  font-family: "Chosunilbo_myungjo";
   text-decoration: none;
   color: #291b0b;
 }
 
-.navbar-logo-div{
+.navbar-logo-div {
   position: absolute;
   left: 50px;
   margin-top: 10px;
 }
 
-.navbar-menu-big-div{
+.navbar-menu-big-div {
   display: flex;
   width: 45%;
   flex-direction: row;
   justify-content: space-around;
 }
 
-.navbar-menu-big-div a{
-  font-family: 'Chosunilbo_myungjo';
+.navbar-menu-big-div a {
+  font-family: "Chosunilbo_myungjo";
   text-align: center;
   width: 120px;
 }
 
-.navbar-menu-big-div a:hover{
+.navbar-menu-big-div a:hover {
   color: #5a3e31;
 }
 
-.navbar-log-div{
+.navbar-log-div {
   position: absolute;
   top: 15px;
   right: 10px;
   display: flex;
 }
 
-.navbar-log-div p{
-  font-family: 'Chosunilbo_myungjo';
+.navbar-log-div p {
+  font-family: "Chosunilbo_myungjo";
   margin: 0;
   margin-right: 20px;
   font-size: 0.8em;
   color: #291b0b;
 }
 
-.navbar-log-div button{
-  font-family: 'Chosunilbo_myungjo';
+.navbar-log-div button {
+  font-family: "Chosunilbo_myungjo";
   margin-right: 20px;
   background-color: transparent;
   border: none;
@@ -74,6 +75,3 @@
   font-weight: bold;
   color: #291b0b;
 }
-
-
-

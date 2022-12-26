@@ -79,7 +79,7 @@ function InfoCard(props) {
   // },[newArray])
 
   return (
-    <div className="Product-infoCards" {...useScrollFadeIn("up", 0.5, 0)}>
+    <div className="Product-infoCards">
       <Card className="Product-infoCard">
         <Card.Body>
           <Card.Title>
@@ -96,6 +96,7 @@ function InfoCard(props) {
           <Card.Link href="#">업체 홈페이지 바로가기</Card.Link>
           {/* <ProductInsertAverage list={list} /> */}
         </Card.Body>
+        `
       </Card>
 
       <Card className="Product-comment">
@@ -105,7 +106,12 @@ function InfoCard(props) {
               <Card.Title>
                 <h1>한줄평</h1>
               </Card.Title>
-              <Card style={{ height: "420px", overflow: "auto" }}>
+              <Card
+                style={{
+                  height: "600px",
+                  overflow: "auto",
+                }}
+              >
                 <MainComment
                   newArray={newArray}
                   setNewArray={setNewArray}
