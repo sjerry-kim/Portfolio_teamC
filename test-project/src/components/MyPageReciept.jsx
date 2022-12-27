@@ -1,4 +1,4 @@
-import '../css/MyPageReciept.css'
+import "../css/MyPageReciept.css";
 import db, { auth } from "../data/firebase";
 import {
   collection,
@@ -16,6 +16,7 @@ import { useEffect, useState } from "react";
 import { async } from "@firebase/util";
 import { useContext } from "react";
 import DataContext from "../data/DataContext";
+import { Link } from "react-router-dom";
 
 const MyPageReciept = () => {
   let array = [];
@@ -43,33 +44,45 @@ const MyPageReciept = () => {
     setReciept(array);
   };
 
-  const deleteReciept = () => {
-
-  }
+  // const deleteReciept = () => {
+  // }
 
   return (
-    <div className='mypagereciept-wallpaper'>
-        <h3>맞춤 견적 영수증</h3>
+    <div className="mypagereciept-wallpaper">
+      <h3>맞춤 견적 영수증</h3>
+      {reciept !== "null" ? (
+       <div className="mypagereciept-noreciept">
+       아아아
+       {/* <Link to='/main/estimation'>맞춤 견적 페이지로 이동하기</Link> */}
+     </div>
+      ) : (
         <div className="mypagereciept-div">
         {reciept.map((reciept, i) => {
           const mapArray = reciept;
           const mapReciept = reciept.parseReciept;
-
           return (
-            <div className='mypagereciept-mini-reciept'>
+            <div className="mypagereciept-mini-reciept">
+              <h3>미니 영수증</h3>
+              <p>발행 : {mapArray.realDate}</p>
+              <div className="mypagereiept-break">********************</div>
               {mapReciept.map((r, i) => {
                 return (
-                  <div key={i}>
-                    {r.name}, {r.answer}
+                  <div className="mypagereciept-lists" key={i}>
+                    <p>
+                      {i + 1} {r.name}
+                    </p>
+                    <p>{r.answer}</p>
                   </div>
                 );
               })}
-              <p>맞춤 업체 : {mapArray.result}</p>
-              <button onClick={()=>{}}>영수증 삭제하기</button>
+              <div className="mypagereiept-break">********************</div>
+              <h6>결과 업체</h6>
+              <h5>{mapArray.result}</h5>
             </div>
           );
         })}
-        </div>
+      </div>
+      )}
     </div>
   );
 };

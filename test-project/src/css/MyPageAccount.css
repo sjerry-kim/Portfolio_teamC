@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'twayair';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.mypageaccount-title{
+  font-family: 'twayair';
+  font-size: 2.1em;
+}
+
+.mypageaccount-wallpaper{
+  margin: auto;
+}
+
+.mypateaccount-div{
+  text-align: center;
+}
+
+.mypageaccount-img-div{
+  margin: 13px;
+}
+
+.mypageaccount-info-div{
+  width: 100%;
+}
+
+.mypageaccount-info-div label{
+  font-family: 'twayair';
+  margin-right: 10px;
+}
+
+.mypageaccount-info-div input{
+  font-family: 'twayair';
+  border: none;
+  width: 210px;
+}

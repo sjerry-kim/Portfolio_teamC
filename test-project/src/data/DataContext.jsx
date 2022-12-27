@@ -129,7 +129,7 @@ const DataProvider = (({ children }) => {
     const [question, setQuestion] = useState([
         {
             id: 1,
-            title: "건물 타입",
+            title: "건물 유형",
             answera: "아파트",
             answerb: "빌라",
             answerc: "단독주택",

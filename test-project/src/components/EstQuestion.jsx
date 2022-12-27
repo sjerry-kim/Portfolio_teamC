@@ -144,7 +144,7 @@ const EstQuestion = () => {
                   console.log(num);
                   switch (num) {
                     case 0:
-                      return setRName("건물 타입");
+                      return setRName("건물 유형");
                     case 1:
                       return setRName("도배");
                     case 2:
@@ -176,7 +176,7 @@ const EstQuestion = () => {
                   setNum(num + 1);
                   switch (num) {
                     case 0:
-                      return setRName("건물 타입");
+                      return setRName("건물 유형");
                     case 1:
                       return setRName("도배");
                     case 2:
@@ -208,7 +208,7 @@ const EstQuestion = () => {
                   setNum(num + 1);
                   switch (num) {
                     case 0:
-                      return setRName("건물 타입");
+                      return setRName("건물 유형");
                     case 1:
                       return setRName("도배");
                     case 2:
@@ -241,7 +241,7 @@ const EstQuestion = () => {
 
                   switch (num) {
                     case 0:
-                      return setRName("건물 타입");
+                      return setRName("건물 유형");
                     case 1:
                       return setRName("도배");
                     case 2:
@@ -273,9 +273,9 @@ const EstQuestion = () => {
                   setNum(num + 1);
                   switch (num) {
                     case 0:
-                      return setRName("건물 타입");
+                      return setRName("건물 유형");
                     case 1:
-                      return setRName("벽지");
+                      return setRName("도배");
                     case 2:
                       return setRName("샷시");
                     case 3:
