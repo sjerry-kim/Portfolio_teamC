@@ -5,6 +5,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+    font-family: 'twayair';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 .estresult-Wrapper {
   position: relative;
@@ -56,7 +62,7 @@
 
 .estresult-Desc {
   position: relative;
-  font-family: "RIDIBatang";
+  font-family: 'twayair';
   color: #291B0C;
   font-size: 25pt;
   top: 43px;
@@ -98,7 +104,7 @@
 }
 
 .estresult-ReStartBtn:hover{
-  background-color: #DFB9B8;
+  background-color: #ece4db;
   color: #6d4c41;
   font-weight: bold;
 }
@@ -121,7 +127,7 @@
 }
 
 .estresult-savebtn:hover{
-  background-color: #DFB9B8;
+  background-color: #ece4db;
   color: #6d4c41;
   font-weight: bold;
 }
