@@ -201,7 +201,9 @@ const Navbar = () => {
       {window.sessionStorage.getItem("login") == 'true' ? (
         <div className="navbar-log-div">
           <button className="navbar-mypagebtn" onClick={()=>{
-            navigate('/main/mypage');
+            setTimeout(()=>{
+              navigate('/main/mypage');
+            },3000)
           }}>My Page</button>
           <button className="navbar-loginbtn" onClick={()=>{
           window.sessionStorage.setItem("login", false);

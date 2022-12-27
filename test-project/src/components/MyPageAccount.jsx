@@ -1,3 +1,4 @@
+import '../css/MyPageAccount.css';
 import { async } from "@firebase/util";
 import { updateProfile } from "firebase/auth";
 import { useEffect } from "react";
@@ -23,22 +24,23 @@ const MyPageAccount = () => {
   //   console.log(email);
   // }
   
-  const changeUserName = () => {
-    updateProfile(auth.currentUser, {
-      displayName: "카카"
-    }).then(() => {
-      alert('이름이 변경되었습니다')
-    }).catch((error) => {
-      console.error(error);
-    });
-  }
+  // const changeUserName = () => {
+  //   updateProfile(auth.currentUser, {
+  //     displayName: "카카"
+  //   }).then(() => {
+  //     alert('이름이 변경되었습니다')
+  //   }).catch((error) => {
+  //     console.error(error);
+  //   });
+  // }
 
   return (  
-    <div>
-      <h1>My Account</h1>
+    <div className='mypageaccount-wallpaper'>
+      <div className='mypateaccount-div'>
+      <h1 className='mypageaccount-title'>My Page</h1>
       {
         window.sessionStorage.getItem("photoURL")== "null" ?  (
-          <div>
+          <div className='mypageaccount-img-div'>
             <div style={{
                             width:"150px", 
                             height:"150px",
@@ -46,29 +48,39 @@ const MyPageAccount = () => {
                             backgroundSize: "cover",
                             borderRadius:"50%"}}>
               </div>
-            <MyPageProfileModal />
+            {/* <MyPageProfileModal /> */}
           </div>
         ):(
-          <div>
+          <div className='mypageaccount-img-div'>
             <img style={{
-                width:"150px", 
-                height:"150px",
-                // backgroundImage: `url(${require(`${window.sessionStorage.getItem("photoURL")}`)})`,
+                width:"100px", 
+                height:"100px",
                 backgroundSize: "cover",
                 borderRadius:"50%",
               }}
               src={window.sessionStorage.getItem("photoURL")}
               alt="없음"
               />
+              {/* <div style={{
+                            width:"150px", 
+                            height:"150px",
+                            backgroundImage:`${window.sessionStorage.getItem("photoURL")}`, 
+                            backgroundColor: "white",
+                            backgroundSize: "cover",
+                            borderRadius:"50%"}}>
+              </div> */}
           </div>
         )
       }
       {/* <MyPageProfileModal /> */}
-      <label>Name</label>
-      <input type="text" value={window.sessionStorage.getItem("displayName")} disabled />
-      <br />
-      <label>Email</label>
-      <input type="text" value={window.sessionStorage.getItem("email")} disabled />
+      <div className='mypageaccount-info-div'>
+        <label>Name</label>
+        <input type="text" value={window.sessionStorage.getItem("displayName")} disabled />
+        <br />
+        <label>Email</label>
+        <input type="text" value={window.sessionStorage.getItem("email")} disabled />
+      </div>
+      </div>
     </div>
   );
 }

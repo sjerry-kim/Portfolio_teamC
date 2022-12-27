@@ -18,6 +18,7 @@ const EstResult = () => {
   const { state, action } = useContext(DataContext);
   const reciept = JSON.stringify(state.reciept);
   const currentUser = auth.currentUser;
+  const date = new Date();
 
 
   // 최종적으로 도출한 결과 객체
@@ -69,17 +70,6 @@ useEffect(() => {
   };
 },[]);
 
-  // useEffect(()=>{
-  //   console.log(reciept)
-  //   localStorage.setItem("reciept", reciept)
-  //   console.log(reciept)
-  // },[reciept])
-
-  // useEffect(()=>{
-  //   let a = localStorage.getItem("reciept");
-  //   let b = JSON.parse(a);
-  //   console.log(b);
-  // })
 
   return (
     <div>
@@ -139,7 +129,13 @@ useEffect(() => {
               const currentReciept = window.sessionStorage.getItem("sessionReciept")
               const firebaseReciept = firestore.collection("reciept");
               const parseReciept = JSON.parse(currentReciept);
-              firebaseReciept.add({parseReciept: parseReciept, uid: currentUser.uid, result: currentResult, timeStamp: new Date(),});
+              firebaseReciept.add({
+                parseReciept: parseReciept, 
+                uid: currentUser.uid, 
+                result: currentResult, 
+                timeStamp: new Date(), 
+                realDate: (`${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()} ${date.getHours()>9? 
+                  date.getHours(): `0${date.getHours()}`}:${date.getMinutes()>9 ? date.getMinutes(): `0${date.getMinutes()}` }`)});
               alert("저장한 영수증은 마이페이지에서 확인할 수 있습니다")
               }}>
                 {/* <FontAwesomeIcon icon={faDownload} /> <br /> */}
