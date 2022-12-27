@@ -50,12 +50,8 @@ const MyPageReciept = () => {
   return (
     <div className="mypagereciept-wallpaper">
       <h3>맞춤 견적 영수증</h3>
-      {reciept !== "null" ? (
-       <div className="mypagereciept-noreciept">
-       아아아
-       {/* <Link to='/main/estimation'>맞춤 견적 페이지로 이동하기</Link> */}
-     </div>
-      ) : (
+      {
+      reciept != "" ? (
         <div className="mypagereciept-div">
         {reciept.map((reciept, i) => {
           const mapArray = reciept;
@@ -82,7 +78,13 @@ const MyPageReciept = () => {
           );
         })}
       </div>
-      )}
+      ) : (
+        <div className="mypagereciept-noreciept">
+        <p>비어있습</p>
+        {/* <Link to='/main/estimation'>맞춤 견적 페이지로 이동하기</Link> */}
+      </div>
+      )
+      }
     </div>
   );
 };
