@@ -12,3 +12,18 @@
   background: rgb(230, 218, 204); /* 스크롤바의 색상 */
   border-radius: 10px;
 }
+.form-control {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: none;
+  border-radius: 0;
+  resize: none;
+  background-color: rgb(241, 238, 235);
+  width: 55%;
+}
+.form-control::placeholder {
+  text-align: center;
+}
+.form-control:focus {
+  outline: 0;
+}

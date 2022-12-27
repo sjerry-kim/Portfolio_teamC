@@ -25,6 +25,8 @@ import {
   getDoc,
 } from "firebase/firestore";
 import { auth } from "../data/firebase";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 const ProductInsertComment = ({ getData }) => {
   const { state, action } = useContext(DataContext);
@@ -71,6 +73,8 @@ const ProductInsertComment = ({ getData }) => {
             display: "flex",
             flexDirection: "row",
             justifyContent: "center",
+            marginTop: "35px",
+            marginBottom: "55px",
           }}
         >
           <Form.Control
@@ -79,31 +83,28 @@ const ProductInsertComment = ({ getData }) => {
             onChange={e => {
               setText(e.target.value);
             }}
-            placeholder="Send your qusestions."
-            rows={3}
+            placeholder="한줄평이나 코멘트를 남겨보세요!"
+            rows={1}
           ></Form.Control>
-          {/* <Form.Select
-            onChange={e => setRating(e.target.value)}
-            defaultValue="5"
-          >
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </Form.Select>                     */}
           <Button
             variant="secondary"
             type="submit"
             style={{
-              backgroundColor: "rgb(230, 218, 204)",
               border: "none",
-              borderRadius: "10px",
+              fontSize: "17px",
+              color: "black",
+              backgroundColor: "rgb(241,238,235)",
             }}
           >
             {" "}
             {/**+ 2022-12-15 버튼에 들어가있던거 💛 onClick={sendRating} */}
-            Send
+            <FontAwesomeIcon
+              icon={faCheck}
+              style={{
+                color: "rgba(200,0,0,0.8)",
+                fontSize: "24px",
+              }}
+            />
           </Button>
         </Form.Group>
       </Form>
