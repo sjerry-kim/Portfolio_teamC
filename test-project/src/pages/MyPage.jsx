@@ -1,3 +1,4 @@
+import "../css/MyPage.css"
 import db, { auth } from '../data/firebase'
 import { collection, query, where, getDocs, orderBy, doc, setDoc, addDoc, getDoc, getDocsFromCache } from "firebase/firestore";
 import { useEffect, useState } from "react";
@@ -10,7 +11,6 @@ import { Outlet } from 'react-router-dom';
 import Notfound from './Notfound';
 import MyPageAccount from '../components/MyPageAccount';
 
-
 const MyPage = () => {
 
 
@@ -18,7 +18,7 @@ const MyPage = () => {
     <div>
       {
         window.sessionStorage.login == 'true'? (
-          <div>
+          <div className='mypage-wallpaper'>
             <MyPageAccount />
             <MyPageReciept />
           </div>
