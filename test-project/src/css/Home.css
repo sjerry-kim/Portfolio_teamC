@@ -146,3 +146,7 @@ body {
     top: 300px !important; 
     left: 900px !important; 
   }
+
+  .homeportfoliocard-card-main{
+    background-color: red;
+  }
