@@ -10,18 +10,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 70px;
+  padding: 56px;
 }
 
 .Product-infoCard {
   width: 400px;
-  height: 500px;
+  height: 800px;
   margin-right: 50px;
+  margin-top: 55px;
 }
 
 .Product-comment {
-  width: 60%;
-  height: 780px;
+  background-color: rgb(241, 238, 235);
+  width: 50%;
+  bottom: 270px;
+  height: 200px;
 }
 
 h2 {

@@ -22,6 +22,8 @@ import {
 import { useState } from "react";
 import { get, getDatabase } from "firebase/database";
 import { getIdToken } from "firebase/auth";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const MainComment = ({ newArray, getData }) => {
   const { id } = useParams();
@@ -38,12 +40,13 @@ const MainComment = ({ newArray, getData }) => {
         overflow: "auto",
         padding: "10px",
         width: "100%",
+        backgroundColor: "rgb(241,238,235)",
       }}
     >
       {newArray.map((item, i) => (
         <div
           style={{
-            margin: "5px",
+            margin: "15px",
           }}
         >
           <p style={{ margin: 0, fontWeight: "bold" }}>{item.name}</p>
@@ -51,9 +54,8 @@ const MainComment = ({ newArray, getData }) => {
             style={{
               display: "flex",
               justifyContent: "space-between",
-              border: "1px solid rgba(0,0,0,0.2)",
-              padding: "10px",
-              borderRadius: "10px",
+              borderBottom: "1px solid rgba(0,0,0,0.1)",
+              paddingTop: "10px",
             }}
           >
             <p>{item.comment}</p>
@@ -76,7 +78,12 @@ const MainComment = ({ newArray, getData }) => {
                   }, 1000);
                 }}
               >
-                delete
+                <FontAwesomeIcon
+                  icon={faTrash}
+                  style={{
+                    color: "rgba(0,0,0,0.4)",
+                  }}
+                />
               </button>
             ) : (
               " "

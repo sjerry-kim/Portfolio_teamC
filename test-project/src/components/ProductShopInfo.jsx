@@ -96,7 +96,6 @@ function InfoCard(props) {
           <Card.Link href="#">업체 홈페이지 바로가기</Card.Link>
           {/* <ProductInsertAverage list={list} /> */}
         </Card.Body>
-        `
       </Card>
 
       <Card className="Product-comment">
@@ -104,12 +103,16 @@ function InfoCard(props) {
           {window.sessionStorage.getItem("login") == "true" ? (
             <div>
               <Card.Title>
-                <h1>한줄평</h1>
+                <h2>한줄평 및 코멘트</h2>
               </Card.Title>
+              <ProductInsertComment getData={getData} />
               <Card
                 style={{
-                  height: "600px",
+                  right: "15px",
+                  height: "550px",
                   overflow: "auto",
+                  marginTop: "10px",
+                  width: "900px",
                 }}
               >
                 <MainComment
@@ -118,12 +121,11 @@ function InfoCard(props) {
                   getData={getData}
                 />
               </Card>
-              <ProductInsertComment getData={getData} />
             </div>
           ) : (
             <div>
               <Card.Title>
-                <h1>한줄평</h1>
+                <h1>한줄평 및 코멘트</h1>
               </Card.Title>
               <p>로그인 후 이용하세요</p>
             </div>
