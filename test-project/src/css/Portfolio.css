@@ -30,6 +30,7 @@
     overflow-y: auto;
     background-size: cover;
     background-color: #f1eeeb;
+
   }
   
   
@@ -55,7 +56,7 @@
     display: flex;
     justify-content: center;
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     perspective: 1000px;
     transform-style: preserve-3d;
 }
@@ -141,6 +142,7 @@
 .portfolio-infos {
   display: block;
 }
+
 .portfolio-infos > .portfolio_intro{
   font-family: 'Chosunilbo_myungjo';
   font-size: 17px;
@@ -150,7 +152,6 @@
   margin-top: 32px;
   color: #291b0b;
 }
-
 
 .portfolio_btn {
   position: fixed;
@@ -193,6 +194,7 @@
   right: 0;
   bottom:0;
 }
+
 .portfolio_btn:hover:before,
 .portfolio_btn:hover:after{
   width:100%;
@@ -213,11 +215,10 @@
   color: var(--current-color2);
 }
 
-
  .click_card1{
   font-family: 'Ycomputer-Regular';
   color:rgb(180, 177, 177);
-  margin-bottom: 45px;
+  margin-bottom: 47px;
   margin-left: 13px;
   font-size: medium;
   animation: blink-effect 1.5s step-end infinite;
