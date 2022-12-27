@@ -7,8 +7,8 @@ import DataContext from "../data/DataContext";
 const Portfolio = (props) => {
   const { state } = useContext(DataContext);
   const disappearSign = () => {
-    document.querySelector(".click_card1").style.display = "none"
-    document.querySelector(".click_card2").style.display = "none"
+    document.querySelector(".click_card1").style.opacity = "0"
+    document.querySelector(".click_card2").style.opacity = "0"
   }
 
   return (
@@ -70,7 +70,7 @@ const Portfolio = (props) => {
             id="s9"
           />
           <h3 className="click_card1">Click Card</h3>
-          <a href="#" className="click_card2" onClick={() => { disappearSign() }} ><span></span><span></span><span></span></a>
+          <a href="#" className="click_card2" onClick={() => { disappearSign() }} ><span></span></a>
           <div className="portfolio-cards" onClick={() => { disappearSign() }}>
             <label for="s1" id="portfolio-slide1">
               <div className="portfolio-card">
