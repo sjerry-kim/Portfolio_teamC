@@ -51,8 +51,16 @@ const Home = () => {
       </div>
       {/** 🌼 스크롤 이미지(?) 사라짐 확인 😁 */}
       <div className="home-arrow-container">
-        <div className="home-scroll-txt">Scroll</div>
-        <div className="home-arrow"></div>
+      <div class="center-con">
+        <div class="round">
+            <div id="cta">
+                <span class="arrow primera next "></span>
+                <span class="arrow segunda next "></span>
+            </div>
+        </div>
+    </div>
+        {/* <div className="home-scroll-txt"></div>
+        <div className="home-arrow"></div> */}
         </div>
         
       <img src={require("../img/logo_white.png")} className="home-logo" width="230" alt="" />
