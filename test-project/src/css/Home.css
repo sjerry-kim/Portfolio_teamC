@@ -62,53 +62,80 @@ body {
 .home-arrow-container{
   position: fixed;
   z-index:11; /*숫자가 클수록 앞에 옴*/
-  bottom: 30px;
-  left: 160px;
+  bottom: -390px;
+  left: 180px;
 }
-  .home-arrow {
-    position: relative; /*현재 위치에서 이동하기 위함(top,left사용)*/
-    width: 42px;
-    height: 64px;
-    top:18px;
-    left: 33px;
-    transform: translate(-50%, -50%);
-/*    bottom: 82px;*/
+
+/* 화살표 */
+
+
+.center-con {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.round {
+  position: absolute;
+  width: 40px;
+  height: 40px;
   
-    border-radius: 50px;
-  }
-  .home-arrow::before, .home-arrow::after{
-    content: '';
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    border: 2px solid rgb(255, 255, 255);
-    height: 10px;
-    width: 10px;
-    transform: translate(-50%, -50%) rotate(45deg);
-    border-top: transparent;
-    border-left: transparent;
-    animation: MoveArrow 1s ease-in-out infinite;
-  }
-  
-  .home-arrow::after{
-    top: 30%;
-    animation-delay: 0.3s;
-  }
-  @keyframes MoveArrow{
-    0%{
-      opacity: 0;
-    }
-    30%{
-      opacity: 1;
-    }
-    60%{
-      opacity: 1;
-    }
-    100%{
-      opacity: 0;
-      top: 90%;
-    }
-  }
+}
+
+#cta{
+  width:100%; position: absolute;
+}
+
+#cta .arrow{left: 30%;}
+.arrow {position: absolute; bottom: 0;  margin-left:-7px; width: 20px; height: 20px; background-size: contain; top:15px;}
+.segunda{margin-left: 10px;}
+.next {
+background-image: url("../img/arrow.png");
+}
+
+@keyframes bounceAlpha {
+0% {opacity: 1; transform: translateX(0px) scale(1);}
+25%{opacity: 0; transform:translateX(10px) scale(0.9);}
+26%{opacity: 0; transform:translateX(-10px) scale(0.9);}
+55% {opacity: 1; transform: translateX(0px) scale(1);}
+}
+
+.bounceAlpha {
+  animation-name: bounceAlpha;
+  animation-duration:1.4s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+}
+
+.arrow.primera.bounceAlpha {
+  animation-name: bounceAlpha;
+  animation-duration:1.4s;
+  animation-delay:0.2s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+}
+
+.round .arrow{
+  animation-name: bounceAlpha;
+  animation-duration:1.4s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+}
+.round .arrow.primera{
+  animation-name: bounceAlpha;
+  animation-duration:1.4s;
+  animation-delay:0.2s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+}
+/* 화살표 끝 */
+
+
+
+
 
   .home-logo{
     position:fixed;
