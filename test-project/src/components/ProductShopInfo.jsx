@@ -108,11 +108,11 @@ function InfoCard(props) {
               <ProductInsertComment getData={getData} />
               <Card
                 style={{
-                  right: "15px",
+                  right: "17px",
                   height: "550px",
                   overflow: "auto",
                   marginTop: "10px",
-                  width: "900px",
+                  width: "903px",
                 }}
               >
                 <MainComment
