@@ -77,7 +77,7 @@ const MyPageAccount = () => {
         <label>Name</label>
         <input type="text" value={window.sessionStorage.getItem("displayName")} disabled />
         <br />
-        <label>Email</label>
+        <label>E-mail</label>
         <input type="text" value={window.sessionStorage.getItem("email")} disabled />
       </div>
       </div>

@@ -80,9 +80,11 @@ const MyPageReciept = () => {
       </div>
       ) : (
         <div className="mypagereciept-noreciept">
-        <p>비어있습</p>
-        {/* <Link to='/main/estimation'>맞춤 견적 페이지로 이동하기</Link> */}
-      </div>
+          <div className="mypagereciept-noreciept-div">
+            <p title="click !">영수증이 없습니다.</p>
+            <Link to='/main/estimation'>클릭해서 영수증 발급받기!</Link>
+          </div>
+        </div>
       )
       }
     </div>
