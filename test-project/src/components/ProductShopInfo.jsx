@@ -60,53 +60,47 @@ function InfoCard(props) {
     console.log(array);
   };
 
-  // 별점 작성하다 망함 ❤🧡💜
-  // const { id } = useParams();
-  // const [newArray, setNewArray] = useState([]);
-  // let array = []
-
-  // const getData = async() => {
-  //   const filteredMarket = query(collection(db, "test"),where("marketId","==",`${id}`));
-  //   const queryMarket = await getDocs(filteredMarket); // 파이어베이서 디비 ...
-  //   queryMarket.forEach((doc)=>{
-  //       array.push(doc.data());
-  //   })
-  //   setNewArray(array);
-  // }
-
-  // useEffect(()=>{
-  //   getData();
-  // },[newArray])
-
   return (
     <div className="Product-infoCards">
-      <Card className="Product-infoCard">
-        <Card.Body>
-          <Card.Title>
+      <div className="Product-infoCard">
+        <div>
+          <div>
             <h2>
               {market ? market.name : "없는 정보 입니다"}
-              <img src={market.companyLogo} alt="" />
             </h2>
-          </Card.Title>
-          <Card.Text>
+          </div>
+          <div>
             <p>주소 : {market ? market.location : "없는 정보 입니다"}</p>
-            <p>대충 자사 소개와 사진이 들어가는건 어떠세요?</p>
             <p>연락처 : {market ? market.number : "없는 정보 입니다"}</p>
-          </Card.Text>
-          <Card.Link href="#">업체 홈페이지 바로가기</Card.Link>
-          {/* <ProductInsertAverage list={list} /> */}
-        </Card.Body>
-      </Card>
+          </div>
+        </div>
+      </div>
 
-      <Card className="Product-comment">
-        <Card.Body>
+      <div className="Product-video">
+      {market ? 
+
+
+        <div 
+        style={{
+          width:'300px', height:'280px'}} >
+      <video style={{
+          width:'300px', height:'280px'}}  controls="controls" autoPlay="autoPlay" >
+     <source src={require(`../video/${market.companyVideo}`)} type="video/mp4"/>
+      </video>
+
+      </div>
+      : "없는 정보 입니다"}
+      </div>
+
+      <div className="Product-comment">
+        <div>
           {window.sessionStorage.getItem("login") == "true" ? (
             <div>
-              <Card.Title>
+              <div>
                 <h2>한줄평 및 코멘트</h2>
-              </Card.Title>
+              </div>
               <ProductInsertComment getData={getData} />
-              <Card
+              <div
                 style={{
                   right: "17px",
                   height: "550px",
@@ -120,18 +114,18 @@ function InfoCard(props) {
                   setNewArray={setNewArray}
                   getData={getData}
                 />
-              </Card>
+              </div>
             </div>
           ) : (
             <div>
-              <Card.Title>
+              <div>
                 <h1>한줄평 및 코멘트</h1>
-              </Card.Title>
+              </div>
               <p>로그인 후 이용하세요</p>
             </div>
           )}
-        </Card.Body>
-      </Card>
+        </div>
+      </div>
     </div>
   );
 }

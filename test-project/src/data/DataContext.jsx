@@ -64,6 +64,9 @@ import dasoleComRe4 from "../img/dasoleComRe4.JPG";
 import dasoleComRe5 from "../img/dasoleComRe5.JPG";
 import dasoleComRe6 from "../img/dasoleComRe6.JPG";
 
+
+import shopVideo1 from "../video/shopVideo1.mp4"
+
 // 회사 로고
 import evianLogo from "../img/evianLogo.png";
 import jyLogo from "../img/jyLogo.png";
@@ -362,6 +365,8 @@ const DataProvider = ({ children }) => {
       companyIntro:
         "기준이 없던 대한민국 인테리어 영역에\n기준을 세우는 정직한 회사, 1204디자인!\n저희가 경험하는 모든 것들에 대해\n솔직하도록 하겠습니다.",
       mainIMG: oneMain,
+      companyVideo:"shopVideo1.mp4"
+
     },
     {
       id: 5,

@@ -45,6 +45,7 @@ const ShopSlick = () => {
               width: "1px",
               height: "70px",
               color: "white",
+              textAlign:"right"
             }}
           >
             {shop.name}
