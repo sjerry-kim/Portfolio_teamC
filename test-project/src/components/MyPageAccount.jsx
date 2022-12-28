@@ -39,16 +39,30 @@ const MyPageAccount = () => {
       <div className='mypateaccount-div'>
       <h1 className='mypageaccount-title'>My Page</h1>
       {
-        window.sessionStorage.getItem("photoURL")== "null" ?  (
+        window.sessionStorage.getItem("googleLogin") !== true ?  (
           <div className='mypageaccount-img-div'>
-            <div style={{
-                            width:"150px", 
-                            height:"150px",
+            <div
+              className='mypageaccount-img'
+              style={{
+                            width:"100px", 
+                            height:"100px",
                             backgroundImage:`url(${require('../img/defaultProfile.jpeg')})`, 
                             backgroundSize: "cover",
                             borderRadius:"50%"}}>
               </div>
-            {/* <MyPageProfileModal /> */}
+              {/* <div
+                className='mypageaccount-img'
+                style={{
+                            width:"100px", 
+                            height:"100px",
+                            backgroundImage:`url(${require(`${window.sessionStorage.getItem("photoURL")}`)})`, 
+                            backgroundColor: "white",
+                            backgroundSize: "cover",
+                            borderRadius:"50%"}}>
+              </div> */}
+              {/* <img className='mypageaccount-img'
+                src={window.sessionStorage.getItem("photoURL")} alt="이미지 없음" />
+            <MyPageProfileModal /> */}
           </div>
         ):(
           <div className='mypageaccount-img-div'>
@@ -73,12 +87,14 @@ const MyPageAccount = () => {
         <label style={{paddingRight:"14px"}}>Name</label>
         <input type="text" value={window.sessionStorage.getItem("displayName")} disabled />
         </div>
-
         <div className='mypageaccount-info-div-box'>
         <label>E-mail</label>
         <input type="text" value={window.sessionStorage.getItem("email")} disabled />
         </div>
       </div>
+      </div>
+      <div className='mypageaccount-recentcomment-div'>
+        
       </div>
     </div>
   );

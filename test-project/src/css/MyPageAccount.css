@@ -5,15 +5,16 @@
   font-style: normal;
 }
 
+.mypageaccount-wallpaper{
+  margin: auto;
+  padding-top: 20px;
+}
+
 .mypageaccount-title{
   font-family: 'twayair';
   color: #291B0C;
   font-size: 2.1em;
   margin-top: -20px;
-}
-
-.mypageaccount-wallpaper{
-  margin: auto;
 }
 
 .mypateaccount-div{
@@ -22,6 +23,8 @@
 
 .mypageaccount-img-div{
   margin: 13px;
+  display: flex;
+  justify-content: center;
 }
 
 .mypageaccount-img{
@@ -53,7 +56,9 @@
 .mypageaccount-info-div input{
   font-family: 'twayair';
   border: none;
+  background-color: rgb(250, 249, 249);
+  padding: 2px 5px;
+  border-radius: 5px;
   color: #291B0C;
-  width: 180px;
-  
+  width: 220px;
 }
