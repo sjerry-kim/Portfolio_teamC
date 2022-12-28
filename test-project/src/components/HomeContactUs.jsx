@@ -24,7 +24,7 @@ const HomeContactUs = () => {
 
   return (
     <div>
-      <div className="homecontactus-titleBox">
+      {/* <div className="homecontactus-titleBox">
       <h2 className="homecontactus-title">Contact Us</h2>
       <div className="homecontactus-letter">
         <div className="homecontactus-middletitle">
@@ -34,7 +34,65 @@ const HomeContactUs = () => {
           <p>이메일:GamilC@gmail.com</p>
         </div>
       </div>
+      </div> */}
+
+<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+
+<button className="homecontactus-button-one">
+  <div class="letters">
+        <div class="card">
+          <div class="card_face front">S</div>
+          <div class="card_face back"><i class="fab fa-github-square"></i></div>
+        </div>
       </div>
+
+      <div class="letters">
+        <div class="card">
+          <div class="card_face front">H</div>
+          <div class="card_face back">
+            <i class="fab fa-twitter-square"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="letters">
+        <div class="card">
+          <div class="card_face front">A</div>
+          <div class="card_face back">
+            <i class="fab fa-facebook-square"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="letters">
+        <div class="card">
+          <div class="card_face front">R</div>
+          <div class="card_face back">
+            <i class="fab fa-instagram-square"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="letters">
+        <div class="card">
+          <div class="card_face front">E</div>
+          <div class="card_face back">
+            <i class="fab fa-linkedin"></i>
+          </div>
+        </div>
+      </div>
+
+
+    </button>
+
+
     <div className="homecontactus-formBox">
       <form className="homecontactus-form" ref={form2} onSubmit={sendEmail2}>
         <div className="homecontactus-formdiv">

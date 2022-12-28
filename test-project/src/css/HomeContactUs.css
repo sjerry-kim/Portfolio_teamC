@@ -4,7 +4,7 @@ input:focus{
   outline: none;
 }
 
-.homecontactus-titleBox{
+/* .homecontactus-titleBox{
   width: 550%;
   position: relative;
   right: 700px;
@@ -20,7 +20,99 @@ input:focus{
     font-size: 100px;
     font-weight: bold;
     width: 100%;
-  }
+  } */
+
+.homecontactus-button-one{
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homecontactus-button-one:before:after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+      button {
+        width: 270px;
+        height: 60px;
+        border: none;
+        background: #b3aeae85;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        right: 700px;
+        top: 500px;
+      }
+      
+
+       button::before,
+      button::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 3px;
+        background-color: rgb(0, 0, 0);
+        transition: width 1s ease-in-out;
+      }
+
+      button:before {
+        
+        top: 0;
+        left: 0;
+      }
+
+      button:after {
+        
+        bottom: 0;
+        right: 0;
+      }
+
+      button:hover:before,
+      button:hover:after {
+        width: 100%;
+      }
+
+      .letters {
+        width: 50px;
+        height: 1px;
+        perspective: 600px;
+      }
+
+      .card {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transition: transform 1s ease-in-out;
+        transform-style: preserve-3d;
+      }
+
+      .card_face {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        backface-visibility: hidden;
+        font-size: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-weight: 600;
+      }
+
+      .back {
+        transform: rotateY(180deg);
+      }
+
+      button:hover .card {
+        transform: rotateY(180deg);
+      }
+
+
   /* .homecontactus-button {
     margin-top: 120px;
     margin-left: -550px;
