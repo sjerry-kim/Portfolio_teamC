@@ -242,7 +242,7 @@ const Join = props => {
           </select>
           </div>
         </form>
-        
+       
         <div id="wrapper">
           <label id="label">
             <input id="hiddenCheckbox" type="checkbox" />
