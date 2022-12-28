@@ -242,19 +242,19 @@ const Join = props => {
           </select>
           </div>
         </form>
-        
+       
         <div id="wrapper">
           <label id="label">
             <input id="hiddenCheckbox" type="checkbox" />
             <div id="showCheckbox"></div>
-            <span>개인정보 수집 및 이용 동의 (선택)</span>
+            <span className="join-span">개인정보 수집 및 이용 동의 (선택)</span>
           </label>
         </div>
         <div id="wrapper">
           <label id="label">
             <input id="hiddenCheckbox" type="checkbox" />
             <div id="showCheckbox"></div>
-            <span>이벤트 안내 등 광고성 마케팅 수신 동의 (선택)</span>
+            <span className="join-span">이벤트 안내 등 광고성 마케팅 수신 동의 (선택)</span>
           </label>
         </div>
         <button

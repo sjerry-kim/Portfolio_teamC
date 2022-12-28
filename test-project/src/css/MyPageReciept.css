@@ -15,13 +15,15 @@
 
 .mypagereciept-wallpaper{
   width: 100%;
-  margin: 30px auto;
+  margin: 15px auto;
   padding: 20px;
   background-color: rgb(250, 247, 244);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .mypagereciept-wallpaper h3{
   font-family: 'twayair';
+  color: #291B0C;
   margin: 10px;
 }
 
@@ -86,5 +88,30 @@
 }
 
 .mypagereciept-noreciept{
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mypagereciept-noreciept-div{
+  text-align: center;
+  margin: 160px auto;
+  margin-bottom: 200px;
+}
+
+.mypagereciept-noreciept-div p{
+  font-family: 'twayair';
+  color: #8a7c6d;
+}
+
+.mypagereciept-noreciept-div a{
+  font-family: 'twayair';
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #8a7c6d;
+  /* border-bottom: 1px solid #8a7c6d; */
+}
+
+.mypagereciept-noreciept-div a:hover{
+  color: #291B0C;
 }
