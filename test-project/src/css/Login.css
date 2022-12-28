@@ -239,3 +239,31 @@
     margin: auto;
   }
   
+  @media screen and (max-width: 1440px),(max-height: 789px) {
+    .login-text-box{
+      margin:auto;
+      margin-top: 100px;
+    }
+    .login-line{
+      width: 400px;
+      border-top: 1px solid #291b0b;
+      margin-top: 20px;
+      padding-top: 30px;
+      color: #291b0b;
+    }
+    .login-line-2{
+      position: relative;
+      right: 50px;
+      height: 500px;
+      border-left: 1px solid #291b0baf;
+      margin-left: 69px;
+      margin-top: -20px;
+    }
+    .login-border{
+      width: 600px;
+      height: 700px;
+      margin: auto;
+      text-align: center;
+      margin-top: -60px;
+    }
+  }
