@@ -23,6 +23,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { userLogout } from "../module/currentUser";
 
 const Navbar = () => {
+
+  const activeStyle = {color: "white"};
+
   const { action } = useContext(DataContext);
   const navigate = useNavigate();
   const loginuser = useSelector((state)=>(state.currentUser)) 
