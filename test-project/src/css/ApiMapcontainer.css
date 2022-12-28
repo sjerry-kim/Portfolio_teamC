@@ -84,3 +84,37 @@
 #api-midMap li div div div span {
   font-family: "LINESeedKR-Bd";
 }
+/* 
+@media screen and (width > 1441px) {
+  .api-Mymap {
+    margin-left: 290px;
+  }
+  .api-inputForm {
+    position: absolute;
+    bottom: 660px;
+    width: 40%;
+  }
+  #api-result-list {
+    position: relative;
+    bottom: 99px;
+    width: 380px;
+    height: 582px;
+    overflow-y: scroll;
+    background-color: rgb(241, 238, 235);
+  }
+  .api-input {
+    position: relative;
+    display: inline-block;
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid rgb(187, 163, 136);
+    border-left: none;
+    border-image: initial;
+    font-size: 22px;
+    margin-left: 56px;
+    padding: 10px;
+    top: 38px;
+    border-radius: 22px;
+    background-color: rgb(241, 238, 235);
+  }
+} */

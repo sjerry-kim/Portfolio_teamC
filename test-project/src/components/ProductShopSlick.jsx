@@ -26,7 +26,6 @@ const ShopSlick = () => {
     // nextArrow: <NextArrow />,
     // prevArrow: <PrevArrow />,
   };
-
   const { id } = useParams();
   const { state } = useContext(DataContext);
   const shop = state.score.find(r => r.id == id);
@@ -36,6 +35,20 @@ const ShopSlick = () => {
       {shop.companyImg.map((item, index) => (
         <div key={index} className="Product-shopimg">
           <img src={require(`../img/${item}`)} />
+          <h1
+            style={{
+              position: "absolute",
+              textCombineUpright: "all",
+              fontSize: "32px",
+              top: "132px",
+              left: "35px",
+              width: "1px",
+              height: "70px",
+              color: "white",
+            }}
+          >
+            {shop.name}
+          </h1>
         </div>
       ))}
     </Slider>
