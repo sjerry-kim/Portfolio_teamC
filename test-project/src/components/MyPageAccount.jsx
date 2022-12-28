@@ -52,12 +52,7 @@ const MyPageAccount = () => {
           </div>
         ):(
           <div className='mypageaccount-img-div'>
-            <img style={{
-                width:"100px", 
-                height:"100px",
-                backgroundSize: "cover",
-                borderRadius:"50%",
-              }}
+            <img className='mypageaccount-img'
               src={window.sessionStorage.getItem("photoURL")}
               alt="없음"
               />
@@ -74,11 +69,15 @@ const MyPageAccount = () => {
       }
       {/* <MyPageProfileModal /> */}
       <div className='mypageaccount-info-div'>
-        <label>Name</label>
+        <div className='mypageaccount-info-div-box'>
+        <label style={{paddingRight:"14px"}}>Name</label>
         <input type="text" value={window.sessionStorage.getItem("displayName")} disabled />
-        <br />
+        </div>
+
+        <div className='mypageaccount-info-div-box'>
         <label>E-mail</label>
         <input type="text" value={window.sessionStorage.getItem("email")} disabled />
+        </div>
       </div>
       </div>
     </div>
