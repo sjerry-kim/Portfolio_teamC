@@ -43,7 +43,6 @@ const Login = () => {
     const provider = new GoogleAuthProvider();
     provider.addScope("profile");
     provider.addScope("email");
-
     const auth = getAuth();
     signInWithPopup(auth, provider)
       .then(result => {
@@ -59,6 +58,7 @@ const Login = () => {
         window.sessionStorage.setItem("displayName", user.displayName);
         window.sessionStorage.setItem("email", user.email);
         window.sessionStorage.setItem("photoURL", user.photoURL);
+        window.sessionStorage.setItem("googleLogin", true);
         navigate("/", {
           state: {
             name: user.displayName,
@@ -111,7 +111,7 @@ const Login = () => {
       window.sessionStorage.setItem("uid", user.uid);
       window.sessionStorage.setItem("displayName", user.displayName);
       window.sessionStorage.setItem("email", user.email);
-      window.sessionStorage.setItem("photoURL", user.photoURL);
+      // window.sessionStorage.setItem("photoURL", user.photoURL);
       navigate("/");
       //dispatch(userLogin(user));
     } catch (error) {
@@ -130,7 +130,7 @@ const Login = () => {
     await signOut(auth);
     // 로컬스토리지에 로그인 상태 저장
     window.sessionStorage.setItem("login", false);
-    window.sessionStorage.setItem("photoURL", null);
+    // window.sessionStorage.setItem("photoURL", null);
     // window.sessionStorage.removeItem("uid"); // 로컬써야 지워짐
     // window.sessionStorage.removeItem("displayName");
   };

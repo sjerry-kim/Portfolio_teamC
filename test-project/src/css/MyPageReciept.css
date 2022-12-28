@@ -15,7 +15,7 @@
 
 .mypagereciept-wallpaper{
   width: 100%;
-  margin: 15px auto;
+  margin: 30px auto;
   padding: 20px;
   background-color: rgb(250, 247, 244);
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
@@ -24,7 +24,7 @@
 .mypagereciept-wallpaper h3{
   font-family: 'twayair';
   color: #291B0C;
-  margin: 10px;
+  margin: 10px ; 
 }
 
 .mypagereciept-div{

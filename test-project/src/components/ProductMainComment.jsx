@@ -66,7 +66,7 @@ const MainComment = ({ newArray, getData }) => {
                   const review = firestore.collection("review");
                   const sameCommentDoc = query(
                     collection(db, "review"),
-                    where("comment", "==", item.comment)
+                    where("comment", "==", item.comment) // 추후 개별 id로 변경시키기! -> 같은 내용 코멘트일시 에러 발생함
                   );
                   const sameCommnetDocs = await getDocs(sameCommentDoc);
                   sameCommnetDocs.forEach(doc => {
