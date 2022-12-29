@@ -9,7 +9,7 @@ import { auth } from '../data/firebase';
 import { updateProfile } from 'firebase/auth';
 
 
-function MyPageProfileModal() {
+function MyPageProfileModal({setUpdate}) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -29,11 +29,11 @@ function MyPageProfileModal() {
   // 저장을 눌렀을 때 state에 사진을 저장하고 모달창을 종료
   const saveProfile = () =>{
     updateProfile(auth.currentUser, {
-      photoURL: `${URL.createObjectURL(file)}`
+      photoURL: URL.createObjectURL(file)
     }).then(() => {
       // Profile updated!
       window.sessionStorage.setItem("photoURL", URL.createObjectURL(file))
-      // setTimeout(()=>{window.location.reload();}, 3000);
+      setUpdate(URL.createObjectURL(file))
       console.log("성공")
     }).catch((error) => {
       // An error occurred
