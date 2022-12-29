@@ -75,6 +75,7 @@ const ProductInsertComment = ({ getData }) => {
             justifyContent: "center",
             marginTop: "35px",
             marginBottom: "55px",
+            width:"45vw"
           }}
         >
           <Form.Control
