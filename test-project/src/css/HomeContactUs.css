@@ -1,18 +1,30 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+}
+@font-face {
+  font-family: 'twayair';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
-input:focus{
+input:focus {
   outline: none;
 }
 
-/* .homecontactus-titleBox{
+.homecontactus-titleBox{
   width: 550%;
   position: relative;
   right: 700px;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 .homecontactus-letter {
     text-align: left;
     margin-top: 350px;
+    font-family: 'Noto Sans KR', sans-serif;
   }
   
   .homecontactus-title {
@@ -20,100 +32,124 @@ input:focus{
     font-size: 100px;
     font-weight: bold;
     width: 100%;
-  } */
+    font-family: 'Noto Sans KR', sans-serif;
+  }
 
-.homecontactus-button-one{
+  .homecontactus-middletitle {
+    font-size: 20px;
+    margin-top: -250px;
+    margin-left: 15px;
+    font-family: 'twayair';
+  }
+
+  .homecontactus-middletitle p {
+    font-family: 'twayair';
+    font-weight: lighter;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+  }
+  
+
+.homecontactus-button-one {
   height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.homecontactus-button-one:before:after{
+.homecontactus-button-one:before:after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+.homecontactus-button-one {
+  width: 270px;
+  height: 60px;
+  border: none;
+  background: #b3aeae85;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 700px;
+  top: 70px;
+}
 
-      button {
-        width: 270px;
-        height: 60px;
-        border: none;
-        background: #b3aeae85;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        right: 700px;
-        top: 500px;
-      }
-      
+.homecontactus-button-one::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: rgba(252, 252, 252, 0.6);
+  transition: width 1s ease-in-out;
+}
+.homecontactus-button-one::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: rgba(252, 252, 252, 0.6);
+  transition: width 1s ease-in-out;
+}
 
-       button::before,
-      button::after {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 3px;
-        background-color: rgb(0, 0, 0);
-        transition: width 1s ease-in-out;
-      }
+.homecontactus-button-one:before {
+  top: 0;
+  left: 0;
+}
 
-      button:before {
-        
-        top: 0;
-        left: 0;
-      }
+.homecontactus-button-one:after {
+  bottom: 0;
+  right: 0;
+}
 
-      button:after {
-        
-        bottom: 0;
-        right: 0;
-      }
+.homecontactus-button-one:hover:before,
+.homecontactus-button-one:hover:after {
+  width: 100%;
+}
 
-      button:hover:before,
-      button:hover:after {
-        width: 100%;
-      }
+.homecontactus-letters {
+  width: 50px;
+  height: 1px;
+  perspective: 600px;
+}
 
-      .letters {
-        width: 50px;
-        height: 1px;
-        perspective: 600px;
-      }
+.homecontactus-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d;
+}
 
-      .card {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        transition: transform 1s ease-in-out;
-        transform-style: preserve-3d;
-      }
+.homecontactus-card_face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.829);
+}
 
-      .card_face {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        backface-visibility: hidden;
-        font-size: 28px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        font-weight: 600;
-      }
+.back {
+  transform: rotateY(180deg);
+}
 
-      .back {
-        transform: rotateY(180deg);
-      }
+.homecontactus-button-one:hover .homecontactus-card {
+  transform: rotateY(180deg);
+}
 
-      button:hover .card {
-        transform: rotateY(180deg);
-      }
+.homecontactus-card div a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+}
 
-
-  /* .homecontactus-button {
+/* .homecontactus-button {
     margin-top: 120px;
     margin-left: -550px;
     padding: 45px 100px 40px 100px;
@@ -123,73 +159,88 @@ input:focus{
     background-color: transparent;
     color: white;
   } */
-  .homecontactus-button:hover {
-    background-color: white;
-    color: black;
-  }
-  
-  .homecontactus-middletitle {
-    font-size: 20px;
-    margin-top: -250px;
-    margin-left: 15px;
-  }
-  
-  .homecontactus-formBox{
-    display: flex;
-    text-align: center;
-    width: 100vw;
-    margin-top: -330px;
-    margin-left: -450px;
-  }
 
-  .homecontactus-form {
-    font-size: 50px;
-    width: 100%;
-  }
+.homecontactus-button:hover {
+  background-color: white;
+  color: black;
+}
 
-  .homecontactus-formdiv{
-    margin: 30px;
-  
-  }
-  
-  .homecontactus-formlable {
-    width: 170px;
-    font-size: 30px;
-    color: rgba(255, 255, 255, 0.8);
-    letter-spacing: 0.2pt;
-    padding: 7px 0px;
-    box-sizing: border-box;
-    border-right: 1px solid rgba(255, 255, 255, 0.25);
-    margin-right: 30px;
-  }
-  .homecontactus-forminput {
-    display: inline-block;
-    size: 10px;
-    font-size: 30px;
-    padding: 10px 5px;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-    box-sizing: border-box;
-    color:rgba(255, 255, 255, 0.8);
-  }
-  .homecontactus-checkbox {
-    font-size: 20px;
-    text-decoration: dashed;
-    margin: 50px 0 20px 0px;
-    padding: 0 15px 0  15px;
+.homecontactus-cp p{
+  font-size: 13px;
+  font-weight: lighter;
+  position: relative;
+  left: -695px;
+  top: 120px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
 
-  }
-  #homecontactus-input{
-    display: inline-block;
-  }
 
-  .homecontactus-checkdiv{
-    display: flex;
-    justify-content: center;
-    margin-right: 300px;
-    padding-left: 25px;
-  }
-.homecontactus-Btn{
-  margin-top: 30px;
+.homecontactus-formBox {
+  display: flex;
+  text-align: center;
+  width: 100vw;
+  margin-top: -470px;
+  margin-left: -450px;
+  font-family: 'twayair';
+}
+
+.homecontactus-form {
+  font-size: 50px;
+  width: 100%;
+}
+
+.homecontactus-formdiv {
+  margin: 30px;
+}
+
+.homecontactus-formlable {
+  width: 170px;
+  font-size: 30px;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.2pt;
+  padding: 7px 0px;
+  box-sizing: border-box;
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+  margin-right: 30px;
+  font-family: 'twayair';
+  font-weight: lighter;
+}
+.homecontactus-forminput {
+  display: inline-block;
+  size: 10px;
+  width: 400px;
+  height: 75px;
+  font-size: 20px;
+  padding: 10px 5px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, 0.8);
+}
+.homecontactus-checkbox {
+  font-size: 20px;
+  text-decoration: dashed;
+  margin: 50px 0 20px 0px;
+  padding: 0 15px 0 15px;
+  font-family: 'twayair';
+  font-weight: lighter;
+}
+#homecontactus-input {
+  display: inline-block;
+}
+
+.homecontactus-checkdiv {
+  display: flex;
+  justify-content: center;
+  margin-right: 250px;
+}
+.homecontactus-Btn {
+  position: relative;
+  left: 300px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: 'twayair';
+  font-weight: lighter;
+  letter-spacing: 2px;
 }
