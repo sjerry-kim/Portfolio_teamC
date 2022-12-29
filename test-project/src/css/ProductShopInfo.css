@@ -1,4 +1,17 @@
+@font-face {
+  font-family: "Chosunilbo_myungjo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+
 .Product-shopInfo {
+  margin-top: -10px;
   margin-left: 50px;
 } 
 
@@ -41,6 +54,7 @@ video{
   width: 903px;
   border : 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 5px;
+  
 }
 
 .Product-infoCard{
@@ -59,7 +73,12 @@ video{
   margin-left: 20px;
   
 }
-
+.Product-commentLogIn h2{
+  font-family: "Chosunilbo_myungjo";
+} 
+.Product-commentLogIn p{
+  font-family: "Chosunilbo_myungjo";
+} 
 .Product-commentLogOut{
   margin-top: 25px;
   margin-left: 20px;
