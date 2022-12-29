@@ -15,14 +15,17 @@
   flex-direction: row;
   justify-content: start;
 }
-
+.product-shopimg-logo {
+  width: 100px;
+  height: 100px;
+}
 .Product-slick-slide {
   width: 100%;
   height: 102vh;
   box-sizing: border-box;
 }
-
 .Product-shopimg img {
+  display: absolute;
   margin: 0 auto 0 auto;
   width: 100vw;
   height: 100vh;

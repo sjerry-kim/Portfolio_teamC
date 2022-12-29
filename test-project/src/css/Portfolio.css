@@ -212,21 +212,24 @@
 .click_card1{
   font-family: 'Ycomputer-Regular';
   color:#C3BBAF;
-  margin-bottom: 36px;
-  margin-left: 13px;
+  margin-bottom: 0px;
+  margin-left: 3px;
   font-size: medium;
-  animation: blink-effect 1.5s step-end infinite;
+  animation: blink-effect 1.6s step-end infinite;
+  position: relative;
+  bottom: 30px;
 } 
 
-a span {
+.click_card2 span {
+  z-index: 10000;
   position: absolute;
-  top: 44%;
+  bottom: 120px;
   left: 52%;
   width: 10px;
   height: 10px;
   margin-left: -12px;
-  border-left: 1px solid #C3BBAF;
-  border-bottom: 1px solid #C3BBAF;
+  border-left: 1.4px solid #C3BBAF;
+  border-bottom: 1.4px solid #C3BBAF;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   -webkit-animation: sdb 1.5s infinite;
