@@ -1,5 +1,4 @@
 import {} from "../css/ProductShopInfo.css";
-import Card from "react-bootstrap/Card";
 import MainComment from "./ProductMainComment";
 import ProductInsertComment from "./ProductInsertComment";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -7,8 +6,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useContext, useState } from "react";
 import DataContext from "../data/DataContext";
 import { useParams } from "react-router-dom";
-import ProductInsertAverage from "./ProductInsertAverage";
-import useScrollFadeIn from "./useScrollFadeIn";
 
 // 1219 firestore- 진혜
 import db from "../data/firebase";
@@ -63,32 +60,24 @@ function InfoCard(props) {
   return (
     <div className="Product-infoCards">
       <div className="Product-infoCard">
-        <div>
+        <div  className="Product-detail">
           <div>
             <h2>
               {market ? market.name : "없는 정보 입니다"}
             </h2>
-          </div>
-          <div>
             <p>주소 : {market ? market.location : "없는 정보 입니다"}</p>
             <p>연락처 : {market ? market.number : "없는 정보 입니다"}</p>
           </div>
         </div>
       </div>
-
       <div className="Product-video">
       {market ? 
-
-
-        <div 
-        style={{
-          width:'300px', height:'280px'}} >
-      <video style={{
-          width:'300px', height:'280px'}}  controls="controls" autoPlay="autoPlay" >
-     <source src={require(`../video/${market.companyVideo}`)} type="video/mp4"/>
+      <video muted loop autoPlay style={{
+          width:'700px', height:'600px'}}  >
+     <source src={require(`../video/${market.companyVideo}`)} />
       </video>
 
-      </div>
+
       : "없는 정보 입니다"}
       </div>
 
@@ -96,18 +85,11 @@ function InfoCard(props) {
         <div>
           {window.sessionStorage.getItem("login") == "true" ? (
             <div>
-              <div>
+              <div className="Product-commentLogIn">
                 <h2>한줄평 및 코멘트</h2>
-              </div>
+              </div >
               <ProductInsertComment getData={getData} />
               <div
-                style={{
-                  right: "17px",
-                  height: "550px",
-                  overflow: "auto",
-                  marginTop: "10px",
-                  width: "903px",
-                }}
               >
                 <MainComment
                   newArray={newArray}
@@ -117,10 +99,8 @@ function InfoCard(props) {
               </div>
             </div>
           ) : (
-            <div>
-              <div>
+            <div className="Product-commentLogOut">
                 <h1>한줄평 및 코멘트</h1>
-              </div>
               <p>로그인 후 이용하세요</p>
             </div>
           )}

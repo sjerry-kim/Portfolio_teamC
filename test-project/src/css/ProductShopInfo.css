@@ -1,8 +1,6 @@
-/* .Product-shopInfo {
-  background-color: rgb(241, 238, 235);
-  height: 102vh;
-  box-sizing: border-box;
-} */
+.Product-shopInfo {
+  margin-left: 50px;
+} 
 
 .Product-infoCards {
   width: 100%;
@@ -11,6 +9,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  row-gap: 5px;
+  column-gap: 5px;
 }
 
 .Product-infoCard:nth-child(1) {
@@ -28,48 +28,52 @@
   grid-row: 2/4;
 }
 
-
-
-
-
 video::-webkit-media-controls-fullscreen-button {
 	display: none !important; }
 
+video{
+  margin-bottom: 10px;
+}
 
-/* 
 .Product-comment {
-  background-color: rgb(241, 238, 235);
-  width: 50%;
-  margin-top: 50px;
+  right: 17px;
+  height: 605px;
+  width: 903px;
+  border : 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
 }
 
-
-h2 {
-  width: 330px;
-  height: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-h2 > img {
-  width: 35%;
+.Product-infoCard{
+  border : 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin-right: 1px;
 }
 
-.Product-video{
-  border: solid 1px black;
+.Product-detail{
+  margin-top: 25px;
+  margin-left: 20px;
 }
 
-
-/*
-.infoCard{
-  margin-right: auto;
+.Product-commentLogIn{
+  margin-top: 25px;
+  margin-left: 20px;
+  
 }
 
-/* .reCard2{
-  float: none;
-  margin: 0 auto;
-} */
+.Product-commentLogOut{
+  margin-top: 25px;
+  margin-left: 20px;
+}
 
-/* .comment{
-  margin-left: auto;
-} */ 
+.Product-commentLogOut > p{
+  margin-left: 10px;
+}
+
+ .Product-video{
+  border-radius: 5px;
+  height: 400px;
+} 
+
+video{
+  margin-top: -100px;
+}

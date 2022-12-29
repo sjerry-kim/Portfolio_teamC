@@ -65,7 +65,6 @@ import dasoleComRe5 from "../img/dasoleComRe5.JPG";
 import dasoleComRe6 from "../img/dasoleComRe6.JPG";
 
 
-import shopVideo1 from "../video/shopVideo1.mp4"
 
 // 회사 로고
 import evianLogo from "../img/evianLogo.png";
@@ -257,6 +256,8 @@ const DataProvider = ({ children }) => {
       companyIntro:
         "토탈 인테리어 전문업체로서 \n합리적인 가격, 맞춤 디자인, 실용성까지 고려한\n인테리어로 고객님이 원하시는 디자인으로\n맞춤 시공 해드립니다.",
       mainIMG: evianMain,
+      companyVideo:"shopVideo1.mp4",
+
     },
     {
       id: 2,
@@ -293,6 +294,8 @@ const DataProvider = ({ children }) => {
       companyIntro:
         "(주)제이와이 인테리어 디자인은 공간에서\n명품을 만든다라는 목표를 실천하기 위해 \n 끊임없이 노력하고 실천하는 \n인테리어 디자인 전문 기업입니다. ",
       mainIMG: jyMain,
+      companyVideo:"shopVideo2.mp4",
+
     },
     {
       id: 3,
@@ -301,7 +304,7 @@ const DataProvider = ({ children }) => {
       location: "경상남도 김해시 월산로 11",
       number: "010-7487-7410",
       companyLogo: purenLogo,
-      companyImg: ["purenCom1.jpg", "purenCom2.jpg", "purenCom3.jpg"],
+      companyImg: ["purenCom1.jpg", "purenCom2.JPG", "purenCom3.jpg"],
       reviewImg1: purenComRe1,
       reviewImg2: purenComRe2,
       reviewImg3: purenComRe3,
@@ -329,6 +332,8 @@ const DataProvider = ({ children }) => {
       companyIntro:
         "푸른들인테리어는 늘 고객 여러분께 \n 최고의 만족을 드리고자 노력하고 있으며, \n 다년간의 실무경력과 기술을 바탕으로\n최고의 만족을 드리고자 최선을 다하겠습니다.",
       mainIMG: purenMain,
+      companyVideo:"shopVideo3.mp4",
+
     },
     {
       id: 4,
@@ -365,7 +370,8 @@ const DataProvider = ({ children }) => {
       companyIntro:
         "기준이 없던 대한민국 인테리어 영역에\n기준을 세우는 정직한 회사, 1204디자인!\n저희가 경험하는 모든 것들에 대해\n솔직하도록 하겠습니다.",
       mainIMG: oneMain,
-      companyVideo:"shopVideo1.mp4"
+      companyVideo:"shopVideo4.mp4",
+
 
     },
     {
@@ -403,6 +409,8 @@ const DataProvider = ({ children }) => {
       companyIntro:
         "아지오디자인은 공간의 본질을 이해하고\n유지하기 위해 끊임없이 연구하고 고민합니다.\n공간의 본질은 유지한 채\n공간의 가치를 높이는 것을 목표로 합니다.",
       mainIMG: agioMain,
+      companyVideo:"shopVideo5.mp4",
+
     },
     {
       id: 6,
@@ -439,6 +447,8 @@ const DataProvider = ({ children }) => {
       companyIntro:
         "모노인테리어는 라이프스타일을 고려하여\n편안하고 개성있는 공간을\n차별화된 공간연출과 합리적인 가격으로\n여러분들께 제공하고 있습니다.",
       mainIMG: monoMain,
+      companyVideo:"shopVideo6.mp4",
+
     },
     {
       id: 7,
@@ -475,13 +485,15 @@ const DataProvider = ({ children }) => {
       companyIntro:
         "다원은 “창조와 열정”이라는 모토로,\n국내 디자인 업계 최고로서 \n공간의 창의성과 고객님들의 \n만족감을 증대시켜 왔습니다.",
       mainIMG: dawonMain,
+      companyVideo:"shopVideo7.mp4",
+    
     },
     {
       id: 8,
       name: "이다스 건축 인테리어",
       best: "abC",
       location: "서울 강남구 도산대로 68길 26 IDAS 빌딩 1F/2F",
-      number: "+82-2-543 6566",
+      number: "02-543 6566",
       companyLogo: idasLogo,
       companyImg: ["idasCom1.JPG", "idasCom2.JPG", "idasCom3.JPG"],
       reviewImg1: idasComRe1,
@@ -503,21 +515,22 @@ const DataProvider = ({ children }) => {
       reviewComment3:
         "이사가면서 리모델링도 같이해서 들어갔습니다. 방중에 가장 신경 쓴 공간이 아이방이였는데, 너무 깔끔하고 아늑하게 잘됬어요~~ 아이놀이방이 항상 지저분한 느낌이들어 매번 볼떄마다 별로였거든요! 이다스에서 해결해주셨네요 ㅎㅎㅎㅎ 감사합니다!!",
       reviewComment4:
-        "집 리모델링 하면서 부엌에 가장 신경을 써달라고 했습니다. 와이프가 요리하는걸 좋아하거든요^^ 저기서 맛있는 요리를 저한테 해 줄 생각에 너무 행복해하네요~~^^(신혼 이해바람) 그리고 우리 부부가 블랙과 화이트를 좋아해서 집도 블랙 화이트로 꾸미고 싶었는데 말 그대로 나와서 좋습니다",
+      "집 리모델링 하면서 부엌에 가장 신경을 써달라고 했습니다. 와이프가 요리하는걸 좋아하거든요^^ 저기서 맛있는 요리를 저한테 해 줄 생각에 너무 행복해하네요~~^^(신혼 이해바람) 그리고 우리 부부가 블랙과 화이트를 좋아해서 집도 블랙 화이트로 꾸미고 싶었는데 말 그대로 나와서 좋습니다",
       reviewComment5:
-        "지인 추천으로 아무 생각없이 맡겼는데 너무 완벽했어요. 사실 여기저기 알아볼 시간이 없어서 맡기면서도 걱정했는데 정말 예쁘게 해주셔서 감사합니다ㅎㅎㅎ 저희부부가 원하는 스타일로다가 딱!!ㅎㅎㅎ 너무 만족해서 후기도 남겨요!! 번창하세요",
+      "지인 추천으로 아무 생각없이 맡겼는데 너무 완벽했어요. 사실 여기저기 알아볼 시간이 없어서 맡기면서도 걱정했는데 정말 예쁘게 해주셔서 감사합니다ㅎㅎㅎ 저희부부가 원하는 스타일로다가 딱!!ㅎㅎㅎ 너무 만족해서 후기도 남겨요!! 번창하세요",
       reviewComment6:
-        "첫 카페 개업이라 정말 깐깐하게 여기저기 참견했는데, 정말 저희 요구를 다들어주셔서 죄송도 하면서 너무 감사했습니다ㅠㅠ 덕분에 이렇게 좋은 결과가 나와서 너무나 만족합니다!! 이렇게 예쁜 공간에서 일할수 있게 되다니.. 너무 감격스럽네요. 적극 추천합니다!!!",
+      "첫 카페 개업이라 정말 깐깐하게 여기저기 참견했는데, 정말 저희 요구를 다들어주셔서 죄송도 하면서 너무 감사했습니다ㅠㅠ 덕분에 이렇게 좋은 결과가 나와서 너무나 만족합니다!! 이렇게 예쁜 공간에서 일할수 있게 되다니.. 너무 감격스럽네요. 적극 추천합니다!!!",
       companyIntro:
-        "완벽한 공간의 완성을 목표로 \n‘생각을 현실로 만드는 이다스’라는 모토 아래\n여러분들이 상상하는 모든 것들을\n현실에서 만날 수 있도록 최선을 다할 것입니다.",
+      "완벽한 공간의 완성을 목표로 \n‘생각을 현실로 만드는 이다스’라는 모토 아래\n여러분들이 상상하는 모든 것들을\n현실에서 만날 수 있도록 최선을 다할 것입니다.",
       mainIMG: idasMain,
+      companyVideo:"shopVideo8.mp4",
     },
     {
       id: 9,
       name: "다솔디자인",
       best: "abC",
       location: "서울시 서초구 명달로 104, 모차르트빌딩 7F",
-      number: "02.535.3431  02.535.3432   070.4279.0800",
+      number: "070.4279.0800",
       companyLogo: dasoleLogo,
       companyImg: ["dasoleCom1.JPG", "dasoleCom2.JPG", "dasoleCom3.JPG"],
       reviewImg1: dasoleComRe1,
@@ -547,6 +560,8 @@ const DataProvider = ({ children }) => {
       companyIntro:
         "DESIGN YOUR LIFE!\n고객의 필요, 입장, 사용자의 공간 이해, 상식으로부터\n시대의 트렌드와 조합한 공간 연출 서비스!\n고객의 삶과 소통하는 공간을 연출하는 다솔!",
       mainIMG: dasoleMain,
+      companyVideo:"shopVideo9.mp4"
+    
     },
   ]);
 
