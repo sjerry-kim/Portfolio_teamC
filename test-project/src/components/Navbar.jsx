@@ -1,11 +1,12 @@
 import { useContext, useEffect, useRef, useState } from "react";
-import { Link as NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import DataContext from "../data/DataContext";
 import "../css/Navbar.css"
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import PangImage from "../img/Logo.png";
+import logo from "../img/logo_black.png";
 
 // login에서 가져온 import
 import {
@@ -23,6 +24,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { userLogout } from "../module/currentUser";
 
 const Navbar = () => {
+
+  const activeStyle = {color: "white"};
+
   const { action } = useContext(DataContext);
   const navigate = useNavigate();
   const loginuser = useSelector((state)=>(state.currentUser)) 
@@ -184,19 +188,26 @@ const Navbar = () => {
   return (
     <div className="navbar-box">
       <div className="navbar-logo-div">
-        <NavLink to="/"><img src={PangImage} width={130}></img></NavLink>
+        <NavLink to="/"><img src={logo} width={130}></img></NavLink>
       </div>
       <div className="navbar-menu-big-div">
-        <NavLink to="/main/portfolio">업체 포트폴리오</NavLink>
+        <NavLink to="/main/portfolio" style={ 
+        ({isActive})=> isActive ? activeStyle : undefined
+      }>업체 포트폴리오</NavLink>
         <NavLink
           to="/main/estimation"
+          style={ 
+            ({isActive})=> isActive ? activeStyle : undefined
+          }
           onClick={() => {
             action.setReciept([]);
           }}
         >
           맞춤 견적 짜기
         </NavLink>
-        <NavLink to="/main/map">주변 업체 찾기</NavLink>
+        <NavLink to="/main/map" style={ 
+        ({isActive})=> isActive ? activeStyle : undefined
+      }>주변 업체 찾기</NavLink>
       </div>
       {window.sessionStorage.getItem("login") == 'true' ? (
         <div className="navbar-log-div">

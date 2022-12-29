@@ -32,7 +32,9 @@ function MyPageProfileModal() {
       photoURL: `${URL.createObjectURL(file)}`
     }).then(() => {
       // Profile updated!
-      window.sessionStorage.setItem("photoURL", null)
+      window.sessionStorage.setItem("photoURL", URL.createObjectURL(file))
+      // setTimeout(()=>{window.location.reload();}, 3000);
+      console.log("성공")
     }).catch((error) => {
       // An error occurred
       // ...

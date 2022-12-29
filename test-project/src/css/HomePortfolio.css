@@ -1,8 +1,21 @@
 .homeportfolio-com {
-    width: 80vw;
-    height: 550px;
+    width: 90vw;
+    height: 600px;
     bottom: 20px;
 }
+
+.homeportfolio-com img {
+    margin-top: 30px;
+    width : 650px;  
+    height : 400px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    filter: brightness(75%)
+    
+}
+.homeportfolio-com img:hover {
+
+}
+
 
 .homeportfolio-imgDiv{
     padding-left: 30px;
@@ -12,7 +25,10 @@
 
 .homeportfolio-info {
     position: relative;
-    font-size: 40px;
-    left: 1110px;
+    font-size: 50px;
+    text-shadow: 2px 3px 5px black;
+    left: 950px;
+    bottom: 40px;
+
 }
 

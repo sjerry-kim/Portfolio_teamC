@@ -96,7 +96,7 @@ const Join = props => {
       window.sessionStorage.setItem("login", true);
       window.sessionStorage.setItem("uid", user.uid);
       window.sessionStorage.setItem("email", user.email);
-      window.sessionStorage.setItem("photoURL", user.photoURL);
+      // window.sessionStorage.setItem("photoURL", user.photoURL);
       setTimeout(() => {
         navigate('/')
       }, 800);
@@ -242,7 +242,7 @@ const Join = props => {
           </select>
           </div>
         </form>
-        
+       
         <div id="wrapper">
           <label id="label">
             <input id="hiddenCheckbox" type="checkbox" />
