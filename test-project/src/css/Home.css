@@ -1,8 +1,13 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+}
+
 body {
     margin:0;
     font-family:Georgia;
     overflow-y: hidden;
-
   }
   #home-container .home-box {
     width:100vw;
@@ -51,18 +56,30 @@ body {
     background-size: cover;
   }
   .two {
-    background-image: url(../img/backgroundImg2.jpg);
+    /* background-image: url(../img/backgroundImg2.jpg); */
+    background-image: url(../img/test1.jpg);
     background-size: cover;
+    position: relative;
   }
   .three {
     background-image: url(../img/backgroundImg3.jpg);
     background-size: cover;
   }
-  
+
+.home-arrow-title{
+  position: absolute;
+  display: inline-block;
+  margin-top: 200px;
+  bottom: 40px;
+  left: -7px;
+  font-size: 25px;
+  color: white;
+  font-family: 'Noto Sans KR', sans-serif;
+}
 .home-arrow-container{
   position: fixed;
   z-index:11; /*숫자가 클수록 앞에 옴*/
-  bottom: -390px;
+  bottom: -385px;
   left: 180px;
 }
 
@@ -160,9 +177,7 @@ background-image: url("../img/arrow.png");
     width: 100vh;
     overflow-y: auto;
   }
-  .outer::-webkit-scrollbar {
-    /* 화면에서 스크롤바 안보이게 */
-  }
+
   .home-slick-position1{
     position: absolute !important; 
     top: 300px !important; 
@@ -177,3 +192,53 @@ background-image: url("../img/arrow.png");
   .homeportfoliocard-card-main{
     background-color: red;
   }
+  .homecontactus-cp-p{
+    font-size: 13px;
+    font-weight: lighter;
+    position: relative;
+    left: 1245px;
+    top: 0px;
+    width: 500px;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: white;
+  }
+
+  @media screen and (max-width: 1440px),(max-height: 789px) {
+    .home-logo{
+      position:fixed;
+      left: 90px;
+      top: 30px;
+      width: 180px;
+    }
+    .home-arrow-container{
+      position: fixed;
+      z-index:11; /*숫자가 클수록 앞에 옴*/
+      bottom: -325px;
+      left: 180px;
+    }
+    .home-arrow-title{
+      position: absolute;
+      display: inline-block;
+      margin-top: 200px;
+      bottom: 35px;
+      left: -6px;
+      font-size: 20px;
+      color: white;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    .arrow{
+      width: 15px; 
+      height: 15px;
+    }
+    
+    .homecontactus-cp-p {
+      font-size: 12px;
+      font-weight: lighter;
+      position: relative;
+      left: 850px;
+      top: -0px;
+      width: 500px;
+      font-family: 'Noto Sans KR', sans-serif;
+      color: rgb(255, 255, 255);
+    }
+}

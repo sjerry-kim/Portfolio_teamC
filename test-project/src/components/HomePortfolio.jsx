@@ -15,7 +15,7 @@ const HomePortfolio = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 2,
     slidesToScroll: 1,
     arrows: false,
@@ -27,21 +27,21 @@ const HomePortfolio = () => {
 		//prevArrow: <SamplePrevArrow />
   };
   const imgArray = ([
-    {img : "agioMain.JPG"},
-    {img : "dasoleMain.JPG"},
-    {img : "dawonMain.JPG"},
-    {img : "evianMain.JPG"},
-    {img : "idasMain.JPG"},
-    {img : "jyMain.JPG"},
-    {img : "monoMain.JPG"},
-    {img : "oneMain.JPG"},
-    {img : "purenMain.JPG"},
+    {img : "agioCom2.JPG"},
+    {img : "dasoleCom2.JPG"},
+    {img : "dawonCom3.JPG"},
+    {img : "evianCom3.jpg"},
+    {img : "idasCom2.JPG"},
+    {img : "jyCom1.jpg"},
+    {img : "monoCom2.JPG"},
+    {img : "oneCom2.jpg"},
+    {img : "purenCom1.jpg"},
   ]);
 
   return (
     <div>
       <div className="homeportfolio-info">
-        <p>Partner Companies</p>
+        <p className="homeportfolio-info-title">Partner Companies</p>
       </div>
     
     <Slider className="homeportfolio-com" {...settings}>

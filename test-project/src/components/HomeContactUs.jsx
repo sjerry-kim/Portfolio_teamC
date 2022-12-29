@@ -102,9 +102,7 @@ const HomeContactUs = () => {
         </div>
       </button>
 
-      <div className="homecontactus-cp">
-        <p>© Copyright 2022 Today Design Company. All Rights Reserved.</p>
-      </div>
+      
 
       <div className="homecontactus-formBox">
         <form className="homecontactus-form" ref={form2} onSubmit={sendEmail2}>
@@ -165,7 +163,7 @@ const HomeContactUs = () => {
               variant="btn btn-outline-light"
               type="submit"
             >
-              보내기
+              <p>보내기</p>
             </Button>
           </div>
         </form>

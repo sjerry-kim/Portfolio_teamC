@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'twayair';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+  .notosanskr * { 
+   font-family: 'Noto Sans KR', sans-serif;
+  }
 .homeportfolio-com {
     width: 90vw;
     height: 600px;
@@ -6,11 +17,10 @@
 
 .homeportfolio-com img {
     margin-top: 30px;
-    width : 650px;  
+    width : 700px;  
     height : 400px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    filter: brightness(75%)
-    
+    filter: brightness(80%);
 }
 .homeportfolio-com img:hover {
 
@@ -20,15 +30,37 @@
 .homeportfolio-imgDiv{
     padding-left: 30px;
     padding-right: 30px;
-
 }
 
 .homeportfolio-info {
+    font-family: 'twayair';
     position: relative;
-    font-size: 50px;
-    text-shadow: 2px 3px 5px black;
-    left: 950px;
-    bottom: 40px;
-
+    font-size: 55px;
+    
+    left: 1075px;
+    bottom: 20px;
+    color: rgba(255, 255, 255, 0.863)
 }
-
+.homeportfolio-info-title{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: lighter;
+    text-shadow: 2px 2.5px 0px #00000070;
+}
+@media screen and (max-width: 1440px),(max-height: 789px) {
+    .homeportfolio-com img {
+        position: relative;
+        left: 20px;
+        margin-top: -10px;
+        width : 520px;  
+        height : 300px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        filter: brightness(75%);
+    }
+    .homeportfolio-info {
+        font-family: 'twayair';
+        position: relative;
+        font-size: 40px;
+        left: 792px;
+        bottom: 40px;
+    }
+}
