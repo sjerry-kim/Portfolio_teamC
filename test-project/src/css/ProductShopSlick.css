@@ -1,9 +1,9 @@
-/* import 따로 */
-
-/* ShopContainer 부분 */
-/* .outer {
-  background: #9cbebd;
-} */
+@font-face {
+  font-family: 'Chosunilbo_myungjo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 .top {
   height: 102vh;
@@ -31,9 +31,7 @@
   height: 100vh;
   box-sizing: border-box;
 } /*위 오른쪽 아래 왼쪽*/
+.Product-shopimg h1{
+  font-family: 'Chosunilbo_myungjo';
 
-.Product-logo {
-  position: relative;
-  left: 30%;
-  color: white;
 }

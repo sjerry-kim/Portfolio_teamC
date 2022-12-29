@@ -465,7 +465,7 @@ const DataProvider = ({ children }) => {
       reviewImg5: dawonComRe5,
       reviewImg6: dawonComRe6,
       reviewTitle1: "다원에 대형카페 시공 맡겼어요",
-      reviewTitle2: "정말 예쁘게 잘됬어요~~",
+      reviewTitle2: "정말 예쁘게 잘되었어요~~",
       reviewTitle3: "저의 첫 카페 오픈^^",
       reviewTitle4: "다음에도 여기서 할꺼예요",
       reviewTitle5: "진짜 전문업체 맞네요",
