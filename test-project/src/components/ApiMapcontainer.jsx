@@ -98,56 +98,45 @@ const ApiMapContainer = ({ searchPlace }) => {
   }, [searchPlace]);
 
   return (
-    <div
-      id="api-TopMap"
-      style={{
-        backgroundColor: "rgb(241,238,235)",
-      }}
-    >
-      <div
-        id="api-myMap"
-        style={{
-          width: "1450px",
-          height: "820px",
-          position: "absolute",
-        }}
-      ></div>
-      <div id="api-Map"></div>
+    <div id="api-TopMap">
+      <div id="api-myMap"></div>
       <div id="api-midMap">
         <li
           style={{
             listStyle: "none",
           }}
         >
-          <div id="api-result-list">
-            {Places.map((item, i) => (
-              <div key={i}>
-                <span>{i + 1}</span>
-                <div>
-                  <h5>{item.place_name}</h5>
-                  {item.road_address_name ? (
-                    <div>
-                      <span>도로명 : {item.road_address_name}</span>
-                      <br />
-                      <span>지번 : {item.address_name}</span>
-                    </div>
-                  ) : (
-                    <span>
-                      지번 : {item.address_name}
-                      <br />
-                    </span>
-                  )}
-                  <span>
-                    {item.phone ? (
-                      <span>연락처: {item.phone}</span>
+          <div id="api-result-list-body">
+            <div id="api-result-list">
+              {Places.map((item, i) => (
+                <div key={i}>
+                  <span>{i + 1}</span>
+                  <div>
+                    <h5>{item.place_name}</h5>
+                    {item.road_address_name ? (
+                      <div>
+                        <span>도로명 : {item.road_address_name}</span>
+                        <br />
+                        <span>지번 : {item.address_name}</span>
+                      </div>
                     ) : (
-                      <span></span>
+                      <span>
+                        지번 : {item.address_name}
+                        <br />
+                      </span>
                     )}
-                  </span>
+                    <span>
+                      {item.phone ? (
+                        <span>연락처: {item.phone}</span>
+                      ) : (
+                        <span></span>
+                      )}
+                    </span>
+                  </div>
                 </div>
-              </div>
-            ))}
-            <div id="api-pagination"></div>
+              ))}
+              <div id="api-pagination"></div>
+            </div>
           </div>
         </li>
       </div>
