@@ -218,6 +218,7 @@ const Navbar = () => {
           <button className="navbar-loginbtn" onClick={()=>{
           window.sessionStorage.setItem("login", false);
           window.sessionStorage.setItem("photoURL", null);
+          window.sessionStorage.setItem("googleLogin", false);
           alert("로그아웃하였습니다")
           navigate('/')
         }}>
