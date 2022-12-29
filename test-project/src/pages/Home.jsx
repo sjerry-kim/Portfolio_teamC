@@ -54,8 +54,12 @@ const Home = () => {
       <div class="center-con">
         <div class="round">
             <div id="cta">
+            <div className="home-arrow-title">Scroll</div>
                 <span class="arrow primera next "></span>
                 <span class="arrow segunda next "></span>
+                <div className="homecontactus-cp">
+                  <p className="homecontactus-cp-p">© Copyright 2022 Today Design Company. All Rights Reserved.</p>
+                </div>
             </div>
         </div>
     </div>
