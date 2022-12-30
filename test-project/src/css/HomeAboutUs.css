@@ -27,7 +27,6 @@
 }
 .homeaboutus-info{
     position: relative;
-    right: 316px;
     font-family: 'Noto Sans KR', sans-serif;
     margin-top: 20px;
     font-weight: lighter;
@@ -42,7 +41,7 @@
 .homeaboutus-company{
     position: relative;
     font-family: 'Noto Sans KR', sans-serif;
-    margin-top: 15px;
+    margin-top: 10px;
     font-weight: lighter;
 }
 
@@ -63,14 +62,13 @@
     }
     .homeaboutus-info{
         position: relative;
-        right: 155px;
         font-size: 24px;
         margin-top: 10px;
     }
     .homeaboutus-info2{
         position: relative;
         font-size: 24px;
-        margin-top: 3px;
+        margin-top: 10px;
     }
     
     .homeaboutus-company{

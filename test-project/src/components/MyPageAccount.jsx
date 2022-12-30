@@ -87,11 +87,11 @@ const MyPageAccount = () => {
         <div className="mypageaccount-info-div">
           <div className="mypageaccount-info-div-box">
             <label style={{ paddingRight: "14px" }}>Name</label>
-            <input type="text" value={name} disabled />
+            <input type="text" value={parseSFU.displayName} disabled />
           </div>
           <div className="mypageaccount-info-div-box">
             <label>E-mail</label>
-            <input type="text" value={email} disabled />
+            <input type="text" value={parseSFU.email} disabled />
           </div>
         </div>
       </div>

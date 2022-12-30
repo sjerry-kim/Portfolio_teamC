@@ -125,3 +125,20 @@
 
 
 
+@media screen and (max-width: 1440px),(max-height: 789px) {
+  .estquestion-Wrapper {
+    position: relative;
+    right: 140px;
+    background-image: url(../img/EstStart-img10.png);
+    background-size: 800px  ;
+    background-color: transparent;
+    background-position-x: -110px;
+    background-position-y: -120px;
+    width: 600px;
+    height: 600px;
+    margin: 100px auto ;
+    margin-top: 145px;
+    border-radius: 5px;
+    border: none;
+  }
+}
