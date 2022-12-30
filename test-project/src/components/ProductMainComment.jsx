@@ -46,7 +46,7 @@ const MainComment = ({ newArray, getData }) => {
       {newArray.map((item, i) => (
         <div
           style={{
-            margin: "15px",
+            margin: "5px",
           }}
         >
           <p style={{ margin: 0, fontWeight: "bold" }}>{item.name}</p>

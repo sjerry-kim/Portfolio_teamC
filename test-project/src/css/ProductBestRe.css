@@ -93,3 +93,42 @@
   font-family: "Chosunilbo_myungjo";
 
 }
+
+/*
+ column 가로
+ row 세로
+*/
+
+@media screen and (max-width: 1440px),(max-height: 789px) {
+  .Product-reviewCards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 95vw;
+    margin-left: 10px;
+    margin-top: 20px;
+    gap: 35px 10px;
+  }
+  .Product-reCard{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: stretch;
+    width: 400px;
+    height: 280px;
+    margin-left:15px;
+    margin-top: 30px;
+
+  }
+
+  .bestReviews_cardIMG img{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: stretch;
+    width: 400px;
+    height: 280px;
+  }
+
+}
+
