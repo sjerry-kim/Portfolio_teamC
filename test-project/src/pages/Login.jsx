@@ -12,8 +12,12 @@ import {
   signInWithEmailAndPassword,
   signOut,
   EmailAuthProvider,
+  setPersistence,
+  browserSessionPersistence,
+  browserLocalPersistence,
 } from "firebase/auth";
 import { auth } from "../data/firebase";
+import db from "../data/firebase";
 import "../css/Login.css";
 import DataContext from "../data/DataContext";
 
@@ -104,6 +108,10 @@ const Login = () => {
   const emailLogin = async () => {
     const auth = getAuth();
     try {
+      // await
+      // db.auth().setPersistence(db.auth.Auth.Persistence.SESSION);
+      setPersistence(auth, browserSessionPersistence);
+      console.log("로그인유지 성공")
       const userCredential = await signInWithEmailAndPassword(auth, email, pw);
       const user = userCredential.user;
       console.log(user);
@@ -130,6 +138,7 @@ const Login = () => {
     await signOut(auth);
     // 로컬스토리지에 로그인 상태 저장
     window.sessionStorage.setItem("login", false);
+    window.sessionStorage.setItem("googleLogin", false);
     // window.sessionStorage.setItem("photoURL", null);
     // window.sessionStorage.removeItem("uid"); // 로컬써야 지워짐
     // window.sessionStorage.removeItem("displayName");

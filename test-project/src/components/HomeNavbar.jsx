@@ -189,7 +189,7 @@ const HomeNavbar = () => {
     //}, []);
     return (  
         <div >
-            <Menu right width={"400px"} >
+            <Menu className='homebm' right width={"400px"} >
               <div className='homenamebox'>
               {
           

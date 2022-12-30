@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Chosunilbo_myungjo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 ::-webkit-scrollbar-track {
   background: rgb(241, 238, 235); /* 스크롤바의 색상 */
 }
@@ -23,6 +30,8 @@
 }
 .form-control::placeholder {
   text-align: center;
+  font-family: 'Chosunilbo_myungjo';
+
 }
 .form-control:focus {
   outline:0ch;
@@ -32,4 +41,13 @@
   -moz-box-shadow: 0px 0px 5px rgba(56, 169, 240, 0);
   box-shadow: 0px 0px 5px rgba(56, 169, 240, 0);
 }
+
+.question-text{
+  margin-left: 30px;
+  
+}
+.commentInsert p{
+  font-family: 'Chosunilbo_myungjo';
+}
+
 

@@ -1,3 +1,15 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+}
+@font-face {
+  font-family: 'twayair';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Position and sizing of burger button */
 .bm-burger-button {
     position: relative;
@@ -93,13 +105,16 @@
     margin-top: 10px;
   }
   .home-mypagebtn{
+    font-family: 'twayair';
     background-color: #1b1b1b00;
     color: white;
     border: none;
     float: left;
     clear: both;
+
   }
   .homename{
+    font-family: 'Noto Sans KR', sans-serif;
     position: relative;
     top: 15px;
     font-size: 20px;
@@ -108,6 +123,7 @@
   }
 
   .homeLogin-Btn{
+    font-family: 'Noto Sans KR', sans-serif;
     position: relative;
     left: 225px;
     width: 100px;
@@ -120,6 +136,7 @@
     text-align: center  !important;
   }
   .homeLogout-Btn{
+    font-family: 'Noto Sans KR', sans-serif;
     position: relative;
     left: 90px;
     width: 100px;
@@ -133,7 +150,15 @@
   }
   
 
-  
+  .hometext1{
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  .hometext2{
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  .hometext3{
+    font-family: 'Noto Sans KR', sans-serif;
+  }
   .hometext1:hover{
     color: rgb(156, 156, 156);
     transition: 0.5s;
@@ -146,3 +171,81 @@
     color: rgb(156, 156, 156);
     transition: 0.5s;
   }
+
+  @media screen and (max-width: 1440px),(max-height: 789px) {
+    .bm-burger-button {
+      position: relative;
+      width: 30px;
+      height: 24px;
+      float: right;
+      top: 70px;
+      margin-right: 70px;
+    }
+    .homebm{
+      width: 340px !important;
+    }
+    
+    .homeLogin-Btn{
+      position: relative;
+      left: 175px;
+      width: 100px;
+      border: none;
+      border: 1px solid rgba(255, 255, 255, 0.815);
+      background-color: rgba(255, 255, 255, 0);
+      color: rgb(255, 255, 255);
+      padding-bottom: 5px;
+      font-size: 20px;
+      text-align: center  !important;
+    }
+    .hometext1{
+      font-size: 24px;padding-right:-100px ;
+    }
+    .hometext2{
+      font-size: 24px;padding-right:-100px ;
+    }
+    .hometext3{
+      font-size: 24px;
+    }
+    .homenamebox{
+      width: 250px;
+      margin-top: 10px;
+    }
+    
+  .homeLogin-Btn{
+    position: relative;
+    left: 180px;
+    width: 80px;
+    height: 35px;
+    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.815);
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(255, 255, 255);
+    padding-bottom: 5px;
+    font-size: 16px;
+    text-align: center  !important;
+  }
+  .homeLogout-Btn{
+    position: relative;
+    left: 25px;
+    width: 80px;
+    height: 35px;
+    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.815);
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(255, 255, 255);
+    padding-bottom: 5px;
+    font-size: 16px;
+    text-align: center  !important;
+  }
+  .home-mypagebtn{
+    background-color: #1b1b1b00;
+    color: white;
+    border: none;
+    float: left;
+    clear: both;
+    font-size: 27px;
+  }
+  .homename{
+    font-size: 17px;
+  }
+}

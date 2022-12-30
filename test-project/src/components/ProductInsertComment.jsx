@@ -1,6 +1,5 @@
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useContext, useEffect, useState } from "react";
@@ -27,6 +26,8 @@ import {
 import { auth } from "../data/firebase";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
+
+
 
 const ProductInsertComment = ({ getData }) => {
   const { state, action } = useContext(DataContext);
@@ -65,7 +66,7 @@ const ProductInsertComment = ({ getData }) => {
   };
 
   return (
-    <div>
+    <div className="commentInsert">
       <Form onSubmit={InsertComment} className="scroll-Color-insert">
         <Form.Group
           controlId="exampleForm.ControlTextarea1"
@@ -75,6 +76,7 @@ const ProductInsertComment = ({ getData }) => {
             justifyContent: "center",
             marginTop: "35px",
             marginBottom: "55px",
+            width:"45vw",
           }}
         >
           <Form.Control
@@ -93,6 +95,7 @@ const ProductInsertComment = ({ getData }) => {
               border: "none",
               fontSize: "17px",
               color: "black",
+              fontFamily: 'Chosunilbo_myungjo',
               backgroundColor: "rgb(241,238,235)",
             }}
           >
@@ -103,6 +106,7 @@ const ProductInsertComment = ({ getData }) => {
               style={{
                 color: "rgba(200,0,0,0.8)",
                 fontSize: "24px",
+            
               }}
             />
           </Button>

@@ -1,53 +1,98 @@
-.Product-shopInfo {
-  background-color: rgb(241, 238, 235);
-  height: 102vh;
-  box-sizing: border-box;
+@font-face {
+  font-family: "Chosunilbo_myungjo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
+
+
+
+
+
+.Product-shopInfo {
+  margin-top: -10px;
+  margin-left: 50px;
+} 
 
 .Product-infoCards {
   width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 56px;
+  margin-top: 150px;
+  margin-left: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 5px;
+  column-gap: 5px;
 }
 
-.Product-infoCard {
-  width: 400px;
-  height: 800px;
-  margin-right: 50px;
-  margin-top: 55px;
+.Product-infoCard:nth-child(1) {
+	grid-column: 1/2;
+  grid-row:1/2
+}
+
+.Product-comment:nth-child(3){
+  grid-column:2/4;
+  grid-row:1/4;
+}
+
+.Product-video:nth-child(2){
+  grid-column: 1/2;
+  grid-row: 2/4;
+}
+
+video::-webkit-media-controls-fullscreen-button {
+	display: none !important; }
+
+video{
+  margin-bottom: 10px;
 }
 
 .Product-comment {
-  background-color: rgb(241, 238, 235);
-  width: 50%;
-  bottom: 270px;
-  height: 200px;
+  right: 17px;
+  height: 605px;
+  width: 903px;
+  border : 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  
 }
 
-h2 {
-  width: 330px;
-  height: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-h2 > img {
-  width: 35%;
+.Product-infoCard{
+  border : 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin-right: 1px;
 }
 
-/*
-.infoCard{
-  margin-right: auto;
+.Product-detail{
+  margin-top: 25px;
+  margin-left: 20px;
 }
 
-/* .reCard2{
-  float: none;
-  margin: 0 auto;
-} */
+.Product-commentLogIn{
+  margin-top: 25px;
+  margin-left: 20px;
+  
+}
+.Product-commentLogIn h2{
+  font-family: "Chosunilbo_myungjo";
+} 
+.Product-commentLogIn p{
+  font-family: "Chosunilbo_myungjo";
+} 
+.Product-commentLogOut{
+  margin-top: 25px;
+  margin-left: 20px;
+}
 
-/* .comment{
-  margin-left: auto;
-} */
+.Product-commentLogOut > p{
+  margin-left: 10px;
+}
+
+ .Product-video{
+  border-radius: 5px;
+  height: 400px;
+} 
+
+video{
+  margin-top: -100px;
+}
