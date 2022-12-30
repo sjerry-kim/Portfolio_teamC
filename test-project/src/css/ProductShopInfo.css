@@ -111,41 +111,8 @@ video{
 
 
 @media screen and (max-width: 1440px),(max-height: 789px) {
-  .Product-shopInfo{
-    margin-top: -60px;
-    margin-left: -15px;
-  }
+  .Product-infoCards{
 
-  .Product-infoCard{
-    width: 100%;
-  }
-
-  .Prloduct-detail h2{
-    margin: 30px auto;
-    margin-bottom: 15px;
-    font-weight: bold;
-  }
-
-  .Prloduct-detail p{
-    margin: 10px auto;
-    font-size: 1.1em;
-    font-family: "Chosunilbo_myungjo";
-  }
-
-  .Product-video video{
-    width: 500px !important;
-    height: 300px !important;
-    margin-top: -10px;
-    }
-
-  .Product-comment{
-    width: 80%;
-    height: 80%;
-  }
-
-
-  /* .Product-infoCards{
-    border: 1px solid red;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 90px;
@@ -154,7 +121,6 @@ video{
   }
 
   .Product-infoCard{
-    border: 1px solid blue;
     width: 500px;
     height: 220px;
   }
@@ -173,7 +139,6 @@ video{
   }
 
   .Product-comment{
-    border: 1px solid blueviolet;
     height: 528px;
     width: 650px;
     

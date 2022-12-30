@@ -86,7 +86,7 @@ function InfoCard(props) {
           {window.sessionStorage.getItem("login") == "true" ? (
             <div>
               <div className="Product-commentLogIn">
-                <h2>한줄평 및 코멘트</h2>
+                <h2 className="Product-commentLogIn-h2">한줄평 및 코멘트</h2>
               </div >
               <ProductInsertComment getData={getData} />
               <div

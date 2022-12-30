@@ -35,8 +35,6 @@
   margin-left: 170px;
   column-gap: 55px;
   row-gap: -20px;
-  
-
 }
 
 .Product-reCard {
@@ -47,6 +45,11 @@
   margin-left: 50px;
   
 }
+.Product-commentLogIn-h2{
+  font-family: "Chosunilbo_myungjo";
+  
+}
+
 
 .Product-reCard > .product-bestReviews_cardIMG {
   color: #fff;
@@ -94,41 +97,32 @@
 
 }
 
-/*
- column 가로
- row 세로
-*/
 
 @media screen and (max-width: 1440px),(max-height: 789px) {
+  .Product-bestRe{
+    margin-top: 110px;
+  }
+  .Product-bestRe h1{
+    font-size: 30px;
+    margin-left: 30px;
+  }
   .Product-reviewCards{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1.2fr 1.5fr;
     width: 95vw;
-    margin-left: 10px;
-    margin-top: 20px;
-    gap: 35px 10px;
+    margin-left: 50px;
+    column-gap: 5px;
+    grid-template-rows: 1fr 1.2fr;
   }
   .Product-reCard{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    align-items: stretch;
     width: 400px;
     height: 280px;
     margin-left:15px;
-    margin-top: 30px;
-
   }
 
   .bestReviews_cardIMG img{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    align-items: stretch;
     width: 400px;
     height: 280px;
   }
 
 }
-
