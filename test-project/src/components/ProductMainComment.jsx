@@ -1,3 +1,4 @@
+import '../css/ProductMainComment.css';
 import { useEffect } from "react";
 import { useContext } from "react";
 import { useParams } from "react-router-dom";
@@ -34,34 +35,15 @@ const MainComment = ({ newArray, getData }) => {
   }, []);
 
   return (
-    <div 
-      style={{
-        height: "400px",
-        overflow: "auto",
-        padding: "10px",
-        width: "100%",
-        backgroundColor: "rgb(241,238,235)",
-      }}
-    >
+    <div className='productmaincomment-div'>
       {newArray.map((item, i) => (
-        <div
-          style={{
-            margin: "5px",
-          }}
-        >
-          <p style={{ margin: 0, fontWeight: "bold" }}>{item.name}</p>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              borderBottom: "1px solid rgba(0,0,0,0.1)",
-              paddingTop: "10px",
-            }}
-          >
+        <div className='productmaincomment-map-div'>
+          <p className='productmaincomment-map-name'>{item.name}</p>
+          <div className='productmaincomment-map-comment-div'>
             <p>{item.comment}</p>
             {user.displayName == item.name ? (
               <button
-                style={{ border: "none", backgroundColor: "transparent" }}
+                className='productmaincomment-map-btn'
                 onClick={async () => {
                   const review = firestore.collection("review");
                   const sameCommentDoc = query(
@@ -78,12 +60,7 @@ const MainComment = ({ newArray, getData }) => {
                   }, 1000);
                 }}
               >
-                <FontAwesomeIcon
-                  icon={faTrash}
-                  style={{
-                    color: "rgba(0,0,0,0.4)",
-                  }}
-                />
+                <FontAwesomeIcon icon={faTrash}/>
               </button>
             ) : (
               " "

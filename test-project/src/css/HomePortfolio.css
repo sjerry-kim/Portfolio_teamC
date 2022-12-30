@@ -63,4 +63,8 @@
         left: 792px;
         bottom: 40px;
     }
+    .homeportfolio-info-title{
+        position: relative;
+        left: 35px;
+    }
 }
