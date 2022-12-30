@@ -96,3 +96,41 @@ video{
 video{
   margin-top: -100px;
 }
+
+
+@media screen and (max-width: 1440px),(max-height: 789px) {
+  .Product-infoCards{
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 90px;
+    margin-left: 80px;
+    gap: 10px ;
+  }
+
+  .Product-infoCard{
+    border: 1px solid blue;
+    width: 500px;
+    height: 220px;
+  }
+
+  .Prloduct-detai div{
+    margin: 50px;
+  }
+
+  .Product-commentLogIn h2{
+    font-size: 23px;
+  }
+
+  .Product-video video{
+  width: 500px !important;
+  margin-top: -150px;
+  }
+
+  .Product-comment{
+    border: 1px solid blueviolet;
+    height: 528px;
+    width: 650px;
+    
+  }
+}

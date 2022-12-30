@@ -60,7 +60,7 @@ function InfoCard(props) {
   return (
     <div className="Product-infoCards">
       <div className="Product-infoCard">
-        <div  className="Product-detail">
+        <div  className="Prloduct-detai">
           <div>
             <h2>
               {market ? market.name : "없는 정보 입니다"}
