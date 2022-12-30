@@ -105,7 +105,7 @@ const Login = () => {
     });
   }, []);
 
-  const emailLogin = async () => {
+  const emailLogin = async() => {
     const auth = getAuth();
     try {
       // await
@@ -119,6 +119,7 @@ const Login = () => {
       window.sessionStorage.setItem("uid", user.uid);
       window.sessionStorage.setItem("displayName", user.displayName);
       window.sessionStorage.setItem("email", user.email);
+      window.sessionStorage.setItem("profileClick", false)
       // window.sessionStorage.setItem("photoURL", user.photoURL);
       navigate("/");
       //dispatch(userLogin(user));

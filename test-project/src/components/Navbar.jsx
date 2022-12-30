@@ -220,6 +220,8 @@ const Navbar = () => {
           window.sessionStorage.setItem("login", false);
           window.sessionStorage.setItem("photoURL", null);
           window.sessionStorage.setItem("googleLogin", false);
+          window.sessionStorage.setItem("firebase:authUser:AIzaSyCMoXUqkehoGjCep79k-dmXJLJfb-HZuFo:[DEFAULT]", null)
+          window.sessionStorage.setItem("profileClick", null)
           alert("로그아웃하였습니다")
           navigate('/')
         }}>

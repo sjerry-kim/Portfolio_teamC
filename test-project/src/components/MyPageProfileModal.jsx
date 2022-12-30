@@ -13,7 +13,10 @@ function MyPageProfileModal({setUpdate}) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleShow = () => {
+    window.sessionStorage.setItem("profileClick", true)
+    setShow(true)
+  };
 
   // const {action, state} = useContext(DataContext);
   const [file, setFile] = useState("");
@@ -33,7 +36,7 @@ function MyPageProfileModal({setUpdate}) {
     }).then(() => {
       // Profile updated!
       window.sessionStorage.setItem("photoURL", URL.createObjectURL(file))
-      setUpdate(URL.createObjectURL(file))
+      setUpdate(window.sessionStorage.getItem("firebase:authUser:AIzaSyCMoXUqkehoGjCep79k-dmXJLJfb-HZuFo:[DEFAULT]"))
       console.log("성공")
     }).catch((error) => {
       // An error occurred
