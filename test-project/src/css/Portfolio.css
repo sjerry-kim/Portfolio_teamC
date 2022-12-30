@@ -418,3 +418,85 @@
     opacity: 0.55;
     
 }
+
+@media screen and (max-width: 1440px),(max-height: 789px) {
+  .click_card1{
+    font-family: 'Ycomputer-Regular';
+    color:#C3BBAF;
+    margin-bottom: 0px;
+    margin-left: 3px;
+    font-size: medium;
+    animation: blink-effect 1.6s step-end infinite;
+    position: relative;
+    bottom: 52px;
+  } 
+  .click_card2 span {
+    z-index: 10000;
+    position: absolute;
+    bottom: 140px;
+    left: 52%;
+    width: 10px;
+    height: 10px;
+    margin-left: -12px;
+    border-left: 1.4px solid #C3BBAF;
+    border-bottom: 1.4px solid #C3BBAF;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: sdb 1.5s infinite;
+    animation: sdb 1.5s infinite;
+    box-sizing: border-box;
+  }
+  .portfolio-infos > .portfolio_intro{
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 15px;
+    font-weight: 600;
+    white-space: pre-wrap;
+    text-align: center;
+    margin-top: 32px;
+    color: #291b0b;
+  }
+  .portfolio-name{
+    font-family: 'Chosunilbo_myungjo';
+    padding-top: 15px;
+    font-size: 26px;
+    letter-spacing: 10px;
+    text-align: end;
+    margin-right: 8px;
+    font-weight: bold;
+    color: #291b0b;
+  }
+  .portfolio-cards .portfolio-card{
+    position: relative;
+    margin: auto;
+    bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #8d8b8009;
+    background-color: #fdfcfa;
+    height: 580px;
+    width: 400px;
+    box-shadow: 10px 0px 10px 0px rgba(0, 0, 0, 0.15);
+}
+.portfolio-card .portfolio-image img{
+  border-radius: 5px;
+  margin-top: 23px;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin-top: -5px;
+  left: 5px;
+  padding: 10px 5px 0px 5px;
+}
+.portfolio_btn {
+  position: fixed;
+  font-size: 16px;
+  width: 130px;
+  height: 40px;
+  margin-top: 30px;
+  margin-left: 250px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  color: #291b0b;
+  background: #FDFCFA;
+}
+}

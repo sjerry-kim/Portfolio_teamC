@@ -18,7 +18,7 @@ input:focus {
   width: 550%;
   position: relative;
   right: 700px;
-  bottom: 10px;
+  bottom: 50px;
   margin-left: 30px;
   font-family: 'Noto Sans KR', sans-serif;
 }
@@ -39,7 +39,7 @@ input:focus {
 
   .homecontactus-middletitle {
     font-size: 20px;
-    margin-top: -250px;
+    margin-top: -300px;
     margin-left: 15px;
     font-family: 'twayair';
   }
@@ -52,13 +52,7 @@ input:focus {
   }
   
 
-.homecontactus-button-one {
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 30px;
-}
+
 
 .homecontactus-button-one:before:after {
   margin: 0;
@@ -75,8 +69,8 @@ input:focus {
   justify-content: center;
   align-items: center;
   position: relative;
-  right: 700px;
-  top: 70px;
+  right: 670px;
+  top: 30px;
 }
 
 .homecontactus-button-one::after {
@@ -252,6 +246,15 @@ input:focus {
 
 
 @media screen and (max-width: 1440px),(max-height: 789px) {
+  .homecontactus-titleBox{
+    width: 550%;
+    position: relative;
+    right: 730px;
+    bottom: 50px;
+    margin-left: 30px;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  
   .homecontactus-title {
     margin-top: -70px;
     font-size: 80px;
@@ -275,7 +278,7 @@ input:focus {
     align-items: center;
     position: relative;
     right: 700px;
-    top: 40px;
+    top: 25px;
   }
   .homecontactus-forminput {
     display: inline-block;

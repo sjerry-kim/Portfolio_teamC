@@ -104,3 +104,21 @@ body {
   -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
   transform: translateX(-9%) translateY(-25%) rotate(45deg);
 }
+
+@media screen and (max-width: 1440px),(max-height: 789px) {
+  .eststart-Wrapper {
+    z-index: 12 !important;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    width: 600px;
+    height: 550px;
+    margin: 100px auto;
+    margin-top: 180px;
+    border: 0.5px solid #d6c5b7;
+    border-radius: 5px;
+    box-shadow: 5px 5px 19px rgb(157, 157, 157);
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+  }
+}
