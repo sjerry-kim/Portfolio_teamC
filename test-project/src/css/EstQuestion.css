@@ -90,11 +90,11 @@
 }
 
 .estquestion-menu button:hover{
-  color: #AE8D6C;
+  color: #CA8E8C;
 }
 
 .estquestion-menu.estquestion-effect-03 button:before {
-  color: #AE8D6C;
+  color: #CA8E8C;
   content: '[';
   display: block;
   font-size: 1.5em;
@@ -104,7 +104,7 @@
   top: 0;
 }
 .estquestion-menu.estquestion-effect-03 button:after {
-  color: #AE8D6C;
+  color: #CA8E8C;
   content: ']';
   display: block;
   font-size: 1.5em;

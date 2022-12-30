@@ -62,26 +62,18 @@ const ProductInsertComment = ({ getData }) => {
       console.error("Error", e);
     }
     getData(id);
-    document.querySelector(".question-text").value = "";
+    document.querySelector(".productinsertcomment-question-control").value = "";
   };
 
   return (
-    <div className="commentInsert">
-      <Form onSubmit={InsertComment} className="scroll-Color-insert">
+    <div className="productinsertcomment-div">
+      <Form onSubmit={InsertComment} className="productinsertcomment-form">
         <Form.Group
-          controlId="exampleForm.ControlTextarea1"
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            marginTop: "35px",
-            marginBottom: "55px",
-            width:"45vw",
-          }}
-        >
+          className="productinsertcomment-fromgroup"
+          controlId="exampleForm.ControlTextarea1" >
           <Form.Control
             as="textarea"
-            className="question-text"
+            className="productinsertcomment-question-control"
             onChange={e => {
               setText(e.target.value);
             }}
@@ -89,25 +81,12 @@ const ProductInsertComment = ({ getData }) => {
             rows={1}
           ></Form.Control>
           <Button
+            className="productinsertcomment-question-btn"
             variant="secondary"
             type="submit"
-            style={{
-              border: "none",
-              fontSize: "17px",
-              color: "black",
-              fontFamily: 'Chosunilbo_myungjo',
-              backgroundColor: "rgb(241,238,235)",
-            }}
           >
-            {" "}
-            {/**+ 2022-12-15 버튼에 들어가있던거 💛 onClick={sendRating} */}
             <FontAwesomeIcon
               icon={faCheck}
-              style={{
-                color: "rgba(200,0,0,0.8)",
-                fontSize: "24px",
-            
-              }}
             />
           </Button>
         </Form.Group>
@@ -118,27 +97,27 @@ const ProductInsertComment = ({ getData }) => {
 
 export default ProductInsertComment;
 
-const styles = {
-  container: {
-    display: "flex",
-    flexDirection: "column",
-  },
-  stars: {
-    display: "flex",
-    flexDirection: "row",
-  },
-  textarea: {
-    border: "1px solid #a9a9a9",
-    borderRadius: 5,
-    padding: 10,
-    margin: "20px 0",
-    minHeight: 100,
-    width: 300,
-  },
-  button: {
-    border: "1px solid #a9a9a9",
-    borderRadius: 5,
-    width: 300,
-    padding: 10,
-  },
-};
+// const styles = {
+//   container: {
+//     display: "flex",
+//     flexDirection: "column",
+//   },
+//   stars: {
+//     display: "flex",
+//     flexDirection: "row",
+//   },
+//   textarea: {
+//     border: "1px solid #a9a9a9",
+//     borderRadius: 5,
+//     padding: 10,
+//     margin: "20px 0",
+//     minHeight: 100,
+//     width: 300,
+//   },
+//   button: {
+//     border: "1px solid #a9a9a9",
+//     borderRadius: 5,
+//     width: 300,
+//     padding: 10,
+//   },
+// };

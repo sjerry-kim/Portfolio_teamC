@@ -19,21 +19,33 @@
   background: rgb(230, 218, 204); /* 스크롤바의 색상 */
   border-radius: 10px;
 }
-.form-control {
+
+.productinsertcomment-fromgroup{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 35px;
+  margin-bottom: 55px;
+  width: 45vw;
+}
+
+.productinsertcomment-question-control{
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   transition: none;
   border-radius: 0;
   resize: none;
-  background-color: rgb(241, 238, 235);
+  background-color: transparent;
   width: 55%;
+  margin-left: 30px;
 }
-.form-control::placeholder {
+
+.productinsertcomment-question-control::placeholder {
   text-align: center;
   font-family: 'Chosunilbo_myungjo';
 
 }
-.form-control:focus {
+.productinsertcomment-question-control:focus {
   outline:0ch;
   border-bottom:1px solid rgba(0, 0, 0, 0.2);
   background-color: rgba(240, 248, 255, 0);
@@ -42,12 +54,26 @@
   box-shadow: 0px 0px 5px rgba(56, 169, 240, 0);
 }
 
-.question-text{
+/* .productinsertcomment-question-control{
   margin-left: 30px;
-  
-}
-.commentInsert p{
+} */
+
+.productinsertcomment-question-btn{
+  border: none;
+  font-size: 17px;
+  color: black;
   font-family: 'Chosunilbo_myungjo';
+  background-color: transparent;
 }
 
+.productinsertcomment-question-btn svg{
+  color: rgba(200,0,0,0.8);
+  font-size: 24px;
+}
 
+@media screen and (max-width: 1440px),(max-height: 789px){
+  .productinsertcomment-question-control{
+    font-size: 0.9em;
+    line-height: 1.7;
+  }
+}
