@@ -188,7 +188,7 @@ const Navbar = () => {
     <div className="navbar-box">
       <div className="navbar-logo-div">
         <NavLink to="/">
-          <img src={logo} width={130}></img>
+          <img className="navbar-logo-div-img" src={logo}></img>
         </NavLink>
       </div>
       <div className="navbar-menu-big-div">
