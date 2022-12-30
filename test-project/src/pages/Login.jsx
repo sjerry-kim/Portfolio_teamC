@@ -48,6 +48,7 @@ const Login = () => {
     provider.addScope("profile");
     provider.addScope("email");
     const auth = getAuth();
+    setPersistence(auth, browserSessionPersistence);
     signInWithPopup(auth, provider)
       .then(result => {
         // 로그인된 결과를 구글인증을 통해서 확인 > 토큰 발급
