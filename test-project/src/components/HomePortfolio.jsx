@@ -21,7 +21,9 @@ const HomePortfolio = () => {
     arrows: false,
     autoplay: true,
     autoplaySpeed: 1500,
-    centerPadding: '10px'
+    centerPadding: '10px',
+    pauseOnHover: false, //마우스 올려도 안멈춤
+    pauseOnFocus: false,
     
     //nextArrow: <SampleNextArrow />,
 		//prevArrow: <SamplePrevArrow />
