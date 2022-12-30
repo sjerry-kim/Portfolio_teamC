@@ -1,0 +1,47 @@
+.productmaincomment-div{
+  height: 400px;
+  overflow: auto;
+  padding: 10px;
+  width: 100%;
+  background-color: rgb(241,238,235);
+}
+
+.productmaincomment-map-div{
+  margin: 5px;
+}
+
+.productmaincomment-map-name{
+  margin: 0;
+  font-weight: bold;
+}
+
+.productmaincomment-map-comment-div{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-top: 10px;
+}
+
+.productmaincomment-map-btn{
+  border: none;
+  background-color: transparent;
+}
+
+.productmaincomment-map-btn svg{
+  color: rgba(0,0,0,0.4);
+}
+
+@media screen and (max-width: 1440px),(max-height: 789px){
+  .productmaincomment-div{
+    height: 260px;
+  }
+
+  .productmaincomment-map-name{
+    font-size: 0.9em;
+  }
+
+  .productmaincomment-map-comment-div p{
+    font-size: 0.9em;
+  }
+
+}
