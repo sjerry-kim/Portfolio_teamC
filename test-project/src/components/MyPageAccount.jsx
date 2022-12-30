@@ -22,7 +22,7 @@ const MyPageAccount = () => {
   const email = parseSFU.email;
 
   useEffect(() => {
-    console.log(parseSFU.photoURL);
+    console.log(profile);
   }, []);
   // const [displayName, setDisplayName] = useState("");
   // const [email, setEmail] = useState("");
@@ -59,7 +59,7 @@ const MyPageAccount = () => {
             <img
               className="mypageaccount-img"
               src={profile}
-              alt="이미지 없음"
+              alt=""
             />
           </div>
         ) :  //이메일, 비번으로 로그인 했을 때
@@ -68,7 +68,7 @@ const MyPageAccount = () => {
             <img
               className="mypageaccount-img"
               src={require("../img/defaultProfile.jpeg")}
-              alt="이미지 없음"
+              alt=""
             />
             <MyPageProfileModal setUpdate={setUpdate} />
           </div>
@@ -77,7 +77,7 @@ const MyPageAccount = () => {
             <img
               className="mypageaccount-img"
               src={profile}
-              alt=" no img "
+              alt=""
             />
             <MyPageProfileModal setUpdate={setUpdate} />
           </div>

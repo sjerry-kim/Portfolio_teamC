@@ -6,15 +6,22 @@
 }
 
 .mypageaccount-wallpaper{
+  width: 450px;
   margin: auto;
+  margin-bottom: 240px;
+  margin-right: 10px;
   padding-top: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
 
 .mypageaccount-title{
   font-family: 'twayair';
   color: #291B0C;
-  font-size: 2.1em;
+  font-size: 2.8em;
   margin-top: -20px;
+  margin-bottom: 30px;
 }
 
 .mypateaccount-div{
@@ -22,14 +29,15 @@
 }
 
 .mypageaccount-img-div{
-  margin: 13px;
+  margin: 30px;
+  margin-bottom: 50px;
   display: flex;
   justify-content: center;
 }
 
 .mypageaccount-img{
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   background-size: cover;
   border-radius: 50%;
   border: 4px solid rgb(250, 247, 244);
@@ -38,27 +46,70 @@
 
 .mypageaccount-info-div{
   width: 100%;
-
 }
+
 .mypageaccount-info-div-box{
-  margin-bottom: 7px;
+  margin-bottom: 11px;
 }
 
 .mypageaccount-info-div label{
   font-family: 'twayair';
+  font-size: 1.1em;
   color: #291B0C;
   margin-right: 10px;
   padding-right: 10px;
   border-right: 1px solid #291b0c8a;
-  height: 25px;
+  height: 30px;
 }
 
 .mypageaccount-info-div input{
   font-family: 'twayair';
+  font-size: 1.1em;
   border: none;
   background-color: rgb(250, 249, 249);
   padding: 2px 5px;
   border-radius: 5px;
   color: #291B0C;
-  width: 220px;
+  width: 245px;
+}
+
+@media screen and (max-width: 1440px),(max-height: 789px) {
+  .mypageaccount-wallpaper{
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 500px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .mypageaccount-title{
+    margin-bottom: 20px;
+    font-size: 2.4em;
+  }
+
+  .mypageaccount-img-div{
+    margin: 20px;
+  }
+
+  .mypageaccount-img{
+    width: 110px;
+    height: 110px;
+    margin-bottom: 20px;
+  }
+
+  .mypageaccount-info-div-box{
+    margin: 8px auto;
+  }
+
+  .mypageaccount-info-div label{
+    font-size: 1em;
+    height: 25px;
+  }
+
+  .mypageaccount-info-div input{
+    font-size: 1em;
+    width: 235px;
+  }
+
 }
