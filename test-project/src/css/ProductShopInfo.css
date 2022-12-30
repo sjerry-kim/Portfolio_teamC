@@ -100,7 +100,6 @@ video{
 
 @media screen and (max-width: 1440px),(max-height: 789px) {
   .Product-infoCards{
-    border: 1px solid red;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 90px;
@@ -109,7 +108,6 @@ video{
   }
 
   .Product-infoCard{
-    border: 1px solid blue;
     width: 500px;
     height: 220px;
   }
@@ -128,7 +126,6 @@ video{
   }
 
   .Product-comment{
-    border: 1px solid blueviolet;
     height: 528px;
     width: 650px;
     

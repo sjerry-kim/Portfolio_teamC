@@ -34,7 +34,7 @@ const MainComment = ({ newArray, getData }) => {
   }, []);
 
   return (
-    <div
+    <div 
       style={{
         height: "400px",
         overflow: "auto",
