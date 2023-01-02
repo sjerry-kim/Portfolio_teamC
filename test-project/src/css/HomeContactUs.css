@@ -39,7 +39,7 @@ input:focus {
 
   .homecontactus-middletitle {
     font-size: 20px;
-    margin-top: -300px;
+    margin-top: -270px;
     margin-left: 15px;
     font-family: 'twayair';
   }
@@ -56,6 +56,7 @@ input:focus {
   .homecontactus-check-box{
     display: flex;
     flex-direction: row;
+    margin-top: 30px;
   }
 
   .homecontactus-check-box p {
@@ -65,8 +66,8 @@ input:focus {
     margin: 0;
     padding: 0;
     position: relative;
-    right: 680px;
-    top: 15px;
+    right: 665px;
+    top: 48px;
     font-weight: bold;
     letter-spacing: 2px;
     /* font-style: italic; */
@@ -191,7 +192,7 @@ input:focus {
   display: flex;
   text-align: center;
   width: 100vw;
-  margin-top: -470px;
+  margin-top: -500px;
   margin-left: -450px;
   font-family: 'twayair';
 }

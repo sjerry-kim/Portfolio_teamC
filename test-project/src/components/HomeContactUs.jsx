@@ -160,7 +160,7 @@ const HomeContactUs = () => {
               variant="btn btn-outline-light"
               type="submit"
             >
-              <p>보내기</p>
+              <p>sand</p>
             </Button>
           </div>
         </form>
