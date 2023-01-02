@@ -1,79 +1,88 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
-.notosanskr * { 
- font-family: 'Noto Sans KR', sans-serif;
+.notosanskr * {
+  font-family: "Noto Sans KR", sans-serif;
 }
 
-*{
-    /*글씨체*/
-
+* {
+  /*글씨체*/
 }
 
-.homeaboutus-Box{
+.homeaboutus-Box {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  margin-top: -140px;
+  position: relative;
+  left: 350px;
+  width: 400px;
+}
+.homeaboutus-title {
+  font-size: 100px;
+  font-weight: bold;
+  position: relative;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.homeaboutus-h3-div {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.homeaboutus-info {
+  position: relative;
+  font-family: "Noto Sans KR", sans-serif;
+  margin-top: 20px;
+  font-weight: lighter;
+  text-align: end;
+}
+
+.homeaboutus-info2 {
+  position: relative;
+  font-family: "Noto Sans KR", sans-serif;
+  margin-top: 10px;
+  font-weight: lighter;
+  text-align: end;
+}
+
+.homeaboutus-company {
+  position: relative;
+  font-family: "Noto Sans KR", sans-serif;
+  margin-top: 10px;
+  font-weight: lighter;
+  text-align: end;
+}
+
+@media screen and (max-width: 1440px), (max-height: 789px) {
+  .homeaboutus-Box {
     display: flex;
     align-items: flex-end;
     flex-direction: column;
-    margin-top: -140px;
+    margin-top: -110px;
     position: relative;
-    left:350px;
+    left: 200px;
     width: 400px;
-}
-.homeaboutus-title{
-    font-size: 100px;
+  }
+  .homeaboutus-title {
+    font-size: 80px;
     font-weight: bold;
     position: relative;
-    font-family: 'Noto Sans KR', sans-serif;
-
-}
-.homeaboutus-info{
+  }
+  .homeaboutus-info {
     position: relative;
-    font-family: 'Noto Sans KR', sans-serif;
-    margin-top: 20px;
-    font-weight: lighter;
-}
-.homeaboutus-info2{
-    position: relative;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 24px;
     margin-top: 10px;
-    font-weight: lighter;
-}
-
-.homeaboutus-company{
+  }
+  .homeaboutus-info2 {
     position: relative;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 24px;
     margin-top: 10px;
-    font-weight: lighter;
-}
+  }
 
-@media screen and (max-width: 1440px),(max-height: 789px) {
-    .homeaboutus-Box{
-        display: flex;
-        align-items: flex-end;
-        flex-direction: column;
-        margin-top: -110px;
-        position: relative;
-        left:200px;
-        width: 400px;
-    }
-    .homeaboutus-title{
-        font-size: 80px;
-        font-weight: bold;
-        position: relative;
-    }
-    .homeaboutus-info{
-        position: relative;
-        font-size: 24px;
-        margin-top: 10px;
-    }
-    .homeaboutus-info2{
-        position: relative;
-        font-size: 24px;
-        margin-top: 10px;
-    }
-    
-    .homeaboutus-company{
-        position: relative;
-        font-size: 24px;
-        margin-top: 10px;
-    }
+  .homeaboutus-company {
+    position: relative;
+    font-size: 24px;
+    margin-top: 10px;
+  }
 }

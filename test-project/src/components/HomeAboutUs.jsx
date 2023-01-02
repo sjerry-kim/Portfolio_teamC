@@ -6,9 +6,11 @@ const HomeAboutUs = () => {
         {/** 지우기 */}
           <div className="homeaboutus-Box">
             <h1 className="homeaboutus-title">Today Design</h1>
-            <h2 className="homeaboutus-info">오늘의 디자인은 전문가와 함께하는 사이트입니다</h2>
-            <h3 className="homeaboutus-info2">인테리어 완성의 마지막 조각 </h3>
-            <h3 className="homeaboutus-company">중개수수료 없는 무료 견적  </h3>
+            <div className="homeaboutus-h3-div">
+              <h3 className="homeaboutus-info">감각적인 내 집 꾸미기의 시작</h3>
+              <h3 className="homeaboutus-info2">홈 인테리어의 마지막 조각 </h3>
+              <h3 className="homeaboutus-company">중개 수수료 없는 투데이 디자인으로 시작하세요 </h3>
+            </div>
           </div>
       </div>
     );
