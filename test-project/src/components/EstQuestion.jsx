@@ -57,7 +57,7 @@ const EstQuestion = () => {
     if (state.question.length !== questionNo + 1) {
       setQuestionNo(questionNo + 1);
     } else {
-      const mbti = newScore.reduce(
+      const estimate = newScore.reduce(
         (acc, curr) =>
           acc +
           (curr.score >= 7 ? curr.id.substring(0, 1) : curr.id.substring(1, 2)),
@@ -68,7 +68,7 @@ const EstQuestion = () => {
         //  search 사용
         pathname: "/main/result",
         search: `?${createSearchParams({
-          mbti: mbti,
+          estimate: estimate,
         })}`,
       });
     }

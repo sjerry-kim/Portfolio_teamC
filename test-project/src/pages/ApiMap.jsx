@@ -23,7 +23,7 @@ function ApiMap() {
       <form className="api-inputForm" onSubmit={handleSubmit}>
         <input
           className="api-input"
-          placeholder="ex) design"
+          placeholder="ex) 광진구 인테리어 업체"
           onChange={onChange}
           value={InputText}
         ></input>

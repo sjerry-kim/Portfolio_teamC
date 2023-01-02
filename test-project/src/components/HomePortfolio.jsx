@@ -15,7 +15,6 @@ const HomePortfolio = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 1000,
     slidesToShow: 2,
     slidesToScroll: 1,
     arrows: false,
@@ -24,20 +23,19 @@ const HomePortfolio = () => {
     centerPadding: '10px',
     pauseOnHover: false, //마우스 올려도 안멈춤
     pauseOnFocus: false,
-    
     //nextArrow: <SampleNextArrow />,
 		//prevArrow: <SamplePrevArrow />
   };
   const imgArray = ([
-    {img : "agioCom2.JPG"},
-    {img : "dasoleCom2.JPG"},
-    {img : "dawonCom3.JPG"},
-    {img : "evianCom3.jpg"},
-    {img : "idasCom2.JPG"},
-    {img : "jyCom1.jpg"},
-    {img : "monoCom2.JPG"},
-    {img : "oneCom2.jpg"},
-    {img : "purenCom1.jpg"},
+    {company: "Agio Design", img : "agioCom2.JPG"},
+    {company: "Dasole Design",img : "dasoleCom2.JPG"},
+    {company: "Dawon Design",img : "dawonCom3.JPG"},
+    {company: "Evian Design",img : "evianCom3.jpg"},
+    {company: "IDAS INC.",img : "idasCom2.JPG"},
+    {company: "JY Interior Design",img : "jyCom1.jpg"},
+    {company: "Mono Interior",img : "monoCom2.JPG"},
+    {company: "1204 Design",img : "oneCom2.jpg"},
+    {company: "PurenDeul Interior",img : "purenCom1.jpg"},
   ]);
 
   return (
@@ -51,6 +49,7 @@ const HomePortfolio = () => {
         imgArray.map((img, index)=>(
           <div key={index}>
             <img src={require(`../img/${img.img}`)} alt="" />
+            <p className="homeportfolio-name">{img.company}</p>
           </div>
         )) 
       }

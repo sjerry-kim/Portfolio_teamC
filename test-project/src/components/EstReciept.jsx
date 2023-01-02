@@ -11,7 +11,7 @@ const EstReciept = () => {
   const [sessionReciept, setSessionReciept] = useState([]);
   const [resultData, setResultData] = useState({});
   const [searchParams] = useSearchParams();
-  const mbti = searchParams.get("mbti");
+  const estimate = searchParams.get("estimate");
   const date= new Date();
 
   useEffect(() => {
@@ -25,8 +25,8 @@ const EstReciept = () => {
   }, []);
 
   useEffect(() => {
-    console.log(mbti)
-    const result = state.score.find((s) => s.best === mbti);
+    // console.log(mbti)
+    const result = state.score.find((s) => s.best === estimate);
     setResultData(result);
   } );
 
