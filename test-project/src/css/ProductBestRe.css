@@ -10,14 +10,15 @@
 
 
 .Product-bestRe {
-  margin-top: 130px;
-  margin-left: 20px;
+  margin-top: 125px;
+  margin-left: 10px;
+
 }
 
 .Product-bestRe h1 {
   font-family: "Chosunilbo_myungjo";
   margin-top: 16px;
-  margin-left: 20px;
+  margin-left: 25px;
 }
 
 .bestReviews_cardIMG > img {
