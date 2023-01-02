@@ -18,15 +18,15 @@ const HomeContactUs = () => {
 
   const navigate = useNavigate();
 
-  const sendEmail2 = (e) => {
+  const sendEmail2 = e => {
     e.preventDefault();
     const Service_ID = "service_y4raiv3";
     const Template_ID = "template_sqorybn";
     const User_ID = "odmr0vvUUkxqQq_1d";
 
     emailjs.sendForm(Service_ID, Template_ID, form2.current, User_ID).then(
-      (result) => alert(result.text),
-      (error) => alert(error.text)
+      result => alert("메일을 성공적으로 전송했습니다!"),
+      error => alert("메일 전송을 실패했습니다!")
     );
     e.currentTarget.reset();
   };
@@ -34,15 +34,17 @@ const HomeContactUs = () => {
   return (
     <div>
       <div className="homecontactus-titleBox">
-      <h2 className="homecontactus-title">Contact Us</h2>
-      <div className="homecontactus-letter">
-        <div className="homecontactus-middletitle">
-          <p>Adress | 부산 부산진구 중앙대로 749 4층</p>
-          <p>Call | 051-715-6224</p>
-          <p>Fax | 051-715-6224</p>
-          <p>E-mail | GamilC@gmail.com</p>
+
+        <h2 className="homecontactus-title">Contact Us</h2>
+        <div className="homecontactus-letter">
+          <div className="homecontactus-middletitle">
+            <p>부산 부산진구 중앙대로 749</p>
+            <p>전화번호 : 051-715-6224</p>
+            <p>팩스번호 : 051-715-6224</p>
+            <p>이메일 : GamilC@gmail.com</p>
+          </div>
+
         </div>
-      </div>
       </div>
 
       <div className="homecontactus-check-box">
@@ -71,8 +73,12 @@ const HomeContactUs = () => {
           <div className="homecontactus-card">
             <div className="homecontactus-card_face front">E</div>
             <div className="homecontactus-card_face back">
-              <a target="_blank" href="https://ko-kr.facebook.com/">
-                <FontAwesomeIcon classNameName="imgfont" icon={faFacebookSquare} />
+              <a href="https://ko-kr.facebook.com/">
+                <FontAwesomeIcon
+                  classNameName="imgfont"
+                  icon={faFacebookSquare}
+                />
+
               </a>
             </div>
           </div>
@@ -98,8 +104,10 @@ const HomeContactUs = () => {
           </div>
         </div>
       </button>
+
       <p>& Subscribe Us!</p>
       </div>
+
 
       <div className="homecontactus-formBox">
         <form className="homecontactus-form" ref={form2} onSubmit={sendEmail2}>
