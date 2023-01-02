@@ -15,7 +15,6 @@ const HomePortfolio = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 2000,
     slidesToShow: 2,
     slidesToScroll: 1,
     arrows: false,
@@ -24,7 +23,6 @@ const HomePortfolio = () => {
     centerPadding: '10px',
     pauseOnHover: false, //마우스 올려도 안멈춤
     pauseOnFocus: false,
-    
     //nextArrow: <SampleNextArrow />,
 		//prevArrow: <SamplePrevArrow />
   };
