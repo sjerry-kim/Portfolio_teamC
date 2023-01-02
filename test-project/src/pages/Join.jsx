@@ -100,9 +100,9 @@ const Join = props => {
       setTimeout(() => {
         navigate('/')
       }, 800);
-     
+    
     } catch (error) {
-      navigate("/login");
+      navigate("/main/login");
       const errorCode = error.code;
       const errorMessage = error.message;
       console.log(errorCode);

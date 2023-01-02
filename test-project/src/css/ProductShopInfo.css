@@ -72,18 +72,21 @@ video{
   font-weight: bold;
   font-family: "Chosunilbo_myungjo";
   font-size: 1.9em;
+  color: #583516;
 }
 
 .Prloduct-detail p{
   margin: 10px auto;
   font-size: 1.1em;
   font-family: "Chosunilbo_myungjo";
+  color: #583516;
 }
 
 .Product-commentLogIn{
   font-family: "Chosunilbo_myungjo";
   margin-top: 25px;
   margin-left: 28px;
+  color: #583516;
   
 }
 .Product-commentLogIn h2{
@@ -91,12 +94,14 @@ video{
   font-size: 1.9em;
   margin-top: 25px;
   font-weight: bold;
+  color: #583516;
 } 
 
 .Product-commentLogOut{
   font-family: "Chosunilbo_myungjo";
   margin-top: 25px;
   margin-left: 28px;
+  color: #583516;
 }
 
 .Product-commentLogOut h2{
@@ -104,6 +109,7 @@ video{
   font-size: 1.9em;
   margin-top: 25px;
   font-weight: bold;
+  color: #583516;
 }
 
 .Product-commentLogOut-p-div{
@@ -121,6 +127,7 @@ video{
   font-family: "Chosunilbo_myungjo";
   position: relative;
   right: 12px;
+  color: #583516;
 }
 
 .Product-commentLogOut-p-div button{
@@ -152,7 +159,7 @@ video{
   .Product-infoCards{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-top: 90px;
+    margin-top: 220px;
     margin-left: 80px;
     gap: 10px ;
   }

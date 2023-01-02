@@ -49,9 +49,29 @@ input:focus {
     font-weight: lighter;
     margin-bottom: 30px;
     letter-spacing: 2px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
   }
   
+  .homecontactus-check-box{
+    display: flex;
+    flex-direction: row;
+  }
 
+  .homecontactus-check-box p {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: lighter;
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    right: 680px;
+    top: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    /* font-style: italic; */
+    color: rgba(255, 255, 255, 0.8);
+  }
 
 
 .homecontactus-button-one:before:after {
@@ -243,20 +263,19 @@ input:focus {
   font-family: 'Noto Sans KR', sans-serif;
 }
 
-
-
 @media screen and (max-width: 1440px),(max-height: 789px) {
   .homecontactus-titleBox{
     width: 550%;
     position: relative;
     right: 730px;
-    bottom: 50px;
+    bottom: 40px;
     margin-left: 30px;
     font-family: 'Noto Sans KR', sans-serif;
   }
   
   .homecontactus-title {
-    margin-top: -70px;
+    margin-top: -40px;
+    margin-bottom: 0;
     font-size: 80px;
     font-weight: bold;
     width: 100%;
@@ -277,8 +296,8 @@ input:focus {
     justify-content: center;
     align-items: center;
     position: relative;
-    right: 700px;
-    top: 25px;
+    right: 690px;
+    top: 0px;
   }
   .homecontactus-forminput {
     display: inline-block;
@@ -297,7 +316,7 @@ input:focus {
     display: flex;
     text-align: center;
     width: 100vw;
-    margin-top: -390px;
+    margin-top: -430px;
     margin-left: -550px;
     font-family: 'twayair';
   }
