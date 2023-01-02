@@ -14,7 +14,7 @@ const EstResult = () => {
   const data = useContext(DataContext);
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  const mbti = searchParams.get("mbti");
+  const estimate = searchParams.get("estimate");
   const { state, action } = useContext(DataContext);
   const reciept = JSON.stringify(state.reciept);
   const currentUser = auth.currentUser;
@@ -24,8 +24,8 @@ const EstResult = () => {
   // 최종적으로 도출한 결과 객체
   const [resultData, setResultData] = useState({});
   useEffect(() => {
-    console.log(mbti)
-    const result = data.state.score.find((s) => s.best === mbti);
+    // console.log(mbti)
+    const result = data.state.score.find((s) => s.best === estimate);
     setResultData(result);
   } );
 
