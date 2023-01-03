@@ -142,3 +142,44 @@
     border: none;
   }
 }
+
+/* 모바일 */
+@media screen and (max-width: 420px){
+  .estquestion-Wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right: 34px;
+    background-image: url(../img/EstStart-img10.png);
+    background-size: 760px  ;
+    background-color: transparent;
+    background-position-x: -110px;
+    background-position-y: -114px;
+    width: 104.5%;
+    height: 385px;
+    margin: 100px auto ;
+    margin-top: 75px;
+    border-radius: 5px;
+    border: none;
+  }
+  .estquestion-progbar{
+    width: 250px !important;
+    margin: auto;
+    position: relative;
+    left: 22px;
+  }
+  .estquestion-Title{
+    margin: auto;
+    position: relative;
+    left: 22px;
+    font-size: 20px;
+    margin-top: -19px;
+    margin-bottom: -10px ;
+  }
+  .estquestion-QBtn{
+    position: relative;
+    left: 22px;
+    font-size: 15px;
+    margin-bottom: -13px;
+  }
+}

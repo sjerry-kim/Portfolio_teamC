@@ -192,3 +192,10 @@
   width: 200px;
   margin-bottom: 0;
 }
+
+/* 모바일 */
+@media screen and (max-width: 420px){
+  .estreciept-wrapper{
+    display: none;
+  }
+}

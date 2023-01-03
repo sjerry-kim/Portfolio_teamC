@@ -118,7 +118,7 @@ const EstQuestion = () => {
       {window.sessionStorage.getItem("login") === "true" ? (
         <div>
           <div className="estquestion-progressbox"></div>
-          <ProgressBar
+          <ProgressBar className="estquestion-progbar"
             style={{
               height: "5px",
               borderRadius: "4px",
