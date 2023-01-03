@@ -358,4 +358,8 @@ input:focus {
     margin-left: -1px;
     font-size: 15px;
   }
+  .homecontactus-check-box p{
+    margin-left: -20px;
+    margin-top: -35px;
+  }
 }
