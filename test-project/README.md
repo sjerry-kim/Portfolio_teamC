@@ -24,7 +24,7 @@
 
 ### `진혜`
 
-1. api 확인
+1. api 확인!
 2. Estimation css 재정리
 3. Estimation 코드 정리 (ex- mbti에서 따온 EST..etc의 명칭 변경 등)
 4.
