@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCamera } from "@fortawesome/free-solid-svg-icons";
 import { auth } from '../data/firebase';
 import { updateProfile } from 'firebase/auth';
+import '../css/MyPageProfileModal.css';
 
 
 function MyPageProfileModal({setUpdate}) {
@@ -48,33 +49,33 @@ function MyPageProfileModal({setUpdate}) {
 
 
   return (
-    <div className='profile-up-modal'>
-      <Button onClick={handleShow} className="profile-modal-btn">
-        Change the profile
+    <div className='mypageprofilemodal-div'>
+      <Button onClick={handleShow} className="mypageprofilemodal-btn">
+        프로필 변경
       </Button>
       {/* 같은 공간에 있다가 show를 통해서 보여줬다가, 보여주지 않았다가 하는 제어로 사용 */}
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Add the image</Modal.Title>
+          <Modal.Title className='mypageprofilemodal-title'>프로필 변경</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body className='mypageprofilemodal-body'>
           {/* 추가된 사진 미리보기 */}
-          <div className='preview' style={{textAlign: "center", width:"200px", height:"200px", backgroundColor:"lightgray", display:"flex", justifyContent:"center"}} ref={imgShow}>
+          <div className='mypageprofilemodal-preview' style={{textAlign: "center", width:"200px", height:"200px", backgroundColor:"lightgray", display:"flex", justifyContent:"center"}} ref={imgShow}>
             {
-              imgShow.current? (""):(<FontAwesomeIcon icon={faCamera} style={{color:"white",fontSize:"3em", zIndex:"999"}} />)
+              imgShow.current? (""):(<FontAwesomeIcon icon={faCamera} />)
             }
           </div>
           {/* 사진 파일을 받아올 input 태그 가져오기 */}
-          <Form.Group controlId="formFile" className="mb-3">
+          <Form.Group controlId="formFile" className="mb-3 mypageprofilemodal-input">
             <Form.Control type="file" onChange={onLoadFile} />
           </Form.Group>
         </Modal.Body>
-        <Modal.Footer>
+        <Modal.Footer className='mypageprofilemodal-footer'>
           <Button variant="secondary" onClick={handleClose}>
-            Cancel
+            취소
           </Button>
-          <Button variant="primary" onClick={saveProfile}>
-            Save
+          <Button className='mypageprofilemodal-save-btn' variant="primary" onClick={saveProfile}>
+            저장
           </Button>
         </Modal.Footer>
       </Modal>
