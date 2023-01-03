@@ -1,0 +1,61 @@
+@font-face {
+  font-family: 'twayair';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.mypageprofilemodal-div button{
+  font-size: 0.8em;
+  border: none;
+  background-color: #6D4C41;
+  font-family: 'twayair';
+  font-weight: 100px;
+}
+
+.mypageprofilemodal-div button:hover{
+  background-color: #C3A88E;
+}
+
+.mypageprofilemodal-title{
+  font-family: 'twayair';
+}
+
+.mypageprofilemodal-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mypageprofilemodal-preview{
+  text-align: center;
+  margin: 10px;
+  margin-bottom: 30px;
+  z-index: 988;
+  display: flex;
+  align-items: center;
+}
+
+.mypageprofilemodal-preview svg{
+  color: white;
+  font-size: 3em;
+  z-index: 999;
+}
+
+.mypageprofilemodal-input{
+  font-family: 'twayair';
+}
+
+.mypageprofilemodal-footer button{
+  font-family: 'twayair';
+}
+
+.mypageprofilemodal-save-btn{
+  background-color: #6D4C41;
+  border: #6D4C41;
+}
+
+.mypageprofilemodal-save-btn:hover{
+  background-color: #5a3f36;
+}
