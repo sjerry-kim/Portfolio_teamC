@@ -219,3 +219,110 @@
   }
 }
 
+/* 모바일 */
+@media screen and (max-width: 420px){
+  .estresult-Wrapper {
+    position: relative;
+    right: 34px;
+    background-image: url(../img/EstStart-img10.png);
+    background-size: 760px  ;
+    background-color: transparent;
+    background-position-x: -110px;
+    background-position-y: -114px;
+    width: 104.5%;
+    height: 385px;
+    margin: 100px auto ;
+    margin-top: 75px;
+    border-radius: 5px;
+    border: none;
+  }
+  .estresult-Contents {
+    position: relative;
+    top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 207px;
+  }
+  .estresult-Title {
+    font-family: "RIDIBatang";
+    font-size: 8pt;
+    position: relative;
+    top: 27px;
+    color: #291B0C;
+    position: relative;
+    left: 22px;
+  }
+  
+  .estresult-Header {
+    position: relative;
+    top: 10px;
+    font-family: "RIDIBatang";
+    font-size: 18pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #291B0C;
+    position: relative;
+    left: 22px;
+  }
+  .estresult-Desc {
+    position: relative;
+    font-family: 'twayair';
+    color: #291B0C;
+    font-size: 18pt;
+    top: 43px;
+    position: relative;
+    left: 22px;
+  }
+  .estresult-effect {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    left: 22px;
+    text-decoration: none;
+    color: #7a32308c;
+    text-transform: capitalize;
+    background-color: transparent;
+    border: 1.5px solid #7a32308c;
+    font-family: "RIDIBatang";
+    font-size: 15px;
+    padding: 0px 0px;
+    width: 90px;
+    height: 30px;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .estresult-ReStartBtn {
+    position: relative;
+    left: 22px;
+    font-family: "RIDIBatang";
+    width: 75px;
+    height: 25px;
+    font-size: 8pt;
+    border: none;
+    margin-right: 6px;
+  }
+  .estresult-savebtn {
+    position: relative;
+    left: 22px;
+    font-family: "RIDIBatang";
+    border: none;
+    width: 75px;
+    height: 25px;
+    font-size: 8pt;
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+    margin-left: 6px
+  }
+  .estresult-all-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    top: -25px;
+  }
+}
