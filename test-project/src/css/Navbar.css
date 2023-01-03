@@ -100,3 +100,44 @@
     font-size: 1em;
   }
 }
+
+/* 모바일 */
+@media screen and (max-width: 420px){
+  .navbar-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 55px;
+    font-weight: bold;
+    background: #ece4db;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  }
+  .navbar-logo-div-img{
+    margin-top: 0px;
+    width: 60px;
+  }
+  .navbar-log-div button {
+    font-family: "Chosunilbo_myungjo";
+    margin-top: 17px;
+    margin-right: 50px;
+    background-color: transparent;
+    border: none;
+    font-size: 0.5em;
+    font-weight: bold;
+    color: #291b0b;
+  }
+  .navbar-menu-big-div a {
+    font-family: "Chosunilbo_myungjo";
+    text-align: center;
+    width: 190px;
+    transition: 0.3s;
+    font-size: 10px;
+  }
+}
