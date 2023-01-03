@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Chosunilbo_myungjo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .login-page-box{
   display: flex;
   justify-content: center;
@@ -118,7 +126,11 @@
   border-left: 1px solid #291b0baf;
   margin-left: 69px;
 }
-
+.login-line p{
+  font-family: "Chosunilbo_myungjo";
+  font-weight: bold;
+  letter-spacing: 1px;
+}
 .login-page{
     padding: 0 20px;
     background-image: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)); /*, url(./img/img1.daumcdn.jpg) ;*/
@@ -145,6 +157,8 @@
     font-size: 12px;
     color: #291b0b;
     margin-bottom: 15px;
+    font-family: "Chosunilbo_myungjo";
+    font-weight: bold;
   }
   .login-inputWrap{
     display: flex;
@@ -171,6 +185,8 @@
     font-weight: 400;
     background-color: #0e0e0e00;
     color: #291b0b;
+    font-family: "Chosunilbo_myungjo";
+    font-weight: bold;
   }
   
   .login-input::placeholder{
@@ -192,6 +208,8 @@
     cursor: pointer;
     transition: 0.5s;
     position: relative;
+    font-family: "Chosunilbo_myungjo";
+    font-weight: bold;
 }
 .login-allbox{
   position: relative;
@@ -221,6 +239,8 @@
     margin-top: 10px;
     cursor: pointer;
     transition: 0.5s;
+    font-family: "Chosunilbo_myungjo";
+    font-weight: bold;
   }
   .login-LoginButton:hover{
     background-color: #291b0b;

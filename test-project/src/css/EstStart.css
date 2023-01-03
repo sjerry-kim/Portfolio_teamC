@@ -122,3 +122,61 @@ body {
     justify-content: end;
   }
 }
+
+
+/* 모바일 */
+@media screen and (max-width: 420px){
+  .eststart-Wrapper {
+    width: 90%;
+    height: 40%;
+  }
+  .est-start-btn {
+    border: none;
+    display: block;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    left: 205px;
+    top: 3px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1px;
+    background-color: #C3A88E;
+    padding: 7px 4px;
+    width: 90px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.20);
+  }
+  .est-start-btn:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 390%;
+  width: 140%;
+  background: #8b6343 ;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  transform: translateX(-96%) translateY(-15%) rotate(44deg);
+}
+
+.est-start-btn:hover:after {
+  -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+  .eststart-main {
+    position: relative;
+    top: 100px;
+    margin-bottom: 40px;
+  }
+
+  .eststart-Header {
+    font-size: 20pt;
+  }
+
+  .eststart-Title {
+    font-size: 10pt;
+  }
+}
