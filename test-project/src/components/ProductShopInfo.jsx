@@ -21,7 +21,12 @@ import {
   getDoc,
   getDocsFromCache,
 } from "firebase/firestore";
-import { useEffect } from "react";
+
+import KakaoShare from "./KakaoShare";
+
+
+
+
 
 const ShopInfo = () => {
   const { id } = useParams();
@@ -62,10 +67,15 @@ function InfoCard(props) {
       <div className="Product-infoCard">
         <div className="Prloduct-detail">
           <div>
+            <div className="titleNshare">
             <h2>{market ? market.name : "없는 정보 입니다"}</h2>
-            <p>주소 : {market ? market.location : "없는 정보 입니다"}</p>
-            <p>연락처 : {market ? market.number : "없는 정보 입니다"}</p>
-          </div>
+            <KakaoShare></KakaoShare>
+            </div>
+            <p className="infoAdd">주소 : {market ? market.location : "없는 정보 입니다"}</p>
+            <p className="infoAdd">연락처 : {market ? market.number : "없는 정보 입니다"}</p> 
+            <p className="infoAdd">전문가 한마디 : {market ? market.comment : "없는 정보 입니다"}</p>
+            </div>
+
         </div>
       </div>
       <div className="Product-video">
@@ -76,7 +86,7 @@ function InfoCard(props) {
             autoPlay
             style={{
               width: "700px",
-              height: "600px",
+              height: "400px",
             }}
           >
             <source src={require(`../video/${market.companyVideo}`)} />
@@ -117,3 +127,66 @@ function InfoCard(props) {
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//사형예정
+          {/* <a className="iconLink" href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoia28ifQ%3D%3D%22%7D">
+  <FontAwesomeIcon icon={faTwitterSquare} 
+    style={{
+      size:"lg",
+      height:"30px",
+      width:"30px",
+      marginLeft:"500px",
+      color:"#583516",
+
+    }}/>
+  </a>
+  <a className="iconLink" href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoia28ifQ%3D%3D%22%7D">
+  <FontAwesomeIcon icon={faFacebookSquare}
+    style={{
+      size:"lg",
+      height:"30px",
+      width:"30px",
+      color:"#583516",
+      marginLeft:"10px",
+    }}/>
+  </a>
+  <a className="iconLink" href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoia28ifQ%3D%3D%22%7D">
+  <FontAwesomeIcon icon={faInstagramSquare} 
+    style={{
+      size:"lg",
+      height:"30px",
+      width:"30px",
+      color:"#583516",
+      marginLeft:"10px",
+    }}/>
+  </a>
+  <a className="iconLink" href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoia28ifQ%3D%3D%22%7D">
+  <FontAwesomeIcon icon={faComment} 
+    style={{
+      size:"lg",
+      height:"30px",
+      width:"30px",
+      color:"#583516",
+      marginLeft:"10px",
+    }}/>
+  </a>           */}
