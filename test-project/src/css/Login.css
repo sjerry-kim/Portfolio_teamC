@@ -168,7 +168,6 @@
     margin-top: 8px;
     margin: auto;
     border-bottom: 1px solid #291b0b7a;
-    
   }
   /* 인풋창 클릭하면 태두리색 바뀜 */
   .login-inputWrap:focus-within{
@@ -226,6 +225,7 @@
     position: relative;
     margin: 20px;
 }
+
 .login-googleimg{
   width: 50px;
   border: none;
@@ -287,5 +287,116 @@
       text-align: center;
       margin-top: -60px;
       margin-left: -30px;
+    }
+  }
+
+  /* 모바일 */
+  @media screen and (max-width: 420px){
+    .login-page-box{
+      display: flex;
+      justify-content: center;
+      clear: both;
+      margin-top: 125px;
+      position: relative;
+      right: 0px;
+    }
+    .login-border{
+      width: 300px;
+      height: 700px;
+      margin: auto;
+      text-align: center;
+    }
+    .login-page2{
+      display: none;
+    }
+    .login-line-2{
+      display: none;
+    }
+    .login-page{
+      padding: 0 20px;
+      background-image: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)); /*, url(./img/img1.daumcdn.jpg) ;*/
+      background-size: cover;
+      margin-top: 20px;
+    }
+    .login-inputWrap{
+      display: flex;
+      width: 230px;
+      max-width: 90%;
+      padding: 10px;
+      margin-top: 8px;
+      margin: auto;
+      border-bottom: 1px solid #291b0b7a;
+      display: inline-block;
+    }
+    .login-input{
+      font-size: 11px;
+    }
+    .login-titleWrap{
+      margin-top: 0px;
+      margin-bottom: 30px;
+      font-size: 30px;
+      color: #291b0b;
+      display: inline-block;
+    }
+    .login-inputTitle{
+      margin-top: -10px;
+      margin-bottom: 10px;
+      font-size: 10px;
+    }
+    .login-errorMessageWrap{
+      font-size: 12px;
+    }
+    .login-LoginButton{
+      width: 60%;
+      height: 30px;
+      border: none;
+      background-color: #ece4db;
+      color: rgb(22, 21, 21);
+      margin-top: 20px;
+      cursor: pointer;
+      transition: 0.5s;
+      font-family: "Chosunilbo_myungjo";
+      font-weight: bold;
+      font-size: 13px;
+    }
+    .login-LoginButton-box{
+
+    }
+    .login-LoginGoogle{
+      background-color: #ece4db;
+      width: 10%;
+      height: 30px;
+      border: none;
+      color: #291b0b;
+      cursor: pointer;
+      transition: 0.5s;
+      position: relative;
+      margin: 20px;
+  }
+  .login-googleimg{
+    width: 30px;
+  }
+  .login-createButton{
+    background-color: #ece4db;
+    width: 60%;
+    height: 30px;
+    border: none;
+    color: #291b0b;
+    cursor: pointer;
+    transition: 0.5s;
+    position: relative;
+    font-family: "Chosunilbo_myungjo";
+    font-weight: bold;
+    font-size: 13px;
+  }
+    .login-allbox{
+      position: relative;
+      left: -10px;
+      display: inline;
+    }
+    .login-contentWrap{
+      display: inline;
+      margin: auto;
+      flex: 1;
     }
   }

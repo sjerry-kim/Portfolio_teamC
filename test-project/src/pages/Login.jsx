@@ -269,7 +269,7 @@ const Login = () => {
                     )}
                 </div>
               </div>
-              <div>
+              <div className="login-LoginButton-box">
                 {/* disabled 버튼활성화 체크*/}
                 <button
                   disabled={notAllow}
