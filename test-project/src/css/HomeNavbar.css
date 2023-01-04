@@ -248,4 +248,15 @@
   .homename{
     font-size: 17px;
   }
+
+  @media screen and (max-width: 420px){
+    .bm-burger-button {
+      position: relative;
+      width: 36px;
+      height: 30px;
+      float: right;
+      top: 45px;
+      margin-right: 40px;
+    }
+  }
 }

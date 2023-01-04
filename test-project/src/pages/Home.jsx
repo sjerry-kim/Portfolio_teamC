@@ -20,7 +20,6 @@ const Home = () => {
     arrows: false,
     infinite: false,
     draggable: false,
-    // 🌼 auto 관련 속성 확인해보기 -> 맥북에서 2번째 슬릭이 자동으로 넘어감
   };
 
   const slider = useRef(null);
