@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { markerdata } from "../data/markerdata";
 import "../css/ApiMapcontainer.css";
+import { motion } from "framer-motion";
+
 const { kakao } = window;
 
 const ApiMapContainer = ({ searchPlace }) => {

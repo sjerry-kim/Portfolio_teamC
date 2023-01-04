@@ -25,6 +25,9 @@ import { userLogin } from "../module/currentUser";
 import { useDispatch } from "react-redux";
 import Notfound from "./Notfound";
 
+import { motion } from "framer-motion";
+/* 1. framer-motion을 import한다 */
+
 const User = {
   email: "test@example.com",
   pw: "test8361@",
@@ -200,7 +203,9 @@ const Login = () => {
       {window.sessionStorage.getItem("login") === "true" ? (
         <Notfound />
       ) : (
-        <div className="login-page-box">
+        <motion.div initial={{opacity: 0 ,transform : 'translateY(50px)', transition:'transform 0.33s ease'}}
+        animate={{opacity: 1 ,transform : 'translateY(0px)', transition:'transform 0.33s ease'}}
+        exit={{opacity: 0 ,transform : 'translateY(50px)', transition:'transform 0.33s ease'}} className="login-page-box">
           <div className="login-page2">
             <div className="login-text-box">
               <p className="login-page2-text1">전문가와 함께하는 </p>
@@ -289,7 +294,7 @@ const Login = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       )}
     </from>
   );

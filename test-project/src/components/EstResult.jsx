@@ -24,7 +24,6 @@ const EstResult = () => {
   // 최종적으로 도출한 결과 객체
   const [resultData, setResultData] = useState({});
   useEffect(() => {
-    // console.log(mbti)
     const result = data.state.score.find((s) => s.best === estimate);
     setResultData(result);
   } );

@@ -4,6 +4,7 @@ import "../css/EstReciept.css";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const EstReciept = () => {
   const { state, action } = useContext(DataContext);
@@ -38,7 +39,9 @@ const EstReciept = () => {
   },[reciept])
 
   return (
-    <div className="estreciept-wrapper">
+    <motion.div initial={{opacity: 0 ,transform : 'translateY(50px)', transition:'transform 0.33s ease'}}
+    animate={{opacity: 1 ,transform : 'translateY(20px)', transition:'transform 0.33s ease'}}
+    exit={{opacity: 0 ,transform : 'translateY(50px)', transition:'transform 0.33s ease'}} className="estreciept-wrapper">
       <div className="estreciept-bar"></div>
       <div className="estreciept-receipt">
         <h1 className="estreciept-logo">Today Design</h1>
@@ -89,7 +92,7 @@ const EstReciept = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

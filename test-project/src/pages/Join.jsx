@@ -36,6 +36,7 @@ import {
 
 import { useDispatch } from "react-redux";
 import { userLogin } from "../module/currentUser";
+import { motion } from "framer-motion";
 
 const Join = props => {
 
@@ -181,7 +182,9 @@ const Join = props => {
   };
 
   return (
-    <div className="join-app-joinForm">
+    <motion.div initial={{opacity: 0 ,transform : 'translateY(50px)', transition:'transform 0.33s ease'}}
+    animate={{opacity: 1 ,transform : 'translateY(0px)', transition:'transform 0.33s ease'}}
+    exit={{opacity: 0 ,transform : 'translateY(50px)', transition:'transform 0.33s ease'}} className="join-app-joinForm">
       <form className="join-joinForm_form">
         <h1 className="join-joinForm_h1">Register
           <img src={paperimg2} className="join-joinForm_h1backimg" />
@@ -269,7 +272,7 @@ const Join = props => {
           회원가입
         </button>
       </form>
-    </div>
+    </motion.div>
   );
 };
 

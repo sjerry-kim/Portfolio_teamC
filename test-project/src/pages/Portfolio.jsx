@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { } from "../css/Portfolio.css";
 import DataContext from "../data/DataContext";
-
+import { motion } from "framer-motion";
 
 const Portfolio = (props) => {
   const { state } = useContext(DataContext);
@@ -11,7 +11,9 @@ const Portfolio = (props) => {
   }
 
   return (
-    <div>
+    <motion.div initial={{opacity: 0 ,transform : 'translateY(50px)', transition:'transform 0.33s ease'}}
+    animate={{opacity: 1 ,transform : 'translateY(20px)', transition:'transform 0.33s ease'}}
+    exit={{opacity: 0 ,transform : 'translateY(50px)', transition:'transform 0.33s ease'}}>
       <body className="portfolio-body">
         <div className="portfolio-container">
           <input
@@ -202,7 +204,7 @@ const Portfolio = (props) => {
           </div>
         </div>
       </body>
-    </div>
+    </motion.div>
 
   );
 };
