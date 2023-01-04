@@ -48,13 +48,13 @@ const ProductInsertComment = ({ getData }) => {
     const user = auth.currentUser;
     setNum(num + 1);
     try {
-      const docRef = await addDoc(collection(db, "review"), {
-        comment: text,
-        star: rating,
-        marketId: id,
-        name: user.displayName,
-        commentId: num,
-        timeStamp: new Date(),
+        const docRef = await addDoc(collection(db, "review"), {
+          comment: text,
+          star: rating,
+          marketId: id,
+          name: user.displayName,
+          commentId: num,
+          timeStamp: new Date(),
       });
       console.log(user.displayName);
       console.log(docRef.id);
