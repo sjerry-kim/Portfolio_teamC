@@ -72,7 +72,7 @@ useEffect(() => {
 
 
   return (
-    <div>
+    <div className="estresult-big-Wrapper">
       <div className="estresult-Wrapper">
         <div className="estresult-Contents">
         <div className="estresult-Header">맞춤 견적 결과</div>

@@ -30,6 +30,13 @@ const EstReciept = () => {
     setResultData(result);
   } );
 
+  useEffect(()=>{
+    console.log(reciept)
+    if(reciept.length >= 9){
+      document.querySelector(".estreciept-wrapper").style.display ="inline-block";
+    }
+  },[reciept])
+
   return (
     <div className="estreciept-wrapper">
       <div className="estreciept-bar"></div>
