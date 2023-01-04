@@ -246,12 +246,12 @@ select:focus {outline:none}
         background-color: white;
         padding: 0px 0px;
         border-width: 1px;
-        width: 350px;
+        width: 85%;
         height: 550px;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     }
     .join-app-joinForm {
-        height: 70vh;
+        height: 85vh;
     }
     .join-joinForm_h1{
         color: #291b0b;
