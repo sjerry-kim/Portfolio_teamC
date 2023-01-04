@@ -485,6 +485,7 @@ const DataProvider = ({ children }) => {
       companyIntro:
         "다원은 “창조와 열정”이라는 모토로,\n국내 디자인 업계 최고로서 \n공간의 창의성과 고객님들의 \n만족감을 증대시켜 왔습니다.",
       mainIMG: dawonMain,
+      mainImgSrc:"https://ifh.cc/g/sAP31G.jpg",
       companyVideo:"shopVideo7.mp4",
     
     },
@@ -493,7 +494,7 @@ const DataProvider = ({ children }) => {
       name: "이다스 건축 인테리어",
       best: "abC",
       location: "서울 강남구 도산대로 68길 26 IDAS 빌딩 1F/2F",
-      number: "02-543 6566",
+      number: "02-543-6566",
       companyLogo: idasLogo,
       companyImg: ["idasCom1.JPG", "idasCom2.JPG", "idasCom3.JPG"],
       reviewImg1: idasComRe1,
@@ -530,7 +531,8 @@ const DataProvider = ({ children }) => {
       name: "다솔디자인",
       best: "abC",
       location: "서울시 서초구 명달로 104, 모차르트빌딩 7F",
-      number: "070.4279.0800",
+      number: "070-4279-0800",
+      comment:"고객님께서 찾던 그 완벽한 인테리어 기업! 바로 더이룸컴퍼니 입니다.",
       companyLogo: dasoleLogo,
       companyImg: ["dasoleCom1.JPG", "dasoleCom2.JPG", "dasoleCom3.JPG"],
       reviewImg1: dasoleComRe1,

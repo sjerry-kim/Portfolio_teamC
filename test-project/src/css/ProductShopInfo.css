@@ -67,7 +67,6 @@ video{
 }
 
 .Prloduct-detail h2{
-  margin: 25px auto;
   margin-bottom: 15px;
   font-weight: bold;
   font-family: "Chosunilbo_myungjo";
@@ -150,8 +149,19 @@ video{
   height: 400px;
 } 
 
-video{
+/* video{
   margin-top: -100px;
+} */
+
+div >.infoAdd{
+  margin-left: 10px;
+}
+
+
+.titleNshare{
+  position: relative;
+  display: flex;
+  margin-top: 20px;
 }
 
 
