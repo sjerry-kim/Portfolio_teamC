@@ -239,3 +239,118 @@ select:focus {outline:none}
         background-size: contain;
       }
   }
+
+  /* 모바일 */
+  @media screen and (max-width: 420px){
+    .join-joinForm_form{
+        background-color: white;
+        padding: 0px 0px;
+        border-width: 1px;
+        width: 350px;
+        height: 550px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    }
+    .join-app-joinForm {
+        height: 70vh;
+    }
+    .join-joinForm_h1{
+        color: #291b0b;
+        text-align: center;
+        margin-top: 25px;
+        margin-left: 40px;
+        font-size: 20px;
+    }
+    .join-joinForm_h1backimg{
+        position: relative;
+        left: -8px;
+        width: 50px;
+    }
+    .join-joinForm_emailBox{
+        display: flex;
+        border-bottom: 1px solid #291b0b7a;
+        margin-top: 10px;
+        margin-left: 50px;
+        margin-bottom: 10px;
+        width: 250px;
+        
+    }
+    .join-joinForm_emailimg_2{
+        position: relative;
+        top: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto 10px;
+        width: 15px;
+        height: 15px;
+    }
+    .join-email_input{
+        height: 40px;
+        color: #291b0b;
+        margin-top: 10px;
+        padding: 15px;
+        border: none;
+        font-size: 13px;
+    }
+    .join-errorMessage{
+        font-size: 12px;
+    }
+    .join-password_input{
+        height: 40px;
+        color: #291b0b;
+        margin-top: 10px;
+        padding: 15px;
+        border: none;
+        font-size: 13px;
+    }
+    .join-joinForm_emailimg_3{
+        width: 15px;
+        height: 15px;
+    }
+    .join-joinForm_emailimg_1{
+        width: 15px;
+        height: 15px;
+    }
+    .join-name_input{
+        font-size: 13px;
+    }
+    .join-joinForm_emailBox_2{
+        display: flex;
+        border-bottom: 1px solid #291b0b7a;
+        margin-bottom: 30px;
+        width: 250px;
+        margin-left: 50px;
+    }
+    .join-qustion{
+        font-size: 13px;
+    }
+    #showCheckbox {
+        position: relative;
+        top:-6px;
+        width: 13px;
+        height: 13px;
+        margin-left: 40px;
+        background: url("https://blog.kakaocdn.net/dn/bjVlZ3/btrL5bHw92G/bg8CBmi4x6zklkecdJ1dpk/img.png") no-repeat;
+        background-size: contain;
+      }
+      .join-span{
+        margin-top: -10px;
+        font-size: 12px;
+      }
+      .join-joinForm_btn{
+        width: 70%;
+        margin-left: 50px;
+        height: 40px;
+        padding: 10px;
+        border: none;
+        background-color:#ece4db;
+        color: white;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 15px;
+        cursor: pointer;
+        margin-bottom: 30px;
+        transition: 0.5s;
+        margin-top: 5px;
+    } 
+  }
