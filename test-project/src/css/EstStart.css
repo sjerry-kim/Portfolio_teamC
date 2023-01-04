@@ -128,7 +128,7 @@ body {
 @media screen and (max-width: 420px){
   .eststart-Wrapper {
     width: 90%;
-    height: 40%;
+    height: 337px;
     margin-top: 120px;
   }
   .est-start-btn {
@@ -143,7 +143,7 @@ body {
     top: 3px;
     color: #fff;
     font-weight: 600;
-    font-size: 1px;
+    font-size: 10px;
     background-color: #C3A88E;
     padding: 7px 4px;
     width: 90px;
