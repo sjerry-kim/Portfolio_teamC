@@ -7,6 +7,8 @@ import { useNavigate } from "react-router-dom";
 import DataContext from "../data/DataContext";
 import { useEffect } from "react";
 
+import { motion } from "framer-motion";
+
 const EstStart = () => {
   const navigate = useNavigate();
   const { state, action } = useContext(DataContext);
@@ -18,7 +20,9 @@ const EstStart = () => {
   };
 
   return (
-    <div className="eststart-Wrapper">
+    <motion.div initial={{opacity: 0 ,transform : 'translateY(50px)', transition:'transform 0.33s ease'}}
+    animate={{opacity: 1 ,transform : 'translateY(0px)', transition:'transform 0.33s ease'}}
+    exit={{opacity: 0 ,transform : 'translateY(50px)', transition:'transform 0.33s ease'}} className="eststart-Wrapper">
       <div className="eststart-Contents">
         <div className="eststart-main">
           <div className="eststart-Header">맞춤 견적 짜기</div>
@@ -56,7 +60,7 @@ const EstStart = () => {
           )}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

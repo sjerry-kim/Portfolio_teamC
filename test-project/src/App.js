@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import {Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Main from "./pages/Main";
 import EstStart from "./components/EstStart";
@@ -26,12 +26,16 @@ import MyPage from "./pages/MyPage";
 import MyPageReciept from "./components/MyPageReciept";
 import MyPageAccount from "./components/MyPageAccount";
 
+import { AnimatePresence } from "framer-motion";
+
 function App() {
+  const location = useLocation();
   return (
     <div className="App">
       <DataProvider>
-        <Routes>
-          <Route index path='/' element={<Home />}/>
+      <AnimatePresence exitBeforeEnter>
+        <Routes location={location} key={location.pathname}>
+          <Route  index path='/' element={<Home />}/>
           <Route path='/join' element={<Join />}/>
           <Route path='/main' element={<Main />}>
             <Route path='/main/login' element={<Login />}/>
@@ -47,6 +51,7 @@ function App() {
           </Route>
           <Route path="*" element={<Nonfound />} />
         </Routes>
+        </AnimatePresence>
       </DataProvider>
     </div>
   );

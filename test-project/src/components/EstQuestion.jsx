@@ -4,6 +4,7 @@ import { ProgressBar } from "react-bootstrap";
 import { createSearchParams, useNavigate } from "react-router-dom";
 import DataContext from "../data/DataContext";
 import EstReciept from "./EstReciept";
+import { motion } from "framer-motion";
 
 const EstQuestion = () => {
   // 프로그래스 바
@@ -114,7 +115,9 @@ const EstQuestion = () => {
   // 🌼🌼🌼 question 진행 중 새로고침 시 가장 첫 번째 문제로 돌아감 => 확인 필요 🌼🌼🌼
 
   return (
-    <div className="estquestion-Wrapper">
+    <motion.div initial={{opacity: 0 ,transform : 'translateY(50px)', transition:'transform 0.33s ease'}}
+    animate={{opacity: 1 ,transform : 'translateY(20px)', transition:'transform 0.33s ease'}}
+    exit={{opacity: 0 ,transform : 'translateY(50px)', transition:'transform 0.33s ease'}} className="estquestion-Wrapper">
       {window.sessionStorage.getItem("login") === "true" ? (
         <div>
           <div className="estquestion-progressbox"></div>
@@ -302,7 +305,7 @@ const EstQuestion = () => {
       ) : (
         <h3 style={{ textAlign: "center" }}>로그인하세요</h3>
       )}
-    </div>
+    </motion.div>
   );
 };
 

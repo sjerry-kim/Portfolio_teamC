@@ -8,6 +8,8 @@ import Col from "react-bootstrap/Col";
 import PangImage from "../img/Logo.png";
 import logo from "../img/logo_black.png";
 
+import { motion } from "framer-motion";
+
 // login에서 가져온 import
 import {
   getAuth,

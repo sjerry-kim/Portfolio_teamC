@@ -53,7 +53,7 @@ function ReviewCard(props) {
           <p>{bestReviews ? bestReviews.reviewComment3 : "후기 없음"}</p>
         </div>
       </div>
-      ``
+      
       <div className="Product-reCard">
         <div className="bestReviews_cardIMG">
           {bestReviews ? <img src={bestReviews.reviewImg4} /> : "후기 사진없음"}
