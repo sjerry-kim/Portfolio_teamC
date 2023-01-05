@@ -242,13 +242,19 @@ background-image: url("../img/arrow.png");
       font-family: 'Noto Sans KR', sans-serif;
       color: rgb(255, 255, 255);
     }
+}
+@media screen and (max-width: 420px){
+  .home-logo{
+    position:fixed;
+    left: 30px;
+    top: 20px;
+    width: 130px;
+  }
 
-    @media screen and (max-width: 420px){
-      .home-logo{
-        position:fixed;
-        left: 30px;
-        top: 20px;
-        width: 130px;
-      }
-    }
+  .home-box .two{
+    display: none;
+  }
+  .home-box.three{
+    display: none;
+  }
 }

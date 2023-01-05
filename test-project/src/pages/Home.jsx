@@ -9,6 +9,7 @@ import Slider from "react-slick";
 
 import { useEffect, useRef } from "react";
 import HomeNavbar from "../components/HomeNavbar";
+import { faBorderNone } from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
   const settings2 = {
@@ -35,6 +36,27 @@ const Home = () => {
       window.removeEventListener("wheel", scroll, true);
     };
   }, []);
+
+  useEffect(()=>{
+  let slider = document.querySelector(".slider");     
+  let timer;    
+
+window.addEventListener('load resize',function(){         
+    clearTimeout( timer );          
+    timer = setTimeout( sliderResponsive(), 100 ); 
+})       
+function sliderResponsive(){         
+    if(window.innerWidth <= 420){             
+        slider.filter('.slick-initialized').slick('unslick');         
+    }else{             
+        slider.not('.slick-initialized').slick({                
+            arrows: true,                
+            slidesToShow: 1,                 
+            slidesToScroll: 1            
+        });                         
+    }       
+}
+  },[])
 
 
   return (
