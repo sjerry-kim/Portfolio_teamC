@@ -160,3 +160,32 @@
   }
 
 }
+
+@media screen and (max-width: 420px){
+  .mypagereciept-wallpaper{
+    width: 320px;
+    height: 585px;
+    margin: auto;
+    margin-bottom: 100px;
+  }
+
+  .mypagereciept-wallpaper > h3{
+    font-size: 1.5em;
+    margin: 15px;
+    text-align: center;
+  }
+
+  .mypagereciept-div{
+    width: 95%;
+    height: 88%;
+    margin: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-rows: 1fr;
+  }
+
+  .mypagereciept-mini-reciept{
+    margin-bottom: 40px;
+  }
+}

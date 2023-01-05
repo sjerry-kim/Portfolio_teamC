@@ -6,7 +6,6 @@ import { async } from '@firebase/util';
 import { useContext } from 'react';
 import DataContext from "../data/DataContext";
 import MyPageReciept from '../components/MyPageReciept';
-import MypageNavbar from '../components/MypageNavbar';
 import { Outlet } from 'react-router-dom';
 import Notfound from './Notfound';
 import MyPageAccount from '../components/MyPageAccount';

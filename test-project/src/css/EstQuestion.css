@@ -67,6 +67,7 @@
   align-items: center;
   justify-content: center;
   font-family: "RIDIBatang";
+  z-index: 999 !important;
 }
 
 .estquestion-menu button,
@@ -137,7 +138,7 @@
     width: 600px;
     height: 600px;
     margin: 100px auto ;
-    margin-top: 145px;
+    margin-top: 100px;
     border-radius: 5px;
     border: none;
   }
@@ -158,7 +159,7 @@
     width: 104.5%;
     height: 385px;
     margin: 100px auto ;
-    margin-top: 75px;
+    margin-top: 115px;
     border-radius: 5px;
     border: none;
   }

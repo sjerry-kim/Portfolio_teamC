@@ -113,5 +113,40 @@
     font-size: 1em;
     width: 235px;
   }
+}
 
+@media screen and (max-width: 420px){
+  .mypageaccount-wallpaper{
+    margin: auto;
+    margin-top: 110px;
+    margin-bottom: 80px;
+    width: 350px;
+    height: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mypageaccount-title{
+    margin-bottom: 20px;
+    font-size: 1.9em;
+  }
+
+  .mypageaccount-img-div{
+    margin: 10px;
+  }
+
+  .mypageaccount-info-div-box{
+    margin: 6px auto;
+  }
+
+  .mypageaccount-info-div label{
+    font-size: 0.8em;
+    height: 18px;
+  }
+
+  .mypageaccount-info-div input{
+    font-size: 0.8em;
+    width: 195px;
+  }
 }
