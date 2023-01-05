@@ -26,7 +26,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { userLogout } from "../module/currentUser";
 
 const Navbar = () => {
-  const activeStyle = { color: "#b38b79" };
+  const activeStyle = { color: "#906b41" };
 
   const { action } = useContext(DataContext);
   const navigate = useNavigate();

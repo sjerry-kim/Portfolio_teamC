@@ -58,7 +58,7 @@
 
 .navbar-menu-big-div a:hover {
   transition: 0.3s;
-  color: #b38b79;
+  color: #906b41;
 }
 
 .navbar-log-div {
@@ -87,6 +87,10 @@
   color: #291b0b;
 }
 
+.navbar-log-div button:hover{
+  color: #906b41;
+}
+
 @media screen and (max-width: 1440px),(max-height: 789px){
   .navbar-logo-div-img{
     width: 120px;
@@ -112,7 +116,7 @@
     font-weight: bold;
     background: #ece4db;
     width: 100%;
-    height: 50px;
+    height: 69px;
     padding: 10px;
     position: absolute;
     top: 0;
@@ -122,20 +126,29 @@
 
   .navbar-logo-div-img{
     margin-top: 0px;
-    margin-left: -30px;
-    width: 60px;
+    margin-left: -38px;
+    width: 59px;
+  }
+
+  .navbar-log-div{
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
   }
 
   .navbar-log-div button {
     font-family: "Chosunilbo_myungjo";
-    margin-top: 1px;
+    margin-top: 3px;
     margin-right: 0px;
     margin-left: 10px;
     background-color: transparent;
     border: none;
-    font-size: 10px;
     font-weight: bold;
     color: #291b0b;
+    font-size: 10px;
   }
 
   .navbar-menu-big-div a {
@@ -143,13 +156,13 @@
     text-align: center;
     font-size: 10px;
     transition: 0.3s;
-    margin-left: 10px;
+    margin-left: 7px;
   }
+
   .navbar-menu-big-div {
     display: flex;
-    width: 45%;
+    width: 66%;
     flex-direction: row;
     justify-content: space-around;
-    margin-right: 20px;
   }
 }

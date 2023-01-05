@@ -1,12 +1,26 @@
 .mypage-wallpaper{
   margin: 130px 60px;
   display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 1440px),(max-height: 789px) {
   .mypage-wallpaper{
     margin: 130px 50px;
+  }
+}
+
+@media screen and (max-width: 420px){
+  body{
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .mypage-wallpaper{
+    margin: auto;
+    flex-direction: column;
+    text-align: center;
+    height: 1100px;
   }
 }
