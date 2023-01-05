@@ -66,15 +66,19 @@ video{
   margin: 20px;
 }
 
-.Prloduct-detail h2{
+.Product-detail h2{
   margin-bottom: 15px;
   font-weight: bold;
   font-family: "Chosunilbo_myungjo";
   font-size: 1.9em;
   color: #583516;
+  height: 20px;
+  width: 260px;
+  margin-left: -20px;
+
 }
 
-.Prloduct-detail p{
+.Product-detail p{
   margin: 10px auto;
   font-size: 1.1em;
   font-family: "Chosunilbo_myungjo";
@@ -154,7 +158,7 @@ video{
 } */
 
 div >.infoAdd{
-  margin-left: 10px;
+  margin-left: -5px;
 }
 
 
@@ -179,7 +183,7 @@ div >.infoAdd{
     height: 230px;
   }
 
-  .Prloduct-detai div{
+  .Product-detai div{
     margin: 50px;
   }
 

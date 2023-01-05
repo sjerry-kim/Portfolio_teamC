@@ -5,20 +5,20 @@ import {
   faPaperclip
 } from "@fortawesome/free-solid-svg-icons";
 
-
 import { useContext, useState } from "react";
 import DataContext from "../data/DataContext";
 import { useParams } from "react-router-dom";
 
 
 
-
-
 export default function KakaoShare() {
+
+
 
   const { id } = useParams();
   const { state } = useContext(DataContext);
   const shopShare = state.score.find(r => r.id == id);
+
 
 	useEffect(() => {
     kakaoButton()
@@ -35,19 +35,20 @@ export default function KakaoShare() {
         objectType: 'feed',
         content: {
           title: `${shopShare.name}`,
+          description:`${shopShare.companyIntro}`,
           imageUrl:
-            `${shopShare.mainIMGSrc}`,
+          `${shopShare.mainImgSrc}`,
           link: {
-            mobileWebUrl: 'https://developers.kakao.com',
-            webUrl: 'https://developers.kakao.com',
+            mobileWebUrl: window.location.href,
+            webUrl: window.location.href,
           },
         },
         buttons: [
           {
             title: '해당 사이트로 이동',
             link: {
-              mobileWebUrl: 'https://developers.kakao.com',
-              webUrl: 'https://developers.kakao.com',
+              mobileWebUrl: window.location.href,
+              webUrl: window.location.href,
             },
           },
         ],
