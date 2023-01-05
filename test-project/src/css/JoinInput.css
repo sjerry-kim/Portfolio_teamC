@@ -269,9 +269,9 @@ select:focus {outline:none}
         display: flex;
         border-bottom: 1px solid #291b0b7a;
         margin-top: 10px;
-        margin-left: 50px;
+        margin: auto;
         margin-bottom: 10px;
-        width: 250px;
+        width: 70%;
         
     }
     .join-joinForm_emailimg_2{
@@ -291,6 +291,7 @@ select:focus {outline:none}
         padding: 15px;
         border: none;
         font-size: 13px;
+        width: 100%;
     }
     .join-errorMessage{
         font-size: 12px;
@@ -302,6 +303,7 @@ select:focus {outline:none}
         padding: 15px;
         border: none;
         font-size: 13px;
+        width: 100%;
     }
     .join-joinForm_emailimg_3{
         width: 15px;
@@ -312,14 +314,18 @@ select:focus {outline:none}
         height: 15px;
     }
     .join-name_input{
+        width: 100%;
         font-size: 13px;
+    }
+    .join-form{
+        
     }
     .join-joinForm_emailBox_2{
         display: flex;
         border-bottom: 1px solid #291b0b7a;
-        margin-bottom: 30px;
-        width: 250px;
-        margin-left: 50px;
+        margin-bottom: 40px !important;
+        width: 70%;
+        margin:auto;
     }
     .join-qustion{
         font-size: 13px;
@@ -335,7 +341,9 @@ select:focus {outline:none}
       }
       .join-span{
         margin-top: -10px;
-        font-size: 12px;
+        width: 100%;
+        font-size: 11px;
+        margin: auto;
       }
       .join-joinForm_btn{
         width: 70%;
