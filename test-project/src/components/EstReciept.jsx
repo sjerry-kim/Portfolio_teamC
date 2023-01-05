@@ -31,12 +31,12 @@ const EstReciept = () => {
     setResultData(result);
   } );
 
-  useEffect(()=>{
-    console.log(reciept)
-    if(reciept.length >= 9){
-      document.querySelector(".estreciept-wrapper").style.display ="inline-block";
-    }
-  },[reciept])
+  // useEffect(()=>{
+  //   console.log(reciept)
+  //   if(reciept.length >= 9){
+  //     document.querySelector(".estreciept-wrapper").style.display ="inline-block";
+  //   }
+  // },[reciept])
 
   return (
     <motion.div initial={{opacity: 0 ,transform : 'translateY(50px)', transition:'transform 0.33s ease'}}

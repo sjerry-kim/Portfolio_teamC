@@ -196,13 +196,6 @@
 /* 모바일 */
 @media screen and (max-width: 420px){
   .estreciept-wrapper{
-    position: absolute;
-    top: 850px;
-    right: 620px;
-  }
-
-  .estreciept-wrapper{
     display: none;
-    margin: auto;
   }
 }
