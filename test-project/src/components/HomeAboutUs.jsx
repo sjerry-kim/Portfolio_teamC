@@ -2,7 +2,7 @@ import "../css/HomeAboutUs.css"
 
 const HomeAboutUs = () => {
     return (
-      <div>
+      <div className="homeaboutus-div">
         {/** 지우기 */}
           <div className="homeaboutus-Box">
             <h1 className="homeaboutus-title">Today Design</h1>

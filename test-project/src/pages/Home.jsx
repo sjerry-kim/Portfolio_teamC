@@ -21,6 +21,15 @@ const Home = () => {
     arrows: false,
     infinite: false,
     draggable: false,
+    // responsive: [
+    //   {
+    //     breakpoint: 420,
+    //     settings: {
+    //       dots: true,
+    //       touchMove: false,
+    //     }
+    //   },
+    // ]
   };
 
   const slider = useRef(null);
@@ -37,28 +46,28 @@ const Home = () => {
     };
   }, []);
 
-  useEffect(()=>{
-  let slider = document.querySelector(".slider");     
-  let timer;    
+//   useEffect(()=>{
+//   let slider = document.querySelector(".slider");     
+//   let timer;    
 
-window.addEventListener('load resize',function(){         
-    clearTimeout( timer );          
-    timer = setTimeout( sliderResponsive(), 100 ); 
-})       
-function sliderResponsive(){         
-    if(window.innerWidth <= 420){             
-        slider.filter('.slick-initialized').slick('unslick');         
-    }else{             
-        slider.not('.slick-initialized').slick({                
-            arrows: true,                
-            slidesToShow: 1,                 
-            slidesToScroll: 1            
-        });                         
-    }       
-}
-  },[])
+// window.addEventListener('load resize',function(){         
+//     clearTimeout( timer );          
+//     timer = setTimeout( sliderResponsive(), 100 ); 
+// })       
+// function sliderResponsive(){         
+//     if(window.innerWidth <= 420){             
+//         slider.filter('.slick-initialized').slick('unslick');         
+//     }else{             
+//         slider.not('.slick-initialized').slick({                
+//             arrows: true,                
+//             slidesToShow: 1,                 
+//             slidesToScroll: 1            
+//         });                         
+//     }       
+// }
+//   },[])
 
-
+// settings: "unslick"
   return (
     <div className="home-slick-div">
       <div id="home-container">
