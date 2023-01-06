@@ -254,6 +254,11 @@ background-image: url("../img/arrow.png");
     width: 130px;
   }
 
+  .home-slick-div{
+ 
+
+  }
+
   #home-container {
     overflow-x: scroll;
     overflow-y: hidden;
@@ -264,7 +269,9 @@ background-image: url("../img/arrow.png");
     overflow-y:scroll;
     overflow-x:hidden;
   }
-
+  #home-container2{
+    position: relative;
+  }
   #home-container .home-box {
     width:  100vw;
     height: 100vh;
@@ -290,5 +297,9 @@ background-image: url("../img/arrow.png");
     color: black;
 
   } */
+  .home-main-slick {
+    position: absolute;
+    border: 1px solid red;
+  }
 
 }
