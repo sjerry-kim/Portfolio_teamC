@@ -301,5 +301,9 @@ background-image: url("../img/arrow.png");
     position: absolute;
     border: 1px solid red;
   }
-
+  .asd{
+    position: relative;
+    bottom: 100px;
+    z-index: 1000 !important;
+  }
 }

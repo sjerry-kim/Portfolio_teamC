@@ -25,7 +25,7 @@ const Home = () => {
       {
         breakpoint: 420,
         settings: {
-          dots: false,
+          dots: true,
           touchMove: false,
           onSwipe: false,
           draggable: false,
@@ -35,6 +35,13 @@ const Home = () => {
   };
 
   const slider = useRef(null);
+  const page3 = useRef(null);
+  const scrollToSection = (elementRef) => {
+    window.scrollTo({
+      top: elementRef.current.offsetTop,
+      behavior: "smooth",
+    });
+  };
 
   function scroll(e) {
     if (slider === null) return 0;
@@ -77,7 +84,7 @@ const Home = () => {
           <Slider className="home-main-slick" {...settings2} ref={slider}>
             <div className="home-box one"><div><HomeAboutUs /></div></div>
             <div className="home-box two"><div className="home-slick-position1"><HomePortfolio /></div></div>
-            <div className="home-box three"><div className="home-slick-position2"><HomeContactUs /></div></div>
+            <div className="home-box three" ref={page3}><div className="home-slick-position2"><HomeContactUs /></div></div>
           </Slider>
         </div>
       </div>
@@ -86,6 +93,7 @@ const Home = () => {
       <div class="center-con">
         <div class="round">
             <div id="cta">
+              <button onClick={()=> scrollToSection(page3)} className="asd" >3페이지</button>
             <div className="home-arrow-title">Scroll</div>
                 <span class="arrow primera next "></span>
                 <span class="arrow segunda next "></span>
