@@ -249,7 +249,10 @@
     font-size: 17px;
   }
 
-  @media screen and (max-width: 420px){
+
+}
+
+@media screen and (max-width: 420px){
     .bm-burger-button {
       position: relative;
       width: 36px;
@@ -258,5 +261,33 @@
       top: 45px;
       margin-right: 40px;
     }
+    .homebm {
+      width: 100% !important;
+    }
+    .homeLogin-Btn{
+      position: relative;
+      left: 250px;
+      width: 100px;
+      border: none;
+      border: 1px solid rgba(255, 255, 255, 0.815);
+      background-color: rgba(255, 255, 255, 0);
+      color: rgb(255, 255, 255);
+      padding-bottom: 5px;
+      font-size: 20px;
+      text-align: center  !important;
+    }
+
+    .homeLogout-Btn{
+      position: relative;
+      left: 120px;
+      width: 80px;
+      height: 35px;
+      border: none;
+      border: 1px solid rgba(255, 255, 255, 0.815);
+      background-color: rgba(255, 255, 255, 0);
+      color: rgb(255, 255, 255);
+      padding-bottom: 5px;
+      font-size: 16px;
+      text-align: center  !important;
+    }
   }
-}

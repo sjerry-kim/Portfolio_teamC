@@ -34,7 +34,6 @@ const HomeContactUs = () => {
   return (
     <div>
       <div className="homecontactus-titleBox">
-
         <h2 className="homecontactus-title">Contact Us</h2>
         <div className="homecontactus-letter">
           <div className="homecontactus-middletitle">
@@ -43,7 +42,6 @@ const HomeContactUs = () => {
             <p>팩스번호 | 051-715-6224</p>
             <p>이메일 | GamilC@gmail.com</p>
           </div>
-
         </div>
       </div>
 
