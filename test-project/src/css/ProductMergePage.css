@@ -21,3 +21,20 @@ body {
 .slick-dots li button:before {
   color: #5a3e31;
 }
+
+
+@media screen and (max-width: 420px){
+  body{
+    overflow: hidden;
+  }
+
+  .slick-dots {
+    position: absolute;
+    top: 76%;
+    margin-left: 89%;
+    margin-top: 35px;
+  }
+  
+
+
+}

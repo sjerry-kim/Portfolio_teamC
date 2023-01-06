@@ -25,6 +25,8 @@ export default ProductBestRe;
 function ReviewCard(props) {
   const { bestReviews } = props;
   return (
+    <div className="test">
+
     <div className="Product-reviewCards">
       <div className="Product-reCard">
         <div className="bestReviews_cardIMG" id="1">
@@ -82,5 +84,7 @@ function ReviewCard(props) {
         </div>
       </div>
     </div>
+    </div>
+    
   );
 }

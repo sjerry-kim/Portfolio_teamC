@@ -31,7 +31,47 @@
   height: 100vh;
   box-sizing: border-box;
 } /*위 오른쪽 아래 왼쪽*/
+
+
 .Product-shopimg h1{
   font-family: 'Chosunilbo_myungjo';
+  position: absolute;
+  text-combine-upright: all;
+  top: 132px;
+  left: 35px;
+  width: 1px;
+  height: 70px;
+  color: white;
+  text-align: right;
 
+}
+
+
+
+
+
+/* 모바일 */
+@media screen and (max-width: 420px){
+
+  .Product-shopimg h1{
+    font-family: 'Chosunilbo_myungjo';
+    position: absolute;
+    text-combine-upright: all;
+    font-size: x-large;
+    top: 102px;
+    left: 35px;
+    width: 1px;
+    height: 70px;
+    color: white;
+    text-align: right;
+  }
+
+
+  .Product-shopimg img {
+    display: absolute;
+    margin: 0 auto 0 auto;
+    width: 100vw;
+    height: 100vh;
+  } /*위 오른쪽 아래 왼쪽*/
+  
 }

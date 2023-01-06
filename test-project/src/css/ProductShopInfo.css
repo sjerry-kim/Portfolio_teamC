@@ -153,21 +153,15 @@ video{
   height: 400px;
 } 
 
-/* video{
-  margin-top: -100px;
-} */
-
 div >.infoAdd{
   margin-left: -5px;
 }
-
 
 .titleNshare{
   position: relative;
   display: flex;
   margin-top: 20px;
 }
-
 
 @media screen and (max-width: 1440px),(max-height: 789px) {
   .Product-infoCards{
@@ -195,6 +189,28 @@ div >.infoAdd{
   .Product-comment{
     height: 528px;
     width: 650px;
-    
   }
+}
+
+/* 모바일 */
+@media screen and (max-width: 420px){
+
+
+  .Product-infoCards{
+    display: flex;
+    gap: 10px ;
+  }
+
+  .Product-infoCard{
+    width: 320px;
+    height: 130px;
+  }
+
+
+
+
+
+
+
+
 }
