@@ -21,15 +21,17 @@ const Home = () => {
     arrows: false,
     infinite: false,
     draggable: false,
-    // responsive: [
-    //   {
-    //     breakpoint: 420,
-    //     settings: {
-    //       dots: true,
-    //       touchMove: false,
-    //     }
-    //   },
-    // ]
+    responsive: [
+      {
+        breakpoint: 420,
+        settings: {
+          dots: false,
+          touchMove: false,
+          onSwipe: false,
+          draggable: false,
+        }
+      },
+    ]
   };
 
   const slider = useRef(null);
