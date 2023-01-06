@@ -8,6 +8,8 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 import { useEffect, useRef } from "react";
+import HomeNavbar from "../components/HomeNavbar";
+import { faBorderNone } from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
   const settings2 = {
@@ -19,7 +21,15 @@ const Home = () => {
     arrows: false,
     infinite: false,
     draggable: false,
-    // 🌼 auto 관련 속성 확인해보기 -> 맥북에서 2번째 슬릭이 자동으로 넘어감
+    // responsive: [
+    //   {
+    //     breakpoint: 420,
+    //     settings: {
+    //       dots: true,
+    //       touchMove: false,
+    //     }
+    //   },
+    // ]
   };
 
   const slider = useRef(null);
@@ -36,10 +46,30 @@ const Home = () => {
     };
   }, []);
 
+//   useEffect(()=>{
+//   let slider = document.querySelector(".slider");     
+//   let timer;    
 
+// window.addEventListener('load resize',function(){         
+//     clearTimeout( timer );          
+//     timer = setTimeout( sliderResponsive(), 100 ); 
+// })       
+// function sliderResponsive(){         
+//     if(window.innerWidth <= 420){             
+//         slider.filter('.slick-initialized').slick('unslick');         
+//     }else{             
+//         slider.not('.slick-initialized').slick({                
+//             arrows: true,                
+//             slidesToShow: 1,                 
+//             slidesToScroll: 1            
+//         });                         
+//     }       
+// }
+//   },[])
+
+// settings: "unslick"
   return (
     <div className="home-slick-div">
-      <div className="home-arrow"></div>
       <div id="home-container">
         <div id="home-container2">
           <Slider className="home-main-slick" {...settings2} ref={slider}>
@@ -49,10 +79,31 @@ const Home = () => {
           </Slider>
         </div>
       </div>
-      {/** 🌼 스크롤 이미지(?) 사라짐 확인  */}
-      <div className="home-scroll-txt">Scroll</div> 
-      <img src={require("../img/logo_white.png")} className="home-logo" width="170" alt="" />
-
+      {/** 🌼 스크롤 이미지(?) 사라짐 확인 😁 */}
+      <div className="home-arrow-container">
+      <div class="center-con">
+        <div class="round">
+            <div id="cta">
+            <div className="home-arrow-title">Scroll</div>
+                <span class="arrow primera next "></span>
+                <span class="arrow segunda next "></span>
+                <div className="homecontactus-cp">
+                  <p className="homecontactus-cp-p">© Copyright 2022 Today Design Company. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+        {/* <div className="home-scroll-txt"></div>
+        <div className="home-arrow"></div> */}
+        </div>
+        
+      <img src={require("../img/logo_white.png")} className="home-logo" width="230" alt="" />
+      
+      <div id="outer-container">
+      <HomeNavbar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
+        <div id="page-wrap">
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,66 +1,183 @@
 @font-face {
-    font-family: 'Humanbumsuk';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Humanbumsuk.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "RIDIBatang";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
-.est-body{
-    background-color: rgb(37, 90, 90);
-    width: 100%;
-    height: 100vh;
+body {
+  background-color: #f1eeeb;
 }
 
-.eststart-Wrapper{
-    background-color: rgb(255, 250, 244);
-    width: 500px;
-    height: 600px;
-    margin: auto;
-    border-radius: 20px;
-    border: 1px solid black;
-    box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
+.eststart-Wrapper {
+  z-index: 12 !important;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  width: 600px;
+  height: 550px;
+  margin: 100px auto;
+  margin-top: 210px;
+  border: 0.5px solid #d6c5b7;
+  border-radius: 5px;
+  box-shadow: 5px 5px 19px rgb(157, 157, 157);
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
 }
 
-
-.eststart-Header{
-    font-family: 'Humanbumsuk';
-    font-size: 40pt;
-    display:flex;
-    justify-content: center;
-    align-items: center;
+.eststart-Contents {
+  background-image: url(../img/EstStart-img3.jpg);
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  border: none;
+  padding: 25px;
 }
 
-.eststart-Contents{
+.eststart-main {
+  position: relative;
+  top: 100px;
+}
+
+.eststart-Header {
+  z-index: 999 !important;
+  font-family: "RIDIBatang";
+  font-size: 35pt;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #291b0b;
+}
+
+.eststart-Title {
+  z-index: 999 !important;
+  font-family: "RIDIBatang";
+  font-size: 20pt;
+  text-align: end;
+  margin-bottom: 20px;
+  color: #291b0b;
+}
+
+.est-start-btn {
+  border: none;
+  display: block;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  left: 385px;
+  top: 4px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  background-color: #C3A88E;
+  padding: 13px 50px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.20);
+}
+
+.est-start-btn span {
+  position: relative; 
+  z-index: 1;
+}
+
+.est-start-btn:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 390%;
+  width: 140%;
+  background: #8b6343 ;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+
+.est-start-btn:hover:after {
+  -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+
+@media screen and (max-width: 1440px),(max-height: 789px) {
+  .eststart-Wrapper {
+    z-index: 12 !important;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    width: 600px;
+    height: 550px;
+    margin: 100px auto;
+    margin-top: 180px;
+    border: 0.5px solid #d6c5b7;
+    border-radius: 5px;
+    box-shadow: 5px 5px 19px rgb(157, 157, 157);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: end;
+  }
 }
 
-.eststart-Title{
-    font-family: 'Humanbumsuk';
-    font-size: 30pt;
-    margin-top: 40px;
+
+/* 모바일 */
+@media screen and (max-width: 420px){
+  .eststart-Wrapper {
+    width: 90%;
+    height: 337px;
+    margin-top: 120px;
+  }
+  .est-start-btn {
+    border: none;
+    display: block;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    left: 205px;
+    top: 3px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 10px;
+    background-color: #C3A88E;
+    padding: 7px 4px;
+    width: 90px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.20);
+  }
+  .est-start-btn:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 390%;
+  width: 140%;
+  background: #8b6343 ;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  transform: translateX(-96%) translateY(-15%) rotate(44deg);
 }
 
-.eststart-LogoImage{
-    margin-top: 10px;
+.est-start-btn:hover:after {
+  -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  transform: translateX(-9%) translateY(-25%) rotate(45deg);
 }
+  .eststart-main {
+    position: relative;
+    top: 100px;
+    margin-bottom: 40px;
+  }
 
-.eststart-Desc{
-    font-family: 'Humanbumsuk';
+  .eststart-Header {
     font-size: 20pt;
-    margin-top: 20px;
-}
+  }
 
-.eststart-StartBtn{
-    font-family: 'Humanbumsuk';
-}
-.PrgressBar {
-    margin-top: 30px;
-}
-.progress-bar{
-    background-color: #366360;
+  .eststart-Title {
+    font-size: 10pt;
+  }
 }

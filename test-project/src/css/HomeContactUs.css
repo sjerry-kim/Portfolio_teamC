@@ -1,16 +1,175 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+}
+@font-face {
+  font-family: 'twayair';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+input:focus {
+  outline: none;
+}
+
+.homecontactus-titleBox{
+  width: 550%;
+  position: relative;
+  right: 700px;
+  bottom: 50px;
+  margin-left: 30px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
 .homecontactus-letter {
     text-align: left;
     margin-top: 350px;
-    margin-left: -740px;
+    font-family: 'Noto Sans KR', sans-serif;
   }
   
   .homecontactus-title {
-    margin-top: -80px;
-    margin-left: -740px;
+    margin-top: 0px;
     font-size: 100px;
     font-weight: bold;
+    width: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
   }
-  .homecontactus-button {
+
+  .homecontactus-middletitle {
+    font-size: 20px;
+    margin-top: -270px;
+    margin-left: 15px;
+    font-family: 'twayair';
+  }
+
+  .homecontactus-middletitle p {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: lighter;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .homecontactus-check-box{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+  }
+
+  .homecontactus-check-box p {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: lighter;
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    right: 665px;
+    top: 48px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    /* font-style: italic; */
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+
+.homecontactus-button-one:before:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.homecontactus-button-one {
+  width: 270px;
+  height: 60px;
+  border: none;
+  background: #b3aeae85;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 670px;
+  top: 30px;
+}
+
+.homecontactus-button-one::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: rgba(252, 252, 252, 0.6);
+  transition: width 1s ease-in-out;
+}
+.homecontactus-button-one::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: rgba(252, 252, 252, 0.6);
+  transition: width 1s ease-in-out;
+}
+
+.homecontactus-button-one:before {
+  top: 0;
+  left: 0;
+}
+
+.homecontactus-button-one:after {
+  bottom: 0;
+  right: 0;
+}
+
+.homecontactus-button-one:hover:before,
+.homecontactus-button-one:hover:after {
+  width: 100%;
+}
+
+.homecontactus-letters {
+  width: 50px;
+  height: 1px;
+  perspective: 600px;
+}
+
+.homecontactus-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.homecontactus-card_face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.829);
+  font-family: 'twayair';
+  font-weight: lighter;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.homecontactus-button-one:hover .homecontactus-card {
+  transform: rotateY(180deg);
+}
+
+.homecontactus-card div a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* .homecontactus-button {
     margin-top: 120px;
     margin-left: -550px;
     padding: 45px 100px 40px 100px;
@@ -19,45 +178,242 @@
     border-radius: 10px;
     background-color: transparent;
     color: white;
-  }
-  .homecontactus-button:hover {
-    background-color: white;
-    color: black;
+  } */
+
+.homecontactus-button:hover {
+  background-color: white;
+  color: black;
+}
+
+
+
+
+.homecontactus-formBox {
+  display: flex;
+  text-align: center;
+  width: 100vw;
+  margin-top: -500px;
+  margin-left: -450px;
+  font-family: 'twayair';
+}
+
+.homecontactus-form {
+  font-size: 50px;
+  width: 100%;
+}
+
+.homecontactus-formdiv {
+  margin: 30px;
+}
+
+.homecontactus-formlable {
+  width: 170px;
+  font-size: 30px;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.2pt;
+  padding: 7px 0px;
+  box-sizing: border-box;
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+  margin-right: 30px;
+  font-family: 'twayair';
+  font-weight: lighter;
+}
+.homecontactus-forminput {
+  display: inline-block;
+  size: 10px;
+  width: 400px;
+  height: 75px;
+  font-size: 20px;
+  padding: 10px 5px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, 0.8);
+}
+.homecontactus-checkbox {
+  font-size: 20px;
+  text-decoration: dashed;
+  margin: 50px 0 20px 0px;
+  padding: 0 15px 0 15px;
+  font-family: 'Noto Sans KR', sans-serif !important;
+  font-weight: lighter;
+}
+#homecontactus-input {
+  display: inline-block;
+}
+
+.homecontactus-checkdiv {
+  display: flex;
+  justify-content: center;
+  margin-right: 230px;
+}
+.homecontactus-Btn {
+  position: relative;
+  left: 300px;
+  margin-top: 1px;
+  margin-bottom: 8px;
+  font-family: 'twayair';
+  font-weight: lighter;
+  letter-spacing: 2px;
+  height: 60px;
+}
+.homecontactus-Btn p{
+  margin-top: 10px ;
+  margin-left: -0px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+@media screen and (max-width: 1440px),(max-height: 789px) {
+  .homecontactus-titleBox{
+    width: 550%;
+    position: relative;
+    right: 730px;
+    bottom: 40px;
+    margin-left: 30px;
+    font-family: 'Noto Sans KR', sans-serif;
   }
   
+  .homecontactus-title {
+    margin-top: -40px;
+    margin-bottom: 0;
+    font-size: 80px;
+    font-weight: bold;
+    width: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
   .homecontactus-middletitle {
-    font-size: 15px;
-    margin-top: -250px;
+    font-size: 17px;
+    margin-top: -280px;
     margin-left: 15px;
+    font-family: 'twayair';
   }
-  
-  .homecontactus-form {
-    margin-left: 250px;
-    margin-top: -500px;
-    font-size: 50px;
-  }
-  
-  .homecontactus-formlable {
-    display: table-cell;
-    width: 170px;
-    font-size: 30px;
-    color: rgba(255, 255, 255, 0.8);
-    letter-spacing: 0.2pt;
-    padding: 7px 20px;
-    box-sizing: border-box;
-    vertical-align: top;
-    border-right: 1px solid rgba(255, 255, 255, 0.25);
+  .homecontactus-button-one {
+    width: 240px;
+    height: 50px;
+    border: none;
+    background: #b3aeae85;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 690px;
+    top: 0px;
   }
   .homecontactus-forminput {
-    float: left;
+    display: inline-block;
     size: 10px;
-    font-size: 30px;
-    padding: 8px 5px;
+    width: 350px;
+    height: 45px;
+    font-size: 15px;
+    padding: 10px 5px;
     background: transparent;
-    border: 0;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     box-sizing: border-box;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .homecontactus-formBox {
+    display: flex;
+    text-align: center;
+    width: 100vw;
+    margin-top: -430px;
+    margin-left: -550px;
+    font-family: 'twayair';
+  }
+  .homecontactus-formlable {
+    width: 170px;
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 0.2pt;
+    padding: 7px 0px;
+    box-sizing: border-box;
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+    margin-right: 30px;
+    font-family: 'twayair';
+    font-weight: lighter;
   }
   .homecontactus-checkbox {
-    font-size: 20px;
+    font-size: 16px;
     text-decoration: dashed;
+    margin: 50px 0 20px 0px;
+    padding: 0 15px 0 15px;
+    font-family: 'twayair';
+    font-weight: lighter;
   }
+  .homecontactus-Btn {
+    position: relative;
+    left: 300px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'twayair';
+    font-weight: lighter;
+    letter-spacing: 2px;
+    padding-right: 10px;
+    width: 70px;
+    height: 50px;
+  }
+  .homecontactus-Btn p{
+    margin-top: 7px;
+    margin-left: -1px;
+    font-size: 15px;
+  }
+  .homecontactus-check-box p{
+    margin-left: -20px;
+    margin-top: -35px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .homecontactus-formBox{
+    display: none;
+  }
+
+  .homecontactus-checkdiv{
+    display: none;
+  }
+
+  .homecontactus-titleBox{
+    position: relative;
+    right: 800px;
+    width: 50px;
+    bottom: 40px;
+    margin: auto;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  
+  .homecontactus-title {
+    margin-top: -30px;
+    margin-bottom: -50px;
+    font-size: 40px;
+    font-weight: bold;
+    width: 50%;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  .homecontactus-middletitle {
+    font-size: 15px;
+    margin-top: -280px;
+    margin-left: 15px;
+    font-family: 'twayair';
+  }
+
+  .homecontactus-check-box{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .homecontactus-check-box button{
+    width: 130px;
+    height: 30px;
+  }
+
+  .homecontactus-check-box button .front{
+    font-size: 15px;
+  }
+
+  .homecontactus-check-box p{
+    font-size: 17px;
+  }
+
+}
+
+

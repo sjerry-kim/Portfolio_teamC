@@ -1,39 +1,66 @@
-import React from "react";
+import React, { useContext } from "react";
 // css-in-js
 import PangImage from "../img/Logo.png";
+import purenComRe3 from "../img/purenComRe3.JPG";
 import "../css/EstStart.css";
-import { Route, Routes, useNavigate } from "react-router-dom";
-import EstReciept from "./EstReciept";
-import EstQuestion from "./EstQuestion";
-import EstResult from "./EstResult";
+import { useNavigate } from "react-router-dom";
+import DataContext from "../data/DataContext";
+import { useEffect } from "react";
+
+import { motion } from "framer-motion";
 
 const EstStart = () => {
   const navigate = useNavigate();
+  const { state, action } = useContext(DataContext);
 
   const StartClickButton = () => {
-    // useHistory 여기서 이동됨
-    navigate("/main/estimation/question");
+    action.setReciept([]);
+    window.sessionStorage.setItem("result", null);
+    navigate("/main/question");
   };
 
   return (
-    <div className="eststart-Wrapper" style={{ display: "flex", flexDeirection: "row" }}>
+    <motion.div initial={{opacity: 0 ,transform : 'translateY(50px)', transition:'transform 0.33s ease'}}
+    animate={{opacity: 1 ,transform : 'translateY(0px)', transition:'transform 0.33s ease'}}
+    exit={{opacity: 0 ,transform : 'translateY(50px)', transition:'transform 0.33s ease'}} className="eststart-Wrapper">
       <div className="eststart-Contents">
-        <div className="eststart-Header">간편 견적</div>
-        <div className="eststart-Title">나에게 맞는 업체</div>
-        <div className="eststart-LogoImage">
-          <img src={PangImage} width={200}></img>
+        <div className="eststart-main">
+          <div className="eststart-Header">맞춤 견적 짜기</div>
+          {window.sessionStorage.getItem("login") === "true" ? (
+            <div className="eststart-Title">내가 찾던 인테리어 집</div>
+          ) : (
+            <div className="eststart-Title">로그인 후 이용하세요</div>
+          )}
+          {/* <div className="eststart-LogoImage"> */}
+          {/* <div className="eststart-img">
+            <div className="eststart-imgText">
+              인테리어 중계업은 Today Design !!
+            </div>
+          </div> */}
+          {/* <div className="eststart-backColor"></div> */}
+          {/* <img src={PangImage} width={200}></img> */}
+          {/* </div> */}
+
+          {window.sessionStorage.getItem("login") === "true" ? (
+            <div className="eststart-StartBtnBox">
+              {/* <button className="eststart-StartBtn" onClick={StartClickButton}>
+            Start
+            </button> */}
+              {/* <button 
+              onClick={StartClickButton}
+              class="button button--shikoba">
+              <span>Start</span>
+            </button> */}
+              <button onClick={StartClickButton} class="est-start-btn">
+                <span>S t a r t</span>
+              </button>
+            </div>
+          ) : (
+            " "
+          )}
         </div>
-        <div className="eststart-Desc">mbti를 기본으로하는 간편 견적</div>
-        <button className="eststart-StartBtn" onClick={StartClickButton}>
-          견적 짜러가기
-        </button>
       </div>
-      <Routes>
-        <Route path="/question" element={<EstQuestion />} />
-        <Route path="/result" element={<EstResult />} />
-        <Route path="/reciept" element={<EstReciept />} />
-      </Routes>
-    </div>
+    </motion.div>
   );
 };
 

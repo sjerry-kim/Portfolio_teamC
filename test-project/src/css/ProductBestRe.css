@@ -1,30 +1,135 @@
-.Product-bestRe {
-  background-color: skyblue;
-  height: 100vh;
-}
-.Product-reviewCards {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin: 90px;
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;600;700&display=swap");
+@font-face {
+  font-family: "Chosunilbo_myungjo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
-.Product-card-img-top {
+.Product-bestRe {
+  margin-top: 125px;
+  margin-left: 10px;
+
+}
+
+.Product-bestRe h1 {
+  font-family: "Chosunilbo_myungjo";
+  margin-top: 16px;
+  margin-left: 25px;
+}
+
+.Product-reviewCards {
+  width: 100vw;
+  height: 90vh;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 450px 450px 450px;
+  grid-template-rows: 350px 350px;
+  margin-left: 170px;
+  column-gap: 55px;
+  row-gap: -20px;
+}
+
+.Product-reCard {
+  position: relative;
+  width: 450px;
+  height: 300px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  margin-left: 50px;
+}
+
+.bestReviews_cardIMG > img {
+  width: 450px;
   height: 300px;
 }
 
-.Product-reCard1 {
-  width: 500px;
-  height: 600px;
+.Product-reCard > .product-bestReviews_cardIMG {
+  color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.35s ease-in-out;
 }
 
-.Product-reCard2 {
-  width: 500px;
-  height: 600px;
+.Product-reCard:hover .product-bestReviews_cardIMG {
+  opacity: 1;
 }
 
-.Product-reCard3 {
-  width: 500px;
-  height: 600px;
+.Product-reCard .product-bestReviews_cardIMG > h3 {
+  font-size: 30px;
+  padding-bottom: 0.4em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-family: "Chosunilbo_myungjo";
+}
+
+.Product-reCard .product-bestReviews_cardIMG > p {
+  font-size: 15px;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  word-break: break-all;
+  white-space: normal;
+  font-family: "Chosunilbo_myungjo";
+}
+
+
+@media screen and (max-width: 1440px),(max-height: 789px) {
+  .Product-bestRe{
+    margin-top: 125px;
+    margin-left: 40px;
+  }
+
+  .Product-bestRe h1{
+    font-size: 2.1em;
+    margin-left: 30px;
+    position: relative;
+    top: 5px;
+    left: 55px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: #583516;
+  }
+
+  .Product-reviewCards {
+    width: fit-content;
+    height: fit-content;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 280px 280px;
+    margin-left: 65px;
+    margin-bottom: 10px;
+    column-gap: 0px;
+    row-gap: 0px;
+  }
+
+  .Product-reCard{
+    width: 380px;
+    height: 260px;
+    margin: 10px
+  }
+
+  .bestReviews_cardIMG img{
+    width: 380px;
+    height: 260px;
+  }
+
+  .Product-reCard .product-bestReviews_cardIMG > h3{
+    padding: 0;
+    font-size: 25px;
+    margin-top: 0px;
+  }
+
+  .Product-reCard .product-bestReviews_cardIMG > p{
+    font-size: 0.9em;
+  }
+
+
 }

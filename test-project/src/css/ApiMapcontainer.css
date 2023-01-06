@@ -1,0 +1,123 @@
+@font-face {
+  font-family: "LINESeedKR-Bd";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+#api-result-list::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0, 0.1); /* 스크롤바의 색상 */
+}
+
+#api-result-list::-webkit-scrollbar {
+  width: 10px; /* 스크롤바의 너비 */
+  scroll-behavior: smooth;
+}
+
+#api-result-list::-webkit-scrollbar-thumb {
+  height: 30%; /* 스크롤바의 길이 */
+  background: rgba(0, 0, 0, 0.4); /* 스크롤바의 색상 */
+  border-radius: 10px;
+}
+
+.api-result-list-font {
+  font-family: "LINESeedKR-Bd";
+}
+#api-result-list-body {
+  background-color: #ffff;
+  opacity: 0.7;
+  border: 1px solid rgb(187, 163, 136);
+  position: relative;
+  height: 878px;
+  padding: 20px;
+  width: 400px;
+}
+#api-result-list {
+  width: 380px;
+  height: 850px;
+  overflow-y: scroll;
+}
+
+#api-result-list > div > div > h5 {
+  position: relative;
+  border-bottom: 1px solid black;
+  bottom: 22px;
+  width: 300px;
+  margin-left: 7px;
+  font-family: "LINESeedKR-Bd";
+}
+#api-result-list > div > div {
+  padding-bottom: 15px;
+  margin-left: 15px;
+  text-align: left;
+}
+
+#api-pagination {
+  text-align: center;
+}
+
+#api-pagination a {
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+  font-family: "LINESeedKR-Bd";
+  margin: 0 10px;
+}
+
+#api-pagination a.on {
+  color: rgb(187, 163, 136);
+  font-weight: bold;
+}
+
+#api-TopMap {
+  display: flex;
+  background-color: rgb(230, 218, 204);
+}
+#api-midMap {
+  width: 40.7vw;
+  margin-top: 90px;
+  font-family: "LINESeedKR-Bd";
+}
+#api-myMap {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  border: 1px solid rgb(187, 163, 136);
+  height: 100%;
+  bottom: 1px;
+}
+
+#api-midMap li div div div span {
+  font-family: "LINESeedKR-Bd";
+}
+@media screen and (max-width: 1440px), (max-height: 789px) {
+  #api-result-list {
+    width: 380px;
+    height: 575px;
+    overflow-y: scroll;
+  }
+}
+@media screen and (max-width: 420px) {
+  #api-myMap {
+    position: absolute;
+    z-index: 0;
+    width: 420px;
+    border: 1px solid rgb(187, 163, 136);
+    height: 844px;
+  }
+  #api-result-list-body {
+    background-color: #ffff;
+    opacity: 0.7;
+    border: 1px solid rgb(187, 163, 136);
+    position: relative;
+    height: 200px;
+    padding: 20px;
+    width: 420px;
+    top: 581px;
+  }
+  #api-result-list {
+    width: 420px;
+    height: 160px;
+    overflow-y: scroll;
+  }
+}

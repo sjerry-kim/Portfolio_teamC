@@ -1,40 +1,196 @@
-.Product-shopInfo {
-  background-color: blueviolet;
-  height: 102vh;
-  box-sizing: border-box;
-}
-.Product-infoCards {
-  width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  padding: 150px;
+@font-face {
+  font-family: "Chosunilbo_myungjo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
-.Product-infoCard {
-  width: 400px;
-  height: 600px;
-  margin-right: 2%;
+.Product-shopInfo {
+  margin-top: 110px;
+  margin-left: 55px;
+} 
+
+.Product-infoCards {
+  width: 100%;
+  margin-top: 150px;
+  margin-left: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 5px;
+  column-gap: 5px;
+}
+
+.Product-infoCard{
+  border : 1px solid #C4BBB1;
+  border-radius: 5px;
+  margin-right: 1px;
+  width: 100%;
+  padding-left: 30px;
+  /* background-color: #F6F4F2; */
+}
+
+.Product-infoCard:nth-child(1) {
+	grid-column: 1/2;
+  grid-row:1/2
+}
+
+.Product-comment:nth-child(3){
+  grid-column:2/4;
+  grid-row:1/4;
+}
+
+.Product-video:nth-child(2){
+  grid-column: 1/2;
+  grid-row: 2/4;
+}
+
+video::-webkit-media-controls-fullscreen-button {
+	display: none !important; }
+
+video{
+  margin-bottom: 10px;
 }
 
 .Product-comment {
-  width: 600px;
-  height: 600px;
-  margin-left: 2%;
+  right: 17px;
+  height: 605px;
+  width: 903px;
+  border : 1px solid #C4BBB1;
+  border-radius: 5px;
+  /* background-color: #f7f4f2; */
 }
 
-/*
-.infoCard{
-  margin-right: auto;
+.Product-detail{
+  margin: 20px;
 }
 
-/* .reCard2{
-  float: none;
-  margin: 0 auto;
+.Prloduct-detail h2{
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-family: "Chosunilbo_myungjo";
+  font-size: 1.9em;
+  color: #583516;
+}
+
+.Prloduct-detail p{
+  margin: 10px auto;
+  font-size: 1.1em;
+  font-family: "Chosunilbo_myungjo";
+  color: #583516;
+}
+
+.Product-commentLogIn{
+  font-family: "Chosunilbo_myungjo";
+  margin-top: 25px;
+  margin-left: 28px;
+  color: #583516;
+  
+}
+.Product-commentLogIn h2{
+  font-family: "Chosunilbo_myungjo";
+  font-size: 1.9em;
+  margin-top: 25px;
+  font-weight: bold;
+  color: #583516;
+} 
+
+.Product-commentLogOut{
+  font-family: "Chosunilbo_myungjo";
+  margin-top: 25px;
+  margin-left: 28px;
+  color: #583516;
+}
+
+.Product-commentLogOut h2{
+  font-family: "Chosunilbo_myungjo";
+  font-size: 1.9em;
+  margin-top: 25px;
+  font-weight: bold;
+  color: #583516;
+}
+
+.Product-commentLogOut-p-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 160px ;
+}
+
+.Product-commentLogOut-p-div p{
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: "Chosunilbo_myungjo";
+  position: relative;
+  right: 12px;
+  color: #583516;
+}
+
+.Product-commentLogOut-p-div button{
+  font-family: "Chosunilbo_myungjo";
+  margin-top: 15px;
+  position: relative;
+  right: 12px;
+  border: none;
+  font-weight: bold;
+  color: #8a857e;
+  font-size: 0.9em;
+}
+
+.Product-commentLogOut-p-div button:hover{
+  color: #291B0C;
+}
+
+.Product-video{
+  border-radius: 5px;
+  height: 400px;
+} 
+
+/* video{
+  margin-top: -100px;
 } */
 
-/* .comment{
-  margin-left: auto;
-} */
+div >.infoAdd{
+  margin-left: 10px;
+}
+
+
+.titleNshare{
+  position: relative;
+  display: flex;
+  margin-top: 20px;
+}
+
+
+@media screen and (max-width: 1440px),(max-height: 789px) {
+  .Product-infoCards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 220px;
+    margin-left: 80px;
+    gap: 10px ;
+  }
+
+  .Product-infoCard{
+    width: 500px;
+    height: 230px;
+  }
+
+  .Prloduct-detai div{
+    margin: 50px;
+  }
+
+  .Product-video video{
+  width: 500px !important;
+  margin-top: -155px;
+  }
+
+  .Product-comment{
+    height: 528px;
+    width: 650px;
+    
+  }
+}

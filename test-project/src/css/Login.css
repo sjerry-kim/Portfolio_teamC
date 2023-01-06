@@ -1,0 +1,402 @@
+@font-face {
+  font-family: "Chosunilbo_myungjo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.login-page-box{
+  display: flex;
+  justify-content: center;
+  clear: both;
+  margin-top: 195px;
+  position: relative;
+  right: 15px;
+}
+.login-page2{
+  width: 700px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.login-text-box{
+  margin:auto;
+  margin-top: 150px;
+}
+
+.login-page2-text1{
+  font-size: 40px;
+  color: #291b0b;
+  width: 13ch;
+  animation: typing 1.8s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right:#291b0b00 3px solid;
+  font-size: 2em;
+  margin: 0;
+}
+
+.login-page2-text2{
+  font-size: 40px;
+  color: #291b0b;
+  width: 12.5ch;
+  animation: typing 1.8s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right:#291b0b00 3px solid;
+  font-size: 2em;
+  animation-delay:2s;
+  animation-fill-mode:backwards;
+  margin: 0;
+}
+.login-page2-text3{
+  font-weight:bold;
+  font-size: 50px;
+  color: #291b0b;
+  width: 14ch;
+  animation: typing 1.8s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right:#291b0b00 3px solid;
+  font-size: 2em;
+  animation-delay:4s;
+  animation-fill-mode:backwards;
+  margin: 0;
+}
+.login-page2-text1::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: black;
+  overflow: hidden;
+  border-right: 1px solid black;
+  animation: typing 5s steps(31) infinite;
+}
+.login-page2-text2::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: black;
+  overflow: hidden;
+  border-right: 1px solid black;
+  animation: typing 5s steps(31) infinite;
+}
+.login-page2-text3::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: black;
+  overflow: hidden;
+  border-right: 1px solid black;
+  animation: typing 5s steps(31) infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+.login-line{
+  width: 400px;
+  border-top: 1px solid #291b0b;
+  margin-top: 20px;
+  padding-top: 30px;
+  color: #291b0b;
+}
+.login-line-2{
+  position: relative;
+  right: 50px;
+  height: 650px;
+  border-left: 1px solid #291b0baf;
+  margin-left: 69px;
+}
+.login-line p{
+  font-family: "Chosunilbo_myungjo";
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.login-page{
+    padding: 0 20px;
+    background-image: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)); /*, url(./img/img1.daumcdn.jpg) ;*/
+    background-size: cover;
+    margin-top: 100px;
+  }
+.login-border{
+    width: 600px;
+    height: 700px;
+    margin: auto;
+    text-align: center;
+  }
+  .login-titleWrap{
+    margin-top: 0px;
+    margin-bottom: 30px;
+    font-size: 53px;
+    color: #291b0b;
+  }
+  .login-contentWrap{
+    margin: auto;
+    flex: 1;
+  }
+  .login-inputTitle{
+    font-size: 12px;
+    color: #291b0b;
+    margin-bottom: 15px;
+    font-family: "Chosunilbo_myungjo";
+    font-weight: bold;
+  }
+  .login-inputWrap{
+    display: flex;
+    width: 50%;
+    max-width: 100%;
+    padding: 16px;
+    margin-top: 8px;
+    margin: auto;
+    border-bottom: 1px solid #291b0b7a;
+  }
+  /* 인풋창 클릭하면 태두리색 바뀜 */
+  .login-inputWrap:focus-within{
+    border: 1px solid #291b0b;
+  }
+  
+  .login-input{
+    margin: auto;
+    width: 100%;
+    outline:  none;
+    border: none;
+    height: 17px;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: #0e0e0e00;
+    color: #291b0b;
+    font-family: "Chosunilbo_myungjo";
+    font-weight: bold;
+  }
+  
+  .login-input::placeholder{
+    color: rgb(192, 192, 192);
+  }
+  
+  .login-errorMessageWrap {
+    margin-top: 8px;
+    color: rgb(206, 0, 0);
+    font-size: 15px;
+  }
+  
+.login-createButton{
+    background-color: #ece4db;
+    width: 50%;
+    height: 48px;
+    border: none;
+    color: #291b0b;
+    cursor: pointer;
+    transition: 0.5s;
+    position: relative;
+    font-family: "Chosunilbo_myungjo";
+    font-weight: bold;
+}
+.login-allbox{
+  position: relative;
+  left: -10px;
+}
+.login-LoginGoogle{
+    background-color: #ece4db;
+    width: 8%;
+    height: 48px;
+    border: none;
+    color: #291b0b;
+    cursor: pointer;
+    transition: 0.5s;
+    position: relative;
+    margin: 20px;
+}
+
+.login-googleimg{
+  width: 50px;
+  border: none;
+}
+  .login-LoginButton{
+    width: 60%;
+    height: 48px;
+    border: none;
+    background-color: #ece4db;
+    color: rgb(22, 21, 21);
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-family: "Chosunilbo_myungjo";
+    font-weight: bold;
+  }
+  .login-LoginButton:hover{
+    background-color: #291b0b;
+    color: #ece4db;
+  }
+  
+  /* 버튼 비활성화일때 회색 */
+  .login-LoginButton:disabled{
+    background-color: rgba(172, 172, 172, 0.281);
+    color: #291b0b;
+  }
+
+
+  .login-login-Logo{
+    width: 200px;
+    margin: auto;
+  }
+  
+  @media screen and (max-width: 1440px),(max-height: 789px) {
+    .login-text-box{
+      margin:auto;
+      margin-top: 100px;
+      margin-right: 170px;
+    }
+    .login-line{
+      width: 400px;
+      border-top: 1px solid #291b0b;
+      margin-top: 20px;
+      padding-top: 30px;
+      color: #291b0b;
+    }
+    .login-line-2{
+      position: relative;
+      right: 50px;
+      height: 530px;
+      border-left: 1px solid #291b0baf;
+      margin-left: 45px;
+      margin-top: -20px;
+    }
+    .login-border{
+      width: 600px;
+      height: 700px;
+      margin: auto;
+      text-align: center;
+      margin-top: -60px;
+      margin-left: -30px;
+    }
+  }
+
+  /* 모바일 */
+  @media screen and (max-width: 420px){
+    .login-page-box{
+      display: flex;
+      justify-content: center;
+      clear: both;
+      margin-top: 125px;
+      position: relative;
+      right: 0px;
+    }
+    .login-border{
+      width: 300px;
+      height: 700px;
+      margin: auto;
+      text-align: center;
+    }
+    .login-page2{
+      display: none;
+    }
+    .login-line-2{
+      display: none;
+    }
+    .login-page{
+      padding: 0 20px;
+      background-image: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)); /*, url(./img/img1.daumcdn.jpg) ;*/
+      background-size: cover;
+      margin-top: 20px;
+    }
+    .login-inputWrap{
+      display: flex;
+      width: 230px;
+      max-width: 90%;
+      padding: 10px;
+      margin-top: 8px;
+      margin: auto;
+      border-bottom: 1px solid #291b0b7a;
+      display: inline-block;
+    }
+    .login-input{
+      font-size: 11px;
+    }
+    .login-titleWrap{
+      margin-top: 0px;
+      margin-bottom: 30px;
+      font-size: 30px;
+      color: #291b0b;
+      display: inline-block;
+    }
+    .login-inputTitle{
+      margin-top: -10px;
+      margin-bottom: 10px;
+      font-size: 10px;
+    }
+    .login-errorMessageWrap{
+      font-size: 12px;
+    }
+    .login-LoginButton{
+      width: 60%;
+      height: 30px;
+      border: none;
+      background-color: #ece4db;
+      color: rgb(22, 21, 21);
+      margin-top: 20px;
+      cursor: pointer;
+      transition: 0.5s;
+      font-family: "Chosunilbo_myungjo";
+      font-weight: bold;
+      font-size: 13px;
+    }
+    .login-LoginButton-box{
+
+    }
+    .login-LoginGoogle{
+      background-color: #ece4db;
+      width: 10%;
+      height: 30px;
+      border: none;
+      color: #291b0b;
+      cursor: pointer;
+      transition: 0.5s;
+      position: relative;
+      margin: 20px;
+  }
+  .login-googleimg{
+    width: 30px;
+  }
+  .login-createButton{
+    background-color: #ece4db;
+    width: 60%;
+    height: 30px;
+    border: none;
+    color: #291b0b;
+    cursor: pointer;
+    transition: 0.5s;
+    position: relative;
+    font-family: "Chosunilbo_myungjo";
+    font-weight: bold;
+    font-size: 13px;
+  }
+    .login-allbox{
+      position: relative;
+      left: -10px;
+      display: inline;
+    }
+    .login-contentWrap{
+      display: inline;
+      margin: auto;
+      flex: 1;
+    }
+  }

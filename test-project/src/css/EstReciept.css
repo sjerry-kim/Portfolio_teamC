@@ -1,35 +1,204 @@
-.receipt{
+@font-face {
+  font-family: "DungGeunMo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* .estreciept-receipt{
     position: relative;
+    bottom: 597px;
+    left: 600px;
     width: 250px;
-    height: 500px;
-    background-color: rgb(255, 250, 244);
+    height: 600px;
+    background-image: url(../img/Reciept-background.jpg);
+    background-color: rgb(255, 255, 255);
     margin: 150px 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-family: "Humanbumsuk";
-    border-radius: 20px;
     font-size: 20px;
-    box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
+    border-radius: 5px;
+    -webkit-box-shadow: 7px 8px 5px 1px rgba(0,0,0,0.47); 
+    box-shadow: 7px 8px 5px 1px rgba(0,0,0,0.47);
+    z-index: 12 !important;
 }
-.State-bar{
+.estreciept-State-bar{
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 30px;
     position: absolute;
     border: none;
-    border-bottom: 2px solid #366360;
+    border-bottom: 4px dashed #000000;
     width: 90%;
     height: 50px;
-    bottom: 440px;
+    bottom: 540px;
 }
-.checklist{
+.estreciept-checklist{
     position: relative;
-    top: 35px;
+    top: -20px;
+    border-bottom: 1px dashed black;
+}
+
+.estreciept-box{
+    position: absolute;
+    bottom: 20px;
+    width: 230px;
+    height: 80px;
+    border-top: 2px dashed #000000;
+    border-bottom: 2px dashed #000000;
+} */
+
+.estreciept-bar{
+  position: relative;
+  bottom: 410px;
+  left: 630px;
+  height: 15px;
+  width: 290px;
+  background-color: rgb(35, 34, 34);
+  border-radius: 10px;
+  box-shadow: 5px 5px 19px rgb(157, 157, 157);
+}
+
+.estreciept-receipt {
+  font-family: "DungGeunMo";
+  background: #fff;
+  box-shadow: 5px 5px 19px rgb(157, 157, 157);
+  padding: 10px;
+  position: relative;
+  bottom: 597px;
+  left: 600px;
+  width: 250px;
+  height: auto;
+  margin: 178px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.9em;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.estreciept-logo {
+  font-family: "DungGeunMo";
+  text-align: center;
+  padding: 10px;
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+.estreciept-div {
+  margin: 0;
+}
+
+.estreciept-line {
+  font-family: "DungGeunMo";
+  margin: 3px 0;
+}
+
+.estreciept-break {
+  height: 17px;
+  margin-top: 5px;
+  color: rgb(37, 37, 37);
+}
+
+.estreciept-line-date {
+  font-size: 1em;
+}
+
+.estreiept-list {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 1em;
+}
+
+.estreciept-list-item{
+  font-family: "DungGeunMo";
+  margin: 0 10px;
 }
 
 
+.estreciept-result-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.estreciept-result{
+  font-family: "DungGeunMo";
+  margin: 0px;
+}
+
+.estreciept-result-div .estreciept-line {
+  font-size: 1em;
+  margin-top: 13px;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.estreciept-button {
+  border: none;
+  background-color: transparent;
+  font-family: "DungGeunMo";
+  font-weight: bold;
+  padding: 10px;
+  margin: 10px;
+}
+
+.estreciept-button:hover {
+  background-color: rgb(245, 242, 242);
+  border-radius: 10px;
+}
+
+.estreciept-result-div .estreciept-company {
+  font-family: "DungGeunMo";
+  display: block;
+  font-size: 1.5em;
+  margin-top: 3px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.estreciept-button p {
+  padding: 5px;
+  margin: 0;
+}
+
+.estreciept-barcode-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.estreciept-barcodenum-div {
+  margin-left: 3px;
+}
+
+.estreciept-barcodenum {
+  font-family: "DungGeunMo";
+  display: inline-block;
+  margin: 0 3px;
+}
+
+.estreciept-barcode img {
+  width: 200px;
+  margin-bottom: 0;
+}
+
+/* 모바일 */
+@media screen and (max-width: 420px){
+  .estreciept-wrapper{
+    display: none;
+    position: absolute;
+    top: 880px;
+    right: 630px;
+  }
+}

@@ -2,12 +2,15 @@ import "../css/HomeAboutUs.css"
 
 const HomeAboutUs = () => {
     return (
-      <div>
+      <div className="homeaboutus-div">
+        {/** 지우기 */}
           <div className="homeaboutus-Box">
-            <h1 className="homeaboutus-title">About us</h1>
-            <h2 className="homeaboutus-info">(사이트 이름)은 blah blah를 위한 사이트입니다</h2>
-            <h3 className="homeaboutus-info2">총 000개의 (사이트 이름) 인증  </h3>
-            <h3 className="homeaboutus-company">시공업체 blah blah </h3>
+            <h1 className="homeaboutus-title">Today Design</h1>
+            <div className="homeaboutus-h3-div">
+              <h3 className="homeaboutus-info">감각적인 내 집 꾸미기의 시작</h3>
+              <h3 className="homeaboutus-info2">홈 인테리어의 마지막 조각 </h3>
+              <h3 className="homeaboutus-company">중개 수수료 없는 투데이 디자인으로 시작하세요 </h3>
+            </div>
           </div>
       </div>
     );

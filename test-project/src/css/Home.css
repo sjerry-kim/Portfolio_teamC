@@ -1,9 +1,27 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+}
+
 body {
     margin:0;
     font-family:Georgia;
     overflow-y: hidden;
-
   }
+
+  #home-container {
+    overflow-y:scroll;
+    overflow-x:hidden;
+    transform: rotate(270deg) translateX(-100%);
+    transform-origin: top left;
+    position:absolute;
+    width: 100vh;
+    height: 100vw;
+    overflow-y:scroll;
+    overflow-x:hidden;
+  }
+
   #home-container .home-box {
     width:100vw;
     height:100vh;
@@ -22,17 +40,7 @@ body {
     line-height:.7;
     font-weight:bold;
   }
-  #home-container {
-    overflow-y:scroll;
-    overflow-x:hidden;
-    transform: rotate(270deg) translateX(-100%);
-    transform-origin: top left;
-    position:absolute;
-    width:100vh;
-    height:100vw;
-    overflow-y:scroll;
-    overflow-x:hidden;
-  }
+  
   #home-container::-webkit-scrollbar {
     display: none;
   }
@@ -51,59 +59,104 @@ body {
     background-size: cover;
   }
   .two {
+    /* background-image: url(../img/backgroundImg2.jpg); */
     background-image: url(../img/backgroundImg2.jpg);
     background-size: cover;
+    position: relative;
   }
   .three {
     background-image: url(../img/backgroundImg3.jpg);
     background-size: cover;
   }
 
-  .home-arrow {
-    z-index:11; /*숫자가 클수록 앞에 옴*/
-    position: fixed;
-    width: 42px;
-    height: 64px;
-    top: 850px;
-    left: 195px;
-    transform: translate(-50%, -50%);
-    bottom: 82px;
+.home-arrow-title{
+  position: absolute;
+  display: inline-block;
+  margin-top: 200px;
+  bottom: 40px;
+  left: -7px;
+  font-size: 25px;
+  color: white;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.home-arrow-container{
+  position: fixed;
+  z-index:11; /*숫자가 클수록 앞에 옴*/
+  bottom: -385px;
+  left: 180px;
+}
+
+/* 화살표 */
+
+
+.center-con {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+
+
+.round {
+  position: absolute;
+  width: 40px;
+  height: 40px;
   
-    border-radius: 50px;
-  }
-  .home-arrow::before, .home-arrow::after{
-    content: '';
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    border: 2px solid rgb(255, 255, 255);
-    height: 10px;
-    width: 10px;
-    transform: translate(-50%, -50%) rotate(45deg);
-    border-top: transparent;
-    border-left: transparent;
-    animation: MoveArrow 1s ease-in-out infinite;
-  }
-  
-  .home-arrow::after{
-    top: 30%;
-    animation-delay: 0.3s;
-  }
-  @keyframes MoveArrow{
-    0%{
-      opacity: 0;
-    }
-    30%{
-      opacity: 1;
-    }
-    60%{
-      opacity: 1;
-    }
-    100%{
-      opacity: 0;
-      top: 90%;
-    }
-  }
+}
+
+#cta{
+  width:100%; position: absolute;
+}
+
+#cta .arrow{left: 30%;}
+.arrow {position: absolute; bottom: 0;  margin-left:-7px; width: 20px; height: 20px; background-size: contain; top:15px;}
+.segunda{margin-left: 10px;}
+.next {
+background-image: url("../img/arrow.png");
+}
+
+@keyframes bounceAlpha {
+0% {opacity: 1; transform: translateX(0px) scale(1);}
+25%{opacity: 0; transform:translateX(10px) scale(0.9);}
+26%{opacity: 0; transform:translateX(-10px) scale(0.9);}
+55% {opacity: 1; transform: translateX(0px) scale(1);}
+}
+
+.bounceAlpha {
+  animation-name: bounceAlpha;
+  animation-duration:1.4s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+}
+
+.arrow.primera.bounceAlpha {
+  animation-name: bounceAlpha;
+  animation-duration:1.4s;
+  animation-delay:0.2s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+}
+
+.round .arrow{
+  animation-name: bounceAlpha;
+  animation-duration:1.4s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+}
+.round .arrow.primera{
+  animation-name: bounceAlpha;
+  animation-duration:1.4s;
+  animation-delay:0.2s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+}
+/* 화살표 끝 */
+
+
+
+
 
   .home-logo{
     position:fixed;
@@ -114,13 +167,10 @@ body {
 }
 
   .home-scroll-txt{
-    position: fixed;
-    z-index:11;
     font-size: 25px;
     font-weight: bold;
     color: rgb(255, 255, 255);
-    bottom: 110px;
-    left: 160px;
+
   }
 
   /* 스크롤 슬라이드*/
@@ -131,9 +181,7 @@ body {
     width: 100vh;
     overflow-y: auto;
   }
-  .outer::-webkit-scrollbar {
-    /* 화면에서 스크롤바 안보이게 */
-  }
+
   .home-slick-position1{
     position: absolute !important; 
     top: 300px !important; 
@@ -144,3 +192,103 @@ body {
     top: 300px !important; 
     left: 900px !important; 
   }
+
+  .homeportfoliocard-card-main{
+    background-color: red;
+  }
+  .homecontactus-cp-p{
+    font-size: 13px;
+    font-weight: lighter;
+    position: relative;
+    left: 1245px;
+    top: 30px;
+    width: 500px;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: white;
+  }
+
+  @media screen and (max-width: 1440px),(max-height: 789px) {
+    .home-logo{
+      position:fixed;
+      left: 90px;
+      top: 30px;
+      width: 180px;
+    }
+    .home-arrow-container{
+      position: fixed;
+      z-index:11; /*숫자가 클수록 앞에 옴*/
+      bottom: -325px;
+      left: 180px;
+    }
+    .home-arrow-title{
+      position: absolute;
+      display: inline-block;
+      margin-top: 200px;
+      bottom: 35px;
+      left: -6px;
+      font-size: 20px;
+      color: white;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    .arrow{
+      width: 15px; 
+      height: 15px;
+    }
+    
+    .homecontactus-cp-p {
+      font-size: 12px;
+      font-weight: lighter;
+      position: relative;
+      left: 850px;
+      top: -0px;
+      width: 500px;
+      font-family: 'Noto Sans KR', sans-serif;
+      color: rgb(255, 255, 255);
+    }
+}
+@media screen and (max-width: 420px){
+  .home-logo{
+    position:fixed;
+    left: 30px;
+    top: 20px;
+    width: 130px;
+  }
+
+  #home-container {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    transform-origin: top left;
+    position:absolute;
+    width: 100vh;
+    height: 100vw;
+    overflow-y:scroll;
+    overflow-x:hidden;
+  }
+
+  #home-container .home-box {
+    width:  100vw;
+    height: 100vh;
+    display:inline-block;
+    position:relative;
+  }
+
+  .one {
+    background-image: url(../img/1.jpg);
+  }
+
+  .two {
+    background-image: url(../img/2.jpg);
+  }
+
+  .three {
+    background-image: url(../img/3.jpg);
+  }
+
+  /* .slick-dots li{
+    position: absolute;
+    top: 100px;
+    color: black;
+
+  } */
+
+}

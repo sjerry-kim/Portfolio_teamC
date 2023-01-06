@@ -1,93 +1,328 @@
-body{
-    
+@font-face {
+  font-family: "RIDIBatang";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
-.estresult-Wrapper{
-    background-color: rgb(255, 250, 244);
-    width: 500px;
-    height: 600px;
-    margin: auto;
-    border-radius: 20px;
-    display: inline-block;
+@font-face {
+    font-family: 'twayair';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.estresult-Wrapper {
+  position: relative;
+  right: 140px;
+  background-image: url(../img/EstStart-img10.png);
+  background-size: 800px;
+  background-color: transparent;
+  background-position-x: -110px;
+  background-position-y: -120px;
+  width: 600px;
+  height: 600px;
+  margin: 100px auto;
+  margin-top: 195px;
+  border-radius: 5px;
+  border: none;
+}
+
+.estresult-Header {
+  position: relative;
+  top: 15px;
+  font-family: "RIDIBatang";
+  font-size: 30pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #291B0C;
+}
+
+.estresult-Contents {
+  position: relative;
+  top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 207px;
+}
+
+.estresult-Title {
+  font-family: "RIDIBatang";
+  font-size: 17pt;
+  position: relative;
+  top: 27px;
+  color: #291B0C;
+}
+
+.estresult-LogoImage {
+  margin-top: 0px;
+}
+
+.estresult-Desc {
+  position: relative;
+  font-family: 'twayair';
+  color: #291B0C;
+  font-size: 25pt;
+  top: 43px;
+}
+
+.estresult-ReBtn {
+  font-family: "RIDIBatang";
+  font-size: 20px;
+  width: 150px;
+  height: 45px;
+  border: none;
+  background-color: rgb(51, 51, 51);
+  color: rgb(255, 255, 255);
+  position: relative;
+  top: 65px;
+}
+
+.estresult-all-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  top: 45px;
+}
+
+.estresult-ReStartBtn {
+  font-family: "RIDIBatang";
+  width: 85px;
+  height: 35px;
+  font-size: 11pt;
+  border: none;
+  background-color: transparent;
+  margin-right: 6px;
+}
+
+.estresult-ReStartBtn svg{
+  font-size: 13px;
+}
+
+.estresult-ReStartBtn:hover{
+  background-color: #ece4db;
+  color: #6d4c41;
+  font-weight: bold;
+}
+
+.estresult-savebtn {
+  font-family: "RIDIBatang";
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  width: 85px;
+  height: 35px;
+  font-size: 11pt;
+  -webkit-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+  margin-left: 6px
+}
+
+.estresult-savebtn svg{
+  font-size: 13px;
+}
+
+.estresult-savebtn:hover{
+  background-color: #ece4db;
+  color: #6d4c41;
+  font-weight: bold;
+}
+
+.estresult-effect {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: #7a32308c;
+  text-transform: capitalize;
+  background-color: transparent;
+  border: 1.5px solid #7a32308c;
+  font-family: "RIDIBatang";
+  font-size: 20px;
+  padding: 7px 0px;
+  width: 150px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.estresult-effect:hover{
+  background-color: #853734;
+  color: white;
+}
+
+/* effect-1 styles */
+.estresult-effect.estresult-effect-1 {
+  transition: all 0.2s linear 0s;
+}
+.estresult-effect.estresult-effect-1:before {
+  content: "\27F6";
+  font-family: FontAwesome;
+  font-size: 20px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  height: 100%;
+  width: 40px;
+  transition: all 0.2s linear 0s;
+  padding: 17px;
+}
+.estresult-effect.estresult-effect-1:hover {
+  text-indent: -20px;
+}
+.estresult-effect.estresult-effect-1:hover:before {
+  opacity: 1;
+  text-indent: 0px;
+}
+
+.estresult-btn-10 {
+  background: #8d6e63;
+  color: white;
+  border-radius: 7px;
+  box-shadow: 0 7px 0px #6d4c41;
+  display: inline-block;
+  transition: all 0.2s;
+  position: relative;
+  cursor: pointer;
+}
+
+.estresult-btn-10:hover {
+  top: 3px;
+  box-shadow: 0 2px 0px #9b6d6c;
+  transition: all 0.2s;
+}
+
+
+@media screen and (max-width: 1440px),(max-height: 789px) {
+  .estresult-Wrapper {
     position: relative;
+    right: 140px;
+    background-image: url(../img/EstStart-img10.png);
+    background-size: 800px;
+    background-color: transparent;
+    background-position-x: -110px;
+    background-position-y: -120px;
+    width: 600px;
+    height: 600px;
+    margin: 100px auto;
+    margin-top: 145px;
+    border-radius: 5px;
+    border: none;
+  }
 }
 
-.estresult-Header{
-    font-family: 'Humanbumsuk';
-    font-size: 40pt;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.estresult-Contents{
+/* 모바일 */
+@media screen and (max-width: 420px){
+  .estresult-Wrapper {
+    position: relative;
+    right: 34px;
+    background-image: url(../img/EstStart-img10.png);
+    background-size: 760px  ;
+    background-color: transparent;
+    background-position-x: -110px;
+    background-position-y: -114px;
+    width: 104.5%;
+    height: 385px;
+    margin: 100px auto ;
+    margin-top: 75px;
+    border-radius: 5px;
+    border: none;
+  }
+  .estresult-Contents {
+    position: relative;
+    top: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-.estresult-Title{
-    font-family: 'Humanbumsuk';
-    font-size: 30pt;
-    margin-top: 40px;
-}
-
-.estresult-LogoImage{
-    margin-top: 10px;
-}
-
-.estresult-Desc{
-    font-family: 'Humanbumsuk';
-    font-size: 15pt;
-    margin-top: 0px;
-}
-
-.estresult-ReStartBtn{
-    font-family: 'Humanbumsuk';
-    border-radius: 19px;
-    width: 100%;
-    min-height: 70px;
-    font-size: 15pt;
-    font-weight: bolder;
-    margin-top: 0px;
-    border: none;
-    --c: no-repeat linear-gradient(#366360 0 0);
-    background: 
-      var(--c) calc(-101% + var(--i,0)*101%) 100% / 50.1% calc(100%*var(--i,0) + .08em),
-      var(--c) calc( 201% - var(--i,0)*101%) 0    / 50.1% calc(100%*var(--i,0) + .08em);
-    transition: .3s calc(var(--i,0)*.3s), background-position .3s calc(.3s - var(--i,0)*.3s);
-}
-
-.estresult-ReStartBtn:hover {
-    --i: 1;
-    color: white;
-    border: 1px solid white;
-}
-
-
-
-  .estresult-Reciept-box{
+    margin-bottom: 207px;
+  }
+  .estresult-Title {
+    font-family: "RIDIBatang";
+    font-size: 8pt;
     position: relative;
-    left: 449px;
-    margin-left: 100px;
-    margin-top: -220px;
-    clear: right;
-    width: 250px;
-    height: 70px;
-    background-color: rgb(255, 250, 244);
-    border-radius: 20px;
+    top: 27px;
+    color: #291B0C;
+    position: relative;
+    left: 22px;
+  }
+  
+  .estresult-Header {
+    position: relative;
+    top: 10px;
+    font-family: "RIDIBatang";
+    font-size: 18pt;
     display: flex;
-    align-items: center;
     justify-content: center;
-    box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
-}
+    align-items: center;
+    color: #291B0C;
+    position: relative;
+    left: 22px;
+  }
+  .estresult-Desc {
+    position: relative;
+    font-family: 'twayair';
+    color: #291B0C;
+    font-size: 18pt;
+    top: 43px;
+    position: relative;
+    left: 22px;
+  }
+  .estresult-effect {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    left: 22px;
+    text-decoration: none;
+    color: #7a32308c;
+    text-transform: capitalize;
+    background-color: transparent;
+    border: 1.5px solid #7a32308c;
+    font-family: "RIDIBatang";
+    font-size: 15px;
+    padding: 0px 0px;
+    width: 90px;
+    height: 30px;
+    border-radius: 6px;
+    overflow: hidden;
+  }
 
-
-.PrgressBar {
-    margin-top: 30px;
-}
-.progress-bar{
-    background-color: #366360;
+  .estresult-ReStartBtn {
+    position: relative;
+    left: 22px;
+    font-family: "RIDIBatang";
+    width: 75px;
+    height: 25px;
+    font-size: 8pt;
+    border: none;
+    margin-right: 6px;
+  }
+  .estresult-savebtn {
+    position: relative;
+    left: 22px;
+    font-family: "RIDIBatang";
+    border: none;
+    width: 75px;
+    height: 25px;
+    font-size: 8pt;
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+    margin-left: 6px
+  }
+  .estresult-all-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    top: -25px;
+  }
 }

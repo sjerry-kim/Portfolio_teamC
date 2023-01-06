@@ -1,9 +1,19 @@
-import { Link } from "react-router-dom";
-import {} from "../css/Portfolio.css";
+import { useContext } from "react";
+import { Link, Outlet } from "react-router-dom";
+import { } from "../css/Portfolio.css";
+import DataContext from "../data/DataContext";
+import { motion } from "framer-motion";
 
-const Portfolio = () => {
+const Portfolio = (props) => {
+  const { state } = useContext(DataContext);
+  const disappearSign = () => {
+    document.querySelector(".portfolio-click_card_div").style.opacity = "0"
+  }
+
   return (
-    <div>
+    <motion.div initial={{opacity: 0 ,transform : 'translateY(50px)', transition:'transform 0.33s ease'}}
+    animate={{opacity: 1 ,transform : 'translateY(20px)', transition:'transform 0.33s ease'}}
+    exit={{opacity: 0 ,transform : 'translateY(50px)', transition:'transform 0.33s ease'}}>
       <body className="portfolio-body">
         <div className="portfolio-container">
           <input
@@ -48,123 +58,154 @@ const Portfolio = () => {
             className="portfolio-d-none"
             id="s7"
           />
-
-          <div className="portfolio-cards">
+          <input
+            type="radio"
+            name="slider"
+            className="portfolio-d-none"
+            id="s8"
+          />
+          <input
+            type="radio"
+            name="slider"
+            className="portfolio-d-none"
+            id="s9"
+          />
+          <div className="portfolio-click_card_div">
+            <h3 className="click_card1">Click Card</h3>
+            <a href="#" className="click_card2" ><span></span></a>
+          </div>
+          <div className="portfolio-cards" onClick={() => { disappearSign() }}>
             <label for="s1" id="portfolio-slide1">
               <div className="portfolio-card">
                 <div className="portfolio-image">
-                  <img src="img/Nike SuperRep Go.jpg" alt="" />
+                  <img src={state.score[0].mainIMG} alt="" />
                 </div>
                 <div className="portfolio-infos">
-                  <span className="portfolio-name">Nike SuperRep Go</span>
-                  <span className="portfolio-lorem">
-                    Lorem ipsum dolor sit amet, sit amet adipiscing elit. Aenean
-                    vel ansd . Nullam lorem. Nulla eu sodales
-                  </span>
-                  {/**
-                   * 🌼 아래 button은 임의로 넣은 것 추후 map을 사용하거나해서
-                   * 각각의 페이지가 들어갈 수 있게 수정 필요
-                   */}
-                  <button>
-                    <Link to="/product">product</Link>
-                  </button>
+                  <p className="portfolio-name">
+                    {state.score[0].name}
+                  </p>
+                  <p className="portfolio_intro">{state.score[0].companyIntro}</p>
                 </div>
+                <button className="portfolio_btn"><Link to="/main/product/1">View More</Link></button>
               </div>
             </label>
-
             <label for="s2" id="portfolio-slide2">
               <div className="portfolio-card">
                 <div className="portfolio-image">
-                  <img src="img/Free run flyknit.jpg" alt="" />
+                  <img src={state.score[1].mainIMG} alt="" />
                 </div>
                 <div className="portfolio-infos">
-                  <span className="portfolio-name">Free Run Flyknit</span>
-                  <span className="portfolio-lorem">
-                    Lorem ipsum dolor sit, adipiscing elit. Aenean vel sit ansd
-                    . Nullam lorem. Nulla eu sodales karma stellus
-                  </span>
+                  <p className="portfolio-name">
+                    {state.score[1].name}
+                  </p>
+                  <p className="portfolio_intro">{state.score[1].companyIntro}</p>
                 </div>
+                <button className="portfolio_btn"><Link to="/main/product/2">View More</Link></button>
               </div>
             </label>
-
             <label for="s3" id="portfolio-slide3">
               <div className="portfolio-card">
                 <div className="portfolio-image">
-                  <img src="img/Black Toe Union.jpg" alt="" />
+                  <img src={state.score[2].mainIMG} alt="" />
                 </div>
                 <div className="portfolio-infos">
-                  <span className="portfolio-name">Black Toe Union</span>
-                  <span className="portfolio-lorem">
-                    Lorem ipsum dolor, sit amet let kar adipiscing. Aenean vel
-                    velit sit ansd . Nullam lorem. Nulla karma stellus
-                  </span>
+                  <p className="portfolio-name">
+                    {state.score[2].name}
+                  </p>
+                  <p className="portfolio_intro">{state.score[2].companyIntro}</p>
                 </div>
+                <button className="portfolio_btn"><Link to="/main/product/3">View More</Link></button>
               </div>
             </label>
-
             <label for="s4" id="portfolio-slide4">
               <div className="portfolio-card">
                 <div className="portfolio-image">
-                  <img src="img/Retro High Og.jpg" alt="" />
+                  <img src={state.score[3].mainIMG} alt="" />
                 </div>
                 <div className="portfolio-infos">
-                  <span className="portfolio-name">Retro High Og</span>
-                  <span className="portfolio-lorem">
-                    Lorem ipsum dolor sit, sit amet elit. Aenean sit amet sit
-                    amet vel velit sit ansd. Nulla eu sodales stellus
-                  </span>
+                  <p className="portfolio-name">
+                    {state.score[3].name}
+                  </p>
+                  <p className="portfolio_intro">{state.score[3].companyIntro}</p>
                 </div>
+                <button className="portfolio_btn"><Link to="/main/product/4">View More</Link></button>
               </div>
             </label>
-
             <label for="s5" id="portfolio-slide5">
               <div className="portfolio-card">
                 <div className="portfolio-image">
-                  <img src="img/Off-White x Air Jordan.jpg" alt="" />
+                  <img src={state.score[4].mainIMG} alt="" />
                 </div>
                 <div className="portfolio-infos">
-                  <span className="portfolio-name">Off-White Air Jordan</span>
-                  <span className="portfolio-lorem">
-                    Lorem ipsum sit amet, sit amet elit. Aenean vel velit ansd .
-                    Nullam lorem. Nulla eu sodales stellus
-                  </span>
+                  <p className="portfolio-name">
+                    {state.score[4].name}
+                  </p>
+                  <p className="portfolio_intro">{state.score[4].companyIntro}</p>
                 </div>
+                <button className="portfolio_btn"><Link to="/main/product/5">View More</Link></button>
               </div>
             </label>
-
             <label for="s6" id="portfolio-slide6">
               <div className="portfolio-card">
                 <div className="portfolio-image">
-                  <img src="img/Off-White x Air Jordan.jpg" alt="" />
+                  <img src={state.score[5].mainIMG} alt="" />
                 </div>
                 <div className="portfolio-infos">
-                  <span className="portfolio-name">새로 추가한 카드1</span>
-                  <span className="portfolio-lorem">
-                    Lorem ipsum sit amet, sit amet elit. Aenean vel velit ansd .
-                    Nullam lorem. Nulla eu sodales stellus
-                  </span>
+                  <p className="portfolio-name">
+                    {state.score[5].name}
+                  </p>
+                  <p className="portfolio_intro">{state.score[5].companyIntro}</p>
                 </div>
+                <button className="portfolio_btn"><Link to="/main/product/6">View More</Link></button>
               </div>
             </label>
-
             <label for="s7" id="portfolio-slide7">
               <div className="portfolio-card">
                 <div className="portfolio-image">
-                  <img src="img/Off-White x Air Jordan.jpg" alt="" />
+                  <img src={state.score[6].mainIMG} alt="" />
                 </div>
                 <div className="portfolio-infos">
-                  <span className="portfolio-name">새로 추가한 카드2</span>
-                  <span className="portfolio-lorem">
-                    Lorem ipsum sit amet, sit amet elit. Aenean vel velit ansd .
-                    Nullam lorem. Nulla eu sodales stellus
-                  </span>
+                  <p className="portfolio-name">
+                    {state.score[6].name}
+                  </p>
+                  <p className="portfolio_intro">{state.score[6].companyIntro}</p>
                 </div>
+                <button className="portfolio_btn"><Link to="/main/product/7">View More</Link></button>
+              </div>
+            </label>
+            <label for="s8" id="portfolio-slide8">
+              <div className="portfolio-card">
+                <div className="portfolio-image">
+                  <img src={state.score[7].mainIMG} alt="" />
+                </div>
+                <div className="portfolio-infos">
+                  <p className="portfolio-name">
+                    {state.score[7].name}
+                  </p>
+                  <p className="portfolio_intro">{state.score[7].companyIntro}</p>
+                </div>
+                <button className="portfolio_btn"><Link to="/main/product/8">View More</Link></button>
+              </div>
+            </label>
+            <label for="s9" id="portfolio-slide9">
+              <div className="portfolio-card">
+                <div className="portfolio-image">
+                  <img src={state.score[8].mainIMG} alt="" />
+                </div>
+                <div className="portfolio-infos">
+                  <p className="portfolio-name">
+                    {state.score[8].name}
+                  </p>
+                  <p className="portfolio_intro">{state.score[8].companyIntro}</p>
+                </div>
+                <button className="portfolio_btn"><Link to="/main/product/9">View More</Link></button>
               </div>
             </label>
           </div>
         </div>
       </body>
-    </div>
+    </motion.div>
+
   );
 };
 

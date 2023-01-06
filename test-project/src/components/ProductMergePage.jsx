@@ -6,13 +6,15 @@ import ProductBestRe from "./ProductBestRe";
 import ShopInfo from "./ProductShopInfo";
 import ShopSlick from "./ProductShopSlick";
 import { useEffect, useRef } from "react";
+import useScrollFadeIn from "./useScrollFadeIn";
+
 // import ShopContainer from "./ShopContainer";
 
 const ProductMergePage = () => {
   const settings2 = {
     slidesToShow: 1,
     slidesToScroll: 1,
-    dots: false,
+    dots: true,
     arrow: false,
     vertical: true,
     arrows: false,

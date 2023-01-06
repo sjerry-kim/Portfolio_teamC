@@ -1,3 +1,23 @@
 body {
   overflow: hidden;
 }
+
+.slick-dots {
+  position: absolute;
+  top: 16%;
+  margin-left: 95%;
+}
+
+.slick-dots li {
+  display: block;
+  padding: 20px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #291b0b;
+  opacity: 0.8;
+}
+
+.slick-dots li button:before {
+  color: #5a3e31;
+}
