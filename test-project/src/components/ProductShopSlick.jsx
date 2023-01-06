@@ -36,21 +36,7 @@ const ShopSlick = () => {
       {shop.companyImg.map((item, index) => (
         <div key={index} className="Product-shopimg">
           <img src={require(`../img/${item}`)} />
-          <h1
-            style={{
-              position: "absolute",
-              textCombineUpright: "all",
-              fontSize: "32px",
-              top: "132px",
-              left: "35px",
-              width: "1px",
-              height: "70px",
-              color: "white",
-              textAlign:"right"
-            }}
-          >
-            {shop.name}
-          </h1>
+          <h1>{shop.name}</h1>
         </div>
       ))}
     </Slider>
