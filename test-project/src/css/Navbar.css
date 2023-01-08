@@ -136,14 +136,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 8px;
+    margin-right: 0px;
   }
 
   .navbar-log-div button {
     font-family: "Chosunilbo_myungjo";
     margin-top: 3px;
     margin-right: 0px;
-    margin-left: 10px;
+    margin-left: 3px;
     background-color: transparent;
     border: none;
     font-weight: bold;
@@ -161,7 +161,7 @@
 
   .navbar-menu-big-div {
     display: flex;
-    width: 66%;
+    width: 68%;
     flex-direction: row;
     justify-content: space-around;
   }
