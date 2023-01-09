@@ -25,6 +25,8 @@ import "../css/Login.css";
 import { useDispatch, useSelector } from "react-redux";
 import { userLogout } from "../module/currentUser";
 
+import Swal from "sweetalert2";
+
 const Navbar = () => {
   const activeStyle = { color: "#906b41" };
 
@@ -239,7 +241,7 @@ const Navbar = () => {
                 null
               );
               window.sessionStorage.setItem("profileClick", null);
-              alert("로그아웃하였습니다");
+              Swal.fire('로그아웃 하였습니다.')
               navigate("/");
             }}
           >
