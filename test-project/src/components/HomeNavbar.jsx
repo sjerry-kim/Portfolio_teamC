@@ -25,6 +25,7 @@ import DataContext from "../data/DataContext";
 import { useDispatch, useSelector } from 'react-redux';
 import { userLogout } from '../module/currentUser';
 import Swal from "sweetalert2";
+import 'animate.css';
 
 const HomeNavbar = () => {
   
@@ -213,7 +214,15 @@ const HomeNavbar = () => {
                       window.sessionStorage.setItem("photoURL", null);
                       window.sessionStorage.setItem("firebase:authUser:AIzaSyCMoXUqkehoGjCep79k-dmXJLJfb-HZuFo:[DEFAULT]", null)
                       window.sessionStorage.setItem("profileClick", null)
-                      Swal.fire('로그아웃 하였습니다.')
+                      Swal.fire({
+                        title: '로그아웃 하였습니다.',
+                        showClass: {
+                          popup: 'animate__animated animate__fadeInDown'
+                        },
+                        hideClass: {
+                          popup: 'animate__animated animate__fadeOutUp'
+                        }
+                      })
                       navigate('/')
                     }}>Logout</button>
                   ) 

@@ -1,3 +1,10 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+}
+
+
 /* 자체 css (사용중)*/
 .joinForm_formInput{
     display: flex;
@@ -12,11 +19,6 @@
     border: 1px solid lightblue;
 }
 
-@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-
-.notosanskr * { 
- font-family: 'Noto Sans KR', sans-serif;
-}
 
 
 .join-joinForm_h1{
@@ -361,4 +363,10 @@ select:focus {outline:none}
         transition: 0.5s;
         margin-top: 5px;
     } 
+  }
+
+
+  /* 모달창 폰트 */
+.swal2-title{
+    font-family: "Noto Sans KR", sans-serif;
   }

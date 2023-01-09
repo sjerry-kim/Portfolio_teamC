@@ -5,6 +5,13 @@
   font-weight: normal;
   font-style: normal;
 }
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+
 
 .login-page-box{
   display: flex;
@@ -400,3 +407,8 @@
       flex: 1;
     }
   }
+
+  /* 모달창 폰트 */
+.swal2-title{
+  font-family: "Noto Sans KR", sans-serif;
+}
