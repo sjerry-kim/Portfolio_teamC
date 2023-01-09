@@ -2,6 +2,21 @@
     color: rgba(200,0,0,0.8);
     background: rgb(241, 238, 235);
     border : 1px solid rgb(241, 238, 235);
-    margin-bottom: 5px;
-    margin-left: 350px;
+    margin-left: 590px;
+    margin-top: -45px;
+    }
+
+
+
+@media screen and (max-width: 1440px),(max-height: 789px){  
+    .shareBtn{
+            margin-left: 400px;
+    }        
+}    
+
+@media screen and (max-width: 420px){
+    .shareBtn{
+        margin-left: 350px;
+        margin-top: -3px;
+    }        
 }

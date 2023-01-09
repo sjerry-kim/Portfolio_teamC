@@ -6,6 +6,9 @@
   font-style: normal;
 }
 
+body{
+  overflow: hidden;
+}
 .Product-shopInfo {
   margin-top: 110px;
   margin-left: 55px;
@@ -75,11 +78,15 @@ video{
   height: 20px;
   width: 260px;
   margin-left: -20px;
+}
 
+.Product-information{
+  margin-left: -13px;
+  margin-top: 15px;
 }
 
 .Product-detail p{
-  margin: 10px auto;
+  margin: 10px auto;;
   font-size: 1.1em;
   font-family: "Chosunilbo_myungjo";
   color: #583516;
@@ -95,9 +102,10 @@ video{
 .Product-commentLogIn h2{
   font-family: "Chosunilbo_myungjo";
   font-size: 1.9em;
-  margin-top: 25px;
+  margin-top: -60px;
   font-weight: bold;
   color: #583516;
+  margin-top: 20px;
 } 
 
 .Product-commentLogOut{
@@ -167,7 +175,7 @@ div >.infoAdd{
   .Product-infoCards{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-top: 220px;
+    margin-top: 210px;
     margin-left: 80px;
     gap: 10px ;
   }
@@ -176,14 +184,15 @@ div >.infoAdd{
     width: 500px;
     height: 230px;
   }
-
-  .Product-detai div{
-    margin: 50px;
+  .Product-information{
+    margin-left: -13px;
+    margin-top: 30px;
   }
+  
 
   .Product-video video{
   width: 500px !important;
-  margin-top: -155px;
+  margin-top: -55px;
   }
 
   .Product-comment{
@@ -194,22 +203,106 @@ div >.infoAdd{
 
 /* 모바일 */
 @media screen and (max-width: 420px){
-
-
   .Product-infoCards{
-    display: flex;
-    gap: 10px ;
+    display: grid;
+    margin-left: -10px;
+    grid-template-rows: 1fr;
+    grid-template-columns:repeat(3,1fr);
+    row-gap: 1px;
+
   }
 
+  
+
+  .Product-infoCards h2{
+    margin-top: 25px;
+  }
+  .Product-infoCards .infoAdd{
+    line-height: 10px;
+  }
+.Product-information{
+  margin-top: 15px;
+}
+
+  .Product-infoCard:nth-child(1) {
+    grid-column: 1/2;
+    grid-row:1/2
+  }
+
+  .Product-video video{
+    display: none;
+  }
+
+  .Product-comment:nth-child(3){
+    grid-column:1/2;
+    grid-row:3/4;
+  }
   .Product-infoCard{
-    width: 320px;
-    height: 130px;
+    width: 310px;
+    height: 170px;
+    margin-top: -170px;
+    
   }
 
+  .Product-video video{
+  width: 310px !important;
+  height: 190px !important;
+  margin-top: -10px;
+  }
 
+  .Product-comment{
+    height: 350px;
+    width: 310px;
+    margin-bottom: 40px;
+    font-size: 13px;
+  }
 
+  .Product-commentLogIn{
+    font-family: "Chosunilbo_myungjo";
+    margin-top: 25px;
+    font-size: 13px;
+    margin-left: 28px;
+    color: #583516;
+    margin-top: 20px;
+    
+  }
+  .Product-commentLogOut{
+    font-family: "Chosunilbo_myungjo";
+    margin-top: 25px;
+    font-size: 13px;
+    margin-left: 28px;
+    color: #583516;  
 
+  }
+.Product-commentLogOut-p-div{
+  margin-top: 95px;
+}
+  .Product-detail h2{
+    font-weight: bold;
+    font-family: "Chosunilbo_myungjo";
+    font-size: 25px;
+    color: #583516;
+    height: 30px;
+    width: 300px;
+    
+  }
+  .Product-information{
+    margin-top: 40px;
+    position: relative;
+    top: -23px
+  }
+  
+  .Product-detail p{
+    font-size: 11px;
+    font-family: "Chosunilbo_myungjo";
+    color: #583516;
+    margin-right: 10px;
+  }
 
+.titleNshare{
+  margin-left: -140px;
+  margin-top: -50px;
+}
 
 
 

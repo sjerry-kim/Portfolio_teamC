@@ -25,7 +25,7 @@ export default ProductBestRe;
 function ReviewCard(props) {
   const { bestReviews } = props;
   return (
-    <div className="test">
+
 
     <div className="Product-reviewCards">
       <div className="Product-reCard">
@@ -84,7 +84,7 @@ function ReviewCard(props) {
         </div>
       </div>
     </div>
-    </div>
+    
     
   );
 }
