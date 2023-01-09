@@ -1,9 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import JoinInput from "../components/JoinInput";
 import {
+  browserSessionPersistence,
   createUserWithEmailAndPassword,
   getAuth,
   onAuthStateChanged,
+  setPersistence,
   updateProfile,
 } from "firebase/auth";
 import { auth } from "../data/firebase";
@@ -68,6 +70,7 @@ const Join = props => {
   const register = async () => {
     const auth = getAuth();
     try {
+      setPersistence(auth, browserSessionPersistence);
       const userCredential = await createUserWithEmailAndPassword(
         auth,
         registerEmail,
@@ -96,6 +99,7 @@ const Join = props => {
       window.sessionStorage.setItem("login", true);
       window.sessionStorage.setItem("uid", user.uid);
       window.sessionStorage.setItem("email", user.email);
+      window.sessionStorage.setItem("profileClick", false)
       // window.sessionStorage.setItem("photoURL", user.photoURL);
       setTimeout(() => {
         navigate('/')
