@@ -28,13 +28,13 @@
   opacity: 0.7;
   border: 1px solid rgb(187, 163, 136);
   position: relative;
-  height: 878px;
   padding: 20px;
-  width: 400px;
+  width: 20%;
+  height: 878px;
 }
 #api-result-list {
-  width: 380px;
-  height: 850px;
+  width: 100%;
+  height: 100%;
   overflow-y: scroll;
 }
 
@@ -71,12 +71,16 @@
 
 #api-TopMap {
   display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
   background-color: rgb(230, 218, 204);
 }
 #api-midMap {
-  width: 40.7vw;
   margin-top: 90px;
   font-family: "LINESeedKR-Bd";
+  width: 100%;
 }
 #api-myMap {
   position: absolute;
@@ -92,8 +96,8 @@
 }
 @media screen and (max-width: 1440px), (max-height: 789px) {
   #api-result-list {
-    width: 380px;
-    height: 575px;
+    width: 100%;
+    height: 100%;
     overflow-y: scroll;
   }
 }
@@ -101,23 +105,39 @@
   #api-myMap {
     position: absolute;
     z-index: 0;
-    width: 420px;
+    width: 100%;
     border: 1px solid rgb(187, 163, 136);
-    height: 844px;
+    height: 100%;
   }
   #api-result-list-body {
     background-color: #ffff;
     opacity: 0.7;
     border: 1px solid rgb(187, 163, 136);
-    position: relative;
-    height: 200px;
+    position: absolute;
+    height: 30%;
     padding: 20px;
-    width: 420px;
-    top: 581px;
+    width: 100%;
+    bottom: 0;
   }
   #api-result-list {
-    width: 420px;
-    height: 160px;
-    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+  }
+  #api-result-list::-webkit-scrollbar-track {
+    display: none;
+    background: rgb(0, 0, 0, 0.1); /* 스크롤바의 색상 */
+  }
+
+  #api-result-list::-webkit-scrollbar {
+    scroll-behavior: smooth;
+    display: none;
+  }
+
+  #api-result-list::-webkit-scrollbar-thumb {
+    height: 30%; /* 스크롤바의 길이 */
+    display: none;
+
+    background: rgba(0, 0, 0, 0.4); /* 스크롤바의 색상 */
+    border-radius: 10px;
   }
 }
