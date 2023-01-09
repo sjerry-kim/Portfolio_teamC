@@ -363,3 +363,57 @@ input:focus {
     margin-top: -35px;
   }
 }
+@media screen and (max-width: 420px) {
+  .homecontactus-formBox{
+    display: none;
+  }
+
+  .homecontactus-checkdiv{
+    display: none;
+  }
+
+  .homecontactus-titleBox{
+    position: relative;
+    right: 800px;
+    width: 50px;
+    bottom: 40px;
+    margin: auto;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  
+  .homecontactus-title {
+    margin-top: -30px;
+    margin-bottom: -50px;
+    font-size: 40px;
+    font-weight: bold;
+    width: 50%;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  .homecontactus-middletitle {
+    font-size: 15px;
+    margin-top: -280px;
+    margin-left: 15px;
+    font-family: 'twayair';
+  }
+
+  .homecontactus-check-box{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .homecontactus-check-box button{
+    width: 130px;
+    height: 30px;
+  }
+
+  .homecontactus-check-box button .front{
+    font-size: 15px;
+  }
+
+  .homecontactus-check-box p{
+    font-size: 17px;
+  }
+
+}
+
+

@@ -164,6 +164,8 @@ const EstQuestion = () => {
                       return setRName("조명");
                     case 8:
                       return setRName("예상 비용");
+                    case 9:
+                      return setRName("선정 기준");
                   }
                 }}
               >
@@ -196,6 +198,8 @@ const EstQuestion = () => {
                       return setRName("조명");
                     case 8:
                       return setRName("예상 비용");
+                    case 9:
+                      return setRName("선정 기준");
                   }
                 }}
               >
@@ -228,6 +232,8 @@ const EstQuestion = () => {
                       return setRName("조명");
                     case 8:
                       return setRName("예상 비용");
+                    case 9:
+                      return setRName("선정 기준");
                   }
                 }}
               >
@@ -261,6 +267,8 @@ const EstQuestion = () => {
                       return setRName("조명");
                     case 8:
                       return setRName("예상 비용");
+                    case 9:
+                      return setRName("선정 기준");
                   }
                 }}
               >
@@ -293,6 +301,8 @@ const EstQuestion = () => {
                       return setRName("조명");
                     case 8:
                       return setRName("예상 비용");
+                    case 9:
+                      return setRName("선정 기준");
                   }
                 }}
               >

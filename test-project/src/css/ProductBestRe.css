@@ -131,5 +131,42 @@
     font-size: 0.9em;
   }
 
+}
+
+
+
+/* 모바일 */
+@media screen and (max-width: 420px){
+.Product-reviewCards {
+display: grid;
+grid-template-columns: 50px;
+grid-template-rows: repeat(6, 1fr );
+margin-left: -35px;
+  }
+
+
+  .Product-bestRe h1{
+    font-size: 1.8em;
+    margin-left: 45px;
+    position: relative;
+    font-weight: bold;
+    color: #583516;
+    margin-top: -45px;
+  }
+
+  .Product-reCard .product-bestReviews_cardIMG > h3{
+    padding: 0;
+    font-size: 25px;
+    margin-top: 0px;
+  }
+
+  .Product-reCard .product-bestReviews_cardIMG > p{
+    font-size: 0.9em;
+  }
+.test {
+  height: 80% !important; 
+  overflow: hidden !important;
+}
+
 
 }

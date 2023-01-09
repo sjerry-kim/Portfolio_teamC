@@ -1,217 +1,217 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
-.notosanskr * { 
- font-family: 'Noto Sans KR', sans-serif;
+.notosanskr * {
+  font-family: "Noto Sans KR", sans-serif;
 }
 @font-face {
-  font-family: 'twayair';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+  font-family: "twayair";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 /* Position and sizing of burger button */
 .bm-burger-button {
+  position: relative;
+  width: 36px;
+  height: 30px;
+  float: right;
+  top: 70px;
+  margin-right: 70px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #c7c7c7;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #ffffff6e;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+  Sidebar wrapper styles
+  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+  */
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  width: 30%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #1b1b1b;
+  opacity: 80%;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+  display: grid;
+  margin: -5px;
+  align-content: flex-start;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+  font-size: 34px;
+  margin-bottom: 70px !important;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+/* Individual item */
+.bm-item {
+  display: inline-block;
+
+  color: white;
+  margin-bottom: 10px;
+  text-align: left;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.bm-item:hover {
+  color: #ffffff;
+}
+
+.homenamebox {
+  width: 350px;
+  margin-top: 10px;
+}
+.home-mypagebtn {
+  font-family: "twayair";
+  background-color: #1b1b1b00;
+  color: white;
+  border: none;
+  float: left;
+  clear: both;
+}
+.homename {
+  font-family: "Noto Sans KR", sans-serif;
+  position: relative;
+  top: 15px;
+  font-size: 20px;
+  float: left;
+  clear: both;
+}
+
+.homeLogin-Btn {
+  font-family: "Noto Sans KR", sans-serif;
+  position: relative;
+  left: 225px;
+  width: 100px;
+  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.815);
+  background-color: rgba(255, 255, 255, 0);
+  color: rgb(255, 255, 255);
+  padding-bottom: 5px;
+  font-size: 20px;
+  text-align: center !important;
+}
+.homeLogout-Btn {
+  font-family: "Noto Sans KR", sans-serif;
+  position: relative;
+  left: 90px;
+  width: 100px;
+  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.815);
+  background-color: rgba(255, 255, 255, 0);
+  color: rgb(255, 255, 255);
+  padding-bottom: 5px;
+  font-size: 20px;
+  text-align: center !important;
+}
+
+.hometext1 {
+  font-family: "Noto Sans KR", sans-serif;
+}
+.hometext2 {
+  font-family: "Noto Sans KR", sans-serif;
+}
+.hometext3 {
+  font-family: "Noto Sans KR", sans-serif;
+}
+.hometext1:hover {
+  color: rgb(156, 156, 156);
+  transition: 0.5s;
+}
+.hometext2:hover {
+  color: rgb(156, 156, 156);
+  transition: 0.5s;
+}
+.hometext3:hover {
+  color: rgb(156, 156, 156);
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 1440px), (max-height: 789px) {
+  .bm-burger-button {
     position: relative;
-    width: 36px;
-    height: 30px;
+    width: 30px;
+    height: 24px;
     float: right;
     top: 70px;
     margin-right: 70px;
   }
-  
-  /* Color/shape of burger icon bars */
-  .bm-burger-bars {
-    background: #c7c7c7;
-  }
-  
-  /* Color/shape of burger icon bars on hover*/
-  .bm-burger-bars-hover {
-    background:  #ffffff6e;
-  }
-  
-  /* Position and sizing of clickable cross button */
-  .bm-cross-button {
-    height: 24px;
-    width: 24px;
-  }
-  
-  /* Color/shape of close button cross */
-  .bm-cross {
-    background: #bdc3c7;
-  }
-  
-  /*
-  Sidebar wrapper styles
-  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
-  */
-  .bm-menu-wrap {
-    position: fixed;
-    height: 100%;
-    width: 30%;
-  }
-  
-  /* General sidebar styles */
-  .bm-menu {
-    background: #1b1b1b;
-    opacity: 80%;
-    padding: 2.5em 1.5em 0;
-    font-size: 1.15em;
-  }
-  
-  /* Morph shape necessary with bubble or elastic */
-  .bm-morph-shape {
-    fill: #373a47;
-  }
-  
-  /* Wrapper for item list */
-  .bm-item-list {
-    color: #b8b7ad;
-    padding: 0.8em;
-    display: grid;
-    margin: -5px;
-    align-content:flex-start;
-
-  }
-  
-  /* Individual item */
-  .bm-item {
-    display: inline-block;
-    font-size: 34px;
-    margin-bottom: 70px !important;
-  }
-  
-  /* Styling of overlay */
-  .bm-overlay {
-    background: rgba(0, 0, 0, 0.3);
-  }
-  /* Individual item */
-.bm-item {
-    display: inline-block;
-  
-    color: white;
-    margin-bottom: 10px;
-    text-align: left;
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-  
-  .bm-item:hover {
-    color: #ffffff;
+  .homebm {
+    width: 340px !important;
   }
 
-  .homenamebox{
-    width: 350px;
+  .homeLogin-Btn {
+    position: relative;
+    left: 175px;
+    width: 100px;
+    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.815);
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(255, 255, 255);
+    padding-bottom: 5px;
+    font-size: 20px;
+    text-align: center !important;
+  }
+  .hometext1 {
+    font-size: 24px;
+    padding-right: -100px;
+  }
+  .hometext2 {
+    font-size: 24px;
+    padding-right: -100px;
+  }
+  .hometext3 {
+    font-size: 24px;
+  }
+  .homenamebox {
+    width: 250px;
     margin-top: 10px;
   }
-  .home-mypagebtn{
-    font-family: 'twayair';
-    background-color: #1b1b1b00;
-    color: white;
-    border: none;
-    float: left;
-    clear: both;
 
-  }
-  .homename{
-    font-family: 'Noto Sans KR', sans-serif;
-    position: relative;
-    top: 15px;
-    font-size: 20px;
-    float: left;
-    clear: both;
-  }
-
-  .homeLogin-Btn{
-    font-family: 'Noto Sans KR', sans-serif;
-    position: relative;
-    left: 225px;
-    width: 100px;
-    border: none;
-    border: 1px solid rgba(255, 255, 255, 0.815);
-    background-color: rgba(255, 255, 255, 0);
-    color: rgb(255, 255, 255);
-    padding-bottom: 5px;
-    font-size: 20px;
-    text-align: center  !important;
-  }
-  .homeLogout-Btn{
-    font-family: 'Noto Sans KR', sans-serif;
-    position: relative;
-    left: 90px;
-    width: 100px;
-    border: none;
-    border: 1px solid rgba(255, 255, 255, 0.815);
-    background-color: rgba(255, 255, 255, 0);
-    color: rgb(255, 255, 255);
-    padding-bottom: 5px;
-    font-size: 20px;
-    text-align: center  !important;
-  }
-  
-
-  .hometext1{
-    font-family: 'Noto Sans KR', sans-serif;
-  }
-  .hometext2{
-    font-family: 'Noto Sans KR', sans-serif;
-  }
-  .hometext3{
-    font-family: 'Noto Sans KR', sans-serif;
-  }
-  .hometext1:hover{
-    color: rgb(156, 156, 156);
-    transition: 0.5s;
-  }
-  .hometext2:hover{
-    color: rgb(156, 156, 156);
-    transition: 0.5s;
-  }
-  .hometext3:hover{
-    color: rgb(156, 156, 156);
-    transition: 0.5s;
-  }
-
-  @media screen and (max-width: 1440px),(max-height: 789px) {
-    .bm-burger-button {
-      position: relative;
-      width: 30px;
-      height: 24px;
-      float: right;
-      top: 70px;
-      margin-right: 70px;
-    }
-    .homebm{
-      width: 340px !important;
-    }
-    
-    .homeLogin-Btn{
-      position: relative;
-      left: 175px;
-      width: 100px;
-      border: none;
-      border: 1px solid rgba(255, 255, 255, 0.815);
-      background-color: rgba(255, 255, 255, 0);
-      color: rgb(255, 255, 255);
-      padding-bottom: 5px;
-      font-size: 20px;
-      text-align: center  !important;
-    }
-    .hometext1{
-      font-size: 24px;padding-right:-100px ;
-    }
-    .hometext2{
-      font-size: 24px;padding-right:-100px ;
-    }
-    .hometext3{
-      font-size: 24px;
-    }
-    .homenamebox{
-      width: 250px;
-      margin-top: 10px;
-    }
-    
-  .homeLogin-Btn{
+  .homeLogin-Btn {
     position: relative;
     left: 180px;
     width: 80px;
@@ -222,9 +222,9 @@
     color: rgb(255, 255, 255);
     padding-bottom: 5px;
     font-size: 16px;
-    text-align: center  !important;
+    text-align: center !important;
   }
-  .homeLogout-Btn{
+  .homeLogout-Btn {
     position: relative;
     left: 25px;
     width: 80px;
@@ -235,9 +235,9 @@
     color: rgb(255, 255, 255);
     padding-bottom: 5px;
     font-size: 16px;
-    text-align: center  !important;
+    text-align: center !important;
   }
-  .home-mypagebtn{
+  .home-mypagebtn {
     background-color: #1b1b1b00;
     color: white;
     border: none;
@@ -245,18 +245,48 @@
     clear: both;
     font-size: 27px;
   }
-  .homename{
+  .homename {
     font-size: 17px;
   }
+}
 
-  @media screen and (max-width: 420px){
-    .bm-burger-button {
-      position: relative;
-      width: 36px;
-      height: 30px;
-      float: right;
-      top: 45px;
-      margin-right: 40px;
-    }
+@media screen and (max-width: 420px) {
+  .bm-burger-button {
+    position: relative;
+    left: 400%;
+    width: 36px;
+    height: 30px;
+    float: right;
+    top: 45px;
+    margin-right: 40px;
+  }
+  .homebm {
+    width: 100% !important;
+  }
+  .homeLogin-Btn {
+    position: relative;
+    left: 250px;
+    width: 100px;
+    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.815);
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(255, 255, 255);
+    padding-bottom: 5px;
+    font-size: 20px;
+    text-align: center !important;
+  }
+
+  .homeLogout-Btn {
+    position: relative;
+    left: 120px;
+    width: 80px;
+    height: 35px;
+    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.815);
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(255, 255, 255);
+    padding-bottom: 5px;
+    font-size: 16px;
+    text-align: center !important;
   }
 }

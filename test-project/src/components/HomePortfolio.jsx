@@ -24,7 +24,17 @@ const HomePortfolio = () => {
     pauseOnHover: false, //마우스 올려도 안멈춤
     pauseOnFocus: false,
     //nextArrow: <SampleNextArrow />,
-		//prevArrow: <SamplePrevArrow />
+		//prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 420,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          fade: true,
+        }
+      }
+    ],
   };
   const imgArray = ([
     {company: "Agio Design", img : "agioCom2.JPG"},
@@ -47,7 +57,7 @@ const HomePortfolio = () => {
     <Slider className="homeportfolio-com" {...settings}>
       {
         imgArray.map((img, index)=>(
-          <div key={index}>
+          <div className="homeportfolio-map-div" key={index}>
             <img src={require(`../img/${img.img}`)} alt="" />
             <p className="homeportfolio-name">{img.company}</p>
           </div>
