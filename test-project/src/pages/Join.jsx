@@ -20,6 +20,8 @@ import paperimg from "../img/join-paper.png"
 import paperimg2 from "../img/join-paper-2.png"
 import breakpaperimg from "../img/join-breakpaper.png"
 
+import Swal from "sweetalert2";
+
 // 진혜 추가
 
 import db from "../data/firebase";
@@ -61,10 +63,7 @@ const Join = props => {
   // 리덕스의 리듀서를 사용하기위한 디스패치
   const dispatch = useDispatch();
 
-  const CreateCheckButton = () => {
-    // 가입완료시 페이지 경로
-    navigate("/");
-  };
+
 
   const register = async () => {
     const auth = getAuth();
@@ -103,13 +102,17 @@ const Join = props => {
       }, 800);
     
     } catch (error) {
-      navigate("/main/login");
+      navigate("/join");
       const errorCode = error.code;
       const errorMessage = error.message;
       console.log(errorCode);
       if (errorCode == "auth/email-already-in-use") {
-        alert("이미 사용하고 있는 이메일입니다.");
-      } else if (errorCode == "auth/weak-password") {
+        Swal.fire({
+          icon: 'error',
+          title: '이미 사용하고 있는 이메일 입니다.',
+          text: '중복된 이메일이 없는지 확인하세요!',
+        })
+      } else if (errorCode == "auth/weak-password") { 
         alert("비밀번호를 6자리 이상으로 작성하세요");
       }
     }
@@ -263,9 +266,9 @@ const Join = props => {
         <button
           className="join-joinForm_btn"
           disabled={notAllow}
-          onClick={() => {
+          onClick={(e) => {
+            e.preventDefault();
             register();
-            CreateCheckButton();
             addUser();
           }}
         >
