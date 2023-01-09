@@ -24,6 +24,7 @@ import DataContext from "../data/DataContext";
 import { userLogin } from "../module/currentUser";
 import { useDispatch } from "react-redux";
 import Notfound from "./Notfound";
+import Swal from "sweetalert2";
 
 import { motion } from "framer-motion";
 /* 1. framer-motion을 import한다 */
@@ -132,9 +133,15 @@ const Login = () => {
       const errorMessage = error.message;
       console.log(errorCode, errorMessage);
       if (errorCode == "auth/wrong-password") {
-        alert("잘못된 비밀번호입니다");
+        Swal.fire({
+          icon: 'error',
+          title: '잘못된 비밀번호 입니다.',
+        })
       } else if (errorCode == "auth/user-not-found") {
-        alert("없는 이메일입니다");
+        Swal.fire({
+          icon: 'error',
+          title: '없는 이메일 입니다.',
+        })
       }
     }
   };
