@@ -13,6 +13,8 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
+import Swal from "sweetalert2";
+
 const HomeContactUs = () => {
   const form2 = useRef();
 
@@ -25,11 +27,23 @@ const HomeContactUs = () => {
     const User_ID = "odmr0vvUUkxqQq_1d";
 
     emailjs.sendForm(Service_ID, Template_ID, form2.current, User_ID).then(
-      result => alert("메일을 성공적으로 전송했습니다!"),
-      error => alert("메일 전송을 실패했습니다!")
+      result => Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: '메일 전송을 성공했습니다.',
+        showConfirmButton: false,
+        timer: 1500
+      }),
+      error => Swal.fire({
+        icon: 'error',
+        title: '메일 전송을 실패하였습니다.',
+        text: 'Something went wrong!',
+      })
     );
     e.currentTarget.reset();
   };
+
+  
 
   return (
     <div>
