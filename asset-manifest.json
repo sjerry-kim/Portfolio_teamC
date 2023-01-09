@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/-Project-teamC/static/css/main.cdc2deb6.css",
-    "main.js": "/-Project-teamC/static/js/main.299a0b6c.js",
+    "main.css": "/-Project-teamC/static/css/main.fbe5106d.css",
+    "main.js": "/-Project-teamC/static/js/main.a23cccd2.js",
     "static/js/787.a526e8cd.chunk.js": "/-Project-teamC/static/js/787.a526e8cd.chunk.js",
     "static/media/shopVideo4.mp4": "/-Project-teamC/static/media/shopVideo4.0638743c834b14067e55.mp4",
     "static/media/shopVideo9.mp4": "/-Project-teamC/static/media/shopVideo9.b39e8200d396a81aefa9.mp4",
@@ -53,13 +53,15 @@
     "static/media/test1.jpg": "/-Project-teamC/static/media/test1.58873a8b1b7c6fe0b584.jpg",
     "static/media/dasoleMain.JPG": "/-Project-teamC/static/media/dasoleMain.de6fd1456682317def87.JPG",
     "static/media/backgroundImg2.jpg": "/-Project-teamC/static/media/backgroundImg2.4cc40537a2dadaf62a72.jpg",
+    "static/media/2.jpg": "/-Project-teamC/static/media/2.494929724b99051dc55c.jpg",
     "static/media/join-paper.png": "/-Project-teamC/static/media/join-paper.3133dd264c43548c62b9.png",
     "static/media/backgroundImg5.jpg": "/-Project-teamC/static/media/backgroundImg5.f73939886a3795c43e1a.jpg",
     "static/media/monoComRe2.JPG": "/-Project-teamC/static/media/monoComRe2.3fafb0c769e0d8c5baad.JPG",
     "static/media/Question-img.jpg": "/-Project-teamC/static/media/Question-img.0c635cdb32fdeacd6a42.jpg",
     "static/media/backgroundImg1.jpg": "/-Project-teamC/static/media/backgroundImg1.500d13b6826643de8fd5.jpg",
+    "static/media/1.jpg": "/-Project-teamC/static/media/1.2fc5c3dc44e0a0e9f867.jpg",
+    "static/media/3.jpg": "/-Project-teamC/static/media/3.d526674f097672b8d1e5.jpg",
     "static/media/Logo.png": "/-Project-teamC/static/media/Logo.5ec9c464e2c5023dcf6f.png",
-    "static/media/2.jpg": "/-Project-teamC/static/media/2.c0d3e6f55e7bbb0c604f.jpg",
     "static/media/purenComRe1.JPG": "/-Project-teamC/static/media/purenComRe1.dfe28e8b020a7f9a170e.JPG",
     "static/media/monoComRe5.JPG": "/-Project-teamC/static/media/monoComRe5.81c643ff2f5f1197560f.JPG",
     "static/media/agioComRe2.JPG": "/-Project-teamC/static/media/agioComRe2.81cdbfc0ef5464b6e475.JPG",
@@ -67,11 +69,9 @@
     "static/media/jyMain.JPG": "/-Project-teamC/static/media/jyMain.dca637a5092bdd1577a8.JPG",
     "static/media/agioComRe5.JPG": "/-Project-teamC/static/media/agioComRe5.db14efe74d1b6bb4ff63.JPG",
     "static/media/evianMain.JPG": "/-Project-teamC/static/media/evianMain.166ec01c2fb7dcadecfa.JPG",
-    "static/media/1.jpg": "/-Project-teamC/static/media/1.a36611973a4f5d8b0118.jpg",
     "static/media/EstStart-img6.jpg": "/-Project-teamC/static/media/EstStart-img6.19bc39bff7f324ab8ef1.jpg",
     "static/media/logo_white.png": "/-Project-teamC/static/media/logo_white.739896426d5b78ddbecb.png",
     "static/media/oneComRe3.jpg": "/-Project-teamC/static/media/oneComRe3.38bc638ebb46db6016f4.jpg",
-    "static/media/3.jpg": "/-Project-teamC/static/media/3.a8680ffe044fdb15b6b5.jpg",
     "static/media/dawonComRe6.JPG": "/-Project-teamC/static/media/dawonComRe6.92bd6059aeb074cae60b.JPG",
     "static/media/purenMain.JPG": "/-Project-teamC/static/media/purenMain.e15ed46d42e5866ed561.JPG",
     "static/media/jyComRe5.JPG": "/-Project-teamC/static/media/jyComRe5.97fece783536d03a8a69.JPG",
@@ -147,12 +147,12 @@
     "static/media/slick.ttf": "/-Project-teamC/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/-Project-teamC/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/-Project-teamC/index.html",
-    "main.cdc2deb6.css.map": "/-Project-teamC/static/css/main.cdc2deb6.css.map",
-    "main.299a0b6c.js.map": "/-Project-teamC/static/js/main.299a0b6c.js.map",
+    "main.fbe5106d.css.map": "/-Project-teamC/static/css/main.fbe5106d.css.map",
+    "main.a23cccd2.js.map": "/-Project-teamC/static/js/main.a23cccd2.js.map",
     "787.a526e8cd.chunk.js.map": "/-Project-teamC/static/js/787.a526e8cd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cdc2deb6.css",
-    "static/js/main.299a0b6c.js"
+    "static/css/main.fbe5106d.css",
+    "static/js/main.a23cccd2.js"
   ]
 }
