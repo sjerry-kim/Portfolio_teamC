@@ -382,7 +382,7 @@ input:focus {
   }
   
   .homecontactus-title {
-    margin-top: -30px;
+    margin-top: -60px;
     margin-bottom: -50px;
     font-size: 40px;
     font-weight: bold;
@@ -391,14 +391,15 @@ input:focus {
   }
   .homecontactus-middletitle {
     font-size: 15px;
-    margin-top: -280px;
-    margin-left: 15px;
+    margin-top: -300px;
+    margin-left: 5px;
     font-family: 'twayair';
   }
 
   .homecontactus-check-box{
     display: flex;
     flex-direction: column;
+    margin-left: -80px;
   }
 
   .homecontactus-check-box button{
@@ -415,5 +416,4 @@ input:focus {
   }
 
 }
-
 

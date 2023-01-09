@@ -265,7 +265,7 @@
   }
   .homeLogin-Btn {
     position: relative;
-    left: 250px;
+    left: 230px;
     width: 100px;
     border: none;
     border: 1px solid rgba(255, 255, 255, 0.815);
@@ -278,7 +278,7 @@
 
   .homeLogout-Btn {
     position: relative;
-    left: 120px;
+    left: 90px;
     width: 80px;
     height: 35px;
     border: none;
