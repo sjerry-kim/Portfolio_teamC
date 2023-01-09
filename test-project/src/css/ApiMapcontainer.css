@@ -71,6 +71,10 @@
 
 #api-TopMap {
   display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
   background-color: rgb(230, 218, 204);
 }
 #api-midMap {
@@ -103,23 +107,21 @@
     z-index: 0;
     width: 100%;
     border: 1px solid rgb(187, 163, 136);
-    height: 92%;
+    height: 100%;
   }
   #api-result-list-body {
     background-color: #ffff;
     opacity: 0.7;
     border: 1px solid rgb(187, 163, 136);
-    position: relative;
-    height: 200px;
+    position: absolute;
+    height: 30%;
     padding: 20px;
-    box-sizing: border-box;
     width: 100%;
-    top: 581px;
+    bottom: 0;
   }
   #api-result-list {
     width: 100%;
     height: 100%;
-    overflow-y: scroll;
   }
   #api-result-list::-webkit-scrollbar-track {
     display: none;

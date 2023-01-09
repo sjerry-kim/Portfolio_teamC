@@ -1,7 +1,7 @@
 .api-inputForm {
   font-family: "LINESeedKR-Bd";
   position: relative;
-  bottom: 825px;
+  bottom: 80%;
   left: 58%;
   transform: translate(-50%, -50%);
   transition: all, 1s;
@@ -43,11 +43,9 @@
   border-radius: 20px;
   padding: 0 20px;
 }
-
 .api-input:focus {
   outline: none;
 }
-
 .api-input::placeholder {
   color: rgb(187, 163, 136);
 }
@@ -57,12 +55,12 @@
 .api-inputForm:hover .api-input {
   display: block;
 }
-
 @media screen and (max-width: 1440px), (max-height: 789px) {
   .api-inputForm {
     font-family: "LINESeedKR-Bd";
     position: relative;
     bottom: 825px;
+    bottom: 80%;
     left: 65%;
     transform: translate(-100%, -25%);
     transition: all, 1s;
@@ -83,7 +81,7 @@
     font-family: "LINESeedKR-Bd";
     position: relative;
     left: 35px;
-    bottom: 170px;
+    bottom: 80%;
     transform: translate(0%, -50%);
     transition: all, 1s;
     width: 50px;
@@ -97,7 +95,6 @@
     padding: 5px;
     opacity: 0.7;
   }
-
   .api-inputForm:hover {
     width: 350px;
   }
