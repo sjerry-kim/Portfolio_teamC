@@ -26,15 +26,23 @@ body {
 @media screen and (max-width: 420px){
   body{
     overflow: hidden;
+    height: 100%;
+    touch-action: none;
+    position: fixed;
   }
+  body * { touch-action: none; }
 
   .slick-dots {
     position: absolute;
-    top: 76%;
-    margin-left: 89%;
+    top: 73%;
+    margin-left: 92%;
     margin-top: 35px;
   }
   
+  .bottom{
+    margin-top: 80px;
+    margin-left: -5px;
+  }
 
 
 }

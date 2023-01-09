@@ -38,6 +38,7 @@
   background-color: transparent;
   width: 55%;
   margin-left: 30px;
+  margin-top: 0px;
 }
 
 .productinsertcomment-question-control::placeholder {
@@ -64,6 +65,7 @@
   color: black;
   font-family: 'Chosunilbo_myungjo';
   background-color: transparent;
+  margin-bottom: -15px;
 }
 
 .productinsertcomment-question-btn svg{
@@ -77,3 +79,41 @@
     line-height: 1.7;
   }
 }
+
+
+/* 모바일 */
+@media screen and (max-width: 420px){
+
+  .productinsertcomment-question-control{
+    font-size: 0.7em;
+    line-height: 1.7;
+    margin-top: -10px;
+    }
+
+  .productinsertcomment-question-control::placeholder {
+      text-align: center;
+      font-family: 'Chosunilbo_myungjo';
+      font-size: 10px;
+        }
+
+  .productinsertcomment-question-control{
+          border: none;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+          transition: none;
+          border-radius: 0;
+          resize: none;
+          background-color: transparent;
+          width: 100%;
+          margin-left: 30px;
+        }
+        
+        .productinsertcomment-question-btn{
+          border: none;
+          font-size: 14px;
+          margin-top: -20px;
+          margin-right: -130px;
+          color: black;
+          font-family: 'Chosunilbo_myungjo';
+          background-color: transparent;
+        }
+      }

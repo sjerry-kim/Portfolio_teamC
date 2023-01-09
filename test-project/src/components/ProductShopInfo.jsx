@@ -67,13 +67,15 @@ function InfoCard(props) {
       <div className="Product-infoCard">
         <div className="Product-detail">
           <div>
-            <div className="titleNshare">
             <h2>{market ? market.name : "없는 정보 입니다"}</h2>
+            <div className="titleNshare">
             <KakaoShare></KakaoShare>
-            </div>
+            </div >
+            <div className="Product-information">
             <p className="infoAdd">주소 : {market ? market.location : "없는 정보 입니다"}</p>
             <p className="infoAdd">연락처 : {market ? market.number : "없는 정보 입니다"}</p> 
             <p className="infoAdd">{market ? market.companyEtc : "없는 정보 입니다"}</p>
+            </div>
             </div>
 
         </div>
