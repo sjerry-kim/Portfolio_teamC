@@ -378,6 +378,7 @@ input:focus {
     width: 50px;
     bottom: 40px;
     margin: auto;
+    margin-top: 32px;
     font-family: 'Noto Sans KR', sans-serif;
   }
   
@@ -401,19 +402,21 @@ input:focus {
     display: flex;
     flex-direction: column;
     margin-left: -80px;
+    margin-top: -12px;
   }
 
   .homecontactus-check-box button{
-    width: 130px;
-    height: 30px;
+    width: 170px;
+    height: 40px;
   }
 
   .homecontactus-check-box button .front{
-    font-size: 15px;
+    font-size: 25px;
   }
 
   .homecontactus-check-box p{
-    font-size: 17px;
+    font-size: 23px;
+    font-style: italic;
   }
 
 }
