@@ -574,7 +574,7 @@ const DataProvider = ({ children }) => {
       reviewComment6:
         "요즘 화이트톤으로 많이 인테리어 해서, 저희집도 화이트톤으로 분위기를 바꿔보고 싶어서 여러군데 알아본결과 여기가 제일 후기도 맘에 들더라구요ㅎㅎㅎ 중간에 마감 잘안된부분이 있었는데 문의하니까 즉시 바로 A/S까지 해주시고 다솔에서하시면 정말 후회하지 않을실꺼예용!! ",
       companyIntro:
-        "DESIGN YOUR LIFE!\n고객의 필요, 입장, 사용자의 공간 이해, 상식으로부터\n시대의 트렌드와 조합한 공간 연출 서비스!\n고객의 삶과 소통하는 공간을 연출하는 다솔!",
+        "DESIGN YOUR LIFE!\n고객의 필요, 사용자의 공간 이해, 상식으로부터\n시대의 트렌드와 조합한 공간 연출 서비스!\n고객의 삶과 소통하는 공간을 연출하는 다솔!",
       mainIMG: dasoleMain,
       mainImgSrc:'https://ifh.cc/g/sAP31G.jpg',
       companyVideo:"shopVideo9.mp4"
