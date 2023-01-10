@@ -25,6 +25,7 @@ import { get, getDatabase } from "firebase/database";
 import { getIdToken } from "firebase/auth";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import Swal from "sweetalert2";
 
 const MainComment = ({ newArray, getData }) => {
   const { id } = useParams();
@@ -53,7 +54,27 @@ const MainComment = ({ newArray, getData }) => {
                   const sameCommnetDocs = await getDocs(sameCommentDoc);
                   sameCommnetDocs.forEach(doc => {
                     review.doc(`${doc.id}`).delete();
-                    alert("댓글을 삭제하였습니다");
+                    let timerInterval
+                    Swal.fire({
+                      title: '댓글을 삭제합니다!',
+                      timer: 1000,
+                      timerProgressBar: true,
+                      didOpen: () => {
+                        Swal.showLoading()
+                        const b = Swal.getHtmlContainer().querySelector('b')
+                        timerInterval = setInterval(() => {
+                          b.textContent = Swal.getTimerLeft()
+                        }, 100)
+                      },
+                      willClose: () => {
+                        clearInterval(timerInterval)
+                      }
+                    }).then((result) => {
+                      /* Read more about handling dismissals below */
+                      if (result.dismiss === Swal.DismissReason.timer) {
+                        console.log('I was closed by the timer')
+                      }
+                    });
                   });
                   setInterval(() => {
                     window.location.reload();

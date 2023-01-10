@@ -114,7 +114,6 @@ const Join = props => {
         Swal.fire({
           icon: 'error',
           title: '이미 사용하고 있는 이메일 입니다.',
-          text: '중복된 이메일이 없는지 확인하세요!',
         })
       } else if (errorCode == "auth/weak-password") { 
         alert("비밀번호를 6자리 이상으로 작성하세요");
