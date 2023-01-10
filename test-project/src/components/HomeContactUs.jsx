@@ -37,10 +37,10 @@ const HomeContactUs = () => {
         <h2 className="homecontactus-title">Contact Us</h2>
         <div className="homecontactus-letter">
           <div className="homecontactus-middletitle">
-            <p className="homecontactus-p">주소 | 부산 부산진구 중앙대로 749</p>
-            <p className="homecontactus-p">전화번호 | 051-715-6224</p>
-            <p className="homecontactus-p">팩스번호 | 051-715-6224</p>
-            <p className="homecontactus-p">이메일 | GamilC@gmail.com</p>
+            <p>주소 | 부산 부산진구 중앙대로 749</p>
+            <p>전화번호 | 051-715-6224</p>
+            <p>팩스번호 | 051-715-6224</p>
+            <p>이메일 | GamilC@gmail.com</p>
           </div>
         </div>
       </div>
