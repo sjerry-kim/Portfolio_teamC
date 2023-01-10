@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/-Project-teamC/static/css/main.c693f183.css",
-    "main.js": "/-Project-teamC/static/js/main.31060256.js",
+    "main.css": "/-Project-teamC/static/css/main.78123c2c.css",
+    "main.js": "/-Project-teamC/static/js/main.f9c4c969.js",
     "static/js/787.a526e8cd.chunk.js": "/-Project-teamC/static/js/787.a526e8cd.chunk.js",
     "static/media/shopVideo4.mp4": "/-Project-teamC/static/media/shopVideo4.0638743c834b14067e55.mp4",
     "static/media/shopVideo9.mp4": "/-Project-teamC/static/media/shopVideo9.b39e8200d396a81aefa9.mp4",
@@ -70,6 +70,7 @@
     "static/media/agioComRe5.JPG": "/-Project-teamC/static/media/agioComRe5.db14efe74d1b6bb4ff63.JPG",
     "static/media/evianMain.JPG": "/-Project-teamC/static/media/evianMain.166ec01c2fb7dcadecfa.JPG",
     "static/media/EstStart-img6.jpg": "/-Project-teamC/static/media/EstStart-img6.19bc39bff7f324ab8ef1.jpg",
+    "static/media/backImg3.jpg": "/-Project-teamC/static/media/backImg3.a9c532282505246253a7.jpg",
     "static/media/logo_white.png": "/-Project-teamC/static/media/logo_white.739896426d5b78ddbecb.png",
     "static/media/oneComRe3.jpg": "/-Project-teamC/static/media/oneComRe3.38bc638ebb46db6016f4.jpg",
     "static/media/dawonComRe6.JPG": "/-Project-teamC/static/media/dawonComRe6.92bd6059aeb074cae60b.JPG",
@@ -79,6 +80,7 @@
     "static/media/dawonComRe1.JPG": "/-Project-teamC/static/media/dawonComRe1.816c3a6f5c257649ef53.JPG",
     "static/media/agioComRe1.JPG": "/-Project-teamC/static/media/agioComRe1.99c8449b388d5044d771.JPG",
     "static/media/agioMain.JPG": "/-Project-teamC/static/media/agioMain.c2dcba83a4862b295ab1.JPG",
+    "static/media/backImg1.jpg": "/-Project-teamC/static/media/backImg1.ae64953669f437d1828d.jpg",
     "static/media/idasComRe6.JPG": "/-Project-teamC/static/media/idasComRe6.34d28169adc09ca56125.JPG",
     "static/media/monoComRe6.JPG": "/-Project-teamC/static/media/monoComRe6.9feeae012621f0cb13e0.JPG",
     "static/media/evianComRe1.jpg": "/-Project-teamC/static/media/evianComRe1.17f7448728e77a7212b6.jpg",
@@ -98,7 +100,6 @@
     "static/media/monoComRe4.JPG": "/-Project-teamC/static/media/monoComRe4.d991044568f01ee53507.JPG",
     "static/media/oneComRe5.jpg": "/-Project-teamC/static/media/oneComRe5.7d839fbf37e345a6df70.jpg",
     "static/media/defaultProfile.jpeg": "/-Project-teamC/static/media/defaultProfile.6a9109cfeafe0fb89460.jpeg",
-    "static/media/backImg3.jpg": "/-Project-teamC/static/media/backImg3.2d97b06063a8aed5eef1.jpg",
     "static/media/dawonComRe3.JPG": "/-Project-teamC/static/media/dawonComRe3.eb6498b7a06e3f3fbcf9.JPG",
     "static/media/dasoleComRe6.JPG": "/-Project-teamC/static/media/dasoleComRe6.b1f7f297b7dbb718ded3.JPG",
     "static/media/idasMain.JPG": "/-Project-teamC/static/media/idasMain.73764bef1717fcea4b57.JPG",
@@ -107,7 +108,6 @@
     "static/media/dawonComRe5.JPG": "/-Project-teamC/static/media/dawonComRe5.e41ec8fa22d8fa6a0d69.JPG",
     "static/media/agioComRe6.JPG": "/-Project-teamC/static/media/agioComRe6.7a00aeaf23efe05e9a80.JPG",
     "static/media/EstStart-img.jpg": "/-Project-teamC/static/media/EstStart-img.931176a5eae547d4e1b0.jpg",
-    "static/media/backImg1.jpg": "/-Project-teamC/static/media/backImg1.7df6237714af6c99c20a.jpg",
     "static/media/idasComRe3.JPG": "/-Project-teamC/static/media/idasComRe3.bb5476dddbecb048c5ef.JPG",
     "static/media/jyComRe3.JPG": "/-Project-teamC/static/media/jyComRe3.8e712314153091f8a3c1.JPG",
     "static/media/jyComRe1.JPG": "/-Project-teamC/static/media/jyComRe1.c2d25fd072a90bf83f11.JPG",
@@ -120,6 +120,7 @@
     "static/media/EstStart-img4.jpg": "/-Project-teamC/static/media/EstStart-img4.5c86df2a3827cd58ef15.jpg",
     "static/media/evianComRe3.jpg": "/-Project-teamC/static/media/evianComRe3.b3ba5330545438a71efd.jpg",
     "static/media/Reciept-background.jpg": "/-Project-teamC/static/media/Reciept-background.8aaa56acdea5ec7168b7.jpg",
+    "static/media/backImg2.jpg": "/-Project-teamC/static/media/backImg2.f8df5a8f92e924a89895.jpg",
     "static/media/dasoleComRe4.JPG": "/-Project-teamC/static/media/dasoleComRe4.4f752d632f8382300454.JPG",
     "static/media/dasoleComRe3.JPG": "/-Project-teamC/static/media/dasoleComRe3.7e0f41aca115b59fff64.JPG",
     "static/media/evianComRe5.jpg": "/-Project-teamC/static/media/evianComRe5.9c031c9ab3f0b68afa8a.jpg",
@@ -133,7 +134,6 @@
     "static/media/test2.jpg": "/-Project-teamC/static/media/test2.bff8a0a1c087fadec447.jpg",
     "static/media/agioComRe3.JPG": "/-Project-teamC/static/media/agioComRe3.d46b2e6daa42b0befa4a.JPG",
     "static/media/monoComRe3.JPG": "/-Project-teamC/static/media/monoComRe3.a689badff0a2ec33bf50.JPG",
-    "static/media/backImg2.jpg": "/-Project-teamC/static/media/backImg2.0253ea58a085740a45a7.jpg",
     "static/media/evianLogo.png": "/-Project-teamC/static/media/evianLogo.eb1fb62d46768471d7a9.png",
     "static/media/EstStart-img10.png": "/-Project-teamC/static/media/EstStart-img10.cbfc6d480ffe4879097e.png",
     "static/media/join-genders.png": "/-Project-teamC/static/media/join-genders.ecd990fdd419da984f17.png",
@@ -147,12 +147,12 @@
     "static/media/slick.ttf": "/-Project-teamC/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/-Project-teamC/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/-Project-teamC/index.html",
-    "main.c693f183.css.map": "/-Project-teamC/static/css/main.c693f183.css.map",
-    "main.31060256.js.map": "/-Project-teamC/static/js/main.31060256.js.map",
+    "main.78123c2c.css.map": "/-Project-teamC/static/css/main.78123c2c.css.map",
+    "main.f9c4c969.js.map": "/-Project-teamC/static/js/main.f9c4c969.js.map",
     "787.a526e8cd.chunk.js.map": "/-Project-teamC/static/js/787.a526e8cd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c693f183.css",
-    "static/js/main.31060256.js"
+    "static/css/main.78123c2c.css",
+    "static/js/main.f9c4c969.js"
   ]
 }
