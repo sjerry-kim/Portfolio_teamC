@@ -190,11 +190,7 @@
   color:rgba(0, 0, 0, 0.699) !important;
   font-family: "Noto Sans KR", sans-serif;
   box-shadow: 0 0 0 3px rgba(255, 255, 255, 0) !important;
-  width: 13%;
-  height: 35px;
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
+
 }
 .swal2-loader{
   background-color: rgba(0, 0, 0, 0) !important;
