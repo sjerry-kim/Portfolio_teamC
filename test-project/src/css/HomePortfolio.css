@@ -94,17 +94,17 @@
   .homeportfolio-info{
     font-size: 20px;
     margin: 0;
-    margin-left: 100px;
-    left: 120px;
+    margin-left: 112px;
+    left: 123px;
   }
 
   .homeportfolio-com{
     margin: 0;
-    margin-left: 20px;
+    margin-left: 25px;
     width: 80vh;
   }
 .homeportfolio-info-title{
-  margin-top: -20px;
+  margin-top: -10px;
 }
   .homeportfolio-map-div{
     width: 20%;

@@ -31,6 +31,7 @@ const HomePortfolio = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          autoplaySpeed: 2500,
           fade: true,
         }
       }
