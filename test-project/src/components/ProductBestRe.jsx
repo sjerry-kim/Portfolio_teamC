@@ -24,13 +24,29 @@ export default ProductBestRe;
 
 function ReviewCard(props) {
   const { bestReviews } = props;
+  const index=[1,2,3,4,5,6];
+  const [click, setClick] = useState();
+
+
   return (
 
 
     <div className="Product-reviewCards">
-      <div className="Product-reCard">
+      
+{ index.map( (index) => (
+        <div className={click==index ? "Product-reCard on" : "Product-reCard"} onMouseEnter={()=>{setClick(index)}} onMouseLeave={()=>{setClick()}}>
         <div className="bestReviews_cardIMG" id="1">
-          {bestReviews ? <img src={bestReviews.reviewImg1} /> : "후기 사진없음"}
+          {bestReviews ? <img src={bestReviews["reviewImg"+index]} /> : "후기 사진없음"}
+        </div>
+        <div className="product-bestReviews_cardIMG">
+          <h3>{bestReviews ? bestReviews["reviewTitle"+index] : "후기 제목 없음"}</h3>
+          <p>{bestReviews ? bestReviews["reviewComment"+index] : "후기 없음"}</p>
+        </div>
+      </div>
+))}
+      {/* <div className="Product-reCard">
+        <div className="bestReviews_cardIMG" id="1">
+          {bestReviews ? <img src={bestReviews["reviewImg"+1]} /> : "후기 사진없음"}
         </div>
         <div className="product-bestReviews_cardIMG">
           <h3>{bestReviews ? bestReviews.reviewTitle1 : "후기 제목 없음"}</h3>
@@ -82,7 +98,7 @@ function ReviewCard(props) {
           <h3>{bestReviews ? bestReviews.reviewTitle6 : "후기 제목 없음"}</h3>
           <p>{bestReviews ? bestReviews.reviewComment6 : "후기 없음"}</p>
         </div>
-      </div>
+      </div> */}
     </div>
     
     
