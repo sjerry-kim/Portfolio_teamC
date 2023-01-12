@@ -5,7 +5,6 @@ import Card from "react-bootstrap/Card";
 import { useContext, useState } from "react";
 import DataContext from "../data/DataContext";
 import { useParams } from "react-router-dom";
-import useScrollFadeIn from "./useScrollFadeIn";
 
 const ProductBestRe = () => {
   const { id } = useParams();
@@ -24,26 +23,40 @@ export default ProductBestRe;
 
 function ReviewCard(props) {
   const { bestReviews } = props;
-  const index=[1,2,3,4,5,6];
+  const index = [1, 2, 3, 4, 5, 6];
   const [click, setClick] = useState();
 
-
   return (
-
-
     <div className="Product-reviewCards">
-      
-{ index.map( (index) => (
-        <div className={click==index ? "Product-reCard on" : "Product-reCard"} onMouseEnter={()=>{setClick(index)}} onMouseLeave={()=>{setClick()}}>
-        <div className="bestReviews_cardIMG" id="1">
-          {bestReviews ? <img src={bestReviews["reviewImg"+index]} /> : "후기 사진없음"}
+      {index.map(index => (
+        <div
+          className={click == index ? "Product-reCard on" : "Product-reCard"}
+          onMouseEnter={() => {
+            setClick(index);
+          }}
+          onMouseLeave={() => {
+            setClick();
+          }}
+        >
+          <div className="bestReviews_cardIMG" id="1">
+            {bestReviews ? (
+              <img src={bestReviews["reviewImg" + index]} />
+            ) : (
+              "후기 사진없음"
+            )}
+          </div>
+          <div className="product-bestReviews_cardIMG">
+            <h3>
+              {bestReviews
+                ? bestReviews["reviewTitle" + index]
+                : "후기 제목 없음"}
+            </h3>
+            <p>
+              {bestReviews ? bestReviews["reviewComment" + index] : "후기 없음"}
+            </p>
+          </div>
         </div>
-        <div className="product-bestReviews_cardIMG">
-          <h3>{bestReviews ? bestReviews["reviewTitle"+index] : "후기 제목 없음"}</h3>
-          <p>{bestReviews ? bestReviews["reviewComment"+index] : "후기 없음"}</p>
-        </div>
-      </div>
-))}
+      ))}
       {/* <div className="Product-reCard">
         <div className="bestReviews_cardIMG" id="1">
           {bestReviews ? <img src={bestReviews["reviewImg"+1]} /> : "후기 사진없음"}
@@ -100,7 +113,5 @@ function ReviewCard(props) {
         </div>
       </div> */}
     </div>
-    
-    
   );
 }

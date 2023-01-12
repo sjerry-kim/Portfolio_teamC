@@ -26,7 +26,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { userLogout } from "../module/currentUser";
 
 import Swal from "sweetalert2";
-import 'animate.css';
+import "animate.css";
 
 const Navbar = () => {
   const activeStyle = { color: "#906b41" };
@@ -204,6 +204,12 @@ const Navbar = () => {
           업체 포트폴리오
         </NavLink>
         <NavLink
+          to="/main/map"
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        >
+          주변 업체 찾기
+        </NavLink>
+        <NavLink
           to="/main/estimation"
           style={({ isActive }) => (isActive ? activeStyle : undefined)}
           onClick={() => {
@@ -211,12 +217,6 @@ const Navbar = () => {
           }}
         >
           맞춤 견적 짜기
-        </NavLink>
-        <NavLink
-          to="/main/map"
-          style={({ isActive }) => (isActive ? activeStyle : undefined)}
-        >
-          주변 업체 찾기
         </NavLink>
       </div>
       {window.sessionStorage.getItem("login") == "true" ? (
@@ -243,14 +243,14 @@ const Navbar = () => {
               );
               window.sessionStorage.setItem("profileClick", null);
               Swal.fire({
-                title: '로그아웃 하였습니다.',
+                title: "로그아웃 하였습니다.",
                 showClass: {
-                  popup: 'animate__animated animate__fadeInDown'
+                  popup: "animate__animated animate__fadeInDown",
                 },
                 hideClass: {
-                  popup: 'animate__animated animate__fadeOutUp'
-                }
-              })
+                  popup: "animate__animated animate__fadeOutUp",
+                },
+              });
               navigate("/");
             }}
           >
