@@ -7,6 +7,7 @@ import { getAuth } from "firebase/auth";
 // import { firestore } from 'firebase/firestore';
 
 
+
 //import firebase from "firebase/compat/app"
 import 'firebase/compat/firestore';
 // TODO: Add SDKs for Firebase products that you want to use
@@ -19,12 +20,12 @@ import "firebase/compat/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: REACT_APP_FIREBASE_APIKEY,
+  apiKey: process.env.REACT_APP_FIREBASE_APIKEY,
   authDomain: "teamc-project-b7dfb.firebaseapp.com",
   projectId: "teamc-project-b7dfb",
   storageBucket: "teamc-project-b7dfb.appspot.com",
   messagingSenderId: "806323494311",
-  appId:REACT_APP_FIREBASE_APIID,
+  appId:process.env.REACT_APP_FIREBASE_APIID,
   measurementId: "G-1ZGMDF529X",
 };
 
