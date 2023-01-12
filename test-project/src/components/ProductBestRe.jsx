@@ -5,7 +5,6 @@ import Card from "react-bootstrap/Card";
 import { useContext, useState } from "react";
 import DataContext from "../data/DataContext";
 import { useParams } from "react-router-dom";
-import useScrollFadeIn from "./useScrollFadeIn";
 
 const ProductBestRe = () => {
   const { id } = useParams();
@@ -24,12 +23,12 @@ export default ProductBestRe;
 
 function ReviewCard(props) {
   const { bestReviews } = props;
-  const index=[1,2,3,4,5,6];
+  const index = [1, 2, 3, 4, 5, 6];
   const [click, setClick] = useState();
-
 
   return (
     <div className="Product-reviewCards">
+
       { index.map( (index) => (
         <div className={click==index ? "Product-reCard on" : "Product-reCard"} onMouseEnter={()=>{setClick(index)}} onMouseLeave={()=>{setClick()}}>
         <div className="bestReviews_cardIMG">
@@ -42,7 +41,5 @@ function ReviewCard(props) {
       </div>
 ))}
     </div>
-    
-    
   );
 }
