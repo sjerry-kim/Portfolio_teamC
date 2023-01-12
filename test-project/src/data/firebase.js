@@ -19,12 +19,12 @@ import "firebase/compat/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCMoXUqkehoGjCep79k-dmXJLJfb-HZuFo",
+  apiKey: REACT_APP_FIREBASE_APIKEY,
   authDomain: "teamc-project-b7dfb.firebaseapp.com",
   projectId: "teamc-project-b7dfb",
   storageBucket: "teamc-project-b7dfb.appspot.com",
   messagingSenderId: "806323494311",
-  appId: "1:806323494311:web:9b277ea4823d588e626a82",
+  appId:REACT_APP_FIREBASE_APIID,
   measurementId: "G-1ZGMDF529X",
 };
 
