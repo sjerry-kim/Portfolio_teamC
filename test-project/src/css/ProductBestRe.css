@@ -172,15 +172,12 @@
 
   }
 
+
+
 .Product-reCard{
   width: 150px;
-  overflow: hidden;
   height: 150px; 
-
-
 }
-
-
 
   
   .Product-reCard:hover{
@@ -196,8 +193,15 @@
       overflow: hidden;
       height: 490px; 
       z-index: 999;  
-
     }
+    .Product-reCard.on:hover{   
+      position: fixed;
+      width: 320px;
+      overflow: hidden;
+      height: 490px; 
+      z-index: 999;  
+    }
+
 
   .bestReviews_cardIMG img{
     width: 150px;
@@ -221,12 +225,13 @@
   .Product-reCard .product-bestReviews_cardIMG > h3{
     padding: 0;
     font-size: 25px;
-    margin-top: 0px;
+    margin-top: 50px;
 
   }
 
   .Product-reCard .product-bestReviews_cardIMG > p{
-    font-size: 0.9em;
+    font-size: 1em;
+    margin-top: 40px;
   }
 
   }
