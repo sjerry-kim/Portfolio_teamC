@@ -31,12 +31,18 @@ body {
     position: fixed;
   }
   body * { touch-action: none; }
-
+  
   .slick-dots {
     position: absolute;
-    top: 73%;
-    margin-left: 92%;
+    top: 60%;
+    margin-left: 91%;
     margin-top: 35px;
+    size: large;
+  }
+  
+  .slick-dots li {
+    display: block;
+    padding: 30px;
   }
   
   .bottom{
@@ -45,4 +51,13 @@ body {
   }
 
 
+  .slick-dots li.slick-active button:before {
+    color: rgb(0, 0, 0);
+    opacity: 0.8;
+  }
+  
+  .slick-dots li button:before {
+    color: black;
+  }
+  
 }
