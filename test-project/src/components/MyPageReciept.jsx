@@ -1,21 +1,13 @@
 import "../css/MyPageReciept.css";
-import db, { auth } from "../data/firebase";
+import db from "../data/firebase";
 import {
   collection,
   query,
   where,
   getDocs,
   orderBy,
-  doc,
-  setDoc,
-  addDoc,
-  getDoc,
-  getDocsFromCache,
 } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import { async } from "@firebase/util";
-import { useContext } from "react";
-import DataContext from "../data/DataContext";
 import { Link } from "react-router-dom";
 
 const MyPageReciept = () => {
@@ -37,15 +29,11 @@ const MyPageReciept = () => {
     );
     const reciepts = await getDocs(filteredReciept);
     reciepts.forEach((doc) => {
-      // array.push(doc.data().parseReciept);
       array.push(doc.data());
     });
     console.log(array);
     setReciept(array);
   };
-
-  // const deleteReciept = () => {
-  // }
 
   return (
     <div className="mypagereciept-wallpaper">

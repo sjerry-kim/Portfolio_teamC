@@ -1,7 +1,5 @@
 import {} from "../css/ProductBestRe.css";
-import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Card from "react-bootstrap/Card";
 import { useContext, useState } from "react";
 import DataContext from "../data/DataContext";
 import { useParams } from "react-router-dom";

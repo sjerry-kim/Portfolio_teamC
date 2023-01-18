@@ -2,13 +2,7 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import DataContext from "../data/DataContext";
 import "../css/Navbar.css";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import PangImage from "../img/Logo.png";
 import logo from "../img/logo_black.png";
-
-import { motion } from "framer-motion";
 
 // login에서 가져온 import
 import {
@@ -18,12 +12,10 @@ import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
   signOut,
-  EmailAuthProvider,
 } from "firebase/auth";
 import { auth } from "../data/firebase";
 import "../css/Login.css";
-import { useDispatch, useSelector } from "react-redux";
-import { userLogout } from "../module/currentUser";
+import { useSelector } from "react-redux";
 
 import Swal from "sweetalert2";
 import "animate.css";
@@ -33,8 +25,7 @@ const Navbar = () => {
 
   const { action } = useContext(DataContext);
   const navigate = useNavigate();
-  const loginuser = useSelector(state => state.currentUser);
-  // const dispatch = useDispatch();
+  const loginuser = useSelector((state) => state.currentUser);
   const currentUser = auth.currentUser;
   const [userName, setUserName] = useState("");
 
@@ -52,7 +43,7 @@ const Navbar = () => {
 
     const auth = getAuth();
     signInWithPopup(auth, provider)
-      .then(result => {
+      .then((result) => {
         // 로그인된 결과를 구글인증을 통해서 확인 > 토큰 발급
         const credential = GoogleAuthProvider.credentialFromResult(result);
         const token = credential.accessToken;
@@ -72,7 +63,7 @@ const Navbar = () => {
         console.log(user.email); // 이메일
         console.log(user.photoURL); // 구글프로필
       })
-      .catch(error => {
+      .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         const email = error.customData.email;
@@ -80,49 +71,19 @@ const Navbar = () => {
       });
   };
 
-  const [name, setName] = useState("");
-  // const {action} = useContext(DataContext)
-  // const navigate = useNavigate()
-  const inputRef = useRef("");
-
-  // const loginUser = (e) => {
-  // e.preventDefault();
-  // 	action.setUser({name: name, profile : null, likelist : [] });
-  // 	navigate('/');
-  // }
-
   // input창에서 값 받을때 사용 / 로그인
   const [email, setEmail] = useState(""); // 이메일 로그인
   const [pw, setPw] = useState(""); // 비밀번호
   const [user, setUser] = useState({}); //코드 추가
 
   useEffect(() => {
-    onAuthStateChanged(auth, currentUser => {
+    onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
     });
   }, []);
 
   const emailLogin = async () => {
     const auth = getAuth();
-    // const provider = new EmailAuthProvider();
-    // signInWithEmailAndPassword(auth,provider)
-    //     .then((result)=>{
-    //         const credential = EmailAuthProvider.credentialFromResult(result);
-    //         const token = credential.accessToken;
-    //         const user = result.user;
-    //         action.setLogin("로그인성공");
-    //     })
-    //     .catch((error)=>{
-    //         //
-    //         const errorCode = error.code;
-    //         const errorMessage = error.message;
-    //         //
-    //         const email = error.customData.email;
-    //         //
-    //         //const credential = EmailAuthProvider.credentialFromError(error);
-    //         console.log("로그인실패")
-    //     });
-
     try {
       const userInfo = await signInWithEmailAndPassword(auth, email, pw);
       // setUser(userInfo.user);
@@ -149,31 +110,6 @@ const Navbar = () => {
   // 버튼을 활성화 시켜주는데 사용
   const [notAllow, setNotAllow] = useState(true);
 
-  // 이메일 조건충족 확인
-  const handleEmail = e => {
-    setEmail(e.target.value);
-    // 정규식인데 로그인할떄 특문같이 정해진 조건발동을 수행시켜주는거같다
-    const regex =
-      /^(([^<>()\[\].,;:\s@"]+(\.[^<>()\[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
-    if (regex.test(e.target.value)) {
-      setEmailValid(true);
-    } else {
-      setEmailValid(false);
-    }
-  };
-
-  // 이메일 조건충족 확인
-  const handlePw = e => {
-    setPw(e.target.value);
-    const regex =
-      /^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+])(?!.*[^a-zA-z0-9$`~!@$!%*#^?&\\(\\)\-_=+]).{8,20}$/;
-    if (regex.test(e.target.value)) {
-      setPwValid(true);
-    } else {
-      setPwValid(false);
-    }
-  };
-
   useEffect(() => {
     // 둘다 모두 true면 버튼활성화를 풀어줌
     if (emailValid && pwValid) {
@@ -183,11 +119,6 @@ const Navbar = () => {
       setNotAllow(true);
     }
   }, [emailValid, pwValid]);
-
-  //useEffect(() => {
-  // console.log(inputRef);
-  //inputRef.current.focus(); // 로그인id 자동포커스
-  //}, []);
 
   return (
     <div className="navbar-box">
@@ -224,9 +155,7 @@ const Navbar = () => {
           <button
             className="navbar-mypagebtn"
             onClick={() => {
-              // setTimeout(()=>{
               navigate("/main/mypage");
-              // },3000)
             }}
           >
             My Page

@@ -2,32 +2,18 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import DataContext from "../data/DataContext";
 import { useParams } from "react-router-dom";
 import "../css/ProductInsertComment.css";
-// import { firestore } from "firebase/firestore";
-import firebase from "firebase/compat/app";
-import { firestore } from "../data/firebase";
 import db from "../data/firebase";
 import {
   collection,
-  query,
-  where,
-  getDocs,
-  orderBy,
-  doc,
-  setDoc,
   addDoc,
-  updateDoc,
-  arrayUnion,
-  getDoc,
 } from "firebase/firestore";
 import { auth } from "../data/firebase";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
-
-
 
 const ProductInsertComment = ({ getData }) => {
   const { state, action } = useContext(DataContext);
@@ -42,7 +28,7 @@ const ProductInsertComment = ({ getData }) => {
   const [newArray, setNewArray] = useState([]);
   let array = [];
 
-  // 1217 진혜 작성
+  // 댓글작성 함수
   const InsertComment = async e => {
     e.preventDefault();
     const user = auth.currentUser;
@@ -96,28 +82,3 @@ const ProductInsertComment = ({ getData }) => {
 };
 
 export default ProductInsertComment;
-
-// const styles = {
-//   container: {
-//     display: "flex",
-//     flexDirection: "column",
-//   },
-//   stars: {
-//     display: "flex",
-//     flexDirection: "row",
-//   },
-//   textarea: {
-//     border: "1px solid #a9a9a9",
-//     borderRadius: 5,
-//     padding: 10,
-//     margin: "20px 0",
-//     minHeight: 100,
-//     width: 300,
-//   },
-//   button: {
-//     border: "1px solid #a9a9a9",
-//     borderRadius: 5,
-//     width: 300,
-//     padding: 10,
-//   },
-// };

@@ -2,10 +2,9 @@ import React, { useRef } from "react";
 import emailjs from "emailjs-com";
 import { Button } from "react-bootstrap";
 import "../css/HomeContactUs.css";
-import { Link, useNavigate } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faComment} from '@fortawesome/free-solid-svg-icons';
+import { faComment } from "@fortawesome/free-solid-svg-icons";
 import {
   faTwitterSquare,
   faFacebookSquare,
@@ -18,32 +17,30 @@ import Swal from "sweetalert2";
 const HomeContactUs = () => {
   const form2 = useRef();
 
-  const navigate = useNavigate();
-
-  const sendEmail2 = e => {
+  const sendEmail2 = (e) => {
     e.preventDefault();
     const Service_ID = "service_y4raiv3";
     const Template_ID = "template_sqorybn";
     const User_ID = "odmr0vvUUkxqQq_1d";
 
     emailjs.sendForm(Service_ID, Template_ID, form2.current, User_ID).then(
-      result => Swal.fire({
-        position: 'top-end',
-        icon: 'success',
-        title: '메일 전송을 성공했습니다.',
-        showConfirmButton: false,
-        timer: 1500
-      }),
-      error => Swal.fire({
-        icon: 'error',
-        title: '메일 전송을 실패하였습니다.',
-        text: 'Something went wrong!',
-      })
+      (result) =>
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "메일 전송을 성공했습니다.",
+          showConfirmButton: false,
+          timer: 1500,
+        }),
+      (error) =>
+        Swal.fire({
+          icon: "error",
+          title: "메일 전송을 실패하였습니다.",
+          text: "Something went wrong!",
+        })
     );
     e.currentTarget.reset();
   };
-
-  
 
   return (
     <div>
@@ -60,66 +57,70 @@ const HomeContactUs = () => {
       </div>
 
       <div className="homecontactus-check-box">
-      <button className="homecontactus-button-one">
-        <div className="homecontactus-letters">
-          <div className="homecontactus-card">
-            <div className="homecontactus-card_face front">C</div>
-            <div className="homecontactus-card_face back">
-              <a  target="_blank" href="https://www.kakaocorp.com/page/service/service/KakaoTalk">
-              <FontAwesomeIcon icon={faComment} />
-              </a>
+        <button className="homecontactus-button-one">
+          <div className="homecontactus-letters">
+            <div className="homecontactus-card">
+              <div className="homecontactus-card_face front">C</div>
+              <div className="homecontactus-card_face back">
+                <a
+                  target="_blank"
+                  href="https://www.kakaocorp.com/page/service/service/KakaoTalk"
+                >
+                  <FontAwesomeIcon icon={faComment} />
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="homecontactus-letters">
-          <div className="homecontactus-card">
-            <div className="homecontactus-card_face front">H</div>
-            <div className="homecontactus-card_face back">
-              <a target="_blank"  href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoia28ifQ%3D%3D%22%7D">
-                <FontAwesomeIcon icon={faTwitterSquare} />
-              </a>
+          <div className="homecontactus-letters">
+            <div className="homecontactus-card">
+              <div className="homecontactus-card_face front">H</div>
+              <div className="homecontactus-card_face back">
+                <a
+                  target="_blank"
+                  href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoia28ifQ%3D%3D%22%7D"
+                >
+                  <FontAwesomeIcon icon={faTwitterSquare} />
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="homecontactus-letters">
-          <div className="homecontactus-card">
-            <div className="homecontactus-card_face front">E</div>
-            <div className="homecontactus-card_face back">
-              <a href="https://ko-kr.facebook.com/">
-                <FontAwesomeIcon
-                  classNameName="imgfont"
-                  icon={faFacebookSquare}
-                />
+          <div className="homecontactus-letters">
+            <div className="homecontactus-card">
+              <div className="homecontactus-card_face front">E</div>
+              <div className="homecontactus-card_face back">
+                <a href="https://ko-kr.facebook.com/">
+                  <FontAwesomeIcon
+                    classNameName="imgfont"
+                    icon={faFacebookSquare}
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="homecontactus-letters">
+            <div className="homecontactus-card">
+              <div className="homecontactus-card_face front">C</div>
+              <div className="homecontactus-card_face back">
+                <a target="_blank" href="https://www.instagram.com/">
+                  <FontAwesomeIcon icon={faInstagramSquare} />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="homecontactus-letters">
+            <div className="homecontactus-card">
+              <div className="homecontactus-card_face front">K</div>
+              <div className="homecontactus-card_face back">
+                <a target="_blank" href="https://kr.linkedin.com/">
+                  <FontAwesomeIcon icon={faLinkedin} />
+                </a>
+              </div>
+            </div>
+          </div>
+        </button>
 
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="homecontactus-letters">
-          <div className="homecontactus-card">
-            <div className="homecontactus-card_face front">C</div>
-            <div className="homecontactus-card_face back">
-              <a  target="_blank" href="https://www.instagram.com/">
-                <FontAwesomeIcon icon={faInstagramSquare} />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="homecontactus-letters">
-          <div className="homecontactus-card">
-            <div className="homecontactus-card_face front">K</div>
-            <div className="homecontactus-card_face back">
-              <a  target="_blank" href="https://kr.linkedin.com/">
-                <FontAwesomeIcon icon={faLinkedin} />
-              </a>
-            </div>
-          </div>
-        </div>
-      </button>
-
-      <p>& Subscribe Us!</p>
+        <p>& Subscribe Us!</p>
       </div>
-
 
       <div className="homecontactus-formBox">
         <form className="homecontactus-form" ref={form2} onSubmit={sendEmail2}>

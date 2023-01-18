@@ -4,12 +4,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"
 import "../css/HomePortfolio.css"
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
-
- 
- 
-
 const HomePortfolio = () => {
 
   const settings = {
@@ -21,10 +15,8 @@ const HomePortfolio = () => {
     autoplay: true,
     autoplaySpeed: 1500,
     centerPadding: '10px',
-    pauseOnHover: false, //마우스 올려도 안멈춤
+    pauseOnHover: false, //마우스 올려도 안멈춤 (일윤이)
     pauseOnFocus: false,
-    //nextArrow: <SampleNextArrow />,
-		//prevArrow: <SamplePrevArrow />,
     responsive: [
       {
         breakpoint: 420,
@@ -70,29 +62,3 @@ const HomePortfolio = () => {
 }
 
 export default HomePortfolio;
-
-// function SampleNextArrow(props) {
-//   const { className, style, onClick } = props;
-//   return (
-// 		<FontAwesomeIcon 
-//       icon={faChevronRight}
-// 			className={className}
-// 			onClick={onClick}
-// 			style={{color:"lightgray", width:"50px", height:"50px", zIndex:"100", top:"250px", right:"-30px"}}
-//       size="lg"
-// 		></FontAwesomeIcon>
-//   );
-// }
-
-// function SamplePrevArrow(props) {
-//   const { className, style, onClick } = props;
-//   return (
-// 		<FontAwesomeIcon 
-// 			icon={faChevronLeft}
-// 			className={className}
-// 			onClick={onClick}
-// 			style={{color:"lightgray", width:"50px", height:"50px", zIndex:"100", top:"250px", right:"-30px"}}
-//       size="lg"
-// 		/>
-//   );
-// }

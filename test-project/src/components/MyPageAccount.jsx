@@ -1,53 +1,22 @@
 import "../css/MyPageAccount.css";
-import { async } from "@firebase/util";
-import { updateProfile } from "firebase/auth";
 import { useEffect } from "react";
 import { useState } from "react";
 import { auth } from "../data/firebase";
-import { userLogin } from "../module/currentUser";
 import MyPageProfileModal from "./MyPageProfileModal";
 
 const MyPageAccount = () => {
   const [update, setUpdate] = useState();
   useEffect(() => {}, [update]);
 
-  const user = auth.currentUser;
-
   const sessionFireUser = window.sessionStorage.getItem(
     "firebase:authUser:AIzaSyCMoXUqkehoGjCep79k-dmXJLJfb-HZuFo:[DEFAULT]"
   );
   const parseSFU = JSON.parse(sessionFireUser);
-  const name = parseSFU.displayName;
   const profile = parseSFU.photoURL;
-  const email = parseSFU.email;
 
   useEffect(() => {
     console.log(profile);
   }, []);
-  // const [displayName, setDisplayName] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
-
-  // useEffect(()=>{
-  //   getUserInfo();
-  // },[])
-
-  // const getUserInfo = ()=>{
-  //   setDisplayName(user.displayName);
-  //   setEmail(user.email);
-  //   console.log(displayName)
-  //   console.log(email);
-  // }
-
-  // const changeUserName = () => {
-  //   updateProfile(auth.currentUser, {
-  //     displayName: "카카"
-  //   }).then(() => {
-  //     alert('이름이 변경되었습니다')
-  //   }).catch((error) => {
-  //     console.error(error);
-  //   });
-  // }
 
   return (
     <div className="mypageaccount-wallpaper">
@@ -83,7 +52,6 @@ const MyPageAccount = () => {
           </div>
           )
         }
-        {/* <MyPageProfileModal /> */}
         <div className="mypageaccount-info-div">
           <div className="mypageaccount-info-div-box">
             <label style={{ paddingRight: "14px" }}>Name</label>

@@ -9,8 +9,6 @@ import { useContext, useState } from "react";
 import DataContext from "../data/DataContext";
 import { useParams } from "react-router-dom";
 
-
-
 export default function KakaoShare() {
 
 

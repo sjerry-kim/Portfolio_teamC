@@ -17,15 +17,12 @@ const ShopSlick = () => {
     infinite: true, //무한반복
     slidesToshow: 1, //한화면에 보여질 이미지
     slidesToScroll: 1, //한번에 스크롤될 이미지
-    //arrow: true, //옆화살표 표시
     dots: false, //아래점표시
     autoplay: true, // 자동 스크롤 사용 여부
     autoplaySpeed: 2100, // 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간
     pauseOnHover: false, //마우스 올려도 안멈춤
     pauseOnFocus: false,
     fade: true,
-    // nextArrow: <NextArrow />,
-    // prevArrow: <PrevArrow />,
   };
   const { id } = useParams();
   const { state } = useContext(DataContext);
@@ -44,31 +41,3 @@ const ShopSlick = () => {
 };
 
 export default ShopSlick;
-
-function NextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <FontAwesomeIcon
-      icon={faChevronRight}
-      className={className}
-      onClick={onClick}
-      style={{
-        color: "#fff",
-        right: "50em",
-        zIndex: "100",
-      }}
-    ></FontAwesomeIcon>
-  );
-}
-
-function PrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <FontAwesomeIcon
-      icon={faChevronLeft}
-      className={className}
-      onClick={onClick}
-      style={{ color: "#fff", left: "50em", zIndex: "100" }}
-    />
-  );
-}

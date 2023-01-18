@@ -1,9 +1,7 @@
-import "./App.css";
 import {Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Main from "./pages/Main";
 import EstStart from "./components/EstStart";
-// import Estimation from './pages/Estimation';
 import Portfolio from "./pages/Portfolio";
 import ProductMergePage from "./components/ProductMergePage";
 import Nonfound from "./pages/Notfound";
@@ -12,20 +10,19 @@ import EstResult from "./components/EstResult";
 import ApiMap from "./pages/ApiMap";
 import Login from "./pages/Login";
 import Join from "./pages/Join";
+import MyPage from "./pages/MyPage";
 
-// DataContext import
-
+// DataContext
 import { DataProvider } from "./data/DataContext";
+
 // firebase
 import "./data/firebase";
 
-// Media Query import - 가장 아래 import 유지
-
+// CSS, Media Query
+import "./App.css";
 import "./css/MediaQuery.css";
-import MyPage from "./pages/MyPage";
-import MyPageReciept from "./components/MyPageReciept";
-import MyPageAccount from "./components/MyPageAccount";
 
+// 화면 전환 효과
 import { AnimatePresence } from "framer-motion";
 
 function App() {

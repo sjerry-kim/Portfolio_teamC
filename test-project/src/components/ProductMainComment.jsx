@@ -1,11 +1,6 @@
 import '../css/ProductMainComment.css';
 import { useEffect } from "react";
-import { useContext } from "react";
 import { useParams } from "react-router-dom";
-import DataContext from "../data/DataContext";
-
-// import { firestore } from "firebase/firestore";
-import firebase from "firebase/compat/app";
 import { auth, firestore } from "../data/firebase";
 import db from "../data/firebase";
 import {
@@ -13,16 +8,7 @@ import {
   query,
   where,
   getDocs,
-  orderBy,
-  doc,
-  setDoc,
-  addDoc,
-  getDoc,
-  getDocsFromCache,
 } from "firebase/firestore";
-import { useState } from "react";
-import { get, getDatabase } from "firebase/database";
-import { getIdToken } from "firebase/auth";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import Swal from "sweetalert2";
