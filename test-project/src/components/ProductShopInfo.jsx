@@ -7,7 +7,7 @@ import React, { useContext, useState } from "react";
 import DataContext from "../data/DataContext";
 import { useNavigate, useParams } from "react-router-dom";
 
-// 1219 firestore- 진혜
+// firestore
 import db from "../data/firebase";
 import {
   collection,
@@ -15,18 +15,9 @@ import {
   where,
   getDocs,
   orderBy,
-  doc,
-  setDoc,
-  addDoc,
-  getDoc,
-  getDocsFromCache,
 } from "firebase/firestore";
 
 import KakaoShare from "./KakaoShare";
-
-
-
-
 
 const ShopInfo = () => {
   const { id } = useParams();

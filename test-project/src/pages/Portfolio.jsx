@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link} from "react-router-dom";
 import { } from "../css/Portfolio.css";
 import DataContext from "../data/DataContext";
 import { motion } from "framer-motion";

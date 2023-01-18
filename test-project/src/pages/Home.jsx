@@ -1,15 +1,14 @@
-import "../css/Home.css";
 import HomeAboutUs from "../components/HomeAboutUs";
 import HomePortfolio from "../components/HomePortfolio";
 import HomeContactUs from "../components/HomeContactUs";
 
+import "../css/Home.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 import { useEffect, useRef } from "react";
 import HomeNavbar from "../components/HomeNavbar";
-import { faBorderNone } from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
   const settings2 = {
@@ -35,18 +34,6 @@ const Home = () => {
   };
 
   const slider = useRef(null);
-  // const page3 = useRef(null);
-  // const scrollToSection = (elementRef) => {
-  //   window.scrollTo({
-  //     top: elementRef.current.offsetTop,
-  //     behavior: "smooth",
-  //   });
-  // };
-
-  function scroll(e) {
-    if (slider === null) return 0;
-    e.wheelDelta > 0 ? slider.current.slickPrev() : slider.current.slickNext();
-  }
 
   useEffect(() => {
     window.addEventListener("wheel", scroll, true);
@@ -55,28 +42,10 @@ const Home = () => {
     };
   }, []);
 
-  //   useEffect(()=>{
-  //   let slider = document.querySelector(".slider");
-  //   let timer;
-
-  // window.addEventListener('load resize',function(){
-  //     clearTimeout( timer );
-  //     timer = setTimeout( sliderResponsive(), 100 );
-  // })
-  // function sliderResponsive(){
-  //     if(window.innerWidth <= 420){
-  //         slider.filter('.slick-initialized').slick('unslick');
-  //     }else{
-  //         slider.not('.slick-initialized').slick({
-  //             arrows: true,
-  //             slidesToShow: 1,
-  //             slidesToScroll: 1
-  //         });
-  //     }
-  // }
-  //   },[])
-
-  // settings: "unslick"
+  function scroll(e) {
+    if (slider === null) return 0;
+    e.wheelDelta > 0 ? slider.current.slickPrev() : slider.current.slickNext();
+  }
 
   return (
     <div className="home-slick-div">
@@ -94,7 +63,6 @@ const Home = () => {
               </div>
             </div>
             <div className="home-box three">
-              {/* ref={page3} */}
               <div className="home-slick-position2">
                 <HomeContactUs />
               </div>
@@ -102,14 +70,10 @@ const Home = () => {
           </Slider>
         </div>
       </div>
-      {/** 🌼 스크롤 이미지(?) 사라짐 확인 😁 */}
       <div className="home-arrow-container">
         <div class="center-con">
           <div class="round">
             <div id="cta">
-              {/* <button onClick={() => scrollToSection(page3)} className="asd">
-                3페이지
-              </button> */}
               <div className="home-arrow-title">Scroll</div>
               <span class="arrow primera next "></span>
               <span class="arrow segunda next "></span>
@@ -121,17 +85,13 @@ const Home = () => {
             </div>
           </div>
         </div>
-        {/* <div className="home-scroll-txt"></div>
-        <div className="home-arrow"></div> */}
       </div>
-
       <img
         src={require("../img/logo_white.png")}
         className="home-logo"
         width="230"
         alt=""
       />
-
       <div id="outer-container">
         <HomeNavbar
           pageWrapId={"page-wrap"}

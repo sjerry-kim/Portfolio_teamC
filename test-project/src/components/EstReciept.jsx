@@ -7,24 +7,27 @@ import { useSearchParams } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const EstReciept = () => {
-  const { state, action } = useContext(DataContext);
+  const { state } = useContext(DataContext);
   const reciept = JSON.stringify(state.reciept);
-  const [sessionReciept, setSessionReciept] = useState([]);
+  const [sessionReciept, setSessionReciept] = useState([]); 
   const [resultData, setResultData] = useState({});
   const [searchParams] = useSearchParams();
   const estimate = searchParams.get("estimate");
   const date= new Date();
 
+  // 세션스토리지에 영수증 목록을 저장
   useEffect(() => {
     sessionStorage.setItem("sessionReciept", reciept);
   });
 
+  // 세션스토리지에 저장된 영수증 목록을 빈 배열에 넣어줌
   useEffect((e) => {
     setSessionReciept(
       JSON.parse(window.sessionStorage.getItem("sessionReciept"))
     );
   }, []);
 
+  // searchParams로 가져온 주소값과 state값 비교
   useEffect(() => {
     const result = state.score.find((s) => s.best === estimate);
     setResultData(result);

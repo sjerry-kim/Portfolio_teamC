@@ -7,8 +7,6 @@ import ShopInfo from "./ProductShopInfo";
 import ShopSlick from "./ProductShopSlick";
 import { useEffect, useRef } from "react";
 
-// import ShopContainer from "./ShopContainer";
-
 const ProductMergePage = () => {
   const settings2 = {
     slidesToShow: 1,
