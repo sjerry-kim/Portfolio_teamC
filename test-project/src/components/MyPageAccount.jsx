@@ -15,7 +15,7 @@ const MyPageAccount = () => {
   const profile = parseSFU.photoURL;
 
   useEffect(() => {
-    console.log(profile);
+    console.log(parseSFU.photoURL);
   }, []);
 
   return (
@@ -32,7 +32,7 @@ const MyPageAccount = () => {
             />
           </div>
         ) :  //이메일, 비번으로 로그인 했을 때
-        window.sessionStorage.getItem("profileClick") == "false"? (
+        window.sessionStorage.getItem("photoURL") == null? ( // null은 그냥 null 그 자체로
           <div className="mypageaccount-img-div">
             <img
               className="mypageaccount-img"

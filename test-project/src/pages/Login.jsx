@@ -125,7 +125,7 @@ const Login = () => {
       window.sessionStorage.setItem("displayName", user.displayName);
       window.sessionStorage.setItem("email", user.email);
       window.sessionStorage.setItem("profileClick", false)
-      // window.sessionStorage.setItem("photoURL", user.photoURL);
+      window.sessionStorage.setItem("photoURL", user.photoURL);
       navigate("/");
       //dispatch(userLogin(user));
     } catch (error) {
