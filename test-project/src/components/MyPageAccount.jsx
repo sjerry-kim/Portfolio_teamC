@@ -31,8 +31,9 @@ const MyPageAccount = () => {
               alt=""
             />
           </div>
-        ) :  //이메일, 비번으로 로그인 했을 때
-        window.sessionStorage.getItem("photoURL") == null? ( // null은 그냥 null 그 자체로
+          ) : 
+          //이메일, 비번으로 로그인 했을 때
+        window.sessionStorage.getItem("profileClick") === "false"? ( // null은 그냥 null 그 자체로
           <div className="mypageaccount-img-div">
             <img
               className="mypageaccount-img"
