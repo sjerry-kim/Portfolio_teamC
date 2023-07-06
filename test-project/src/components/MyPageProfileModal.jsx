@@ -10,20 +10,26 @@ import { updateProfile } from "firebase/auth";
 import "../css/MyPageProfileModal.css";
 
 function MyPageProfileModal({ setUpdate }) {
+  // 모달 펼치기에 필요한 state 및 함수
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
+  // 기본프로필 설정 비포&애프터 구분을 위한 세션 저장
   const handleShow = () => {
     window.sessionStorage.setItem("profileClick", true);
     setShow(true);
   };
 
+  // 이미지 파일 저장 state
   const [file, setFile] = useState("");
+  // 프로필 div ref
   const imgShow = useRef();
 
+  // 프로필 이미지 파일 업로드 -> 부트스트랩 사용
   const onLoadFile = (e) => {
+    // 이미지 파일을 state에 저장
     setFile(e.target.files[0]);
     imgShow.current.style.backgroundSize = "cover";
+    // 업로드한 이미지 파일의 url 생성
     imgShow.current.style.backgroundImage = `url(${URL.createObjectURL(
       e.target.files[0]
     )})`;
@@ -31,24 +37,24 @@ function MyPageProfileModal({ setUpdate }) {
 
   // 저장을 눌렀을 때 state에 사진을 저장하고 모달창을 종료
   const saveProfile = () => {
+    // 파이어베이스에 프로필을 업데이트 시킴
     updateProfile(auth.currentUser, {
       photoURL: URL.createObjectURL(file),
     })
       .then(() => {
-        // Profile updated!
-        window.sessionStorage.setItem("photoURL", URL.createObjectURL(file));
+        // 프로필 업데이트 !
+        window.sessionStorage.setItem("photoURL", URL.createObjectURL(file)); // 파이어베이스 업로드 속도 문제로 세션 저장
+        // 리랜더용 set
         setUpdate(
           window.sessionStorage.getItem(
             "firebase:authUser:AIzaSyCMoXUqkehoGjCep79k-dmXJLJfb-HZuFo:[DEFAULT]"
           )
         );
-        console.log("성공");
       })
       .catch((error) => {
-        // An error occurred
-        // ...
         console.log(error);
       });
+    // 모달창 종료
     handleClose();
   };
 

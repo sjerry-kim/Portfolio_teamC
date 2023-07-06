@@ -64,8 +64,6 @@ import dasoleComRe4 from "../img/dasoleComRe4.JPG";
 import dasoleComRe5 from "../img/dasoleComRe5.JPG";
 import dasoleComRe6 from "../img/dasoleComRe6.JPG";
 
-
-
 // 회사 로고
 import evianLogo from "../img/evianLogo.png";
 import jyLogo from "../img/jyLogo.png";
@@ -88,9 +86,6 @@ import monoMain from "../img/monoMain.JPG";
 import oneMain from "../img/oneMain.JPG";
 import purenMain from "../img/purenMain.JPG";
 
-import { useNavigate } from "react-router-dom";
-import ProductInsertComment from "../components/ProductInsertComment";
-
 // createContext
 const DataContext = createContext();
 
@@ -109,8 +104,6 @@ const DataProvider = ({ children }) => {
   // const [list, setList] = useState([]);
 
   // Estimation
-  // 간편견적 결과 페이지 이동 -> 이거 왜 있음? 삭제해도 되는지 확인하기
-  const navigate = useNavigate();
 
   // Receipt 리스트 정보
   const [reciept, setReciept] = useState([]);
@@ -227,7 +220,7 @@ const DataProvider = ({ children }) => {
       best: "ABC",
       location: "부산 강서구 유통단지1로 41",
       number: "010-2546-4095",
-      companyEtc:"사업자등록번호 : 227-76-00245 / 운영시간 : 08:00 - 17:00",
+      companyEtc: "사업자등록번호 : 227-76-00245 / 운영시간 : 08:00 - 17:00",
       companyLogo: evianLogo,
       companyImg: ["evianCom1.jpg", "evianCom2.jpg", "evianCom3.jpg"],
       reviewImg1: evianComRe1,
@@ -257,9 +250,8 @@ const DataProvider = ({ children }) => {
       companyIntro:
         "토탈 인테리어 전문업체로서\n합리적인 가격, 맞춤 디자인, 실용성까지 고려한\n인테리어로 고객님이 원하시는 디자인으로\n맞춤 시공 해드립니다.",
       mainIMG: evianMain,
-      mainImgSrc:'https://ifh.cc/g/oPzYnh.jpg',
-      companyVideo:"shopVideo1.mp4",
-
+      mainImgSrc: "https://ifh.cc/g/oPzYnh.jpg",
+      companyVideo: "shopVideo1.mp4",
     },
     {
       id: 2,
@@ -267,7 +259,7 @@ const DataProvider = ({ children }) => {
       best: "ABc",
       location: "전라북도 전주시 완산구 공북로",
       number: "063-252-9631 / 이메일 : dkssld5@naver.com",
-      companyEtc:"사업자등록번호 : 287-81-02486 / 운영시간 : 09:00 ~ 18:00",
+      companyEtc: "사업자등록번호 : 287-81-02486 / 운영시간 : 09:00 ~ 18:00",
       companyLogo: jyLogo,
       companyImg: ["jyCom1.jpg", "jyCom2.jpg", "jyCom3.jpg"],
       reviewImg1: jyComRe1,
@@ -297,9 +289,8 @@ const DataProvider = ({ children }) => {
       companyIntro:
         "(주)제이와이 인테리어 디자인은 공간에서\n명품을 만든다라는 목표를 실천하기 위해\n끊임없이 노력하고 실천하는\n인테리어 디자인 전문 기업입니다. ",
       mainIMG: jyMain,
-      mainImgSrc:'https://ifh.cc/g/mVr1ln.jpg',
-      companyVideo:"shopVideo2.mp4",
-
+      mainImgSrc: "https://ifh.cc/g/mVr1ln.jpg",
+      companyVideo: "shopVideo2.mp4",
     },
     {
       id: 3,
@@ -307,7 +298,7 @@ const DataProvider = ({ children }) => {
       best: "AbC",
       location: "경상남도 김해시 월산로 11",
       number: "010-7487-7410 / 이메일 : sym2617@naver.com",
-      companyEtc:"사업자등록번호 : 615-16-18190 / 운영시간 : 09:00 ~ 18:00",
+      companyEtc: "사업자등록번호 : 615-16-18190 / 운영시간 : 09:00 ~ 18:00",
       companyLogo: purenLogo,
       companyImg: ["purenCom1.jpg", "purenCom2.JPG", "purenCom3.jpg"],
       reviewImg1: purenComRe1,
@@ -337,9 +328,8 @@ const DataProvider = ({ children }) => {
       companyIntro:
         "푸른들인테리어는 늘 고객 여러분께\n최고의 만족을 드리고자 노력하고 있으며,\n다년간의 실무경력과 기술을 바탕으로\n최고의 만족을 드리고자 최선을 다하겠습니다.",
       mainIMG: purenMain,
-      mainImgSrc:'https://ifh.cc/g/TLNKrT.jpg',
-      companyVideo:"shopVideo3.mp4",
-
+      mainImgSrc: "https://ifh.cc/g/TLNKrT.jpg",
+      companyVideo: "shopVideo3.mp4",
     },
     {
       id: 4,
@@ -347,7 +337,7 @@ const DataProvider = ({ children }) => {
       best: "Abc",
       location: "광주광역시 광산구 왕버들로 101",
       number: "1666-1204 / 이메일 : 1204design@kakao.com",
-      companyEtc:"사업자등록번호 : 635-87-00957 / 운영시간 : 08:00 - 17:00",
+      companyEtc: "사업자등록번호 : 635-87-00957 / 운영시간 : 08:00 - 17:00",
       companyLogo: oneLogo,
       companyImg: ["oneCom1.jpg", "oneCom2.jpg", "oneCom3.jpg"],
       reviewImg1: oneComRe1,
@@ -377,9 +367,8 @@ const DataProvider = ({ children }) => {
       companyIntro:
         "기준이 없던 대한민국 인테리어 영역에\n기준을 세우는 정직한 회사, 1204디자인!\n저희가 경험하는 모든 것들에 대해\n솔직하도록 하겠습니다.",
       mainIMG: oneMain,
-      mainImgSrc:'https://ifh.cc/g/AT9HOY.jpg',
-      companyVideo:"shopVideo4.mp4",
-
+      mainImgSrc: "https://ifh.cc/g/AT9HOY.jpg",
+      companyVideo: "shopVideo4.mp4",
     },
     {
       id: 5,
@@ -387,7 +376,7 @@ const DataProvider = ({ children }) => {
       best: "aBC",
       location: "서울특별시 서초구 효령로46길 22",
       number: "02-517-5001 / 이메일 : agioid@agiodesign.co.kr",
-      companyEtc:"사업자등록번호 : 211-88-10260 / 운영시간 : 09:00 ~ 18:00",
+      companyEtc: "사업자등록번호 : 211-88-10260 / 운영시간 : 09:00 ~ 18:00",
       companyLogo: agioLogo,
       companyImg: ["agioCom1.JPG", "agioCom2.JPG", "agioCom3.JPG"],
       reviewImg1: agioComRe1,
@@ -417,9 +406,8 @@ const DataProvider = ({ children }) => {
       companyIntro:
         "아지오디자인은 공간의 본질을 이해하고\n유지하기 위해 끊임없이 연구하고 고민합니다.\n공간의 본질은 유지한 채\n공간의 가치를 높이는 것을 목표로 합니다.",
       mainIMG: agioMain,
-      mainImgSrc:'https://ifh.cc/g/W7W8rD.jpg',
-      companyVideo:"shopVideo5.mp4",
-
+      mainImgSrc: "https://ifh.cc/g/W7W8rD.jpg",
+      companyVideo: "shopVideo5.mp4",
     },
     {
       id: 6,
@@ -427,7 +415,7 @@ const DataProvider = ({ children }) => {
       best: "aBc",
       location: "서울 마포구 서교동 483-14번지 1층 (서울 마포구 양화로7길 74)",
       number: " 02-3144-7339 / 이메일 : monointerior@naver.com",
-      companyEtc:"사업자등록번호 : 745-26-01252 / 운영시간 : 09:00 ~ 18:00",
+      companyEtc: "사업자등록번호 : 745-26-01252 / 운영시간 : 09:00 ~ 18:00",
       companyLogo: monoLogo,
       companyImg: ["monoCom1.JPG", "monoCom2.JPG", "monoCom3.JPG"],
       reviewImg1: monoComRe1,
@@ -457,9 +445,8 @@ const DataProvider = ({ children }) => {
       companyIntro:
         "모노인테리어는 라이프스타일을 고려하여\n편안하고 개성있는 공간을\n차별화된 공간연출과 합리적인 가격으로\n여러분들께 제공하고 있습니다.",
       mainIMG: monoMain,
-      mainImgSrc:'https://ifh.cc/g/Pav3zo.jpg',
-      companyVideo:"shopVideo6.mp4",
-
+      mainImgSrc: "https://ifh.cc/g/Pav3zo.jpg",
+      companyVideo: "shopVideo6.mp4",
     },
     {
       id: 7,
@@ -467,7 +454,7 @@ const DataProvider = ({ children }) => {
       best: "abc",
       location: "서울시 강남구 테헤란로 16길 다원빌딩 12F",
       number: "02-3468-5800 / 이메일 : dawondesign@dawon.com",
-      companyEtc:"사업자등록번호 : 220-81-22757 / 운영시간 : 09:00 ~ 18:00",
+      companyEtc: "사업자등록번호 : 220-81-22757 / 운영시간 : 09:00 ~ 18:00",
       companyLogo: dawonLogo,
       companyImg: ["dawonCom1.JPG", "dawonCom2.JPG", "dawonCom3.JPG"],
       reviewImg1: dawonComRe1,
@@ -497,9 +484,8 @@ const DataProvider = ({ children }) => {
       companyIntro:
         "다원은 “창조와 열정”이라는 모토로,\n국내 디자인 업계 최고로서\n공간의 창의성과 고객님들의\n만족감을 증대시켜 왔습니다.",
       mainIMG: dawonMain,
-      mainImgSrc:'https://ifh.cc/g/G4z7rH.jpg',
-      companyVideo:"shopVideo7.mp4",
-    
+      mainImgSrc: "https://ifh.cc/g/G4z7rH.jpg",
+      companyVideo: "shopVideo7.mp4",
     },
     {
       id: 8,
@@ -507,7 +493,7 @@ const DataProvider = ({ children }) => {
       best: "abC",
       location: "서울 강남구 도산대로 68길 26 IDAS 빌딩 1F/2F",
       number: "02-543-6566 / 이메일 : contact@idas.com",
-      companyEtc:"사업자등록번호 : 211-81-00031 / 운영시간 : 09:00 ~ 18:00",
+      companyEtc: "사업자등록번호 : 211-81-00031 / 운영시간 : 09:00 ~ 18:00",
       companyLogo: idasLogo,
       companyImg: ["idasCom1.JPG", "idasCom2.JPG", "idasCom3.JPG"],
       reviewImg1: idasComRe1,
@@ -529,16 +515,16 @@ const DataProvider = ({ children }) => {
       reviewComment3:
         "이사가면서 리모델링도 같이해서 들어갔습니다. 방중에 가장 신경 쓴 공간이 아이방이였는데, 너무 깔끔하고 아늑하게 잘됬어요~~ 아이놀이방이 항상 지저분한 느낌이들어 매번 볼떄마다 별로였거든요! 이다스에서 해결해주셨네요 ㅎㅎㅎㅎ 감사합니다!!",
       reviewComment4:
-      "집 리모델링 하면서 부엌에 가장 신경을 써달라고 했습니다. 와이프가 요리하는걸 좋아하거든요^^ 저기서 맛있는 요리를 저한테 해 줄 생각에 너무 행복해하네요~~^^(신혼 이해바람) 그리고 우리 부부가 블랙과 화이트를 좋아해서 집도 블랙 화이트로 꾸미고 싶었는데 말 그대로 나와서 좋습니다",
+        "집 리모델링 하면서 부엌에 가장 신경을 써달라고 했습니다. 와이프가 요리하는걸 좋아하거든요^^ 저기서 맛있는 요리를 저한테 해 줄 생각에 너무 행복해하네요~~^^(신혼 이해바람) 그리고 우리 부부가 블랙과 화이트를 좋아해서 집도 블랙 화이트로 꾸미고 싶었는데 말 그대로 나와서 좋습니다",
       reviewComment5:
-      "지인 추천으로 아무 생각없이 맡겼는데 너무 완벽했어요. 사실 여기저기 알아볼 시간이 없어서 맡기면서도 걱정했는데 정말 예쁘게 해주셔서 감사합니다ㅎㅎㅎ 저희부부가 원하는 스타일로다가 딱!!ㅎㅎㅎ 너무 만족해서 후기도 남겨요!! 번창하세요",
+        "지인 추천으로 아무 생각없이 맡겼는데 너무 완벽했어요. 사실 여기저기 알아볼 시간이 없어서 맡기면서도 걱정했는데 정말 예쁘게 해주셔서 감사합니다ㅎㅎㅎ 저희부부가 원하는 스타일로다가 딱!!ㅎㅎㅎ 너무 만족해서 후기도 남겨요!! 번창하세요",
       reviewComment6:
-      "첫 카페 개업이라 정말 깐깐하게 여기저기 참견했는데, 정말 저희 요구를 다들어주셔서 죄송도 하면서 너무 감사했습니다ㅠㅠ 덕분에 이렇게 좋은 결과가 나와서 너무나 만족합니다!! 이렇게 예쁜 공간에서 일할수 있게 되다니.. 너무 감격스럽네요. 적극 추천합니다!!!",
+        "첫 카페 개업이라 정말 깐깐하게 여기저기 참견했는데, 정말 저희 요구를 다들어주셔서 죄송도 하면서 너무 감사했습니다ㅠㅠ 덕분에 이렇게 좋은 결과가 나와서 너무나 만족합니다!! 이렇게 예쁜 공간에서 일할수 있게 되다니.. 너무 감격스럽네요. 적극 추천합니다!!!",
       companyIntro:
-      "완벽한 공간의 완성을 목표로\n‘생각을 현실로 만드는 이다스’라는 모토 아래\n여러분들이 상상하는 모든 것들을\n현실에서 만날 수 있도록 최선을 다할 것입니다.",
+        "완벽한 공간의 완성을 목표로\n‘생각을 현실로 만드는 이다스’라는 모토 아래\n여러분들이 상상하는 모든 것들을\n현실에서 만날 수 있도록 최선을 다할 것입니다.",
       mainIMG: idasMain,
-      mainImgSrc:'https://ifh.cc/g/fnkZzj.jpg',
-      companyVideo:"shopVideo8.mp4",
+      mainImgSrc: "https://ifh.cc/g/fnkZzj.jpg",
+      companyVideo: "shopVideo8.mp4",
     },
     {
       id: 9,
@@ -546,7 +532,7 @@ const DataProvider = ({ children }) => {
       best: "abC",
       location: "서울시 서초구 명달로 104, 모차르트빌딩 7F",
       number: "070-4279-0800 / 이메일 : dasole1771@naver.com ",
-      companyEtc:"사업자등록번호 : 214-06-48662 / 운영시간 : 09:00 ~ 18:00",
+      companyEtc: "사업자등록번호 : 214-06-48662 / 운영시간 : 09:00 ~ 18:00",
       companyLogo: dasoleLogo,
       companyImg: ["dasoleCom1.JPG", "dasoleCom2.JPG", "dasoleCom3.JPG"],
       reviewImg1: dasoleComRe1,
@@ -576,9 +562,8 @@ const DataProvider = ({ children }) => {
       companyIntro:
         "DESIGN YOUR LIFE!\n고객의 필요, 사용자의 공간 이해, 상식으로부터\n시대의 트렌드와 조합한 공간 연출 서비스!\n고객의 삶과 소통하는 공간을 연출하는 다솔!",
       mainIMG: dasoleMain,
-      mainImgSrc:'https://ifh.cc/g/sAP31G.jpg',
-      companyVideo:"shopVideo9.mp4"
-    
+      mainImgSrc: "https://ifh.cc/g/sAP31G.jpg",
+      companyVideo: "shopVideo9.mp4",
     },
   ]);
 

@@ -1,4 +1,4 @@
-import { useContext, useRef } from "react";
+import { useRef } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
@@ -10,36 +10,19 @@ import {
   signInWithPopup,
   onAuthStateChanged,
   signInWithEmailAndPassword,
-  signOut,
-  EmailAuthProvider,
   setPersistence,
   browserSessionPersistence,
-  browserLocalPersistence,
 } from "firebase/auth";
 import { auth } from "../data/firebase";
-import db from "../data/firebase";
 import "../css/Login.css";
-import DataContext from "../data/DataContext";
 
-import { userLogin } from "../module/currentUser";
-import { useDispatch } from "react-redux";
 import Notfound from "./Notfound";
 import Swal from "sweetalert2";
 
 import { motion } from "framer-motion";
 /* 1. framer-motion을 import한다 */
 
-const User = {
-  email: "test@example.com",
-  pw: "test8361@",
-};
-
-// Home ('/')으로 돌아가는
-
 const Login = () => {
-  // 리덕스의 리듀서를 사용하기위한 디스패치
-  const dispatch = useDispatch();
-
   const navigate = useNavigate();
   const CreateButton = () => {
     // 회원가입창 경로
@@ -54,7 +37,7 @@ const Login = () => {
     const auth = getAuth();
     setPersistence(auth, browserSessionPersistence);
     signInWithPopup(auth, provider)
-      .then(result => {
+      .then((result) => {
         // 로그인된 결과를 구글인증을 통해서 확인 > 토큰 발급
         const credential = GoogleAuthProvider.credentialFromResult(result);
         const token = credential.accessToken;
@@ -80,7 +63,7 @@ const Login = () => {
         console.log(user.email); // 이메일
         console.log(user.photoURL); // 구글프로필
       })
-      .catch(error => {
+      .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         const email = error.customData.email;
@@ -88,16 +71,7 @@ const Login = () => {
       });
   };
 
-  const [name, setName] = useState("");
-  // const {action} = useContext(DataContext)
-  // const navigate = useNavigate()
   const inputRef = useRef("");
-
-  // const loginUser = (e) => {
-  // e.preventDefault();
-  // 	action.setUser({name: name, profile : null, likelist : [] });
-  // 	navigate('/');
-  // }
 
   // input창에서 값 받을때 사용 / 로그인
   const [email, setEmail] = useState(""); // 이메일 로그인
@@ -105,18 +79,16 @@ const Login = () => {
   const [user, setUser] = useState({}); //코드 추가
 
   useEffect(() => {
-    onAuthStateChanged(auth, currentUser => {
+    onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
     });
   }, []);
 
-  const emailLogin = async() => {
+  const emailLogin = async () => {
     const auth = getAuth();
     try {
-      // await
-      // db.auth().setPersistence(db.auth.Auth.Persistence.SESSION);
       setPersistence(auth, browserSessionPersistence);
-      console.log("로그인유지 성공")
+      console.log("로그인유지 성공");
       const userCredential = await signInWithEmailAndPassword(auth, email, pw);
       const user = userCredential.user;
       console.log(user);
@@ -124,36 +96,25 @@ const Login = () => {
       window.sessionStorage.setItem("uid", user.uid);
       window.sessionStorage.setItem("displayName", user.displayName);
       window.sessionStorage.setItem("email", user.email);
-      window.sessionStorage.setItem("profileClick", false)
+      window.sessionStorage.setItem("profileClick", false);
       window.sessionStorage.setItem("photoURL", user.photoURL);
       navigate("/");
-      //dispatch(userLogin(user));
     } catch (error) {
       const errorCode = error.code;
       const errorMessage = error.message;
       console.log(errorCode, errorMessage);
       if (errorCode == "auth/wrong-password") {
         Swal.fire({
-          icon: 'error',
-          title: '잘못된 비밀번호 입니다.',
-        })
+          icon: "error",
+          title: "잘못된 비밀번호 입니다.",
+        });
       } else if (errorCode == "auth/user-not-found") {
         Swal.fire({
-          icon: 'error',
-          title: '없는 이메일 입니다.',
-        })
+          icon: "error",
+          title: "없는 이메일 입니다.",
+        });
       }
     }
-  };
-
-  const emailLogout = async () => {
-    await signOut(auth);
-    // 로컬스토리지에 로그인 상태 저장
-    window.sessionStorage.setItem("login", false);
-    window.sessionStorage.setItem("googleLogin", false);
-    // window.sessionStorage.setItem("photoURL", null);
-    // window.sessionStorage.removeItem("uid"); // 로컬써야 지워짐
-    // window.sessionStorage.removeItem("displayName");
   };
 
   // 이메일,패스워드 조건이 충족하는지 확인용
@@ -166,7 +127,7 @@ const Login = () => {
   const [notAllow, setNotAllow] = useState(true);
 
   // 이메일 조건충족 확인
-  const handleEmail = e => {
+  const handleEmail = (e) => {
     setEmail(e.target.value);
     // 정규식인데 로그인할떄 특문같이 정해진 조건발동을 수행시켜주는거같다
     const regex =
@@ -179,7 +140,7 @@ const Login = () => {
   };
 
   // 이메일 조건충족 확인
-  const handlePw = e => {
+  const handlePw = (e) => {
     setPw(e.target.value);
     const regex =
       /^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+])(?!.*[^a-zA-z0-9$`~!@$!%*#^?&\\(\\)\-_=+]).{8,20}$/;
@@ -210,37 +171,46 @@ const Login = () => {
       {window.sessionStorage.getItem("login") === "true" ? (
         <Notfound />
       ) : (
-        <motion.div initial={{opacity: 0 ,transform : 'translateY(50px)', transition:'transform 0.33s ease'}}
-        animate={{opacity: 1 ,transform : 'translateY(0px)', transition:'transform 0.33s ease'}}
-        exit={{opacity: 0 ,transform : 'translateY(50px)', transition:'transform 0.33s ease'}} className="login-page-box">
+        <motion.div
+          initial={{
+            opacity: 0,
+            transform: "translateY(50px)",
+            transition: "transform 0.33s ease",
+          }}
+          animate={{
+            opacity: 1,
+            transform: "translateY(0px)",
+            transition: "transform 0.33s ease",
+          }}
+          exit={{
+            opacity: 0,
+            transform: "translateY(50px)",
+            transition: "transform 0.33s ease",
+          }}
+          className="login-page-box"
+        >
           <div className="login-page2">
             <div className="login-text-box">
               <p className="login-page2-text1">전문가와 함께하는 </p>
               <p className="login-page2-text2">간편한 업체 소싱,</p>
               <p className="login-page2-text3">지금 시작해볼까요 ?</p>
               <div className="login-line">
-              <p>
-                Today disign의 업체 소싱은<br></br>
-                전문가와 함께하기 때문에<br></br>
-                보다 효율적이고 안정적입니다<br></br>
-              </p>
+                <p>
+                  Today disign의 업체 소싱은<br></br>
+                  전문가와 함께하기 때문에<br></br>
+                  보다 효율적이고 안정적입니다<br></br>
+                </p>
               </div>
             </div>
           </div>
-          <div className="login-line-2">
-            
-          </div>
+          <div className="login-line-2"></div>
           <div className="login-page">
             <div className="login-border">
-              {/* <img
-                src={require("../img/logo_white.png")}
-                className="login-login-Logo"
-              /> */}
               <div className="login-titleWrap">
                 로그인
                 <br />
               </div>
-              
+
               <div className="login-contentWrap">
                 <div className="login-inputTitle">E-mail</div>
                 <div className="login-inputWrap">
@@ -292,12 +262,12 @@ const Login = () => {
                 </button>
               </div>
               <div className="login-allbox">
-                  <button className="login-LoginGoogle" onClick={googleLogin}>
-                    <img src={googleImg} className="login-googleimg"/>
-                  </button>
-                  <button className="login-createButton" onClick={CreateButton}>
-                    회원 가입
-                  </button>      
+                <button className="login-LoginGoogle" onClick={googleLogin}>
+                  <img src={googleImg} className="login-googleimg" />
+                </button>
+                <button className="login-createButton" onClick={CreateButton}>
+                  회원 가입
+                </button>
               </div>
             </div>
           </div>

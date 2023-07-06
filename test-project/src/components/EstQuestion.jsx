@@ -22,17 +22,15 @@ const EstQuestion = () => {
       clearInterval(timer);
     };
   }, []);
-  //
 
   // DataContext
   const { state, action } = useContext(DataContext);
-
+  // 다음 단계에서 1씩 늘어나게 해주는 questionNo
   const [questionNo, setQuestionNo] = useState(0);
   const [num, setNum] = useState(0);
+  // state의 배열 각 요소를 하나씩 짚어줘서 넘어갈 수 있게 해주는 변수 dastQu
   let dastQu = state.question[questionNo];
   const navigate = useNavigate();
-
-  // 진혜
   const [rName, setRName] = useState(null);
   const [answer, setAnswer] = useState(null);
   const [companyIndex, setCompanyIndex] = useState([]);
@@ -42,7 +40,6 @@ const EstQuestion = () => {
     { id: "Bb", score: 0 },
     { id: "Cc", score: 0 },
   ]);
-  console.log("totalScore", totalScore);
 
   const ClickButton = (Num, type) => {
     // totalScore에 map함수로 각각의 요소를 a로 받음
@@ -91,8 +88,6 @@ const EstQuestion = () => {
     if (rName && answer) {
       action.setReciept(addedAnswer);
     }
-    console.log(companyIndex);
-    console.log(state.reciept);
   };
 
   // 뒤로가기 막기 변수
@@ -112,16 +107,30 @@ const EstQuestion = () => {
     };
   }, []);
 
-  // 🌼🌼🌼 question 진행 중 새로고침 시 가장 첫 번째 문제로 돌아감 => 확인 필요 🌼🌼🌼
-
   return (
-    <motion.div initial={{opacity: 0 ,transform : 'translateY(50px)', transition:'transform 0.33s ease'}}
-    animate={{opacity: 1 ,transform : 'translateY(20px)', transition:'transform 0.33s ease'}}
-    exit={{opacity: 0 ,transform : 'translateY(50px)', transition:'transform 0.33s ease'}} className="estquestion-Wrapper">
+    <motion.div
+      initial={{
+        opacity: 0,
+        transform: "translateY(50px)",
+        transition: "transform 0.33s ease",
+      }}
+      animate={{
+        opacity: 1,
+        transform: "translateY(20px)",
+        transition: "transform 0.33s ease",
+      }}
+      exit={{
+        opacity: 0,
+        transform: "translateY(50px)",
+        transition: "transform 0.33s ease",
+      }}
+      className="estquestion-Wrapper"
+    >
       {window.sessionStorage.getItem("login") === "true" ? (
         <div>
           <div className="estquestion-progressbox"></div>
-          <ProgressBar className="estquestion-progbar"
+          <ProgressBar
+            className="estquestion-progbar"
             style={{
               height: "5px",
               borderRadius: "4px",
@@ -139,12 +148,15 @@ const EstQuestion = () => {
               <button
                 className="estquestion-QBtn"
                 onClick={() => {
+                  // 결과 도출을 위한 점수를 쌓아줌
                   ClickButton(4, dastQu.type);
+                  // 5가지 선택사항 중 고른 하나의 값을 넘겨줌
                   setAnswer(dastQu.answera);
+                  // 확인용 state
                   setCompanyIndex(dastQu.answera);
-                  console.log(questionNo);
+                  // 한 단계씩 넘길 때마다 각 항목이 나올 수 있게 switch문을 사용함.
+                  // 랜더될 때마다 1씩 증가하는 num state를 이용해 각각 다른 항목이 return되어 영수증에 찍힐 수 있게 함
                   setNum(num + 1);
-                  console.log(num);
                   switch (num) {
                     case 0:
                       return setRName("건물 유형");

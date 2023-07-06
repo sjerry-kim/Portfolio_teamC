@@ -20,9 +20,24 @@ const EstStart = () => {
   };
 
   return (
-    <motion.div initial={{opacity: 0 ,transform : 'translateY(50px)', transition:'transform 0.33s ease'}}
-    animate={{opacity: 1 ,transform : 'translateY(0px)', transition:'transform 0.33s ease'}}
-    exit={{opacity: 0 ,transform : 'translateY(50px)', transition:'transform 0.33s ease'}} className="eststart-Wrapper">
+    <motion.div
+      initial={{
+        opacity: 0,
+        transform: "translateY(50px)",
+        transition: "transform 0.33s ease",
+      }}
+      animate={{
+        opacity: 1,
+        transform: "translateY(0px)",
+        transition: "transform 0.33s ease",
+      }}
+      exit={{
+        opacity: 0,
+        transform: "translateY(50px)",
+        transition: "transform 0.33s ease",
+      }}
+      className="eststart-Wrapper"
+    >
       <div className="eststart-Contents">
         <div className="eststart-main">
           <div className="eststart-Header">맞춤 견적 짜기</div>
@@ -31,26 +46,9 @@ const EstStart = () => {
           ) : (
             <div className="eststart-Title">로그인 후 이용하세요</div>
           )}
-          {/* <div className="eststart-LogoImage"> */}
-          {/* <div className="eststart-img">
-            <div className="eststart-imgText">
-              인테리어 중계업은 Today Design !!
-            </div>
-          </div> */}
-          {/* <div className="eststart-backColor"></div> */}
-          {/* <img src={PangImage} width={200}></img> */}
-          {/* </div> */}
 
           {window.sessionStorage.getItem("login") === "true" ? (
             <div className="eststart-StartBtnBox">
-              {/* <button className="eststart-StartBtn" onClick={StartClickButton}>
-            Start
-            </button> */}
-              {/* <button 
-              onClick={StartClickButton}
-              class="button button--shikoba">
-              <span>Start</span>
-            </button> */}
               <button onClick={StartClickButton} class="est-start-btn">
                 <span>S t a r t</span>
               </button>

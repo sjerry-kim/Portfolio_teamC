@@ -1,11 +1,12 @@
 import "../css/MyPageAccount.css";
 import { useEffect } from "react";
 import { useState } from "react";
-import { auth } from "../data/firebase";
 import MyPageProfileModal from "./MyPageProfileModal";
 
 const MyPageAccount = () => {
   const [update, setUpdate] = useState();
+
+  // firebase 업로드 속도에 의한 프로필 업데이트 문제를 해결하기 위해 해당 컴포넌트 강제 리랜더용 useEffect
   useEffect(() => {}, [update]);
 
   const sessionFireUser = window.sessionStorage.getItem(
@@ -14,10 +15,6 @@ const MyPageAccount = () => {
   const parseSFU = JSON.parse(sessionFireUser);
   const profile = parseSFU.photoURL;
 
-  useEffect(() => {
-    console.log(parseSFU.photoURL);
-  }, []);
-
   return (
     <div className="mypageaccount-wallpaper">
       <div className="mypateaccount-div">
@@ -25,15 +22,11 @@ const MyPageAccount = () => {
         {window.sessionStorage.getItem("googleLogin") === "true" ? (
           // 구글계정으로 로그인 했을 때
           <div className="mypageaccount-img-div">
-            <img
-              className="mypageaccount-img"
-              src={profile}
-              alt=""
-            />
+            <img className="mypageaccount-img" src={profile} alt="" />
           </div>
-          ) : 
-          //이메일, 비번으로 로그인 했을 때
-        window.sessionStorage.getItem("profileClick") === "false"? ( // null은 그냥 null 그 자체로
+        ) : //이메일, 비번으로 로그인 했을 때
+        window.sessionStorage.getItem("profileClick") === "false" ? (
+          // 기본 프로필
           <div className="mypageaccount-img-div">
             <img
               className="mypageaccount-img"
@@ -43,16 +36,12 @@ const MyPageAccount = () => {
             <MyPageProfileModal setUpdate={setUpdate} />
           </div>
         ) : (
+          // 업데이트 후 프로필
           <div className="mypageaccount-img-div">
-            <img
-              className="mypageaccount-img"
-              src={profile}
-              alt=""
-            />
+            <img className="mypageaccount-img" src={profile} alt="" />
             <MyPageProfileModal setUpdate={setUpdate} />
           </div>
-          )
-        }
+        )}
         <div className="mypageaccount-info-div">
           <div className="mypageaccount-info-div-box">
             <label style={{ paddingRight: "14px" }}>Name</label>

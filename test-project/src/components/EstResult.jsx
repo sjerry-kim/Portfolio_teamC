@@ -67,6 +67,7 @@ const EstResult = () => {
     };
   }, []);
 
+  // 저장하기 버튼을 누른 영수증을 firebase에 저장해서 마이페이지에서 호출할 수 있게 함
   const saveReceipt = () => {
     const currentResult = window.sessionStorage.getItem("result");
     const currentReciept = window.sessionStorage.getItem("sessionReciept");
